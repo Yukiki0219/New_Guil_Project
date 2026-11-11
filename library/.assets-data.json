@@ -1,0 +1,713 @@
+{
+  "0d635b2c-4058-4a56-a617-62134d598047": {
+    "url": "db://assets/resources",
+    "value": {},
+    "versionCode": 1
+  },
+  "4afbca9e-77b1-456c-ad0b-f58f90391f88": {
+    "url": "db://assets/scenes",
+    "value": {},
+    "versionCode": 1
+  },
+  "c4b5012f-251d-4d42-928f-2f7fe422d683": {
+    "url": "db://assets/scripts",
+    "value": {},
+    "versionCode": 1
+  },
+  "d2cc011c-4e0f-4def-bc4b-e09557c4f94e": {
+    "url": "db://assets/resources/art",
+    "value": {},
+    "versionCode": 1
+  },
+  "7f8af59f-9a73-4bb4-b2c9-afc7e323881a": {
+    "url": "db://assets/resources/audio",
+    "value": {},
+    "versionCode": 1
+  },
+  "7954f24b-b1de-478d-be88-724c207f66b7": {
+    "url": "db://assets/scripts/GameModel.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "9f327c01-c945-427f-97a6-94ab92496ce9": {
+    "url": "db://assets/scripts/GuliGame.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "dd0b753e-02fe-434d-8ac8-f59c9a8f6856": {
+    "url": "db://assets/scenes/Guli.scene",
+    "value": {
+      "depends": [],
+      "dependScripts": [
+        "9f327c01-c945-427f-97a6-94ab92496ce9"
+      ]
+    },
+    "versionCode": 2
+  },
+  "c191a2b7-4ccf-4a3a-bf63-a892587b3960": {
+    "url": "db://assets/resources/art/courtyard.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "546819f9-b6a1-41d0-b66e-3d08bc8cddc2": {
+    "url": "db://assets/resources/audio/hit.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d4e5b59b-83a0-4477-8608-07651e64840e": {
+    "url": "db://assets/resources/audio/shoot.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "790e3ade-99fc-4768-941a-db6f3eed0ec3": {
+    "url": "db://assets/resources/audio/win.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "c191a2b7-4ccf-4a3a-bf63-a892587b3960@6c48a": {
+    "url": "db://assets/resources/art/courtyard.png@6c48a",
+    "value": {
+      "depends": [
+        "c191a2b7-4ccf-4a3a-bf63-a892587b3960"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c191a2b7-4ccf-4a3a-bf63-a892587b3960@f9941": {
+    "url": "db://assets/resources/art/courtyard.png@f9941",
+    "value": {
+      "depends": [
+        "c191a2b7-4ccf-4a3a-bf63-a892587b3960@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "3332f2aa-4829-417b-8bef-9ed6bfa5a16d": {
+    "url": "db://assets/resources/hud",
+    "value": {},
+    "versionCode": 1
+  },
+  "31bef3d5-2cb0-4aed-8f50-2e31b4e36c44": {
+    "url": "db://assets/resources/hud/prefabs",
+    "value": {},
+    "versionCode": 1
+  },
+  "315354e2-65ec-4f22-8593-8e9803df24bd": {
+    "url": "db://assets/scripts/GuliPhysics.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "9f8da9f4-d06d-4ef8-ab6f-954ed50d095a": {
+    "url": "db://assets/scripts/PhysicsVerification.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "3497509c-c5cb-47ad-91e2-595f22637826": {
+    "url": "db://assets/scenes/HudComponents.scene",
+    "value": {
+      "depends": [
+        "2d3345c7-bb53-4f0d-9cd6-9e7b50f43139",
+        "fc560ca1-3dc1-434e-a7fa-87965ceda14c",
+        "3a243ce4-eb5a-4478-aabf-ba30a5d2e530",
+        "ba643e50-48d0-4588-824e-f2d6b6d46794",
+        "4f27f07e-7683-40e1-a32a-9934fdb4e0bb",
+        "667b4c6f-4212-49f9-a287-31097b8dcdd6",
+        "a604e0c0-9dd7-4072-9f60-b856d6dbb0c9",
+        "9a20d150-3851-4189-89aa-980cade4874e",
+        "bbc541d7-3d1b-4504-af47-7ca94bf3e181",
+        "c17e892a-1e8d-412d-a391-b90f3f283eda",
+        "6d3dd3ea-15d0-4d93-a17f-26a6dd0a12a0",
+        "b2be2572-353d-4e08-8486-f0f364f7ef56",
+        "e52b5241-8f73-4d82-b162-e129b862020c",
+        "d0dbb74b-52a8-4a25-a84f-9f1f5fecffb2",
+        "98814abf-a6eb-4ba2-bc38-06868843d5bc",
+        "711ac17a-617d-4cdb-b954-5cfe4eebdeca",
+        "b289878d-c72d-488d-9942-594fd4ac2766",
+        "28c4adca-f336-490c-8c01-c5c24dbd2695",
+        "3760f629-a625-4462-adfe-3fc230f22a55"
+      ],
+      "dependScripts": [
+        "CC3eba29-7abb-723a-f7ab-ae275e2277e8"
+      ]
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e": {
+    "url": "db://assets/resources/hud/guli-hud.plist",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@a9f24",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@8a646",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@c89c3",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@b4508",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@f6bf5",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@04c25",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@ed718",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@419bd",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@af791",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@d3d10",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@a1eef",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@815a0",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@47ba4",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@aa1ea",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@9726c",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@90ff0",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@8bcb4",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@5fd5a",
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@ac38f"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4": {
+    "url": "db://assets/resources/hud/guli-hud.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2d3345c7-bb53-4f0d-9cd6-9e7b50f43139": {
+    "url": "db://assets/resources/hud/prefabs/AimLine.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@815a0"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "fc560ca1-3dc1-434e-a7fa-87965ceda14c": {
+    "url": "db://assets/resources/hud/prefabs/AimMarker.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@a1eef"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "3a243ce4-eb5a-4478-aabf-ba30a5d2e530": {
+    "url": "db://assets/resources/hud/prefabs/ChalkRing.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@d3d10"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "ba643e50-48d0-4588-824e-f2d6b6d46794": {
+    "url": "db://assets/resources/hud/prefabs/ControlPanel.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@5fd5a"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@a9f24": {
+    "url": "db://assets/resources/hud/guli-hud.plist@a9f24",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@8a646": {
+    "url": "db://assets/resources/hud/guli-hud.plist@8a646",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4f27f07e-7683-40e1-a32a-9934fdb4e0bb": {
+    "url": "db://assets/resources/hud/prefabs/FireButton.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@ac38f",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@c89c3": {
+    "url": "db://assets/resources/hud/guli-hud.plist@c89c3",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "667b4c6f-4212-49f9-a287-31097b8dcdd6": {
+    "url": "db://assets/resources/hud/prefabs/HomeButton.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@a9f24",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@b4508": {
+    "url": "db://assets/resources/hud/guli-hud.plist@b4508",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a": {
+    "url": "db://assets/resources/hud/guli-hud.png@6c48a",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@f6bf5": {
+    "url": "db://assets/resources/hud/guli-hud.plist@f6bf5",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@04c25": {
+    "url": "db://assets/resources/hud/guli-hud.plist@04c25",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a604e0c0-9dd7-4072-9f60-b856d6dbb0c9": {
+    "url": "db://assets/resources/hud/prefabs/LevelPlate.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@b4508",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@ed718": {
+    "url": "db://assets/resources/hud/guli-hud.plist@ed718",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "9a20d150-3851-4189-89aa-980cade4874e": {
+    "url": "db://assets/resources/hud/prefabs/Logo.prefab",
+    "value": {
+      "depends": [
+        "16dcc06f-3663-40be-a1dc-3b0cdefecd10@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@419bd": {
+    "url": "db://assets/resources/hud/guli-hud.plist@419bd",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "bbc541d7-3d1b-4504-af47-7ca94bf3e181": {
+    "url": "db://assets/resources/hud/prefabs/MarbleAmber.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@aa1ea"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@af791": {
+    "url": "db://assets/resources/hud/guli-hud.plist@af791",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@d3d10": {
+    "url": "db://assets/resources/hud/guli-hud.plist@d3d10",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c17e892a-1e8d-412d-a391-b90f3f283eda": {
+    "url": "db://assets/resources/hud/prefabs/MarbleBlue.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@47ba4"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@a1eef": {
+    "url": "db://assets/resources/hud/guli-hud.plist@a1eef",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@815a0": {
+    "url": "db://assets/resources/hud/guli-hud.plist@815a0",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6d3dd3ea-15d0-4d93-a17f-26a6dd0a12a0": {
+    "url": "db://assets/resources/hud/prefabs/MarbleGreen.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@9726c"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@47ba4": {
+    "url": "db://assets/resources/hud/guli-hud.plist@47ba4",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@f9941": {
+    "url": "db://assets/resources/hud/guli-hud.png@f9941",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b2be2572-353d-4e08-8486-f0f364f7ef56": {
+    "url": "db://assets/resources/hud/prefabs/MarblePurple.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@90ff0"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@aa1ea": {
+    "url": "db://assets/resources/hud/guli-hud.plist@aa1ea",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e52b5241-8f73-4d82-b162-e129b862020c": {
+    "url": "db://assets/resources/hud/prefabs/MarbleShooter.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@8bcb4"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@9726c": {
+    "url": "db://assets/resources/hud/guli-hud.plist@9726c",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d0dbb74b-52a8-4a25-a84f-9f1f5fecffb2": {
+    "url": "db://assets/resources/hud/prefabs/PauseButton.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@c89c3",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@90ff0": {
+    "url": "db://assets/resources/hud/guli-hud.plist@90ff0",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@8bcb4": {
+    "url": "db://assets/resources/hud/guli-hud.plist@8bcb4",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@5fd5a": {
+    "url": "db://assets/resources/hud/guli-hud.plist@5fd5a",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "98814abf-a6eb-4ba2-bc38-06868843d5bc": {
+    "url": "db://assets/resources/hud/prefabs/ShotsPlate.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@04c25",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "711ac17a-617d-4cdb-b954-5cfe4eebdeca": {
+    "url": "db://assets/resources/hud/prefabs/StarEmpty.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@ed718"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@ac38f": {
+    "url": "db://assets/resources/hud/guli-hud.plist@ac38f",
+    "value": {
+      "depends": [
+        "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b289878d-c72d-488d-9942-594fd4ac2766": {
+    "url": "db://assets/resources/hud/prefabs/StarEmpty2.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@419bd"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "28c4adca-f336-490c-8c01-c5c24dbd2695": {
+    "url": "db://assets/resources/hud/prefabs/StarEmpty3.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@af791"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "3760f629-a625-4462-adfe-3fc230f22a55": {
+    "url": "db://assets/resources/hud/prefabs/TargetPlate.prefab",
+    "value": {
+      "depends": [
+        "a3a8fea2-0d45-48cb-a902-caa8724e5b4e@f6bf5",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941"
+      ],
+      "dependScripts": []
+    },
+    "versionCode": 2
+  },
+  "7ff1bbd8-d8cb-4e60-a2b9-e1847d90efc2": {
+    "url": "db://assets/scripts/Slingshot.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "ca947891-b6a2-46f2-a337-deeff991fb1d": {
+    "url": "db://assets/scripts/SlingshotVerification.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "04305538-f722-431b-8c98-28dd63525edd": {
+    "url": "db://assets/scripts/AimPrediction.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "082c38db-970a-43bd-b5a6-422fb5e1eab3": {
+    "url": "db://assets/scripts/MarbleAppearance.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "c54e02ab-0a4d-405c-ae72-2ecffd5be82b": {
+    "url": "db://assets/scripts/MarbleAppearancePreview.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "e97056c2-683c-4a47-ad9f-f29ea14b9863": {
+    "url": "db://assets/scripts/MarbleRenderer.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "a31cdcdf-8b02-4e04-8c02-f1f1ddee85f8": {
+    "url": "db://assets/scripts/RollbackVerification.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "1a80f22e-8933-470a-8645-13091d1f6f49": {
+    "url": "db://assets/resources/art/marble-motifs.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "1a80f22e-8933-470a-8645-13091d1f6f49@6c48a": {
+    "url": "db://assets/resources/art/marble-motifs.png@6c48a",
+    "value": {
+      "depends": [
+        "1a80f22e-8933-470a-8645-13091d1f6f49"
+      ]
+    },
+    "versionCode": 1
+  },
+  "1a80f22e-8933-470a-8645-13091d1f6f49@f9941": {
+    "url": "db://assets/resources/art/marble-motifs.png@f9941",
+    "value": {
+      "depends": [
+        "1a80f22e-8933-470a-8645-13091d1f6f49@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5a949f08-29fc-4c58-b451-e0419e3188aa": {
+    "url": "db://assets/resources/audio/bgm_gameplay.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "51696ad1-7886-4d71-b823-0b6f619bdeeb": {
+    "url": "db://assets/resources/audio/bgm_main_menu.ogg",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "87381871-6862-4708-b17a-c72d382f8c99": {
+    "url": "db://assets/scripts/Tutorial.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "395bd534-6232-4dcb-8929-b5ad7fc64550": {
+    "url": "db://assets/scripts/TutorialVerification.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "85eaddd5-1d40-4e7e-9572-19d6ba5ad4b2": {
+    "url": "db://assets/scripts/TutorialView.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "83d30718-220b-4205-a893-a02f883916a6": {
+    "url": "db://assets/scripts/GameHints.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "e5c8e23a-7cac-4f57-a5b8-fda702852460": {
+    "url": "db://assets/scripts/LanguageSwitch.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "217ffd53-db30-4e4a-93de-807351f2f8ab": {
+    "url": "db://assets/scripts/LanguageVerification.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "d230aefd-5785-4f9d-9714-c729c4cb6a4e": {
+    "url": "db://assets/scripts/Localization.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "16dcc06f-3663-40be-a1dc-3b0cdefecd10": {
+    "url": "db://assets/resources/hud/guli-go-logo.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "16dcc06f-3663-40be-a1dc-3b0cdefecd10@6c48a": {
+    "url": "db://assets/resources/hud/guli-go-logo.png@6c48a",
+    "value": {
+      "depends": [
+        "16dcc06f-3663-40be-a1dc-3b0cdefecd10"
+      ]
+    },
+    "versionCode": 1
+  },
+  "16dcc06f-3663-40be-a1dc-3b0cdefecd10@f9941": {
+    "url": "db://assets/resources/hud/guli-go-logo.png@f9941",
+    "value": {
+      "depends": [
+        "16dcc06f-3663-40be-a1dc-3b0cdefecd10@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "4303d09c-0e85-4d7c-8d10-18b1deaa39d5": {
+    "url": "db://assets/scripts/HuaweiLogin.ts",
+    "value": {},
+    "versionCode": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "lib": ["ES2017", "DOM"], "module": "ESNext", "skipLibCheck": true },
+  "include": ["assets/scripts/**/*.ts"],
+  "exclude": ["extensions", "library", "build", "node_modules"]
+}

@@ -1,0 +1,38 @@
+newmtl GlassShell
+Ka 0.080 0.100 0.140
+Kd 0.520 0.700 0.860
+Ks 0.950 0.980 1.000
+Ns 220.000
+d 0.18
+Tr 0.82
+Ni 1.52
+Tf 0.86 0.95 1.00
+illum 4
+
+newmtl SwirlBlue
+Ka 0.050 0.080 0.300
+Kd 0.060 0.180 0.850
+Ks 0.350 0.450 0.900
+Ns 80.000
+illum 2
+
+newmtl SwirlCyan
+Ka 0.020 0.200 0.250
+Kd 0.050 0.720 0.850
+Ks 0.450 0.800 0.900
+Ns 80.000
+illum 2
+
+newmtl SwirlCoral
+Ka 0.250 0.040 0.050
+Kd 0.950 0.120 0.180
+Ks 0.600 0.350 0.350
+Ns 80.000
+illum 2
+
+newmtl SwirlPearl
+Ka 0.300 0.320 0.350
+Kd 0.920 0.950 1.000
+Ks 0.700 0.750 0.850
+Ns 100.000
+illum 2

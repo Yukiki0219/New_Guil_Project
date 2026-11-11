@@ -1,0 +1,4 @@
+Native PowerPoint opened the PPTX.
+Slides: 16
+PDF and 1600x900 slide PNGs exported.
+Text overflow warnings: 0

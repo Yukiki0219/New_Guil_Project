@@ -1,0 +1,31 @@
+{
+  "platform": "huawei-quick-game",
+  "debug": false,
+  "buildPath": "project://build",
+  "outputName": "huawei-quick-game",
+  "name": "GULI Go!",
+  "startScene": "dd0b753e-02fe-434d-8ac8-f59c9a8f6856",
+  "scenes": [
+    {
+      "url": "db://assets/scenes/Guli.scene",
+      "uuid": "dd0b753e-02fe-434d-8ac8-f59c9a8f6856"
+    }
+  ],
+  "packages": {
+    "huawei-quick-game": {
+      "package": "com.jianxiang.kaile.GuliGo_1.0",
+      "icon": "C:/Users/user/Guil_Project/config/huawei/icon.png",
+      "versionName": "1.0.0",
+      "versionCode": 1,
+      "minPlatformVersion": 1078,
+      "deviceOrientation": "portrait",
+      "fullScreen": true,
+      "logLevel": "error",
+      "useDebugKey": false,
+      "privatePemPath": "C:/Users/user/Guil_Project/private.pem",
+      "certificatePemPath": "C:/Users/user/Guil_Project/certificate.pem",
+      "separateEngine": false,
+      "wasmSubpackage": false
+    }
+  }
+}

@@ -1,0 +1,32 @@
+Cocos 3.8.8 actual Box2D verification
+PTM=32; config={"timestep":0.008333333333333333,"maxSubSteps":12,"velocityIterations":10,"positionIterations":10,"restitution":0.25,"friction":0.05,"linearDamping":1.6,"mass":1,"settleSpeed":2,"settleDuration":0.25}
+PASS Engine unit conversion, collider radius and equal masses
+PASS Restitution 0.25 / 0.3 / 0.45 / 0.6: momentum, energy and one response
+PASS Unequal masses are resolved by the engine
+PASS Damping acts once, without a second manual friction pass
+PASS Entire-ball boundary and deferred counting
+PASS Low speed must persist, collisions reset quiet time, no 15-second forced result
+PASS Pause (no advance), resume and replay cleanup
+PASS Overlapping start separates stably; maximum-power shot does not tunnel
+PASS 30 / 60 / 144 FPS and a long frame produce the same completed shot
+PASS Last permitted shot can win; shooter removed only after completed settlement
+ROLL 10% 1 balls: before={"time":8.625000000000151,"distance":696.6925048828125,"target":0,"peakTarget":0} after={"time":3.716666666666656,"distance":305.9839172363281,"target":0,"peakTarget":0}
+ROLL 30% 1 balls: before={"time":9.100000000000124,"distance":951.5408935546875,"target":0,"peakTarget":0} after={"time":3.9749999999999885,"distance":460.0274353027344,"target":0,"peakTarget":0}
+ROLL 50% 1 balls: before={"time":9.46666666666677,"distance":1206.401123046875,"target":0,"peakTarget":0} after={"time":4.149999999999996,"distance":614.058837890625,"target":0,"peakTarget":0}
+ROLL 100% 1 balls: before={"time":10.125000000000066,"distance":1843.5496826171875,"target":0,"peakTarget":0} after={"time":4.458333333333345,"distance":999.1641845703125,"target":0,"peakTarget":0}
+ROLL 10% 2 balls: before={"time":8.12500000000018,"distance":211.93252563476562,"target":483.76025390625,"peakTarget":315.6070251464844} after={"time":3.416666666666657,"distance":132.29283142089844,"target":173.18109130859375,"peakTarget":275.97039794921875}
+ROLL 30% 2 balls: before={"time":8.608333333333485,"distance":282.0204162597656,"target":668.5377807617188,"peakTarget":435.3061218261719} after={"time":3.6749999999999896,"distance":190.05979919433594,"target":269.45965576171875,"peakTarget":431.32635498046875}
+ROLL 50% 2 balls: before={"time":8.975000000000131,"distance":352.1065979003906,"target":853.3108520507812,"peakTarget":554.5643920898438} after={"time":3.8583333333333223,"distance":247.826416015625,"target":365.7374267578125,"peakTarget":583.1690673828125}
+ROLL 100% 2 balls: before={"time":9.625000000000094,"distance":527.3187255859375,"target":1315.2349853515625,"peakTarget":856.0142822265625} after={"time":4.166666666666663,"distance":392.24102783203125,"target":606.4290771484375,"peakTarget":961.0433959960938}
+ROLL 10% 4 balls: before={"time":7.133333333333478,"distance":160.78851318359375,"target":246.24868774414062,"peakTarget":315.6070251464844} after={"time":2.8416666666666592,"distance":100.52774047851562,"target":72.30589294433594,"peakTarget":275.97039794921875}
+ROLL 30% 4 balls: before={"time":7.616666666666835,"distance":214.0497283935547,"target":343.74560546875,"peakTarget":435.3061218261719} after={"time":3.108333333333325,"distance":135.460205078125,"target":112.38551330566406,"peakTarget":431.32635498046875}
+ROLL 50% 4 balls: before={"time":7.98333333333352,"distance":253.13267517089844,"target":440.507568359375,"peakTarget":554.5643920898438} after={"time":3.3166666666666575,"distance":171.00741577148438,"target":151.67611694335938,"peakTarget":583.1690673828125}
+ROLL 100% 4 balls: before={"time":8.633333333333484,"distance":372.7382507324219,"target":683.3026123046875,"peakTarget":856.0142822265625} after={"time":3.5916666666666566,"distance":265.2235107421875,"target":248.97885131835938,"peakTarget":600.652099609375}
+PASS 10 / 30 / 50 / 100 power: isolated rolling, two balls and four-ball chain
+Level 1: 2 shots, 2 targets, 3 stars; route=[[-80,-85,1],[80,-85,1]]
+Level 2: 2 shots, 3 targets, 3 stars; route=[[-170,70,1],[80,145,1]]
+Level 3: 5 shots, 4 targets, 2 stars; route=[[90,140,1],[74.79469299316406,64.97887420654297,1],[-40,-40,1],[-78.78567504882812,138.77842712402344,1],[-133.15523529052734,202.13279724121094,0.65]]
+Level 4: 4 shots, 7 targets, 3 stars; route=[[-35,170,1],[85,-65,1],[-75,170,1],[-214.93142700195312,106.26129150390625,1]]
+Level 5: 4 shots, 8 targets, 3 stars; route=[[35,180,1],[-95,140,1],[63.1734504699707,232.3087615966797,1],[-164.83905029296875,57.49934387207031,1]]
+PASS All five unchanged levels remain completable with slingshot launch positions
+DONE: 12 passed, 0 failed.

@@ -1,0 +1,405 @@
+{
+  "version": "1.0.1",
+  "map": {
+    "resources": {
+      "time": 1792730516096.2588,
+      "uuid": "0d635b2c-4058-4a56-a617-62134d598047"
+    },
+    "scenes": {
+      "time": 1792730516120.4028,
+      "uuid": "4afbca9e-77b1-456c-ad0b-f58f90391f88"
+    },
+    "scripts": {
+      "time": 1793159169160.4673,
+      "uuid": "c4b5012f-251d-4d42-928f-2f7fe422d683"
+    },
+    "resources\\art": {
+      "time": 1792730516095.212,
+      "uuid": "d2cc011c-4e0f-4def-bc4b-e09557c4f94e"
+    },
+    "resources\\audio": {
+      "time": 1793018056032.5012,
+      "uuid": "7f8af59f-9a73-4bb4-b2c9-afc7e323881a"
+    },
+    "scripts\\GameModel.ts": {
+      "time": 1793159169082.1702,
+      "uuid": "7954f24b-b1de-478d-be88-724c207f66b7"
+    },
+    "scripts\\GuliGame.ts": {
+      "time": 1793159298875.2249,
+      "uuid": "9f327c01-c945-427f-97a6-94ab92496ce9"
+    },
+    "resources.meta": {
+      "time": 1792328833091.6094
+    },
+    "scenes.meta": {
+      "time": 1792328833120.3005
+    },
+    "scripts.meta": {
+      "time": 1792328833120.3005
+    },
+    "resources\\art.meta": {
+      "time": 1792328833091.6094
+    },
+    "resources\\audio.meta": {
+      "time": 1792328833115.132
+    },
+    "scripts\\GameModel.ts.meta": {
+      "time": 1792328833120.3005
+    },
+    "scripts\\GuliGame.ts.meta": {
+      "time": 1792328833120.3005
+    },
+    "scenes\\Guli.scene": {
+      "time": 1792328833120.3005,
+      "uuid": "dd0b753e-02fe-434d-8ac8-f59c9a8f6856"
+    },
+    "resources\\art\\courtyard.png": {
+      "time": 1792328833111.2627,
+      "uuid": "c191a2b7-4ccf-4a3a-bf63-a892587b3960"
+    },
+    "resources\\audio\\hit.wav": {
+      "time": 1792328833115.132,
+      "uuid": "546819f9-b6a1-41d0-b66e-3d08bc8cddc2"
+    },
+    "resources\\audio\\shoot.wav": {
+      "time": 1792328833117.1382,
+      "uuid": "d4e5b59b-83a0-4477-8608-07651e64840e"
+    },
+    "resources\\audio\\win.wav": {
+      "time": 1792328833117.1382,
+      "uuid": "790e3ade-99fc-4768-941a-db6f3eed0ec3"
+    },
+    "scenes\\Guli.scene.meta": {
+      "time": 1792328833120.3005
+    },
+    "resources\\audio\\hit.wav.meta": {
+      "time": 1792328833117.1382
+    },
+    "resources\\audio\\shoot.wav.meta": {
+      "time": 1792328833117.1382
+    },
+    "resources\\audio\\win.wav.meta": {
+      "time": 1792328833120.3005
+    },
+    "resources\\art\\courtyard.png.meta": {
+      "time": 1792328833111.2627
+    },
+    "resources\\hud": {
+      "time": 1793018056037.6274,
+      "uuid": "3332f2aa-4829-417b-8bef-9ed6bfa5a16d"
+    },
+    "resources\\hud\\prefabs": {
+      "time": 1793018056037.6274,
+      "uuid": "31bef3d5-2cb0-4aed-8f50-2e31b4e36c44"
+    },
+    "scripts\\GuliPhysics.ts": {
+      "time": 1792732162289.3599,
+      "uuid": "315354e2-65ec-4f22-8593-8e9803df24bd"
+    },
+    "scripts\\PhysicsVerification.ts": {
+      "time": 1792730516129.3777,
+      "uuid": "9f8da9f4-d06d-4ef8-ab6f-954ed50d095a"
+    },
+    "resources\\hud.meta": {
+      "time": 1792730516095.212
+    },
+    "resources\\hud\\prefabs.meta": {
+      "time": 1792730516103.382
+    },
+    "scripts\\GuliPhysics.ts.meta": {
+      "time": 1792730516125.3713
+    },
+    "scripts\\PhysicsVerification.ts.meta": {
+      "time": 1792730516129.3777
+    },
+    "scenes\\HudComponents.scene": {
+      "time": 1792730516120.4028,
+      "uuid": "3497509c-c5cb-47ad-91e2-595f22637826"
+    },
+    "resources\\hud\\guli-hud.plist": {
+      "time": 1792730516096.2588,
+      "uuid": "a3a8fea2-0d45-48cb-a902-caa8724e5b4e"
+    },
+    "resources\\hud\\guli-hud.png": {
+      "time": 1792730516103.382,
+      "uuid": "c1a2af2d-6cfe-476c-a9e6-9bf8420f61c4"
+    },
+    "resources\\hud\\prefabs\\AimLine.prefab": {
+      "time": 1792730516103.382,
+      "uuid": "2d3345c7-bb53-4f0d-9cd6-9e7b50f43139"
+    },
+    "resources\\hud\\prefabs\\AimMarker.prefab": {
+      "time": 1792730516107.166,
+      "uuid": "fc560ca1-3dc1-434e-a7fa-87965ceda14c"
+    },
+    "resources\\hud\\prefabs\\ChalkRing.prefab": {
+      "time": 1792730516108.3503,
+      "uuid": "3a243ce4-eb5a-4478-aabf-ba30a5d2e530"
+    },
+    "resources\\hud\\prefabs\\ControlPanel.prefab": {
+      "time": 1792730516109.3499,
+      "uuid": "ba643e50-48d0-4588-824e-f2d6b6d46794"
+    },
+    "resources\\hud\\prefabs\\FireButton.prefab": {
+      "time": 1792730516110.3506,
+      "uuid": "4f27f07e-7683-40e1-a32a-9934fdb4e0bb"
+    },
+    "resources\\hud\\prefabs\\HomeButton.prefab": {
+      "time": 1792730516110.3506,
+      "uuid": "667b4c6f-4212-49f9-a287-31097b8dcdd6"
+    },
+    "resources\\hud\\prefabs\\LevelPlate.prefab": {
+      "time": 1792730516111.583,
+      "uuid": "a604e0c0-9dd7-4072-9f60-b856d6dbb0c9"
+    },
+    "resources\\hud\\prefabs\\Logo.prefab": {
+      "time": 1793018056037.6274,
+      "uuid": "9a20d150-3851-4189-89aa-980cade4874e"
+    },
+    "resources\\hud\\prefabs\\MarbleAmber.prefab": {
+      "time": 1792730516113.2546,
+      "uuid": "bbc541d7-3d1b-4504-af47-7ca94bf3e181"
+    },
+    "resources\\hud\\prefabs\\MarbleBlue.prefab": {
+      "time": 1792730516114.3306,
+      "uuid": "c17e892a-1e8d-412d-a391-b90f3f283eda"
+    },
+    "resources\\hud\\prefabs\\MarbleGreen.prefab": {
+      "time": 1792730516115.3298,
+      "uuid": "6d3dd3ea-15d0-4d93-a17f-26a6dd0a12a0"
+    },
+    "resources\\hud\\prefabs\\MarblePurple.prefab": {
+      "time": 1792730516116.329,
+      "uuid": "b2be2572-353d-4e08-8486-f0f364f7ef56"
+    },
+    "resources\\hud\\prefabs\\MarbleShooter.prefab": {
+      "time": 1792730516117.329,
+      "uuid": "e52b5241-8f73-4d82-b162-e129b862020c"
+    },
+    "resources\\hud\\prefabs\\PauseButton.prefab": {
+      "time": 1792730516118.3298,
+      "uuid": "d0dbb74b-52a8-4a25-a84f-9f1f5fecffb2"
+    },
+    "resources\\hud\\prefabs\\ShotsPlate.prefab": {
+      "time": 1792730516118.3298,
+      "uuid": "98814abf-a6eb-4ba2-bc38-06868843d5bc"
+    },
+    "resources\\hud\\prefabs\\StarEmpty.prefab": {
+      "time": 1792730516119.329,
+      "uuid": "711ac17a-617d-4cdb-b954-5cfe4eebdeca"
+    },
+    "resources\\hud\\prefabs\\StarEmpty2.prefab": {
+      "time": 1792730516120.4028,
+      "uuid": "b289878d-c72d-488d-9942-594fd4ac2766"
+    },
+    "resources\\hud\\prefabs\\StarEmpty3.prefab": {
+      "time": 1792730516120.4028,
+      "uuid": "28c4adca-f336-490c-8c01-c5c24dbd2695"
+    },
+    "resources\\hud\\prefabs\\TargetPlate.prefab": {
+      "time": 1792730516120.4028,
+      "uuid": "3760f629-a625-4462-adfe-3fc230f22a55"
+    },
+    "resources\\hud\\prefabs\\AimLine.prefab.meta": {
+      "time": 1792730516107.166
+    },
+    "scenes\\HudComponents.scene.meta": {
+      "time": 1792730516120.4028
+    },
+    "resources\\hud\\prefabs\\AimMarker.prefab.meta": {
+      "time": 1792730516108.3503
+    },
+    "resources\\hud\\prefabs\\ChalkRing.prefab.meta": {
+      "time": 1792730516109.3499
+    },
+    "resources\\hud\\prefabs\\ControlPanel.prefab.meta": {
+      "time": 1792730516109.3499
+    },
+    "resources\\hud\\prefabs\\FireButton.prefab.meta": {
+      "time": 1792730516110.3506
+    },
+    "resources\\hud\\prefabs\\HomeButton.prefab.meta": {
+      "time": 1792730516111.583
+    },
+    "resources\\hud\\prefabs\\LevelPlate.prefab.meta": {
+      "time": 1792730516112.5835
+    },
+    "resources\\hud\\prefabs\\Logo.prefab.meta": {
+      "time": 1792730516113.2546
+    },
+    "resources\\hud\\prefabs\\MarbleAmber.prefab.meta": {
+      "time": 1792730516114.3306
+    },
+    "resources\\hud\\prefabs\\MarbleBlue.prefab.meta": {
+      "time": 1792730516115.3298
+    },
+    "resources\\hud\\prefabs\\MarbleGreen.prefab.meta": {
+      "time": 1792730516115.3298
+    },
+    "resources\\hud\\prefabs\\MarblePurple.prefab.meta": {
+      "time": 1792730516116.329
+    },
+    "resources\\hud\\prefabs\\MarbleShooter.prefab.meta": {
+      "time": 1792730516117.329
+    },
+    "resources\\hud\\prefabs\\PauseButton.prefab.meta": {
+      "time": 1792730516118.3298
+    },
+    "resources\\hud\\prefabs\\ShotsPlate.prefab.meta": {
+      "time": 1792730516119.329
+    },
+    "resources\\hud\\prefabs\\StarEmpty.prefab.meta": {
+      "time": 1792730516119.329
+    },
+    "resources\\hud\\prefabs\\StarEmpty2.prefab.meta": {
+      "time": 1792730516120.4028
+    },
+    "resources\\hud\\prefabs\\StarEmpty3.prefab.meta": {
+      "time": 1792730516120.4028
+    },
+    "resources\\hud\\prefabs\\TargetPlate.prefab.meta": {
+      "time": 1792730516120.4028
+    },
+    "resources\\hud\\guli-hud.png.meta": {
+      "time": 1792730516103.382
+    },
+    "resources\\hud\\guli-hud.plist.meta": {
+      "time": 1792730516096.2588
+    },
+    "scripts\\Slingshot.ts.meta": {
+      "time": 1792730516129.8809
+    },
+    "scripts\\SlingshotVerification.ts.meta": {
+      "time": 1792730516131.897
+    },
+    "scripts\\Slingshot.ts": {
+      "time": 1792730516129.8809,
+      "uuid": "7ff1bbd8-d8cb-4e60-a2b9-e1847d90efc2"
+    },
+    "scripts\\SlingshotVerification.ts": {
+      "time": 1793018056044.374,
+      "uuid": "ca947891-b6a2-46f2-a337-deeff991fb1d"
+    },
+    "scripts\\AimPrediction.ts": {
+      "time": 1793159169063.5793,
+      "uuid": "04305538-f722-431b-8c98-28dd63525edd"
+    },
+    "scripts\\MarbleAppearance.ts": {
+      "time": 1792730516125.3713,
+      "uuid": "082c38db-970a-43bd-b5a6-422fb5e1eab3"
+    },
+    "scripts\\MarbleAppearancePreview.ts": {
+      "time": 1792730516127.375,
+      "uuid": "c54e02ab-0a4d-405c-ae72-2ecffd5be82b"
+    },
+    "scripts\\MarbleRenderer.ts": {
+      "time": 1792730516127.375,
+      "uuid": "e97056c2-683c-4a47-ad9f-f29ea14b9863"
+    },
+    "scripts\\AimPrediction.ts.meta": {
+      "time": 1792730516120.4028
+    },
+    "scripts\\MarbleAppearance.ts.meta": {
+      "time": 1792730516127.375
+    },
+    "scripts\\MarbleAppearancePreview.ts.meta": {
+      "time": 1792730516127.375
+    },
+    "scripts\\MarbleRenderer.ts.meta": {
+      "time": 1792730516127.375
+    },
+    "scripts\\RollbackVerification.ts": {
+      "time": 1792732162289.3599,
+      "uuid": "a31cdcdf-8b02-4e04-8c02-f1f1ddee85f8"
+    },
+    "scripts\\RollbackVerification.ts.meta": {
+      "time": 1792730516129.8809
+    },
+    "resources\\art\\marble-motifs.png.meta": {
+      "time": 1792730516095.212
+    },
+    "resources\\art\\marble-motifs.png": {
+      "time": 1792730516094.3806,
+      "uuid": "1a80f22e-8933-470a-8645-13091d1f6f49"
+    },
+    "scripts\\Tutorial.ts.meta": {
+      "time": 1793018056049.233
+    },
+    "scripts\\TutorialVerification.ts.meta": {
+      "time": 1793018056050.318
+    },
+    "scripts\\TutorialView.ts.meta": {
+      "time": 1793018056050.318
+    },
+    "scripts\\Tutorial.ts": {
+      "time": 1793018056048.7905,
+      "uuid": "87381871-6862-4708-b17a-c72d382f8c99"
+    },
+    "scripts\\TutorialVerification.ts": {
+      "time": 1793018056049.233,
+      "uuid": "395bd534-6232-4dcb-8929-b5ad7fc64550"
+    },
+    "scripts\\TutorialView.ts": {
+      "time": 1793018056050.318,
+      "uuid": "85eaddd5-1d40-4e7e-9572-19d6ba5ad4b2"
+    },
+    "resources\\audio\\bgm_gameplay.ogg.meta": {
+      "time": 1793018056027.341
+    },
+    "resources\\audio\\bgm_main_menu.ogg.meta": {
+      "time": 1793018056032.5012
+    },
+    "resources\\audio\\bgm_gameplay.ogg": {
+      "time": 1793018056026.7979,
+      "uuid": "5a949f08-29fc-4c58-b451-e0419e3188aa"
+    },
+    "resources\\audio\\bgm_main_menu.ogg": {
+      "time": 1793018056032.5012,
+      "uuid": "51696ad1-7886-4d71-b823-0b6f619bdeeb"
+    },
+    "scripts\\GameHints.ts": {
+      "time": 1793018056037.6274,
+      "uuid": "83d30718-220b-4205-a893-a02f883916a6"
+    },
+    "scripts\\GameHints.ts.meta": {
+      "time": 1793018056037.6274
+    },
+    "scripts\\LanguageSwitch.ts": {
+      "time": 1793018056044.374,
+      "uuid": "e5c8e23a-7cac-4f57-a5b8-fda702852460"
+    },
+    "scripts\\LanguageVerification.ts": {
+      "time": 1793018056044.374,
+      "uuid": "217ffd53-db30-4e4a-93de-807351f2f8ab"
+    },
+    "scripts\\Localization.ts": {
+      "time": 1793159169160.4673,
+      "uuid": "d230aefd-5785-4f9d-9714-c729c4cb6a4e"
+    },
+    "scripts\\LanguageSwitch.ts.meta": {
+      "time": 1793018056044.374
+    },
+    "scripts\\LanguageVerification.ts.meta": {
+      "time": 1793018056044.374
+    },
+    "scripts\\Localization.ts.meta": {
+      "time": 1793018056044.374
+    },
+    "resources\\hud\\guli-go-logo.png": {
+      "time": 1793018056037.6274,
+      "uuid": "16dcc06f-3663-40be-a1dc-3b0cdefecd10"
+    },
+    "resources\\hud\\guli-go-logo.png.meta": {
+      "time": 1793018056037.6274
+    },
+    "scripts\\HuaweiLogin.ts.meta": {
+      "time": 1793159169142.0498
+    },
+    "scripts\\HuaweiLogin.ts": {
+      "time": 1793159169118.0728,
+      "uuid": "4303d09c-0e85-4d7c-8d10-18b1deaa39d5"
+    }
+  },
+  "missing": {}
+}

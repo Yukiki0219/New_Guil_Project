@@ -1,0 +1,13 @@
+{
+  "name": "Guil_Project",
+  "uuid": "f955364c-d8aa-4481-bc88-e07e578e814b",
+  "scripts": {
+    "test": "node tests/game-model.cjs && node tests/slingshot.cjs && node tests/tutorial.cjs && node tests/music.cjs && node tests/localization.cjs && node tests/huawei-login.cjs",
+    "typecheck": "node extensions/cocos-creator-mcp-main/node_modules/typescript/bin/tsc -p tsconfig.game.json",
+    "audio": "node tools/create-audio.cjs"
+  },
+  "creator": {
+    "version": "3.8.8"
+  },
+  "description": ""
+}

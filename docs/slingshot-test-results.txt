@@ -1,0 +1,5 @@
+PASS Touch pull updates marble, power label and aim; second touch cannot interfere
+PASS Release launches once from pulled position; native physics settles normally
+PASS Mouse caps at 100, Esc and right click cancel, tap does not fire
+PASS Background/blur cancel and non-shooter input cannot begin pull
+DONE: 4 passed, 0 failed

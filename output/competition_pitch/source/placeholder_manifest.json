@@ -1,0 +1,252 @@
+[
+  {
+    "id": "IMG-02",
+    "occurrence": "IMG-02-S01",
+    "slide": 1,
+    "kind": "Existing project image",
+    "description": "Actual courtyard background resource",
+    "source": "assets\\resources\\art\\courtyard.png",
+    "status": "PLACED \u2014 review version",
+    "ratio": "941:1672"
+  },
+  {
+    "id": "IMG-01",
+    "occurrence": "IMG-01-S01",
+    "slide": 1,
+    "kind": "Existing project image",
+    "description": "Logo atlas region",
+    "source": "assets/resources/hud/guli-hud.png; Logo region in guli-hud.plist",
+    "status": "PLACED \u2014 review version",
+    "ratio": "479:212"
+  },
+  {
+    "id": "IMG-03",
+    "occurrence": "IMG-03-S02",
+    "slide": 2,
+    "kind": "Editable placeholder",
+    "description": "Provide an approved team photo or member portraits.",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "1:1"
+  },
+  {
+    "id": "IMG-04",
+    "occurrence": "IMG-04-S03",
+    "slide": 3,
+    "kind": "Existing project image",
+    "description": "Existing English gameplay screenshot",
+    "source": "docs\\language-game-en.png",
+    "status": "PLACED \u2014 review version",
+    "ratio": "360:640"
+  },
+  {
+    "id": "IMG-06",
+    "occurrence": "IMG-06-S04",
+    "slide": 4,
+    "kind": "Editable placeholder",
+    "description": "Capture a real completed level with matching HUD and result.",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "9:16"
+  },
+  {
+    "id": "IMG-07",
+    "occurrence": "IMG-07-S05",
+    "slide": 5,
+    "kind": "Editable placeholder",
+    "description": "Hold and pull to aim",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "4:3 crop from 9:16"
+  },
+  {
+    "id": "IMG-07",
+    "occurrence": "IMG-07-S05-2",
+    "slide": 5,
+    "kind": "Editable placeholder",
+    "description": "Release; capture the collision",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "4:3 crop from 9:16"
+  },
+  {
+    "id": "IMG-07",
+    "occurrence": "IMG-07-S05-3",
+    "slide": 5,
+    "kind": "Editable placeholder",
+    "description": "Wait for the settled result",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "4:3 crop from 9:16"
+  },
+  {
+    "id": "IMG-08",
+    "occurrence": "IMG-08-S06",
+    "slide": 6,
+    "kind": "Editable native diagram",
+    "description": "DO \u2192 RESPONSE \u2192 REWARD \u2192 AGAIN; native editable shapes",
+    "source": "Based on current code / Phase 2 plan",
+    "status": "COMPLETE",
+    "ratio": "16:9"
+  },
+  {
+    "id": "IMG-09",
+    "occurrence": "IMG-09-S07",
+    "slide": 7,
+    "kind": "Editable placeholder",
+    "description": "Show five levels, locks and best stars.",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "9:16"
+  },
+  {
+    "id": "IMG-10",
+    "occurrence": "IMG-10-S07",
+    "slide": 7,
+    "kind": "Editable placeholder",
+    "description": "Use current, corrected labels and artwork.",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "9:16"
+  },
+  {
+    "id": "IMG-11",
+    "occurrence": "IMG-11-S08",
+    "slide": 8,
+    "kind": "Existing project image",
+    "description": "Actual tutorial illustration of valid and invalid shots",
+    "source": "docs/ftue-step2.png",
+    "status": "PLACED \u2014 review version",
+    "ratio": "430:769"
+  },
+  {
+    "id": "IMG-12",
+    "occurrence": "IMG-12-S09",
+    "slide": 9,
+    "kind": "Editable native diagram",
+    "description": "Actual client-side architecture; no invented backend",
+    "source": "Based on current code / Phase 2 plan",
+    "status": "COMPLETE",
+    "ratio": "16:9"
+  },
+  {
+    "id": "IMG-13",
+    "occurrence": "IMG-13-S09",
+    "slide": 9,
+    "kind": "Editable native diagram",
+    "description": "Review validation summary, not a fabricated console screenshot",
+    "source": "Based on current code / Phase 2 plan",
+    "status": "COMPLETE",
+    "ratio": "16:9"
+  },
+  {
+    "id": "IMG-14",
+    "occurrence": "IMG-14-S10",
+    "slide": 10,
+    "kind": "Editable placeholder",
+    "description": "SDK configuration, real API result and device details.",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "4:3"
+  },
+  {
+    "id": "IMG-05",
+    "occurrence": "IMG-05-S11",
+    "slide": 11,
+    "kind": "Editable placeholder",
+    "description": "Target, shots and power",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "8:1 detail strip"
+  },
+  {
+    "id": "IMG-15",
+    "occurrence": "IMG-15-S11",
+    "slide": 11,
+    "kind": "Existing project image",
+    "description": "Existing English tutorial capture",
+    "source": "docs/language-tutorial-en.png",
+    "status": "PLACED \u2014 review version",
+    "ratio": "390:695"
+  },
+  {
+    "id": "IMG-16",
+    "occurrence": "IMG-16-S11",
+    "slide": 11,
+    "kind": "Editable placeholder",
+    "description": "Use current layout and corrected collection total.",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "9:16"
+  },
+  {
+    "id": "IMG-17",
+    "occurrence": "IMG-17-S12",
+    "slide": 12,
+    "kind": "Editable placeholder",
+    "description": "Capture actual in-game designs after label review.",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "1:1"
+  },
+  {
+    "id": "IMG-18",
+    "occurrence": "IMG-18-S12",
+    "slide": 12,
+    "kind": "Editable placeholder",
+    "description": "Red shot-count pulse",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "5:1 detail strip"
+  },
+  {
+    "id": "IMG-19",
+    "occurrence": "IMG-19-S13",
+    "slide": 13,
+    "kind": "Editable native diagram",
+    "description": "Audience hypotheses and validation questions; no market metrics",
+    "source": "Based on current code / Phase 2 plan",
+    "status": "COMPLETE",
+    "ratio": "16:9"
+  },
+  {
+    "id": "IMG-20",
+    "occurrence": "IMG-20-S14",
+    "slide": 14,
+    "kind": "Editable native diagram",
+    "description": "Now / Next / Explore; proposed work is clearly separated",
+    "source": "Based on current code / Phase 2 plan",
+    "status": "COMPLETE",
+    "ratio": "16:9"
+  },
+  {
+    "id": "IMG-04",
+    "occurrence": "IMG-04-S15",
+    "slide": 15,
+    "kind": "Existing project image",
+    "description": "Reused actual gameplay capture",
+    "source": "docs\\language-game-en.png",
+    "status": "PLACED \u2014 review version",
+    "ratio": "360:640"
+  },
+  {
+    "id": "IMG-01",
+    "occurrence": "IMG-01-S16",
+    "slide": 16,
+    "kind": "Existing project image",
+    "description": "Reused project logo",
+    "source": "assets/resources/hud/guli-hud.png",
+    "status": "PLACED \u2014 review version",
+    "ratio": "479:212"
+  },
+  {
+    "id": "IMG-21",
+    "occurrence": "IMG-21-S16",
+    "slide": 16,
+    "kind": "Editable placeholder",
+    "description": "Generate only after verifying the public demo URL.",
+    "source": "User supply / current game capture",
+    "status": "REPLACE",
+    "ratio": "1:1"
+  }
+]

@@ -1,0 +1,27 @@
+const fs = require('node:fs');
+const vm = require('node:vm');
+const assert = require('node:assert/strict');
+const ts = require('../extensions/cocos-creator-mcp-main/node_modules/typescript');
+const source = fs.readFileSync(require('node:path').join(__dirname, '../assets/scripts/GuliGame.ts'), 'utf8');
+const code = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, experimentalDecorators: true } }).outputText;
+const context = { exports: {}, require: name => name === 'cc' ? { Component: class {}, _decorator: { ccclass: () => value => value } } : {} };
+vm.runInNewContext(code, context);
+const game = Object.create(context.exports.GuliGame.prototype);
+let plays = 0;
+game.music = { clip: null, playing: false, play() { plays++; this.playing = true; }, pause() { this.playing = false; }, stop() { this.playing = false; } };
+game.enabledInHierarchy = true; game.save = { sound: true }; game.screen = 'home';
+game.musicClips = { bgm_main_menu: {}, bgm_gameplay: {} };
+game.syncMusic(); assert.equal(plays, 0); // User gesture required.
+game.musicUnlocked = true; game.syncMusic(); assert.equal(plays, 1);
+assert.equal(game.music.clip, game.musicClips.bgm_main_menu);
+game.syncMusic(); game.screen = 'collection'; game.syncMusic(); assert.equal(plays, 1);
+game.screen = 'game'; game.syncMusic(); assert.equal(plays, 2);
+assert.equal(game.music.clip, game.musicClips.bgm_gameplay);
+game.save.sound = false; game.syncMusic(); assert.equal(game.music.playing, false);
+game.save.sound = true; game.syncMusic(); assert.equal(plays, 3);
+game.musicHidden = true; game.syncMusic(); assert.equal(game.music.playing, false);
+game.musicHidden = false; game.syncMusic(); assert.equal(plays, 4);
+game.screen = 'home'; game.syncMusic(); assert.equal(plays, 5);
+game.enabledInHierarchy = false; game.syncMusic(); assert.equal(game.music.playing, false);
+game.enabledInHierarchy = true; game.musicClips = {}; game.syncMusic(); assert.equal(game.music.clip, null);
+console.log('PASS music: gesture, menu/collection continuity, gameplay switch, mute, background, return, disable, pending load');

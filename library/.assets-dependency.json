@@ -1,0 +1,11 @@
+{
+  "data": {
+    "path": {
+      "resources\\hud\\guli-hud.plist": [
+        "resources\\hud\\guli-hud.png"
+      ]
+    },
+    "uuid": {}
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,530 @@
+21:18:01.861 debug: 10/29/2026, 9:18:01 PM
+21:18:01.862 debug: Project: C:\Users\Lenovo\Documents\Guil_Project
+21:18:01.862 debug: Targets: editor,preview
+21:18:01.888 debug: Incremental file seems great.
+21:18:01.890 debug: Engine path: C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine
+21:18:01.938 debug: Initializing target [Editor]
+21:18:01.940 debug: Loading cache
+21:18:02.091 debug: Loading cache costs 150.66449999999895ms.
+21:18:02.091 debug: Engine features shipped in editor: base,gfx-webgl,gfx-webgl2,gfx-empty,gfx-webgpu,3d,animation,skeletal-animation,2d,rich-text,mask,graphics,ui-skew,ui,affine-transform,sorting-2d,particle,particle-2d,physics-framework,physics-cannon,physics-physx,physics-ammo,physics-builtin,physics-2d-framework,physics-2d-box2d-jsb,physics-2d-box2d,physics-2d-builtin,physics-2d-box2d-wasm,intersection-2d,primitive,profiler,occlusion-query,geometry-renderer,debug-renderer,audio,video,xr,light-probe,terrain,webview,tween,tiled-map,vendor-google,spine-3.8,spine-4.2,dragon-bones,marionette,procedural-animation,custom-pipeline,custom-pipeline-builtin-scripts,custom-pipeline-post-process,legacy-pipeline,websocket,websocket-server,meshopt
+21:18:02.093 debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc"
+  }
+}
+21:18:02.094 debug: Initializing target [Preview]
+21:18:02.095 debug: Loading cache
+21:18:02.221 debug: Loading cache costs 126.63330000000133ms.
+21:18:02.222 debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc"
+  }
+}
+21:18:02.299 debug: Sync engine features: 2d,affine-transform,animation,audio,base,custom-pipeline,dragon-bones,gfx-webgl,gfx-webgl2,graphics,intersection-2d,mask,particle-2d,physics-2d-box2d,profiler,rich-text,spine-3.8,tiled-map,tween,ui,video,webview
+21:18:02.305 debug: Reset databases. Enumerated domains: [
+  {
+    "root": "db://internal/",
+    "physical": "C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\resources\\3d\\engine\\editor\\assets"
+  },
+  {
+    "root": "db://assets/",
+    "physical": "C:\\Users\\Lenovo\\Documents\\Guil_Project\\assets"
+  }
+]
+21:18:02.305 debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "db://internal/": "file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/",
+    "db://assets/": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/"
+  }
+}
+21:18:02.316 debug: Our import map(foo:/bar): {
+  "imports": {
+    "cc": "cce:/internal/x/cc",
+    "db://internal/": "file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/",
+    "db://assets/": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/"
+  }
+}
+21:18:02.320 debug: Pulling asset-db.
+21:18:02.352 debug: Fetch asset-db cost: 31.68519999999262ms.
+21:18:02.361 debug: Build iteration starts.
+Number of accumulated asset changes: 25
+Feature changed: false
+21:18:02.362 debug: Target(editor) build started.
+21:18:02.407 debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 07:30:16 GMT+0730 (Malaysia Time), Current mtime: Thu Jan 01 1970 07:31:31 GMT+0730 (Malaysia Time)
+21:18:02.407 debug: Inspect cce:/internal/x/cc
+21:18:02.732 debug: transform url: 'cce:/internal/x/cc' costs: 324.00 ms
+21:18:02.760 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+21:18:02.760 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+21:18:02.761 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl2 from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl2.
+21:18:02.761 debug: Resolve cce:/internal/x/cc-fu/gfx-empty from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-empty.
+21:18:02.761 debug: Resolve cce:/internal/x/cc-fu/gfx-webgpu from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgpu.
+21:18:02.761 debug: Resolve cce:/internal/x/cc-fu/3d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/3d.
+21:18:02.761 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+21:18:02.761 debug: Resolve cce:/internal/x/cc-fu/skeletal-animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/skeletal-animation.
+21:18:02.762 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+21:18:02.764 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+21:18:02.765 debug: Resolve cce:/internal/x/cc-fu/rich-text from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/rich-text.
+21:18:02.765 debug: Resolve cce:/internal/x/cc-fu/mask from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/mask.
+21:18:02.765 debug: Resolve cce:/internal/x/cc-fu/graphics from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/graphics.
+21:18:02.766 debug: Resolve cce:/internal/x/cc-fu/ui-skew from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui-skew.
+21:18:02.766 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+21:18:02.766 debug: Resolve cce:/internal/x/cc-fu/affine-transform from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/affine-transform.
+21:18:02.766 debug: Resolve cce:/internal/x/cc-fu/sorting-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting-2d.
+21:18:02.766 debug: Resolve cce:/internal/x/cc-fu/particle from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle.
+21:18:02.767 debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
+21:18:02.767 debug: Resolve cce:/internal/x/cc-fu/physics-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-framework.
+21:18:02.767 debug: Resolve cce:/internal/x/cc-fu/physics-cannon from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-cannon.
+21:18:02.767 debug: Resolve cce:/internal/x/cc-fu/physics-physx from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-physx.
+21:18:02.767 debug: Resolve cce:/internal/x/cc-fu/physics-ammo from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-ammo.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/physics-builtin from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-builtin.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d-jsb from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d-jsb.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/physics-2d-builtin from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-builtin.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d-wasm from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d-wasm.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/primitive from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/primitive.
+21:18:02.768 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+21:18:02.769 debug: Resolve cce:/internal/x/cc-fu/geometry-renderer from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/geometry-renderer.
+21:18:02.769 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+21:18:02.769 debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
+21:18:02.769 debug: Resolve cce:/internal/x/cc-fu/xr from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/xr.
+21:18:02.769 debug: Resolve cce:/internal/x/cc-fu/light-probe from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/light-probe.
+21:18:02.769 debug: Resolve cce:/internal/x/cc-fu/terrain from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/terrain.
+21:18:02.770 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
+21:18:02.770 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+21:18:02.770 debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
+21:18:02.811 debug: Resolve cce:/internal/x/cc-fu/vendor-google from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/vendor-google.
+21:18:02.812 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
+21:18:02.812 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+21:18:02.812 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
+21:18:02.812 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline-post-process from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline-post-process.
+21:18:02.812 debug: Resolve cce:/internal/x/cc-fu/legacy-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/legacy-pipeline.
+21:18:02.813 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:34:38 GMT+0730 (Malaysia Time), Current mtime: Thu Jan 01 1970 07:31:31 GMT+0730 (Malaysia Time)
+21:18:02.813 debug: Inspect cce:/internal/x/prerequisite-imports
+21:18:02.956 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 142.40 ms
+21:18:02.991 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:18:02.992 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@11f3130e-c08c-47bb-a209-71d114594e6d, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@11f3130e-c08c-47bb-a209-71d114594e6d
+21:18:02.993 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts
+21:18:03.568 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts' costs: 575.00 ms
+21:18:03.599 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:18:03.599 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@6f94083c-fc92-438b-a15b-a20ec61666c7, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@6f94083c-fc92-438b-a15b-a20ec61666c7
+21:18:03.600 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts
+21:18:03.820 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts' costs: 220.20 ms
+21:18:03.913 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:18:03.914 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@de1c2107-70c8-4021-8459-6399f24d01c6, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@de1c2107-70c8-4021-8459-6399f24d01c6
+21:18:03.914 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts
+21:18:04.468 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts' costs: 553.80 ms
+21:18:04.488 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:18:04.489 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@cbf30902-517f-40dc-af90-a550bac27cf1, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@cbf30902-517f-40dc-af90-a550bac27cf1
+21:18:04.489 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts
+21:18:04.804 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts' costs: 315.00 ms
+21:18:04.833 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:18:04.834 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@ff9b0199-ce04-4cfe-86cc-6c719f08d6e4, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@ff9b0199-ce04-4cfe-86cc-6c719f08d6e4
+21:18:04.835 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts
+21:18:05.967 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts' costs: 1131.90 ms
+21:18:06.002 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:18:06.003 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts. Last mtime: Sun Oct 18 2026 21:28:58 GMT+0800 (Malaysia Time)@b2bd1fa7-8d7c-49c5-a158-df29a6d3a594, Current mtime: Thu Oct 29 2026 21:13:47 GMT+0800 (Malaysia Time)@b2bd1fa7-8d7c-49c5-a158-df29a6d3a594
+21:18:06.003 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts
+21:18:06.365 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts' costs: 362.20 ms
+21:18:06.379 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts.
+21:18:06.386 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts.
+21:18:06.401 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.402 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts.
+21:18:06.404 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:06.406 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts.
+21:18:06.407 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts.
+21:18:06.409 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts.
+21:18:06.411 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts.
+21:18:06.413 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts.
+21:18:06.417 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts.
+21:18:06.419 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts.
+21:18:06.421 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts.
+21:18:06.424 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts.
+21:18:06.426 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts.
+21:18:06.428 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts.
+21:18:06.430 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts.
+21:18:06.434 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts.
+21:18:06.436 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts.
+21:18:06.437 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.438 debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Wed Oct 28 2026 11:44:19 GMT+0800 (Malaysia Time), Current mtime: Thu Oct 29 2026 21:16:30 GMT+0800 (Malaysia Time)
+21:18:06.438 debug: Inspect cce:/internal/code-quality/cr.mjs
+21:18:06.487 debug: transform url: 'cce:/internal/code-quality/cr.mjs' costs: 47.90 ms
+21:18:06.523 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+21:18:06.537 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+21:18:06.537 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+21:18:06.538 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as external dependency cc/env.
+21:18:06.547 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:18:06.551 debug: Resolve ./builtin-pipeline-pass from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:18:06.556 debug: Resolve ./builtin-pipeline from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:18:06.556 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.556 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:18:06.557 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:18:06.557 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:18:06.557 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as external dependency cc/env.
+21:18:06.561 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:18:06.561 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:18:06.561 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:18:06.562 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:18:06.562 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.562 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+21:18:06.563 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+21:18:06.563 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+21:18:06.567 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:18:06.567 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as external dependency cc/env.
+21:18:06.567 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.567 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:18:06.567 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:18:06.568 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:18:06.568 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as external dependency cc/env.
+21:18:06.621 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:18:06.621 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:18:06.621 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:18:06.621 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:18:06.622 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.622 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts as cce:/internal/x/cc.
+21:18:06.625 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.625 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts as cce:/internal/x/cc.
+21:18:06.625 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.625 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts as cce:/internal/x/cc.
+21:18:06.626 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.626 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as cce:/internal/x/cc.
+21:18:06.626 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as cce:/internal/x/cc.
+21:18:06.645 debug: Resolve ./HuaweiLogin from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts.
+21:18:06.648 debug: Resolve ./Localization from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts.
+21:18:06.650 debug: Resolve ./LanguageSwitch from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts.
+21:18:06.651 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as cce:/internal/x/cc.
+21:18:06.652 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.654 debug: Resolve ./GuliPhysics from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:06.654 debug: Resolve cc/env from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as external dependency cc/env.
+21:18:06.656 debug: Resolve ./Slingshot from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts.
+21:18:06.659 debug: Resolve ./AimPrediction from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts.
+21:18:06.661 debug: Resolve ./MarbleAppearance from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts.
+21:18:06.663 debug: Resolve ./MarbleRenderer from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts.
+21:18:06.665 debug: Resolve ./Tutorial from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts.
+21:18:06.668 debug: Resolve ./TutorialView from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts.
+21:18:06.669 debug: Resolve ./GameHints from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts.
+21:18:06.671 debug: Resolve ./RollbackVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts.
+21:18:06.678 debug: Resolve ./PhysicsVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts.
+21:18:06.683 debug: Resolve ./MarbleAppearancePreview from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts.
+21:18:06.685 debug: Resolve ./MarbleAppearancePreview from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts.
+21:18:06.687 debug: Resolve ./SlingshotVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts.
+21:18:06.690 debug: Resolve ./LanguageVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts.
+21:18:06.692 debug: Resolve ./TutorialVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts.
+21:18:06.692 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts as cce:/internal/x/cc.
+21:18:06.692 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts as cce:/internal/x/cc.
+21:18:06.693 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.693 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts as cce:/internal/x/cc.
+21:18:06.693 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts as cce:/internal/x/cc.
+21:18:06.695 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts as cce:/internal/x/cc.
+21:18:06.695 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.696 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as cce:/internal/x/cc.
+21:18:06.696 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as cce:/internal/x/cc.
+21:18:06.696 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as cce:/internal/x/cc.
+21:18:06.698 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.698 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts as cce:/internal/x/cc.
+21:18:06.699 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts as cce:/internal/x/cc.
+21:18:06.699 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.699 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts as cce:/internal/x/cc.
+21:18:06.699 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts as cce:/internal/x/cc.
+21:18:06.699 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts as cce:/internal/x/cc.
+21:18:06.699 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.699 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts as cce:/internal/x/cc.
+21:18:06.701 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.701 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts as cce:/internal/x/cc.
+21:18:06.701 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts as cce:/internal/x/cc.
+21:18:06.702 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts as cce:/internal/x/cc.
+21:18:06.702 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.702 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as cce:/internal/x/cc.
+21:18:06.702 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as cce:/internal/x/cc.
+21:18:06.702 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as cce:/internal/x/cc.
+21:18:06.704 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.707 debug: Resolve ./GuliPhysics from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:06.707 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.708 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as cce:/internal/x/cc.
+21:18:06.708 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as cce:/internal/x/cc.
+21:18:06.708 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as cce:/internal/x/cc.
+21:18:06.711 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.714 debug: Resolve ./GuliPhysics from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:06.714 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.714 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts as cce:/internal/x/cc.
+21:18:06.716 debug: Resolve ./GuliPhysics from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:06.716 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.716 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as cce:/internal/x/cc.
+21:18:06.717 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as cce:/internal/x/cc.
+21:18:06.717 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as cce:/internal/x/cc.
+21:18:06.719 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.721 debug: Resolve ./Slingshot from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts.
+21:18:06.721 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.721 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as cce:/internal/x/cc.
+21:18:06.722 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as cce:/internal/x/cc.
+21:18:06.722 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as cce:/internal/x/cc.
+21:18:06.723 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.726 debug: Resolve ./LanguageSwitch from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts.
+21:18:06.726 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:06.727 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as cce:/internal/x/cc.
+21:18:06.727 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as cce:/internal/x/cc.
+21:18:06.727 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as cce:/internal/x/cc.
+21:18:06.729 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:06.862 debug: Target(editor) ends with cost 4500.1206999999995ms.
+21:18:06.863 debug: Target(preview) build started.
+21:18:06.877 debug: Detected change: cce:/internal/x/cc. Last mtime: Thu Jan 01 1970 07:30:16 GMT+0730 (Malaysia Time), Current mtime: Thu Jan 01 1970 07:31:31 GMT+0730 (Malaysia Time)
+21:18:06.877 debug: Inspect cce:/internal/x/cc
+21:18:06.968 debug: transform url: 'cce:/internal/x/cc' costs: 91.20 ms
+21:18:06.973 debug: Resolve cce:/internal/x/cc-fu/2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/2d.
+21:18:06.973 debug: Resolve cce:/internal/x/cc-fu/sorting from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/sorting.
+21:18:06.973 debug: Resolve cce:/internal/x/cc-fu/affine-transform from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/affine-transform.
+21:18:06.973 debug: Resolve cce:/internal/x/cc-fu/animation from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/animation.
+21:18:06.973 debug: Resolve cce:/internal/x/cc-fu/audio from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/audio.
+21:18:06.976 debug: Resolve cce:/internal/x/cc-fu/base from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/base.
+21:18:06.977 debug: Resolve cce:/internal/x/cc-fu/custom-pipeline from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/custom-pipeline.
+21:18:06.977 debug: Resolve cce:/internal/x/cc-fu/dragon-bones from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/dragon-bones.
+21:18:06.977 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl.
+21:18:06.977 debug: Resolve cce:/internal/x/cc-fu/gfx-webgl2 from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/gfx-webgl2.
+21:18:06.977 debug: Resolve cce:/internal/x/cc-fu/graphics from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/graphics.
+21:18:06.978 debug: Resolve cce:/internal/x/cc-fu/intersection-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/intersection-2d.
+21:18:06.978 debug: Resolve cce:/internal/x/cc-fu/mask from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/mask.
+21:18:06.984 debug: Resolve cce:/internal/x/cc-fu/particle-2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/particle-2d.
+21:18:06.984 debug: Resolve cce:/internal/x/cc-fu/physics-2d-box2d from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-box2d.
+21:18:06.984 debug: Resolve cce:/internal/x/cc-fu/physics-2d-framework from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/physics-2d-framework.
+21:18:06.984 debug: Resolve cce:/internal/x/cc-fu/profiler from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/profiler.
+21:18:06.984 debug: Resolve cce:/internal/x/cc-fu/rich-text from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/rich-text.
+21:18:06.985 debug: Resolve cce:/internal/x/cc-fu/spine from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/spine.
+21:18:06.985 debug: Resolve cce:/internal/x/cc-fu/tiled-map from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tiled-map.
+21:18:06.985 debug: Resolve cce:/internal/x/cc-fu/tween from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/tween.
+21:18:06.985 debug: Resolve cce:/internal/x/cc-fu/ui from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/ui.
+21:18:06.985 debug: Resolve cce:/internal/x/cc-fu/video from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/video.
+21:18:06.985 debug: Resolve cce:/internal/x/cc-fu/webview from cce:/internal/x/cc as external dependency cce:/internal/x/cc-fu/webview.
+21:18:06.985 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:34:39 GMT+0730 (Malaysia Time), Current mtime: Thu Jan 01 1970 07:31:36 GMT+0730 (Malaysia Time)
+21:18:06.985 debug: Inspect cce:/internal/x/prerequisite-imports
+21:18:07.040 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 55.00 ms
+21:18:07.047 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:18:07.048 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@11f3130e-c08c-47bb-a209-71d114594e6d, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@11f3130e-c08c-47bb-a209-71d114594e6d
+21:18:07.048 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts
+21:18:07.308 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts' costs: 259.10 ms
+21:18:07.319 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:18:07.319 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@6f94083c-fc92-438b-a15b-a20ec61666c7, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@6f94083c-fc92-438b-a15b-a20ec61666c7
+21:18:07.320 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts
+21:18:07.448 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts' costs: 128.00 ms
+21:18:07.475 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:18:07.476 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@de1c2107-70c8-4021-8459-6399f24d01c6, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@de1c2107-70c8-4021-8459-6399f24d01c6
+21:18:07.476 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts
+21:18:07.764 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts' costs: 288.10 ms
+21:18:07.808 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:18:07.808 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@cbf30902-517f-40dc-af90-a550bac27cf1, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@cbf30902-517f-40dc-af90-a550bac27cf1
+21:18:07.809 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts
+21:18:07.976 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts' costs: 167.60 ms
+21:18:07.985 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:18:07.985 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts. Last mtime: Sun Oct 18 2026 21:28:57 GMT+0800 (Malaysia Time)@ff9b0199-ce04-4cfe-86cc-6c719f08d6e4, Current mtime: Thu Oct 29 2026 21:13:46 GMT+0800 (Malaysia Time)@ff9b0199-ce04-4cfe-86cc-6c719f08d6e4
+21:18:07.985 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts
+21:18:08.989 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts' costs: 1002.90 ms
+21:18:09.037 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:18:09.038 debug: Detected change: file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts. Last mtime: Sun Oct 18 2026 21:28:58 GMT+0800 (Malaysia Time)@b2bd1fa7-8d7c-49c5-a158-df29a6d3a594, Current mtime: Thu Oct 29 2026 21:13:47 GMT+0800 (Malaysia Time)@b2bd1fa7-8d7c-49c5-a158-df29a6d3a594
+21:18:09.038 debug: Inspect file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts
+21:18:09.429 debug: transform url: 'file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts' costs: 390.80 ms
+21:18:09.437 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts.
+21:18:09.440 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts.
+21:18:09.443 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.446 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts.
+21:18:09.448 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:09.457 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts.
+21:18:09.459 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts.
+21:18:09.462 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts.
+21:18:09.463 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts.
+21:18:09.467 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts.
+21:18:09.471 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts.
+21:18:09.473 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts.
+21:18:09.474 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts.
+21:18:09.476 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts.
+21:18:09.478 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts.
+21:18:09.481 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts.
+21:18:09.483 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts.
+21:18:09.484 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts.
+21:18:09.486 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts.
+21:18:09.487 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.488 debug: Detected change: cce:/internal/code-quality/cr.mjs. Last mtime: Wed Oct 28 2026 11:44:19 GMT+0800 (Malaysia Time), Current mtime: Thu Oct 29 2026 21:16:30 GMT+0800 (Malaysia Time)
+21:18:09.488 debug: Inspect cce:/internal/code-quality/cr.mjs
+21:18:09.525 debug: transform url: 'cce:/internal/code-quality/cr.mjs' costs: 37.40 ms
+21:18:09.530 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+21:18:09.530 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+21:18:09.530 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as cce:/internal/x/cc.
+21:18:09.530 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as external dependency cc/env.
+21:18:09.534 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:18:09.540 debug: Resolve ./builtin-pipeline-pass from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:18:09.544 debug: Resolve ./builtin-pipeline from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:18:09.544 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.545 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:18:09.546 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:18:09.546 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as cce:/internal/x/cc.
+21:18:09.546 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as external dependency cc/env.
+21:18:09.549 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:18:09.550 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:18:09.550 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:18:09.550 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts as cce:/internal/x/cc.
+21:18:09.550 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.550 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+21:18:09.550 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+21:18:09.550 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as cce:/internal/x/cc.
+21:18:09.554 debug: Resolve ./builtin-pipeline-settings from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:18:09.554 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts as external dependency cc/env.
+21:18:09.554 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.554 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:18:09.555 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:18:09.555 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as cce:/internal/x/cc.
+21:18:09.555 debug: Resolve cc/env from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as external dependency cc/env.
+21:18:09.557 debug: Resolve ./builtin-pipeline-types from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:18:09.558 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:18:09.561 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:18:09.561 debug: Resolve cc from file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts as cce:/internal/x/cc.
+21:18:09.561 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.561 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts as cce:/internal/x/cc.
+21:18:09.563 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.563 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts as cce:/internal/x/cc.
+21:18:09.563 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.564 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts as cce:/internal/x/cc.
+21:18:09.564 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.564 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as cce:/internal/x/cc.
+21:18:09.564 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as cce:/internal/x/cc.
+21:18:09.567 debug: Resolve ./HuaweiLogin from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts.
+21:18:09.570 debug: Resolve ./Localization from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts.
+21:18:09.571 debug: Resolve ./LanguageSwitch from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts.
+21:18:09.573 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as cce:/internal/x/cc.
+21:18:09.575 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.577 debug: Resolve ./GuliPhysics from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:09.577 debug: Resolve cc/env from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as external dependency cc/env.
+21:18:09.579 debug: Resolve ./Slingshot from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts.
+21:18:09.581 debug: Resolve ./AimPrediction from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts.
+21:18:09.582 debug: Resolve ./MarbleAppearance from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts.
+21:18:09.585 debug: Resolve ./MarbleRenderer from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts.
+21:18:09.586 debug: Resolve ./Tutorial from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts.
+21:18:09.588 debug: Resolve ./TutorialView from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts.
+21:18:09.591 debug: Resolve ./GameHints from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts.
+21:18:09.594 debug: Resolve ./RollbackVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts.
+21:18:09.595 debug: Resolve ./PhysicsVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts.
+21:18:09.597 debug: Resolve ./MarbleAppearancePreview from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts.
+21:18:09.599 debug: Resolve ./MarbleAppearancePreview from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts.
+21:18:09.601 debug: Resolve ./SlingshotVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts.
+21:18:09.603 debug: Resolve ./LanguageVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts.
+21:18:09.606 debug: Resolve ./TutorialVerification from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts.
+21:18:09.606 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts as cce:/internal/x/cc.
+21:18:09.606 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts as cce:/internal/x/cc.
+21:18:09.607 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.607 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts as cce:/internal/x/cc.
+21:18:09.607 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts as cce:/internal/x/cc.
+21:18:09.607 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts as cce:/internal/x/cc.
+21:18:09.607 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.607 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as cce:/internal/x/cc.
+21:18:09.607 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as cce:/internal/x/cc.
+21:18:09.607 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as cce:/internal/x/cc.
+21:18:09.609 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.609 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts as cce:/internal/x/cc.
+21:18:09.610 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts as cce:/internal/x/cc.
+21:18:09.610 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.610 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts as cce:/internal/x/cc.
+21:18:09.610 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts as cce:/internal/x/cc.
+21:18:09.610 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts as cce:/internal/x/cc.
+21:18:09.610 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.611 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts as cce:/internal/x/cc.
+21:18:09.613 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.614 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts as cce:/internal/x/cc.
+21:18:09.614 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts as cce:/internal/x/cc.
+21:18:09.614 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts as cce:/internal/x/cc.
+21:18:09.614 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.615 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as cce:/internal/x/cc.
+21:18:09.615 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as cce:/internal/x/cc.
+21:18:09.615 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as cce:/internal/x/cc.
+21:18:09.617 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.618 debug: Resolve ./GuliPhysics from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:09.618 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.619 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as cce:/internal/x/cc.
+21:18:09.619 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as cce:/internal/x/cc.
+21:18:09.619 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as cce:/internal/x/cc.
+21:18:09.622 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.624 debug: Resolve ./GuliPhysics from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:09.624 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.624 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts as cce:/internal/x/cc.
+21:18:09.626 debug: Resolve ./GuliPhysics from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:09.626 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.627 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as cce:/internal/x/cc.
+21:18:09.627 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as cce:/internal/x/cc.
+21:18:09.627 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as cce:/internal/x/cc.
+21:18:09.629 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.631 debug: Resolve ./Slingshot from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts.
+21:18:09.631 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.631 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as cce:/internal/x/cc.
+21:18:09.631 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as cce:/internal/x/cc.
+21:18:09.631 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as cce:/internal/x/cc.
+21:18:09.633 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.635 debug: Resolve ./LanguageSwitch from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts.
+21:18:09.635 debug: Resolve cce:/internal/code-quality/cr.mjs from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as cce:/internal/code-quality/cr.mjs.
+21:18:09.635 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as cce:/internal/x/cc.
+21:18:09.635 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as cce:/internal/x/cc.
+21:18:09.636 debug: Resolve cc from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as cce:/internal/x/cc.
+21:18:09.638 debug: Resolve ./GameModel from file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:09.750 debug: Target(preview) ends with cost 2886.189400000003ms.
+21:18:13.893 debug: Pulling asset-db.
+21:18:14.221 debug: Fetch asset-db cost: 328.1903999999922ms.
+21:18:14.225 debug: Build iteration starts.
+Number of accumulated asset changes: 25
+Feature changed: false
+21:18:14.226 debug: Target(editor) build started.
+21:18:14.243 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:31:31 GMT+0730 (Malaysia Time), Current mtime: Thu Jan 01 1970 07:31:43 GMT+0730 (Malaysia Time)
+21:18:14.243 debug: Inspect cce:/internal/x/prerequisite-imports
+21:18:14.296 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 52.70 ms
+21:18:14.310 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:18:14.313 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:18:14.316 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:18:14.319 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:18:14.329 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:18:14.331 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:18:14.333 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts.
+21:18:14.334 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts.
+21:18:14.336 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:14.337 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts.
+21:18:14.341 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:14.342 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts.
+21:18:14.344 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts.
+21:18:14.345 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts.
+21:18:14.348 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts.
+21:18:14.349 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts.
+21:18:14.350 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts.
+21:18:14.352 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts.
+21:18:14.354 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts.
+21:18:14.356 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts.
+21:18:14.358 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts.
+21:18:14.359 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts.
+21:18:14.361 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts.
+21:18:14.362 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts.
+21:18:14.364 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts.
+21:18:14.449 debug: Target(editor) ends with cost 222.5734000000084ms.
+21:18:14.450 debug: Target(preview) build started.
+21:18:14.461 debug: Detected change: cce:/internal/x/prerequisite-imports. Last mtime: Thu Jan 01 1970 07:31:36 GMT+0730 (Malaysia Time), Current mtime: Thu Jan 01 1970 07:31:43 GMT+0730 (Malaysia Time)
+21:18:14.461 debug: Inspect cce:/internal/x/prerequisite-imports
+21:18:14.510 debug: transform url: 'cce:/internal/x/prerequisite-imports' costs: 49.00 ms
+21:18:14.523 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-dof-pass.ts.
+21:18:14.533 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-pass.ts.
+21:18:14.536 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-settings.ts.
+21:18:14.538 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline-types.ts.
+21:18:14.540 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts.
+21:18:14.544 debug: Resolve file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts from cce:/internal/x/prerequisite-imports as file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts.
+21:18:14.547 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts.
+21:18:14.548 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts.
+21:18:14.550 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts.
+21:18:14.552 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts.
+21:18:14.553 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts.
+21:18:14.555 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts.
+21:18:14.557 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts.
+21:18:14.559 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts.
+21:18:14.561 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts.
+21:18:14.562 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts.
+21:18:14.563 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts.
+21:18:14.564 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts.
+21:18:14.566 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts.
+21:18:14.567 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts.
+21:18:14.569 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts.
+21:18:14.571 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/SlingshotVerification.ts.
+21:18:14.572 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Tutorial.ts.
+21:18:14.576 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialVerification.ts.
+21:18:14.577 debug: Resolve file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts from cce:/internal/x/prerequisite-imports as file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/TutorialView.ts.
+21:18:14.661 debug: Target(preview) ends with cost 211.2100999999966ms.

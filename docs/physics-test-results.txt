@@ -1,0 +1,19 @@
+Cocos 3.8.8 actual Box2D verification
+PTM=32; config={"timestep":0.008333333333333333,"maxSubSteps":12,"velocityIterations":10,"positionIterations":10,"restitution":0.45,"friction":0.05,"linearDamping":0.65,"mass":1,"settleSpeed":2,"settleDuration":0.25}
+PASS Engine unit conversion, collider radius and equal masses
+PASS Restitution 0.3 / 0.45 / 0.6: momentum, energy and one response
+PASS Unequal masses are resolved by the engine
+PASS Damping acts once, without a second manual friction pass
+PASS Entire-ball boundary and deferred counting
+PASS Low speed must persist, collisions reset quiet time, no 15-second forced result
+PASS Pause (no advance), resume and replay cleanup
+PASS Overlapping start separates stably; maximum-power shot does not tunnel
+PASS 30 / 60 / 144 FPS and a long frame produce the same completed shot
+PASS Last permitted shot can win; shooter removed only after completed settlement
+Level 1: 1 shots, 2 targets, 3 stars; route=[[-120,-85,0.45]]
+Level 2: 1 shots, 4 targets, 3 stars; route=[[80,145,0.65]]
+Level 3: 1 shots, 4 targets, 3 stars; route=[[130,140,1]]
+Level 4: 2 shots, 6 targets, 3 stars; route=[[-35,170,1],[-105,-100,1]]
+Level 5: 2 shots, 10 targets, 3 stars; route=[[-5,190,1],[-35.5414457321167,251.42347717285156,1]]
+PASS All five unchanged levels retain a three-star route
+DONE: 11 passed, 0 failed.
