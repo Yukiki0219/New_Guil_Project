@@ -159,3 +159,28 @@
 11-15-2026 20:25:16-debug: asset-db:refresh-all-database (70ms)
 11-15-2026 20:25:16-debug: asset-db:worker-effect-data-processing (2ms)
 11-15-2026 20:25:16-debug: asset-db-hook-engine-extends-afterRefresh (2ms)
+11-15-2026 20:29:49-debug: refresh db internal success
+11-15-2026 20:29:49-debug: refresh db assets success
+11-15-2026 20:29:49-debug: Run asset db hook engine-extends:afterRefresh ...
+11-15-2026 20:29:49-debug: Run asset db hook engine-extends:afterRefresh success!
+11-15-2026 20:29:49-debug: asset-db:refresh-all-database (63ms)
+11-15-2026 20:36:28-debug: refresh db internal success
+11-15-2026 20:36:28-debug: refresh db assets success
+11-15-2026 20:36:28-debug: Run asset db hook engine-extends:afterRefresh ...
+11-15-2026 20:36:28-debug: Run asset db hook engine-extends:afterRefresh success!
+11-15-2026 20:36:28-debug: asset-db:refresh-all-database (181ms)
+11-15-2026 20:36:28-debug: asset-db:worker-effect-data-processing (1ms)
+11-15-2026 20:36:28-debug: asset-db-hook-engine-extends-afterRefresh (1ms)
+11-15-2026 20:53:34-debug: refresh db internal success
+11-15-2026 20:53:34-debug: refresh db assets success
+11-15-2026 20:53:34-debug: Run asset db hook engine-extends:afterRefresh ...
+11-15-2026 20:53:34-debug: Run asset db hook engine-extends:afterRefresh success!
+11-15-2026 20:53:34-debug: asset-db:refresh-all-database (141ms)
+11-15-2026 20:53:34-debug: asset-db:worker-effect-data-processing (-1ms)
+11-15-2026 20:57:09-debug: refresh db internal success
+11-15-2026 20:57:09-debug: refresh db assets success
+11-15-2026 20:57:09-debug: Run asset db hook engine-extends:afterRefresh ...
+11-15-2026 20:57:09-debug: Run asset db hook engine-extends:afterRefresh success!
+11-15-2026 20:57:09-debug: asset-db:refresh-all-database (69ms)
+11-15-2026 20:57:09-debug: asset-db:worker-effect-data-processing (2ms)
+11-15-2026 20:57:09-debug: asset-db-hook-engine-extends-afterRefresh (3ms)
