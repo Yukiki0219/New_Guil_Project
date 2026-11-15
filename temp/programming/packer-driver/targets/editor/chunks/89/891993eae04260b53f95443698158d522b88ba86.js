@@ -1,21 +1,13 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "__unresolved_5", "cc/env", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "cc/env", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, HuaweiLogin, LOGIN_TEXT, translate, LanguageSwitch, _decorator, Component, Node, UITransform, Graphics, Color, Label, Vec3, input, Input, KeyCode, view, ResolutionPolicy, resources, SpriteFrame, Sprite, sys, AudioSource, AudioClip, Canvas, Camera, profiler, Prefab, instantiate, Button, BlockInputEvents, game, Game, GameModel, MARBLE_COUNT, LEVELS, RADIUS, SHOOTER_Y, cleanSave, award, rollMarbles, marbleName, rarity, GuliPhysics, PREVIEW, HUAWEI, Slingshot, GROUND_Y_SCALE, predictAim, MARBLE_APPEARANCES, drawMarbleAppearance, Tutorial, TutorialView, GameHints, HINT_TEXT, _dec, _class, _crd, ccclass, CREAM, INK, TEAL, GOLD, PALETTE, GuliGame;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, translate, LanguageSwitch, _decorator, Component, Node, UITransform, Graphics, Color, Label, Vec3, input, Input, KeyCode, view, ResolutionPolicy, resources, SpriteFrame, Sprite, Mask, sys, AudioSource, AudioClip, Canvas, Camera, profiler, Prefab, instantiate, Button, BlockInputEvents, UIOpacity, game, Game, GameModel, MARBLE_COUNT, LEVELS, RADIUS, SHOOTER_Y, cleanSave, award, rollMarbles, marbleName, rarity, GuliPhysics, PREVIEW, Slingshot, GROUND_Y_SCALE, predictAim, MARBLE_APPEARANCES, drawMarbleAppearance, Tutorial, TutorialView, GameHints, HINT_TEXT, REWARDS, RARITIES, drawReward, equipReward, rewardById, _dec, _class, _crd, ccclass, CREAM, INK, TEAL, GOLD, PALETTE, GACHA_MARBLE_SOURCES, GuliGame;
 
   function col(hex, alpha = 255) {
     const c = new Color();
     Color.fromHEX(c, hex);
     c.a = alpha;
     return c;
-  }
-
-  function _reportPossibleCrUseOfHuaweiLogin(extras) {
-    _reporterNs.report("HuaweiLogin", "./HuaweiLogin", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfLOGIN_TEXT(extras) {
-    _reporterNs.report("LOGIN_TEXT", "./HuaweiLogin", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOftranslate(extras) {
@@ -118,6 +110,34 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
     _reporterNs.report("HINT_TEXT", "./GameHints", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOfREWARDS(extras) {
+    _reporterNs.report("REWARDS", "./Gacha", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfRARITIES(extras) {
+    _reporterNs.report("RARITIES", "./Gacha", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfReward(extras) {
+    _reporterNs.report("Reward", "./Gacha", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfRewardKind(extras) {
+    _reporterNs.report("RewardKind", "./Gacha", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfdrawReward(extras) {
+    _reporterNs.report("drawReward", "./Gacha", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfequipReward(extras) {
+    _reporterNs.report("equipReward", "./Gacha", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfrewardById(extras) {
+    _reporterNs.report("rewardById", "./Gacha", _context.meta, extras);
+  }
+
   return {
     setters: [function (_unresolved_) {
       _reporterNs = _unresolved_;
@@ -141,6 +161,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       resources = _cc.resources;
       SpriteFrame = _cc.SpriteFrame;
       Sprite = _cc.Sprite;
+      Mask = _cc.Mask;
       sys = _cc.sys;
       AudioSource = _cc.AudioSource;
       AudioClip = _cc.AudioClip;
@@ -151,54 +172,57 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       instantiate = _cc.instantiate;
       Button = _cc.Button;
       BlockInputEvents = _cc.BlockInputEvents;
+      UIOpacity = _cc.UIOpacity;
       game = _cc.game;
       Game = _cc.Game;
     }, function (_unresolved_2) {
-      HuaweiLogin = _unresolved_2.HuaweiLogin;
-      LOGIN_TEXT = _unresolved_2.LOGIN_TEXT;
+      translate = _unresolved_2.translate;
     }, function (_unresolved_3) {
-      translate = _unresolved_3.translate;
+      LanguageSwitch = _unresolved_3.LanguageSwitch;
     }, function (_unresolved_4) {
-      LanguageSwitch = _unresolved_4.LanguageSwitch;
+      GameModel = _unresolved_4.GameModel;
+      MARBLE_COUNT = _unresolved_4.MARBLE_COUNT;
+      LEVELS = _unresolved_4.LEVELS;
+      RADIUS = _unresolved_4.RADIUS;
+      SHOOTER_Y = _unresolved_4.SHOOTER_Y;
+      cleanSave = _unresolved_4.cleanSave;
+      award = _unresolved_4.award;
+      rollMarbles = _unresolved_4.rollMarbles;
+      marbleName = _unresolved_4.marbleName;
+      rarity = _unresolved_4.rarity;
     }, function (_unresolved_5) {
-      GameModel = _unresolved_5.GameModel;
-      MARBLE_COUNT = _unresolved_5.MARBLE_COUNT;
-      LEVELS = _unresolved_5.LEVELS;
-      RADIUS = _unresolved_5.RADIUS;
-      SHOOTER_Y = _unresolved_5.SHOOTER_Y;
-      cleanSave = _unresolved_5.cleanSave;
-      award = _unresolved_5.award;
-      rollMarbles = _unresolved_5.rollMarbles;
-      marbleName = _unresolved_5.marbleName;
-      rarity = _unresolved_5.rarity;
-    }, function (_unresolved_6) {
-      GuliPhysics = _unresolved_6.GuliPhysics;
+      GuliPhysics = _unresolved_5.GuliPhysics;
     }, function (_ccEnv) {
       PREVIEW = _ccEnv.PREVIEW;
-      HUAWEI = _ccEnv.HUAWEI;
+    }, function (_unresolved_6) {
+      Slingshot = _unresolved_6.Slingshot;
+      GROUND_Y_SCALE = _unresolved_6.GROUND_Y_SCALE;
     }, function (_unresolved_7) {
-      Slingshot = _unresolved_7.Slingshot;
-      GROUND_Y_SCALE = _unresolved_7.GROUND_Y_SCALE;
+      predictAim = _unresolved_7.predictAim;
     }, function (_unresolved_8) {
-      predictAim = _unresolved_8.predictAim;
+      MARBLE_APPEARANCES = _unresolved_8.MARBLE_APPEARANCES;
     }, function (_unresolved_9) {
-      MARBLE_APPEARANCES = _unresolved_9.MARBLE_APPEARANCES;
+      drawMarbleAppearance = _unresolved_9.drawMarbleAppearance;
     }, function (_unresolved_10) {
-      drawMarbleAppearance = _unresolved_10.drawMarbleAppearance;
+      Tutorial = _unresolved_10.Tutorial;
     }, function (_unresolved_11) {
-      Tutorial = _unresolved_11.Tutorial;
+      TutorialView = _unresolved_11.TutorialView;
     }, function (_unresolved_12) {
-      TutorialView = _unresolved_12.TutorialView;
+      GameHints = _unresolved_12.GameHints;
+      HINT_TEXT = _unresolved_12.HINT_TEXT;
     }, function (_unresolved_13) {
-      GameHints = _unresolved_13.GameHints;
-      HINT_TEXT = _unresolved_13.HINT_TEXT;
+      REWARDS = _unresolved_13.REWARDS;
+      RARITIES = _unresolved_13.RARITIES;
+      drawReward = _unresolved_13.drawReward;
+      equipReward = _unresolved_13.equipReward;
+      rewardById = _unresolved_13.rewardById;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "9f327wByUVCf5emlKuSSWzp", "GuliGame", undefined);
 
-      __checkObsolete__(['_decorator', 'Component', 'Node', 'UITransform', 'Graphics', 'Color', 'Label', 'Vec3', 'input', 'Input', 'EventTouch', 'EventMouse', 'EventKeyboard', 'KeyCode', 'view', 'ResolutionPolicy', 'resources', 'SpriteFrame', 'Sprite', 'sys', 'AudioSource', 'AudioClip', 'Canvas', 'Camera', 'profiler', 'Prefab', 'instantiate', 'Button', 'BlockInputEvents', 'game', 'Game']);
+      __checkObsolete__(['_decorator', 'Component', 'Node', 'UITransform', 'Graphics', 'Color', 'Label', 'Vec3', 'input', 'Input', 'EventTouch', 'EventMouse', 'EventKeyboard', 'KeyCode', 'view', 'ResolutionPolicy', 'resources', 'SpriteFrame', 'Sprite', 'Mask', 'sys', 'AudioSource', 'AudioClip', 'Canvas', 'Camera', 'profiler', 'Prefab', 'instantiate', 'Button', 'BlockInputEvents', 'UIOpacity', 'game', 'Game']);
 
       ({
         ccclass
@@ -208,15 +232,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       TEAL = '#008e96';
       GOLD = '#e0a13d';
       PALETTE = ['#168acb', '#d89516', '#20996b', '#8155bb', '#c44661', '#82becb', '#39b5a3', '#e17d55', '#475bba', '#e7ac30'];
+      GACHA_MARBLE_SOURCES = [4, 2, 6, 5, 13, 0, 7, 14, 42, 23, 27, 31, 26, 28, 39, 36, 35, 25, 44, 54];
 
       _export("GuliGame", GuliGame = (_dec = ccclass('GuliGame'), _dec(_class = class GuliGame extends Component {
         constructor(...args) {
           super(...args);
-          this.huaweiLogin = new (_crd && HuaweiLogin === void 0 ? (_reportPossibleCrUseOfHuaweiLogin({
-            error: Error()
-          }), HuaweiLogin) : HuaweiLogin)(HUAWEI && !PREVIEW);
-          this.hmsButton = null;
-          this.hmsNotice = null;
           this.translatedLabels = new Map();
           this.screen = 'home';
           this.save = (_crd && cleanSave === void 0 ? (_reportPossibleCrUseOfcleanSave({
@@ -241,6 +261,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.ui = void 0;
           this.board = void 0;
+          this.trailLayer = void 0;
           this.ballLayer = void 0;
           this.overlay = void 0;
           this.aimG = void 0;
@@ -284,65 +305,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.clips = {};
           this.newItems = 0;
+          this.earnedStars = 0;
+          this.lastReward = null;
+          this.wardrobeKind = 'marble';
+          this.navSwipe = null;
+          this.trailMarks = [];
+          this.trailClock = 0;
+          this.trailPreviews = [];
+          this.sceneSprite = void 0;
+          this.sceneFallback = void 0;
+          this.sceneArtId = '';
+          this.flowerTrailFrame = null;
           this.storageWarning = false;
           this.artwork = {};
           this.aimMarker = null;
           this.shotsHud = null;
           this.invalidHud = null;
-        }
-
-        ensureHuaweiLogin() {
-          return this.huaweiLogin.canPlay;
-        }
-
-        beginHuaweiLogin(interactive = true) {
-          this.huaweiLogin.onChange = () => {
-            if (!this.isValid) return; // Stop an active pull when the platform explicitly restricts play; keep progress intact.
-
-            if (!this.huaweiLogin.canPlay) this.cancelInput();
-            this.refreshHuaweiLoginUI();
-          };
-
-          this.huaweiLogin.login(interactive);
-        }
-
-        renderHuaweiLoginUI() {
-          this.hmsButton = null;
-          this.hmsNotice = null;
-          if (!this.huaweiLogin.required || this.screen !== 'home' && this.screen !== 'game') return;
-          this.button('登录HMS', -255, 615, 170, 38, () => this.beginHuaweiLogin());
-          this.hmsButton = this.ui.children[this.ui.children.length - 1];
-          this.hmsNotice = this.label((_crd && LOGIN_TEXT === void 0 ? (_reportPossibleCrUseOfLOGIN_TEXT({
-            error: Error()
-          }), LOGIN_TEXT) : LOGIN_TEXT).idle, this.screen === 'home' ? 0 : 90, this.screen === 'home' ? -620 : 615, 15, INK, this.ui, this.screen === 'home' ? 650 : 440);
-          this.refreshHuaweiLoginUI();
-        }
-
-        refreshHuaweiLoginUI() {
-          var _this$hmsButton, _this$hmsNotice;
-
-          // Update only account UI: callbacks must not cancel a drag, reset physics or dismiss a result panel.
-          const visible = !this.huaweiLogin.isAuthenticated;
-
-          if ((_this$hmsButton = this.hmsButton) != null && _this$hmsButton.isValid) {
-            this.hmsButton.active = visible;
-            const pending = this.huaweiLogin.state === 'pending';
-            this.hmsButton.getComponent(Button).interactable = visible && !pending && !this.modal; // The plate prefab also contains a label. Keep it empty and update the button caption only.
-
-            const labels = this.hmsButton.getComponentsInChildren(Label);
-            const label = labels[labels.length - 1];
-            labels.slice(0, -1).forEach(l => this.setText(l, ''));
-            if (label) this.setText(label, pending ? '登录中…' : '登录HMS');
-          }
-
-          if ((_this$hmsNotice = this.hmsNotice) != null && _this$hmsNotice.isValid) {
-            this.hmsNotice.node.active = visible;
-            this.setText(this.hmsNotice, this.huaweiLogin.canPlay ? (_crd && LOGIN_TEXT === void 0 ? (_reportPossibleCrUseOfLOGIN_TEXT({
-              error: Error()
-            }), LOGIN_TEXT) : LOGIN_TEXT)[this.huaweiLogin.state] : (_crd && LOGIN_TEXT === void 0 ? (_reportPossibleCrUseOfLOGIN_TEXT({
-              error: Error()
-            }), LOGIN_TEXT) : LOGIN_TEXT).blocked);
-          }
         }
 
         setText(label, text) {
@@ -391,9 +369,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           profiler.hideStats();
 
           try {
+            const raw = JSON.parse(sys.localStorage.getItem('guli.save.v3') || sys.localStorage.getItem('guli.save.v2') || sys.localStorage.getItem('guli.save.v1') || 'null');
             this.save = (_crd && cleanSave === void 0 ? (_reportPossibleCrUseOfcleanSave({
               error: Error()
-            }), cleanSave) : cleanSave)(JSON.parse(sys.localStorage.getItem('guli.save.v2') || sys.localStorage.getItem('guli.save.v1') || 'null'));
+            }), cleanSave) : cleanSave)(raw);
+            if (raw && raw.version !== 3) this.persist();
           } catch {
             this.save = (_crd && cleanSave === void 0 ? (_reportPossibleCrUseOfcleanSave({
               error: Error()
@@ -425,20 +405,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           });
 
           const back = this.makeNode('Courtyard', this.node, 0, 0, 720, 1280);
-          const fallback = back.addComponent(Graphics);
-          fallback.fillColor = col('#e8c78f');
-          fallback.rect(-360, -640, 720, 1280);
-          fallback.fill();
-          resources.load('art/courtyard/spriteFrame', SpriteFrame, (err, frame) => {
-            if (err || !this.isValid) return;
-            const art = this.makeNode('CourtyardArt', back, 0, 0, 720, 1280);
-            const s = art.addComponent(Sprite);
-            s.spriteFrame = frame;
-            s.sizeMode = Sprite.SizeMode.CUSTOM;
-            art.getComponent(UITransform).setContentSize(720, 1280);
-            fallback.enabled = false;
+          this.sceneFallback = back.addComponent(Graphics);
+          this.sceneFallback.fillColor = col('#e8c78f');
+          this.sceneFallback.rect(-360, -640, 720, 1280);
+          this.sceneFallback.fill();
+          this.sceneSprite = this.makeNode('CourtyardArt', back, 0, 0, 720, 1280).addComponent(Sprite);
+          this.sceneSprite.sizeMode = Sprite.SizeMode.CUSTOM;
+          this.refreshSceneArt();
+          resources.load('art/gacha-T05/spriteFrame', SpriteFrame, (err, frame) => {
+            if (!err && this.isValid) this.flowerTrailFrame = frame;
           });
           this.board = this.makeNode('Board', this.node);
+          this.trailLayer = this.makeNode('Trails', this.node);
           this.ballLayer = this.makeNode('Marbles', this.node);
           this.ui = this.makeNode('Interface', this.node);
           this.overlay = this.makeNode('Overlay', this.node);
@@ -455,7 +433,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           game.on(Game.EVENT_SHOW, this.showMusic, this);
           if (sys.isBrowser && typeof window !== 'undefined') window.addEventListener('blur', this.blurHandler);
           this.render();
-          if (this.huaweiLogin.required) this.beginHuaweiLogin(false);
           resources.loadDir('hud/prefabs', Prefab, (err, prefabs) => {
             if (!this.isValid) return;
 
@@ -510,7 +487,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         onDestroy() {
           var _this$music3, _this$physics;
 
-          this.huaweiLogin.dispose();
           view.off('canvas-resize', this.resizeUI, this);
           this.clearTutorial();
           this.stopInvalidShotHudAnimation();
@@ -541,6 +517,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         graphic(parent) {
           return this.makeNode('Paint', parent).addComponent(Graphics);
+        }
+
+        refreshSceneArt() {
+          const id = this.screen === 'gacha' ? 'gacha-page' : this.save.equipped.scene || 'default';
+          if (id === this.sceneArtId) return;
+          this.sceneArtId = id;
+          const path = id === 'default' ? 'art/courtyard/spriteFrame' : id === 'gacha-page' ? 'art/gacha-page/spriteFrame' : `art/gacha-scenes/${id}/spriteFrame`;
+          resources.load(path, SpriteFrame, (err, frame) => {
+            if (!this.isValid || this.sceneArtId !== id) return;
+
+            if (err) {
+              console.warn('Scene skin load failed: ' + id, err);
+              return;
+            }
+
+            this.sceneSprite.spriteFrame = frame;
+            this.sceneSprite.node.getComponent(UITransform).setContentSize(720, 1280);
+            this.sceneFallback.enabled = false;
+          });
         }
         /** Instantiate the actual editable asset, so future prefab edits appear in the game. */
 
@@ -686,6 +681,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.cancelInput();
           this.screen = screen;
           this.modal = '';
+          this.page = 0;
           this.render();
         }
 
@@ -709,8 +705,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.shooterPreview = null;
           this.clear(this.ui);
           this.clear(this.board);
+          this.clear(this.trailLayer);
           this.clear(this.ballLayer);
           this.clear(this.overlay);
+          this.trailMarks = [];
+          this.trailClock = 0;
+          this.trailPreviews = [];
+          this.refreshSceneArt();
           this.translatedLabels.clear();
           this.hits = [];
           this.sprites.clear();
@@ -720,8 +721,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (this.screen === 'levels') this.levels();
           if (this.screen === 'collection') this.collection();
           if (this.screen === 'skins') this.skins();
+          if (this.screen === 'gacha') this.gacha();
           if (this.screen === 'game') this.gameUI();
-          this.renderHuaweiLoginUI();
           this.refreshTutorial();
           this.applySafeArea();
         }
@@ -734,7 +735,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           const insetY = Math.max(0, rect.y, size.height - rect.y - rect.height);
           this.safeScale = Math.min(1, Math.max(1, size.width - insetX * 2) / 720, Math.max(1, size.height - insetY * 2) / 1280);
 
-          for (const root of [this.board, this.ballLayer, this.ui, this.overlay, (_this$tutorialView2 = this.tutorialView) == null ? void 0 : _this$tutorialView2.root]) {
+          for (const root of [this.board, this.trailLayer, this.ballLayer, this.ui, this.overlay, (_this$tutorialView2 = this.tutorialView) == null ? void 0 : _this$tutorialView2.root]) {
             var _this$tutorialView2;
 
             root == null || root.setScale(this.safeScale, this.safeScale, 1);
@@ -756,13 +757,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           g.ellipse(0, 102, 253, 145);
           g.stroke();
           this.marble(this.ballLayer, 0, -111, 100, 51);
-          this.marble(this.ballLayer, 2, 111, 110, 47);
-          this.marble(this.ballLayer, 33, 12, 40, 57);
+          this.marble(this.ballLayer, 2, 111, 110, 51);
+          this.marble(this.ballLayer, 33, 12, 40, 51);
+          this.button('›', 298, 0, 70, 78, () => this.navigate('gacha'));
           this.button('开始游戏', 0, -152, 386, 88, () => this.play(), true);
           this.button('收藏图鉴  ' + this.save.collection.length + '/' + (_crd && MARBLE_COUNT === void 0 ? (_reportPossibleCrUseOfMARBLE_COUNT({
             error: Error()
           }), MARBLE_COUNT) : MARBLE_COUNT), 0, -258, 386, 76, () => this.navigate('collection'));
-          this.button('发射球皮肤', 0, -350, 386, 76, () => this.navigate('skins'));
+          this.button('装扮衣橱', 0, -350, 386, 76, () => this.navigate('skins'));
           this.button(this.save.sound ? '音效：开' : '音效：关', 0, -535, 280, 54, () => {
             this.save.sound = !this.save.sound;
             this.persist();
@@ -829,19 +831,169 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         skins() {
-          this.header('发射球皮肤', '专属于你的发射球外观');
-          this.panel(0, 20, 568, 610);
-          this.marble(this.ui, 0, 0, 156, 88);
-          this.label('原始玻璃弹珠', 0, -13, 32);
-          this.label('已装备', 0, -71, 22, TEAL);
-          this.label('统一的重量与力度，纯粹的技巧挑战。\n更多皮肤将在后续版本加入。', 0, -162, 21, '#7b684e', this.ui, 490);
-          this.button('返回主页', 0, -405, 320, 78, () => this.navigate('home'), true);
+          var _ref;
+
+          this.header('装扮衣橱', `抽奖收藏 ${this.save.rewards.length} / ${(_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
+            error: Error()
+          }), REWARDS) : REWARDS).length}`);
+          const tabs = [['marble', '弹珠'], ['scene', '场景'], ['trail', '轨迹']];
+          tabs.forEach(([kind, label], i) => this.button(label, -210 + i * 210, 410, 180, 62, () => {
+            this.wardrobeKind = kind;
+            this.page = 0;
+            this.render();
+          }, kind === this.wardrobeKind));
+          const equipped = this.save.equipped[this.wardrobeKind];
+          this.panel(0, 300, 312, 58);
+          this.label(`当前装备：${((_ref = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
+            error: Error()
+          }), rewardById) : rewardById)(equipped)) == null ? void 0 : _ref.name) || '默认'}`, 0, 300, 23, TEAL, this.ui, 292);
+          const items = (_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
+            error: Error()
+          }), REWARDS) : REWARDS).filter(reward => reward.kind === this.wardrobeKind);
+
+          for (let i = 0; i < 6 && this.page * 6 + i < items.length; i++) {
+            const reward = items[this.page * 6 + i],
+                  x = (i % 2 ? 1 : -1) * 158,
+                  y = 175 - Math.floor(i / 2) * 170;
+            const owned = this.save.rewards.includes(reward.id);
+            this.panel(x, y, 298, 150);
+
+            if (reward.kind === 'marble') {
+              if (owned) this.rewardMarble(this.ui, reward, x - 91, y + 10, 32);else this.marble(this.ui, -2, x - 91, y + 10, 32);
+            } else if (reward.kind === 'scene') this.scenePreview(reward, x - 92, y + 15, owned);else this.trailPreview(reward, x - 92, y + 15, owned);
+
+            this.label(owned ? reward.name : '未获得', x + 53, y + 28, 20, owned ? INK : '#77756f', this.ui, 174);
+            this.label(reward.rarity, x + 53, y - 9, 17, owned ? '#956a44' : '#8b8982', this.ui, 170);
+            this.button(equipped === reward.id ? '已装备' : '装备', x + 54, y - 49, 128, 43, () => {
+              this.save = (_crd && equipReward === void 0 ? (_reportPossibleCrUseOfequipReward({
+                error: Error()
+              }), equipReward) : equipReward)(this.save, reward.id);
+              this.persist();
+              this.render();
+            }, false, this.ui, !owned || equipped === reward.id);
+          }
+
+          this.button('上一页', -210, -450, 150, 56, () => {
+            this.page--;
+            this.render();
+          }, false, this.ui, this.page === 0);
+          this.label(`${this.page + 1} / ${Math.ceil(items.length / 6)}`, 0, -450, 21);
+          this.button('下一页', 210, -450, 150, 56, () => {
+            this.page++;
+            this.render();
+          }, false, this.ui, this.page >= Math.ceil(items.length / 6) - 1);
+          this.button('去抽奖', 0, -543, 280, 62, () => this.navigate('gacha'), true);
+        }
+
+        scenePreview(reward, x, y, owned) {
+          const frame = this.makeNode('ScenePreview-' + reward.id, this.ui, x, y, 76, 76);
+          frame.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
+          const base = this.graphic(frame);
+          base.fillColor = col('#aaa9a0');
+          base.rect(-38, -38, 76, 76);
+          base.fill();
+          base.fillColor = col('#d5d3c9');
+          base.circle(21, 18, 9);
+          base.fill();
+          base.fillColor = col('#777c78');
+          base.moveTo(-38, -12);
+          base.lineTo(-11, 14);
+          base.lineTo(13, -14);
+          base.lineTo(38, 10);
+          base.lineTo(38, -38);
+          base.lineTo(-38, -38);
+          base.close();
+          base.fill();
+          if (owned) resources.load(`art/gacha-scenes/${reward.id}/spriteFrame`, SpriteFrame, (err, art) => {
+            if (err || !frame.isValid) return;
+            const picture = this.makeNode('SceneArt', frame, 0, 0, 76, 76);
+            const size = art.originalSize;
+            const scale = Math.max(76 / size.width, 76 / size.height);
+            picture.getComponent(UITransform).setContentSize(size.width * scale, size.height * scale);
+            const sprite = picture.addComponent(Sprite);
+            sprite.spriteFrame = art;
+            sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+          });
+          const outline = this.graphic(this.ui);
+          outline.strokeColor = col(owned ? '#b88745' : '#7d7f79');
+          outline.lineWidth = 3;
+          outline.roundRect(x - 39, y - 39, 78, 78, 4);
+          outline.stroke();
+        }
+
+        trailPreview(reward, x, y, owned) {
+          const frame = this.makeNode('TrailPreview-' + reward.id, this.ui, x, y, 110, 90);
+          frame.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
+          const layer = this.makeNode('TrailPreviewMarks', frame, 0, 0, 110, 90);
+          const ball = this.marble(frame, owned ? 0 : -2, 0, 5, 23);
+          const time = Number(reward.id.slice(1)) * .45;
+          ball.setPosition(Math.sin(time * 2.6) * 25, 5);
+          this.trailPreviews.push({
+            reward,
+            layer,
+            ball,
+            owned,
+            time,
+            stamp: 0
+          });
+        }
+
+        gacha() {
+          this.panel(0, 485, 460, 92, this.ui, TEAL);
+          this.label('星星抽奖', 0, 485, 46, CREAM);
+          this.button('‹', -294, 485, 80, 76, () => this.navigate('home'));
+          this.label('○  ●', 274, 425, 20, TEAL, this.ui, 90);
+          this.panel(0, 365, 258, 60);
+          this.label(`剩余 ${this.save.starBalance} 星`, 0, 365, 27, TEAL, this.ui, 238);
+          this.button('抽一次 3 星', 0, -394, 475, 87, () => this.drawGacha(), true, this.ui, this.save.starBalance < 3 || this.save.rewards.length === (_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
+            error: Error()
+          }), REWARDS) : REWARDS).length);
+          this.button('奖励图鉴', -160, -514, 240, 64, () => this.navigate('skins'));
+          this.button('概率', 160, -514, 240, 64, () => this.showModal('odds'));
+          if (this.save.starBalance < 3) this.label('星星不足', 0, -580, 18, '#865d3e');
+        }
+
+        drawGacha() {
+          const result = (_crd && drawReward === void 0 ? (_reportPossibleCrUseOfdrawReward({
+            error: Error()
+          }), drawReward) : drawReward)(this.save);
+          if (!result) return;
+          this.save = result.save;
+          this.lastReward = result.reward;
+          this.persist();
+          this.render();
+          this.showModal('gacha-result');
+        }
+
+        rewardMarble(parent, reward, x, y, radius) {
+          var _GACHA_MARBLE_SOURCES;
+
+          const n = this.makeNode('Reward-' + reward.id, parent, x, y, radius * 3, radius * 3);
+          const index = Number(reward.id.slice(1)) - 1;
+          const source = (_crd && MARBLE_APPEARANCES === void 0 ? (_reportPossibleCrUseOfMARBLE_APPEARANCES({
+            error: Error()
+          }), MARBLE_APPEARANCES) : MARBLE_APPEARANCES)[(_GACHA_MARBLE_SOURCES = GACHA_MARBLE_SOURCES[index]) != null ? _GACHA_MARBLE_SOURCES : 0];
+          const style = { ...source,
+            base: reward.color,
+            light: reward.accent,
+            accent: reward.accent
+          };
+          (_crd && drawMarbleAppearance === void 0 ? (_reportPossibleCrUseOfdrawMarbleAppearance({
+            error: Error()
+          }), drawMarbleAppearance) : drawMarbleAppearance)(n, radius, style);
+          return n;
+        }
+
+        shooterMarble(parent, x, y, radius) {
+          const reward = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
+            error: Error()
+          }), rewardById) : rewardById)(this.save.equipped.marble);
+          return reward ? this.rewardMarble(parent, reward, x, y, radius) : this.marble(parent, 0, x, y, radius);
         }
 
         startLevel(index, replay = false) {
           var _this$model, _this$physics3;
 
-          if (!this.ensureHuaweiLogin()) return;
           this.clearTutorial();
           const ids = replay && ((_this$model = this.model) == null ? void 0 : _this$model.levelIndex) === index ? this.model.ids : (_crd && rollMarbles === void 0 ? (_reportPossibleCrUseOfrollMarbles({
             error: Error()
@@ -866,7 +1018,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         play() {
-          if (this.ensureHuaweiLogin()) this.navigate('levels');
+          this.navigate('levels');
         }
 
         clearTutorial() {
@@ -885,8 +1037,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         startTutorial() {
-          if (!this.ensureHuaweiLogin()) return;
-
           if (this.screen !== 'game' || !this.model) {
             this.startLevel(0);
             if (this.tutorial) return;
@@ -1024,7 +1174,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (m.phase === 'aim') {
             this.power = 1;
-            this.shooterPreview = this.marble(this.ballLayer, 0, 0, this.projectY(_crd && SHOOTER_Y === void 0 ? (_reportPossibleCrUseOfSHOOTER_Y({
+            this.shooterPreview = this.shooterMarble(this.ballLayer, 0, this.projectY(_crd && SHOOTER_Y === void 0 ? (_reportPossibleCrUseOfSHOOTER_Y({
               error: Error()
             }), SHOOTER_Y) : SHOOTER_Y), 32);
           }
@@ -1053,7 +1203,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         syncBalls() {
           this.model.balls.forEach(b => {
             if (!this.sprites.has(b)) {
-              const n = this.marble(this.ballLayer, b.shooter ? 0 : b.id, b.x, this.projectY(b.y), b.r);
+              const n = b.shooter ? this.shooterMarble(this.ballLayer, b.x, this.projectY(b.y), b.r) : this.marble(this.ballLayer, b.id, b.x, this.projectY(b.y), b.r);
               n.active = !b.gone;
               this.sprites.set(b, n);
             }
@@ -1257,8 +1407,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         update(dt) {
           var _this$tutorialView5;
 
-          if (!this.huaweiLogin.canPlay) return;
           this.clock += dt;
+          this.updateTrail(dt);
+          if (this.screen === 'skins' && this.wardrobeKind === 'trail' && !this.modal) this.updateTrailPreviews(dt);
 
           if (this.tutorial) {
             var _this$tutorialView4;
@@ -1275,11 +1426,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (m.phase === 'moving') {
             const hit = this.physics.advance(dt);
-            if (hit) this.sound('hit');
+
+            if (hit) {
+              this.sound('hit');
+              this.physics.contactPoints.forEach(p => this.emitCollision(p.x, this.projectY(p.y)));
+            }
+
             this.sprites.forEach((n, b) => {
               n.active = !b.gone;
               n.setPosition(b.x, this.projectY(b.y));
             });
+            const shooter = m.balls.find(b => b.shooter && !b.gone);
+            if (shooter && Math.hypot(shooter.vx, shooter.vy) > 30) this.emitTrail(shooter, dt);
             this.refreshHud();
 
             if (m.phase !== 'moving') {
@@ -1291,10 +1449,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               if ((m.phase === 'won' || m.phase === 'lost') && !this.resultHandled) {
                 this.resultHandled = true;
                 const previous = this.save.collection.length;
+                const firstClear = m.phase === 'won' && this.save.stars[m.levelIndex] === 0;
                 this.save = (_crd && award === void 0 ? (_reportPossibleCrUseOfaward({
                   error: Error()
                 }), award) : award)(this.save, m);
                 this.newItems = this.save.collection.length - previous;
+                this.earnedStars = firstClear ? m.stars : 0;
 
                 if (m.phase === 'won') {
                   this.persist();
@@ -1305,6 +1465,188 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               }
             }
           }
+        }
+
+        updateTrailPreviews(dt) {
+          const step = Math.min(dt, .05);
+
+          for (const preview of this.trailPreviews) {
+            const previous = preview.ball.position.x;
+            preview.time += step;
+            const x = Math.sin(preview.time * 2.6) * 25;
+            preview.ball.setPosition(x, 5);
+            preview.ball.angle -= (x - previous) / 23 * 180 / Math.PI;
+            preview.stamp += step;
+            if (preview.stamp < .1 || Math.abs(Math.cos(preview.time * 2.6)) < .2) continue;
+            preview.stamp = 0;
+            const direction = Math.sign(Math.cos(preview.time * 2.6));
+            this.emitTrailMark(preview.reward, preview.layer, x - direction * 24, 5, direction, 0, .55, !preview.owned);
+          }
+        }
+
+        emitTrail(shooter, dt) {
+          const reward = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
+            error: Error()
+          }), rewardById) : rewardById)(this.save.equipped.trail);
+          if (!reward) return;
+          this.trailClock += dt;
+          if (this.trailClock < .045) return;
+          this.trailClock = 0;
+          this.emitTrailMark(reward, this.trailLayer, shooter.x, this.projectY(shooter.y), shooter.vx, shooter.vy * (_crd && GROUND_Y_SCALE === void 0 ? (_reportPossibleCrUseOfGROUND_Y_SCALE({
+            error: Error()
+          }), GROUND_Y_SCALE) : GROUND_Y_SCALE));
+        }
+
+        emitTrailMark(reward, parent, x, y, vx, vy, scale = 1, muted = false) {
+          if (this.trailMarks.length >= 28) {
+            const oldest = this.trailMarks.shift();
+            oldest.node.destroy();
+          }
+
+          const n = this.makeNode('Trail-' + reward.id, parent, x, y, 42, 42);
+          n.setScale(scale, scale, 1);
+          const index = Number(reward.id.slice(1));
+
+          if (reward.id === 'T05' && this.flowerTrailFrame && !muted) {
+            const angle = Math.atan2(vy, vx);
+            n.setPosition(x - Math.cos(angle) * 32 * scale, y - Math.sin(angle) * 32 * scale);
+            n.angle = angle * 180 / Math.PI;
+            n.getComponent(UITransform).setContentSize(100, 36);
+            const sprite = n.addComponent(Sprite);
+            sprite.spriteFrame = this.flowerTrailFrame;
+            sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+          } else {
+            const g = n.addComponent(Graphics);
+            g.strokeColor = col(muted ? '#6e7472' : reward.accent, 220);
+            g.fillColor = col(muted ? '#7c817d' : reward.color, 210);
+            g.lineWidth = 3;
+
+            if ([3, 6].includes(index)) {
+              g.circle(0, 0, 8 + index);
+              g.stroke();
+            } else if ([2, 5, 8].includes(index)) {
+              for (let i = 0; i < 3; i++) {
+                const a = i * Math.PI * 2 / 3;
+                g.ellipse(Math.cos(a) * 8, Math.sin(a) * 8, 5, 9);
+                g.fill();
+              }
+            } else if (index === 9) {
+              g.moveTo(-18, -9);
+              g.bezierCurveTo(-2, 15, 4, -15, 18, 9);
+              g.stroke();
+              g.moveTo(-18, 9);
+              g.bezierCurveTo(-2, -15, 4, 15, 18, -9);
+              g.stroke();
+            } else if (index === 10) {
+              g.moveTo(-12, -10);
+              g.lineTo(1, 18);
+              g.lineTo(12, -6);
+              g.lineTo(0, 2);
+              g.close();
+              g.fill();
+            } else if (index === 7) {
+              for (let i = 0; i < 4; i++) {
+                const a = i * Math.PI / 2;
+                g.moveTo(Math.cos(a) * 8, Math.sin(a) * 8);
+                g.lineTo(Math.cos(a) * 20, Math.sin(a) * 20);
+                g.stroke();
+              }
+            } else {
+              for (let i = 0; i < 4; i++) {
+                g.circle((i % 2 ? 1 : -1) * (4 + i * 3), (i - 1.5) * 6, 2 + i % 2);
+                g.fill();
+              }
+            }
+          }
+
+          const opacity = n.addComponent(UIOpacity);
+          opacity.opacity = 210;
+          this.trailMarks.push({
+            node: n,
+            opacity,
+            age: 0,
+            life: index >= 8 ? .75 : .5
+          });
+        }
+
+        updateTrail(dt) {
+          this.trailMarks = this.trailMarks.filter(mark => {
+            mark.age += dt;
+
+            if (mark.age >= mark.life || !mark.node.isValid) {
+              if (mark.node.isValid) mark.node.destroy();
+              return false;
+            }
+
+            mark.opacity.opacity = Math.round(210 * (1 - mark.age / mark.life));
+            return true;
+          });
+        }
+
+        emitCollision(x, y) {
+          const reward = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
+            error: Error()
+          }), rewardById) : rewardById)(this.save.equipped.trail);
+          if (!reward) return;
+
+          if (this.trailMarks.length >= 28) {
+            const oldest = this.trailMarks.shift();
+            oldest.node.destroy();
+          }
+
+          const n = this.makeNode('Collision-' + reward.id, this.trailLayer, x, y, 70, 70);
+          const g = n.addComponent(Graphics);
+          g.strokeColor = col(reward.accent, 240);
+          g.fillColor = col(reward.color, 210);
+          g.lineWidth = 4;
+          const index = Number(reward.id.slice(1));
+
+          if ([3, 6].includes(index)) {
+            for (const radius of [15, 29]) {
+              g.circle(0, 0, radius);
+              g.stroke();
+            }
+          } else if ([2, 5, 8].includes(index)) {
+            for (let i = 0; i < 6; i++) {
+              const a = i * Math.PI / 3;
+              g.ellipse(Math.cos(a) * 23, Math.sin(a) * 23, 6, 12);
+              g.fill();
+            }
+          } else if ([7, 10].includes(index)) {
+            for (let i = 0; i < 6; i++) {
+              const a = i * Math.PI / 3;
+              g.moveTo(Math.cos(a) * 12, Math.sin(a) * 12);
+              g.lineTo(Math.cos(a + .22) * 34, Math.sin(a + .22) * 34);
+              g.lineTo(Math.cos(a + .45) * 20, Math.sin(a + .45) * 20);
+              g.close();
+              g.fill();
+            }
+          } else if (index === 9) {
+            for (let i = 0; i < 3; i++) {
+              const a = i * Math.PI * 2 / 3;
+              g.moveTo(Math.cos(a) * 10, Math.sin(a) * 10);
+              g.bezierCurveTo(Math.cos(a + .6) * 38, Math.sin(a + .6) * 38, Math.cos(a - .6) * 38, Math.sin(a - .6) * 38, Math.cos(a) * 26, Math.sin(a) * 26);
+              g.stroke();
+            }
+          } else {
+            for (let i = 0; i < 6; i++) {
+              const a = i * Math.PI / 3;
+              g.moveTo(Math.cos(a) * 14, Math.sin(a) * 14);
+              g.lineTo(Math.cos(a) * 29, Math.sin(a) * 29);
+              g.stroke();
+              g.circle(Math.cos(a) * 32, Math.sin(a) * 32, 3);
+              g.fill();
+            }
+          }
+
+          const opacity = n.addComponent(UIOpacity);
+          opacity.opacity = 220;
+          this.trailMarks.push({
+            node: n,
+            opacity,
+            age: 0,
+            life: .35
+          });
         }
 
         updateHints(dt) {
@@ -1400,14 +1742,42 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.panel(0, completed ? -40 : 0, 600, completed ? 730 : 650, this.overlay);
           const m = this.model;
 
-          if (kind === 'login') {
-            this.label('华为帐号登录', 0, 205, 34, INK, this.overlay, 530);
-            this.label((_crd && LOGIN_TEXT === void 0 ? (_reportPossibleCrUseOfLOGIN_TEXT({
+          if (kind === 'odds') {
+            this.label('抽奖概率', 0, 220, 35, INK, this.overlay);
+            (_crd && RARITIES === void 0 ? (_reportPossibleCrUseOfRARITIES({
               error: Error()
-            }), LOGIN_TEXT) : LOGIN_TEXT)[this.huaweiLogin.state], 0, 60, 24, INK, this.overlay, 510);
-            const pending = this.huaweiLogin.state === 'pending';
-            this.button(pending ? '登录中…' : '重新登录', 0, -105, 430, 76, () => this.beginHuaweiLogin(), true, this.overlay, pending);
-            this.button('回到主菜单', 0, -205, 430, 70, () => this.navigate('home'), false, this.overlay);
+            }), RARITIES) : RARITIES).forEach((rarity, i) => this.label(`${rarity}  ·  ${['50%', '35%', '12.5%', '2%', '0.5%'][i]}`, 0, 135 - i * 65, 24, INK, this.overlay));
+            this.label('每抽一件未拥有奖励；抽空的档位按剩余概率重分配', 0, -238, 18, '#857155', this.overlay, 510);
+            this.button('返回', 0, -310, 260, 65, () => {
+              this.modal = '';
+              this.render();
+            }, true, this.overlay);
+            return;
+          }
+
+          if (kind === 'gacha-result' && this.lastReward) {
+            const reward = this.lastReward;
+            this.label('获得新奖励！', 0, 235, 35, INK, this.overlay);
+            if (reward.kind === 'marble') this.rewardMarble(this.overlay, reward, 0, 100, 70);else {
+              const g = this.graphic(this.overlay);
+              g.fillColor = col(reward.color);
+              g.circle(0, 100, 62);
+              g.fill();
+            }
+            this.label(`${reward.name} · ${reward.rarity}`, 0, -10, 27, TEAL, this.overlay);
+            this.label(`剩余 ${this.save.starBalance} 星`, 0, -67, 20, '#857155', this.overlay);
+            this.button('立即装备', 0, -155, 300, 65, () => {
+              this.save = (_crd && equipReward === void 0 ? (_reportPossibleCrUseOfequipReward({
+                error: Error()
+              }), equipReward) : equipReward)(this.save, reward.id);
+              this.persist();
+              this.wardrobeKind = reward.kind;
+              this.navigate('skins');
+            }, true, this.overlay);
+            this.button('继续', 0, -247, 300, 65, () => {
+              this.modal = '';
+              this.render();
+            }, false, this.overlay);
             return;
           }
 
@@ -1416,7 +1786,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.label(won ? '漂亮的一击！' : '次数已用完', 0, 236, 38, INK, this.overlay, 520);
             this.stars(m.stars, 0, 148, 32, this.overlay);
             this.label(`击出 ${m.knocked.length} 颗 · 使用 ${m.used} 次射击`, 0, 62, 24, INK, this.overlay, 530);
-            this.label(won ? `新收藏 +${this.newItems}  ·  最佳 ${this.save.stars[m.levelIndex]} 星` : '目标尚未完成，本次挑战失败。', 0, 7, 20, '#87704f', this.overlay, 540);
+            this.label(won ? `新收藏 +${this.newItems}  ·  首通星星 +${this.earnedStars}  ·  最佳 ${this.save.stars[m.levelIndex]} 星` : '目标尚未完成，本次挑战失败。', 0, 7, 20, '#87704f', this.overlay, 540);
             this.button(won && m.levelIndex < 4 ? '下一关' : '返回关卡', 0, -87, 440, 75, () => won && m.levelIndex < 4 ? this.startLevel(m.levelIndex + 1) : this.navigate('levels'), true, this.overlay);
             this.button('再试一次', 0, -181, 440, 70, () => this.startLevel(m.levelIndex, true), false, this.overlay);
             if (won) this.button('回到主菜单', 0, -275, 440, 70, () => this.navigate('home'), false, this.overlay);
@@ -1443,7 +1813,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         persist() {
           try {
-            sys.localStorage.setItem('guli.save.v2', JSON.stringify(this.save));
+            sys.localStorage.setItem('guli.save.v3', JSON.stringify(this.save));
             this.storageWarning = false;
           } catch {
             this.storageWarning = true;
@@ -1486,12 +1856,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         down(pointer, x, y) {
           var _this$model3;
 
-          if (!this.huaweiLogin.canPlay) return;
           this.musicUnlocked = true;
           this.syncMusic();
 
           if (this.tutorial) {
             if (!this.tutorialSwipe && y > -490 && y < 280) this.tutorialSwipe = {
+              pointer,
+              x,
+              y
+            };
+            return;
+          }
+
+          if ((this.screen === 'home' || this.screen === 'gacha') && y > -100 && y < 300) {
+            this.navSwipe = {
               pointer,
               x,
               y
@@ -1533,7 +1911,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         up(pointer, x, y) {
-          var _this$model4;
+          var _this$navSwipe, _this$model4;
 
           if (this.tutorial) {
             const swipe = this.tutorialSwipe;
@@ -1542,6 +1920,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if ((swipe == null ? void 0 : swipe.pointer) === pointer && Math.abs(x - swipe.x) > 70 && Math.abs(x - swipe.x) > Math.abs(y - swipe.y) * 1.5) {
               if (x < swipe.x) this.tutorial.advancePage();else this.tutorial.previous();
               this.refreshTutorial();
+            }
+
+            return;
+          }
+
+          if (((_this$navSwipe = this.navSwipe) == null ? void 0 : _this$navSwipe.pointer) === pointer) {
+            const swipe = this.navSwipe;
+            this.navSwipe = null;
+
+            if (!this.modal && Math.abs(x - swipe.x) > 80 && Math.abs(x - swipe.x) > Math.abs(y - swipe.y) * 1.3) {
+              if (this.screen === 'home' && x < swipe.x) this.navigate('gacha');else if (this.screen === 'gacha' && x > swipe.x) this.navigate('home');
             }
 
             return;
@@ -1572,6 +1961,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _this$model5, _this$shooterPreview2;
 
           this.tutorialSwipe = null;
+          this.navSwipe = null;
           this.sling.cancel();
           if (this.screen === 'game' && ((_this$model5 = this.model) == null ? void 0 : _this$model5.phase) === 'aim' && (_this$shooterPreview2 = this.shooterPreview) != null && _this$shooterPreview2.isValid) this.updatePull();
         }
@@ -1595,10 +1985,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         touchCancel(e) {
-          var _this$tutorialSwipe;
+          var _this$tutorialSwipe, _this$navSwipe2;
 
           this.lastTouch = Date.now();
           if (((_this$tutorialSwipe = this.tutorialSwipe) == null ? void 0 : _this$tutorialSwipe.pointer) === 'touch:' + e.getID()) this.tutorialSwipe = null;
+          if (((_this$navSwipe2 = this.navSwipe) == null ? void 0 : _this$navSwipe2.pointer) === 'touch:' + e.getID()) this.navSwipe = null;
           if (this.sling.pointer === 'touch:' + e.getID()) this.cancelInput();
         }
 

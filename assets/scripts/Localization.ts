@@ -1,19 +1,10 @@
 /** Chinese source strings are stable translation keys; game data remains language-neutral. */
 export type Language = 'zh' | 'en';
 const EN: Record<string, string> = {
- '登录HMS':'Sign in HMS',
- '未登录 HMS，仍可正常游玩，记录保存在本地。':'Not signed in to HMS. Play normally; progress is saved locally.',
- '已取消登录，可继续游玩或稍后重试。':'Sign-in cancelled. Keep playing or retry later.',
- '实名认证未完成，请重新登录完成认证后继续。':'Sign in again and complete identity verification to continue.',
- '华为帐号登录':'HUAWEI ID Sign-in','登录中…':'Signing in…','重新登录':'Retry Sign-in','登录成功':'Signed in',
- '请登录华为帐号后开始游戏。':'Sign in with your HUAWEI ID to play.',
- '正在登录华为帐号，请稍候…':'Signing in with HUAWEI ID. Please wait…',
- '已取消登录，请重新登录后开始游戏。':'Sign-in cancelled. Sign in again to play.',
- '实名认证未完成，请完成认证后进入游戏。':'Complete identity verification before playing.',
- '当前环境不支持华为游戏登录，请使用受支持的华为快游戏环境。':'Huawei game sign-in is unavailable. Use a supported Huawei Quick Game runtime.',
- '登录等待超时，请检查网络后重试。':'Sign-in timed out. Check your connection and retry.',
- '华为登录失败，请检查网络与帐号后重试。':'Sign-in failed. Check your connection and account, then retry.',
- '未获取到有效玩家信息，请重试登录。':'No valid player information received. Please retry sign-in.',
+ '装扮衣橱':'Wardrobe','弹珠':'Marble','场景':'Scene','轨迹':'Trail','当前装备':'Equipped','默认':'Default','未获得':'Not Owned','装备':'Equip','去抽奖':'Go to Draw',
+ '星星抽奖':'Star Draw','庭院珍藏':'Courtyard Treasures','弹珠 · 场景 · 轨迹':'Marbles · Scenes · Trails','抽一次 3 星':'Draw Once · 3 Stars','奖励图鉴':'Prize Collection','概率':'Odds',
+ '抽奖概率':'Draw Odds','每抽一件未拥有奖励；抽空的档位按剩余概率重分配':'Every draw grants a new prize. Empty rarity tiers are redistributed.',
+ '获得新奖励！':'New Prize!','立即装备':'Equip Now','继续':'Continue','星星不足':'Not Enough Stars',
  '开始游戏':'Play','关卡选择':'Level Select','庭院挑战':'Level Select','弹珠图鉴':'Collection','收藏图鉴':'Collection','发射球皮肤':'Shooter Skins','新手教学 / Help':'Tutorial','音效：开':'Sound Effects: On','音效：关':'Sound Effects: Off',
  '下一关':'Next Level','再试一次':'Try Again','回到主菜单':'Main Menu','返回主页':'Main Menu','返回关卡':'Level Select','查看提示':'Show Hint','查看教程':'Tutorial','继续游戏':'Resume','返回':'Back','主页':'Main Menu','暂停':'Pause','发射':'Shoot','重玩本关':'Restart Level','力度':'Power',
  '星级与收藏已保存':'Stars and collection saved','一颗弹珠，一整个童年':'A marble. A childhood of memories.','庭 院 弹 珠':'COURTYARD MARBLES','本地单机  /  进度自动保存':'Offline play / Progress saved automatically','存档不可用：本次进度仅保留在当前会话':'Saving unavailable: progress lasts for this session only',
@@ -38,12 +29,26 @@ const EN: Record<string, string> = {
  '月影白兔':'Moonshadow Rabbit','星瞳灵猫':'Star-eyed Cat','赤焰小狐':'Flame Fox','墨玉熊猫':'Jade Panda','锦鳞金鲤':'Golden Koi','青龙':'Azure Dragon','白虎':'White Tiger','朱雀':'Vermilion Bird','玄武':'Black Tortoise',
 };
 const colors = ['海蓝','琥珀','翡翠','紫晶','樱桃','月白','薄荷','珊瑚','靛青','金橙'];
+Object.assign(EN, {
+ '竹影小径':'Bamboo Path','雨后青庭':'Rainwashed Garden','月光花圃':'Moonlit Flower Garden','樱花茶庭':'Cherry Tea Garden','星河古庭':'Starlit Ancient Court',
+ '蜜橘光':'Tangerine Glow','青瓷纹':'Celadon Ring','奶油云':'Cream Cloud','珊瑚砂':'Coral Sand','薄荷叶':'Mint Leaf','海盐蓝':'Sea Salt Blue','石榴红':'Pomegranate Red','琥珀线':'Amber Swirl','紫藤灰':'Wisteria Grey',
+ '雨滴蓝':'Raindrop Blue','暖金涟漪':'Golden Ripples','夜兰':'Night Orchid','翡翠花纹':'Jade Blossom','雪晶':'Snow Crystal','花庭玻璃':'Flower Garden Glass',
+ '幻彩潮汐':'Iridescent Tide','赤焰核心':'Ember Core','月下蝶影':'Moonlit Butterfly','四季花冠':'Four Seasons Crown','凤凰琉璃':'Phoenix Glass',
+ '粉笔星点':'Chalk Sparks','落叶':'Falling Leaves','水珠':'Water Drops','金沙':'Golden Sand','花瓣轻痕':'Petal Trail','水波环':'Water Rings','火星':'Fire Sparks','萤火旋流':'Firefly Swirl','锦鲤流光':'Koi Glow','凤凰焰羽':'Phoenix Feathers',
+});
 const colorsEn = ['Ocean Blue','Amber','Jade','Amethyst','Cherry','Moon White','Mint','Coral','Indigo','Golden Orange'];
 const patterns = ['流纹','涟漪','星砂','花瓣','幻彩'];
 const patternsEn = ['Swirl','Ripple','Stardust','Petals','Iridescence'];
 colors.forEach((c,i)=>patterns.forEach((p,j)=>{EN[c+p]=`${colorsEn[i]} ${patternsEn[j]}`;}));
 const plural = (n:string, word:string)=>`${n} ${word}${Number(n)===1?'':'s'}`;
 const templates: [RegExp, (...args:string[])=>string][] = [
+ [/^抽奖收藏 (\d+) \/ (\d+)$/,(n,total)=>`Draw Collection ${n}/${total}`],
+ [/^当前装备：(.+)$/,name=>`Equipped: ${EN[name]||name}`],
+ [/^剩余 (\d+) 星$/,n=>`${n} stars left`],
+ [/^可用星星 (\d+)$/,n=>`Available Stars: ${n}`],
+ [/^(.+) · (普通|稀有|超级稀有|珍藏|传奇)$/, (name,rarity)=>`${EN[name]||name} · ${EN[rarity]||rarity}`],
+ [/^(普通|稀有|超级稀有|珍藏|传奇)  ·  (.+)$/, (rarity,odds)=>`${EN[rarity]||rarity} · ${odds}`],
+ [/^新收藏 \+(\d+)  ·  首通星星 \+(\d+)  ·  最佳 (\d+) 星$/, (items,stars,best)=>`New +${items} · First-clear stars +${stars} · Best: ${best} stars`],
  [/^第 (\d+) 关$/,n=>`Level ${n}`],
  [/^目标 (\d+)\/(\d+)(?:\s+剩余 (\d+) 次)?$/,(n,total,shots)=>`Target ${n}/${total}${shots===undefined?'':`   Shots Left: ${shots}`}`],
  [/^剩余 (\d+) 次(?:机会)?$/,n=>`Shots Left: ${n}`],

@@ -44,7 +44,7 @@ The existing rules allow a shooter-only exit to preserve target movements even i
 
 ## Limits
 
-No physical phone, Huawei RPK build, real device touch, notch device, or GPU performance measurements were run. Safe-area handling uses Cocos `sys.getSafeAreaRect` where the platform reports it, plus SHOW_ALL layout; platform reporting and browser chrome still need device QA. Graphics match the existing project's visual assets and palette, not the reference's exact illustration fidelity. The three-page help no longer requires a practice win to set `tuto`; this is intentional under the new requirements. Existing saved `tuto: true` values remain completed.
+No native mobile build, physical-phone touch test, notch-device test, or GPU performance measurement was run. Safe-area handling uses Cocos `sys.getSafeAreaRect` where the platform reports it, plus SHOW_ALL layout; platform reporting and browser chrome still need device QA. Graphics match the existing project's visual assets and palette, not the reference's exact illustration fidelity. The three-page help no longer requires a practice win to set `tuto`; this is intentional under the new requirements. Existing saved `tuto: true` values remain completed.
 
 - Additional manual persistence check: completed the built tutorial, reloaded the page, and clicked Play; the normal level opened without onboarding. See ftue-returning-player.png.
 

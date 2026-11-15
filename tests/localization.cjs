@@ -1,6 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const ts=require('../extensions/cocos-creator-mcp-main/node_modules/typescript');
-function load(name){const box={exports:{}};vm.runInNewContext(ts.transpileModule(fs.readFileSync(`assets/scripts/${name}.ts`,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,box);return box.exports;}
+function load(name){const box={exports:{},require:path=>load(path.replace('./',''))};vm.runInNewContext(ts.transpileModule(fs.readFileSync(`assets/scripts/${name}.ts`,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText,box);return box.exports;}
 const {translate}=load('Localization'),{cleanSave,award,GameModel,marbleName,rarity}=load('GameModel');
 for(const language of [undefined,null,'fr',0,'zh'])assert.equal(cleanSave({language}).language,'zh');
 const save=cleanSave({language:'en',stars:[3,2],collection:[0,55],sound:false,tuto:true});

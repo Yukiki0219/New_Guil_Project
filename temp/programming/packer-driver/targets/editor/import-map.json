@@ -9,11 +9,11 @@
     "file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/default_renderpipeline/builtin-pipeline.ts": "./chunks/fd/fd74c742a972dbbcd3691d204a338b19a4515b62.js",
     "file:///C:/ProgramData/cocos/editors/Creator/3.8.8/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts": "./chunks/62/621a159ce4a7bac550092546e00c97e12458f12b.js",
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts": "./chunks/ef/efeae8b5bb8929cd6cb12a1ec230444c9da2d64c.js",
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Gacha.ts": "./chunks/9c/9cca42594fd9695cc1b96e6bc946019c3e793bd5.js",
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts": "./chunks/b9/b994cf97bc4b6bff9b7cf45a79f7e91a3aaf04c8.js",
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts": "./chunks/58/58880a8083b2f07e7c855faf195f25fd943fc1c0.js",
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts": "./chunks/89/891993eae04260b53f95443698158d522b88ba86.js",
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts": "./chunks/b5/b52d9af49d3f1c3efb6199331218a9ef5cd1858b.js",
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts": "./chunks/a8/a8ee4b5c6c28a0fb055b65f2ee9d370d70003649.js",
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts": "./chunks/66/664fa497237bce8fcfe4e3e9eaa796f0c38c0ec2.js",
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts": "./chunks/a0/a05759eedb7317477ba237a66d3560a0e8d98857.js",
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts": "./chunks/22/224b41cac551edc3f4a2d10740c1f22f2f12adc0.js",
@@ -87,6 +87,12 @@
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/58/58880a8083b2f07e7c855faf195f25fd943fc1c0.js": {
+      "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
+      "__unresolved_1": "./chunks/9c/9cca42594fd9695cc1b96e6bc946019c3e793bd5.js",
+      "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
+    },
+    "./chunks/9c/9cca42594fd9695cc1b96e6bc946019c3e793bd5.js": {
+      "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/2e/2e22cb0681c1eda0c2d62b8079a8385a13375c26.js": {
@@ -145,15 +151,12 @@
       "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
-    "./chunks/a8/a8ee4b5c6c28a0fb055b65f2ee9d370d70003649.js": {
-      "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
-    },
     "./chunks/89/891993eae04260b53f95443698158d522b88ba86.js": {
       "__unresolved_0": "./chunks/6a/6a5019a719a9014c047e67aa1cf34453ab8392ce.js",
-      "__unresolved_1": "./chunks/a8/a8ee4b5c6c28a0fb055b65f2ee9d370d70003649.js",
-      "__unresolved_10": "./chunks/2e/2e22cb0681c1eda0c2d62b8079a8385a13375c26.js",
-      "__unresolved_11": "./chunks/d4/d4058bb62bafcedda156d2fa2f539e0de10ce450.js",
-      "__unresolved_12": "./chunks/b9/b994cf97bc4b6bff9b7cf45a79f7e91a3aaf04c8.js",
+      "__unresolved_1": "./chunks/22/224b41cac551edc3f4a2d10740c1f22f2f12adc0.js",
+      "__unresolved_10": "./chunks/d4/d4058bb62bafcedda156d2fa2f539e0de10ce450.js",
+      "__unresolved_11": "./chunks/b9/b994cf97bc4b6bff9b7cf45a79f7e91a3aaf04c8.js",
+      "__unresolved_12": "./chunks/9c/9cca42594fd9695cc1b96e6bc946019c3e793bd5.js",
       "__unresolved_13": "./chunks/69/6974c553c7914b691dc63e9dbd6e5db6ad30c397.js",
       "__unresolved_14": "./chunks/b1/b1ae2cd90ab8e560ca7829bd2f506bad1b758dc3.js",
       "__unresolved_15": "./chunks/73/7386f4ce5fb5aad134a84ae2b4660fed21b7b6d5.js",
@@ -161,14 +164,14 @@
       "__unresolved_17": "./chunks/2d/2da3ee31eb2016350dc9e44f4e084feb967aead0.js",
       "__unresolved_18": "./chunks/a0/a05759eedb7317477ba237a66d3560a0e8d98857.js",
       "__unresolved_19": "./chunks/17/1737ec200cca58ea2e7255514a3035f39a5570fb.js",
-      "__unresolved_2": "./chunks/22/224b41cac551edc3f4a2d10740c1f22f2f12adc0.js",
-      "__unresolved_3": "./chunks/66/664fa497237bce8fcfe4e3e9eaa796f0c38c0ec2.js",
-      "__unresolved_4": "./chunks/58/58880a8083b2f07e7c855faf195f25fd943fc1c0.js",
-      "__unresolved_5": "./chunks/b5/b52d9af49d3f1c3efb6199331218a9ef5cd1858b.js",
-      "__unresolved_6": "./chunks/f6/f66d1a6c9783ce9d866c958d2dfd765c9b16d27c.js",
-      "__unresolved_7": "./chunks/ef/efeae8b5bb8929cd6cb12a1ec230444c9da2d64c.js",
-      "__unresolved_8": "./chunks/a4/a4529910ec6dbcf2deec4fc3c5c24c0feccde964.js",
-      "__unresolved_9": "./chunks/ec/ec81fdd6afbc866332b00ba807e2512ac50a3eda.js",
+      "__unresolved_2": "./chunks/66/664fa497237bce8fcfe4e3e9eaa796f0c38c0ec2.js",
+      "__unresolved_3": "./chunks/58/58880a8083b2f07e7c855faf195f25fd943fc1c0.js",
+      "__unresolved_4": "./chunks/b5/b52d9af49d3f1c3efb6199331218a9ef5cd1858b.js",
+      "__unresolved_5": "./chunks/f6/f66d1a6c9783ce9d866c958d2dfd765c9b16d27c.js",
+      "__unresolved_6": "./chunks/ef/efeae8b5bb8929cd6cb12a1ec230444c9da2d64c.js",
+      "__unresolved_7": "./chunks/a4/a4529910ec6dbcf2deec4fc3c5c24c0feccde964.js",
+      "__unresolved_8": "./chunks/ec/ec81fdd6afbc866332b00ba807e2512ac50a3eda.js",
+      "__unresolved_9": "./chunks/2e/2e22cb0681c1eda0c2d62b8079a8385a13375c26.js",
       "cc": "./chunks/93/93ba276ea7b26ffcdc433fab14afc1ed6f05647b.js"
     },
     "./chunks/ef/efeae8b5bb8929cd6cb12a1ec230444c9da2d64c.js": {
@@ -211,8 +214,8 @@
     "./chunks/6d/6d8fd2b0177941b032ddc0733af48a561fb60657.js": {
       "__unresolved_0": "./chunks/50/50ec684ab28702df18cf262b25c26ec6d899c3a5.js",
       "__unresolved_1": "./chunks/b1/b18130d786bcadd1d0cb653401afdf2ede79b799.js",
-      "__unresolved_10": "./chunks/b5/b52d9af49d3f1c3efb6199331218a9ef5cd1858b.js",
-      "__unresolved_11": "./chunks/a8/a8ee4b5c6c28a0fb055b65f2ee9d370d70003649.js",
+      "__unresolved_10": "./chunks/89/891993eae04260b53f95443698158d522b88ba86.js",
+      "__unresolved_11": "./chunks/b5/b52d9af49d3f1c3efb6199331218a9ef5cd1858b.js",
       "__unresolved_12": "./chunks/66/664fa497237bce8fcfe4e3e9eaa796f0c38c0ec2.js",
       "__unresolved_13": "./chunks/a0/a05759eedb7317477ba237a66d3560a0e8d98857.js",
       "__unresolved_14": "./chunks/22/224b41cac551edc3f4a2d10740c1f22f2f12adc0.js",
@@ -231,9 +234,9 @@
       "__unresolved_4": "./chunks/fd/fd74c742a972dbbcd3691d204a338b19a4515b62.js",
       "__unresolved_5": "./chunks/62/621a159ce4a7bac550092546e00c97e12458f12b.js",
       "__unresolved_6": "./chunks/ef/efeae8b5bb8929cd6cb12a1ec230444c9da2d64c.js",
-      "__unresolved_7": "./chunks/b9/b994cf97bc4b6bff9b7cf45a79f7e91a3aaf04c8.js",
-      "__unresolved_8": "./chunks/58/58880a8083b2f07e7c855faf195f25fd943fc1c0.js",
-      "__unresolved_9": "./chunks/89/891993eae04260b53f95443698158d522b88ba86.js"
+      "__unresolved_7": "./chunks/9c/9cca42594fd9695cc1b96e6bc946019c3e793bd5.js",
+      "__unresolved_8": "./chunks/b9/b994cf97bc4b6bff9b7cf45a79f7e91a3aaf04c8.js",
+      "__unresolved_9": "./chunks/58/58880a8083b2f07e7c855faf195f25fd943fc1c0.js"
     }
   }
 }

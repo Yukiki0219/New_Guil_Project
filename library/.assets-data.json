@@ -709,5 +709,215 @@
     "url": "db://assets/scripts/HuaweiLogin.ts",
     "value": {},
     "versionCode": 1
+  },
+  "4f62f4af-1161-47ca-96c8-69d07907cecb": {
+    "url": "db://assets/scripts/Gacha.ts",
+    "value": {},
+    "versionCode": 1
+  },
+  "fd8e0d54-555c-4a26-9c18-d10448b122f7": {
+    "url": "db://assets/resources/art/gacha-scenes",
+    "value": {},
+    "versionCode": 1
+  },
+  "6cbf0a1d-6d1d-40e3-9268-a6fb42eb87da": {
+    "url": "db://assets/resources/art/gacha-scenes/S01.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d1708ebd-4d6b-4411-8b8c-a587cf4b6fc3": {
+    "url": "db://assets/resources/art/gacha-scenes/S02.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "3683e525-233b-462c-8964-543699057da7": {
+    "url": "db://assets/resources/art/gacha-scenes/S03.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "5bbcb69c-709e-4cb2-9bc2-eb21dc995621": {
+    "url": "db://assets/resources/art/gacha-scenes/S04.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "b485eeae-a9d0-4b7c-8673-18adc58d589b": {
+    "url": "db://assets/resources/art/gacha-scenes/S05.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "3683e525-233b-462c-8964-543699057da7@6c48a": {
+    "url": "db://assets/resources/art/gacha-scenes/S03.png@6c48a",
+    "value": {
+      "depends": [
+        "3683e525-233b-462c-8964-543699057da7"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d1708ebd-4d6b-4411-8b8c-a587cf4b6fc3@6c48a": {
+    "url": "db://assets/resources/art/gacha-scenes/S02.png@6c48a",
+    "value": {
+      "depends": [
+        "d1708ebd-4d6b-4411-8b8c-a587cf4b6fc3"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b485eeae-a9d0-4b7c-8673-18adc58d589b@6c48a": {
+    "url": "db://assets/resources/art/gacha-scenes/S05.png@6c48a",
+    "value": {
+      "depends": [
+        "b485eeae-a9d0-4b7c-8673-18adc58d589b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5bbcb69c-709e-4cb2-9bc2-eb21dc995621@6c48a": {
+    "url": "db://assets/resources/art/gacha-scenes/S04.png@6c48a",
+    "value": {
+      "depends": [
+        "5bbcb69c-709e-4cb2-9bc2-eb21dc995621"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6cbf0a1d-6d1d-40e3-9268-a6fb42eb87da@6c48a": {
+    "url": "db://assets/resources/art/gacha-scenes/S01.png@6c48a",
+    "value": {
+      "depends": [
+        "6cbf0a1d-6d1d-40e3-9268-a6fb42eb87da"
+      ]
+    },
+    "versionCode": 1
+  },
+  "3683e525-233b-462c-8964-543699057da7@f9941": {
+    "url": "db://assets/resources/art/gacha-scenes/S03.png@f9941",
+    "value": {
+      "depends": [
+        "3683e525-233b-462c-8964-543699057da7@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b485eeae-a9d0-4b7c-8673-18adc58d589b@f9941": {
+    "url": "db://assets/resources/art/gacha-scenes/S05.png@f9941",
+    "value": {
+      "depends": [
+        "b485eeae-a9d0-4b7c-8673-18adc58d589b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "d1708ebd-4d6b-4411-8b8c-a587cf4b6fc3@f9941": {
+    "url": "db://assets/resources/art/gacha-scenes/S02.png@f9941",
+    "value": {
+      "depends": [
+        "d1708ebd-4d6b-4411-8b8c-a587cf4b6fc3@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "5bbcb69c-709e-4cb2-9bc2-eb21dc995621@f9941": {
+    "url": "db://assets/resources/art/gacha-scenes/S04.png@f9941",
+    "value": {
+      "depends": [
+        "5bbcb69c-709e-4cb2-9bc2-eb21dc995621@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "6cbf0a1d-6d1d-40e3-9268-a6fb42eb87da@f9941": {
+    "url": "db://assets/resources/art/gacha-scenes/S01.png@f9941",
+    "value": {
+      "depends": [
+        "6cbf0a1d-6d1d-40e3-9268-a6fb42eb87da@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "24b8086d-5dd2-48e0-add7-9d32fd8de056": {
+    "url": "db://assets/resources/art/gacha-page.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "24b8086d-5dd2-48e0-add7-9d32fd8de056@6c48a": {
+    "url": "db://assets/resources/art/gacha-page.png@6c48a",
+    "value": {
+      "depends": [
+        "24b8086d-5dd2-48e0-add7-9d32fd8de056"
+      ]
+    },
+    "versionCode": 1
+  },
+  "24b8086d-5dd2-48e0-add7-9d32fd8de056@f9941": {
+    "url": "db://assets/resources/art/gacha-page.png@f9941",
+    "value": {
+      "depends": [
+        "24b8086d-5dd2-48e0-add7-9d32fd8de056@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2db21b47-5b4e-4c1f-9c40-9f6a191b4a15": {
+    "url": "db://assets/resources/art/gacha-M15.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "43cfc734-79be-45fa-9d25-cc7d59356b05": {
+    "url": "db://assets/resources/art/gacha-T05.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "43cfc734-79be-45fa-9d25-cc7d59356b05@6c48a": {
+    "url": "db://assets/resources/art/gacha-T05.png@6c48a",
+    "value": {
+      "depends": [
+        "43cfc734-79be-45fa-9d25-cc7d59356b05"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2db21b47-5b4e-4c1f-9c40-9f6a191b4a15@6c48a": {
+    "url": "db://assets/resources/art/gacha-M15.png@6c48a",
+    "value": {
+      "depends": [
+        "2db21b47-5b4e-4c1f-9c40-9f6a191b4a15"
+      ]
+    },
+    "versionCode": 1
+  },
+  "2db21b47-5b4e-4c1f-9c40-9f6a191b4a15@f9941": {
+    "url": "db://assets/resources/art/gacha-M15.png@f9941",
+    "value": {
+      "depends": [
+        "2db21b47-5b4e-4c1f-9c40-9f6a191b4a15@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "43cfc734-79be-45fa-9d25-cc7d59356b05@f9941": {
+    "url": "db://assets/resources/art/gacha-T05.png@f9941",
+    "value": {
+      "depends": [
+        "43cfc734-79be-45fa-9d25-cc7d59356b05@6c48a"
+      ]
+    },
+    "versionCode": 1
   }
 }

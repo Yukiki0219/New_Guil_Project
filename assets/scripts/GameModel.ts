@@ -1,3 +1,5 @@
+import { REWARDS, rewardById } from './Gacha';
+
 /** Rules only. Position/radius and velocity snapshots use ground-plane pixels and pixels/s.
  * Cocos Box2D owns integration, damping and contact resolution in GuliPhysics. */
 export interface Marble { id: number; x: number; y: number; vx: number; vy: number; r: number; shooter: boolean; entered: boolean; gone: boolean }
@@ -105,16 +107,23 @@ export class GameModel {
         this.phase = this.knocked.length >= this.level.target ? 'won' : this.remaining === 0 ? 'lost' : 'aim';
     }
 }
-export interface SaveData { version: number; stars: number[]; collection: number[]; sound: boolean; tuto: boolean; language: 'zh' | 'en' }
+export interface SaveData { version: number; stars: number[]; collection: number[]; sound: boolean; tuto: boolean; language: 'zh' | 'en'; starBalance: number; rewards: string[]; equipped: { scene: string | null; marble: string | null; trail: string | null } }
 export function cleanSave(raw: any): SaveData {
-    return { version: 2,
-        stars: LEVELS.map((_, i) => Math.max(0, Math.min(3, Math.floor(Number(raw?.stars?.[i]) || 0)))),
+    const stars = LEVELS.map((_, i) => Math.max(0, Math.min(3, Math.floor(Number(raw?.stars?.[i]) || 0))));
+    const rewards = Array.from(new Set<string>((Array.isArray(raw?.rewards) ? raw.rewards : []).filter((id: any) => typeof id === 'string' && REWARDS.some(reward => reward.id === id))));
+    const equipped = (['scene', 'marble', 'trail'] as const).reduce((result, kind) => {
+        const id = raw?.equipped?.[kind]; result[kind] = rewards.includes(id) && rewardById(id)?.kind === kind ? id : null; return result;
+    }, { scene: null, marble: null, trail: null } as SaveData['equipped']);
+    return { version: 3, stars,
         collection: Array.from(new Set<number>((Array.isArray(raw?.collection) ? raw.collection : []).filter((n: any) => Number.isInteger(n) && n >= 0 && n < MARBLE_COUNT))),
-        sound: raw?.sound !== false, tuto: raw?.tuto === true, language: raw?.language === 'en' ? 'en' : 'zh' };
+        sound: raw?.sound !== false, tuto: raw?.tuto === true, language: raw?.language === 'en' ? 'en' : 'zh',
+        starBalance: raw?.version === 3 && Number.isFinite(raw?.starBalance) ? Math.max(0, Math.floor(raw.starBalance)) : raw?.version === 3 ? 0 : stars.reduce((sum, value) => sum + value, 0),
+        rewards, equipped };
 }
 export function award(save: SaveData, game: GameModel): SaveData {
     const next = cleanSave(save);
     if (game.phase === 'won') {
+        if (save.stars[game.levelIndex] === 0) next.starBalance += game.stars;
         next.stars[game.levelIndex] = Math.max(next.stars[game.levelIndex], game.stars);
         next.collection = Array.from(new Set(next.collection.concat(game.knocked)));
     }

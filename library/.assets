@@ -14,7 +14,6 @@
             "scripts\\GameModel.ts",
             "scripts\\GuliGame.ts",
             "scripts\\GuliPhysics.ts",
-            "scripts\\HuaweiLogin.ts",
             "scripts\\LanguageSwitch.ts",
             "scripts\\LanguageVerification.ts",
             "scripts\\Localization.ts",
@@ -58,7 +57,17 @@
             "resources\\hud\\prefabs\\StarEmpty.prefab",
             "resources\\hud\\prefabs\\StarEmpty2.prefab",
             "resources\\hud\\prefabs\\StarEmpty3.prefab",
-            "resources\\hud\\prefabs\\TargetPlate.prefab"
+            "resources\\hud\\prefabs\\TargetPlate.prefab",
+            "scripts\\Gacha.ts",
+            "resources\\art\\gacha-scenes",
+            "resources\\art\\gacha-scenes\\S01.png",
+            "resources\\art\\gacha-scenes\\S02.png",
+            "resources\\art\\gacha-scenes\\S03.png",
+            "resources\\art\\gacha-scenes\\S04.png",
+            "resources\\art\\gacha-scenes\\S05.png",
+            "resources\\art\\gacha-page.png",
+            "resources\\art\\gacha-M15.png",
+            "resources\\art\\gacha-T05.png"
         ]
     }
 }

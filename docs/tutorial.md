@@ -41,7 +41,7 @@ The existing `guli.save.v2` record gains one Boolean field, `tuto`. Existing v1 
 - Portrait device preview (iPhone 14 Pro profile, 393×852) was visually inspected: instruction card, target, shooter and power bar remained visible; native continuation buttons worked.
 - Cocos Creator 3.8.8 Web Mobile release build completed successfully with exit code 36. Build log: `temp/tutorial-build.log`.
 
-No Huawei RPK build, physical-device restart/touch test, or broad device/performance matrix was performed. Browser reload persistence is verified; it is not a claim of native application restart verification.
+No native mobile build, physical-device restart/touch test, or broad device/performance matrix was performed. Browser reload persistence is verified; it is not a claim of native application restart verification.
 
 ## Open and test
 

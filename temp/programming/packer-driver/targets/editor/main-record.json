@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 11643.1953,
+      "mTimestamp": 28947.0676,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 15852.004,
+      "mTimestamp": 5329652.332,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -1099,7 +1099,7 @@
           }
         },
         {
-          "value": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts",
+          "value": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Gacha.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
@@ -1108,63 +1108,63 @@
             },
             "end": {
               "line": 5,
-              "column": 1150
+              "column": 1146
+            }
+          }
+        },
+        {
+          "value": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 1162
+            },
+            "end": {
+              "line": 5,
+              "column": 1238
             }
           }
         },
         {
           "value": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts",
-          "resolved": "__unresolved_8",
+          "resolved": "__unresolved_9",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1166
+              "column": 1254
             },
             "end": {
               "line": 5,
-              "column": 1242
+              "column": 1330
             }
           }
         },
         {
           "value": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts",
-          "resolved": "__unresolved_9",
+          "resolved": "__unresolved_10",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1258
+              "column": 1346
             },
             "end": {
               "line": 5,
-              "column": 1333
+              "column": 1421
             }
           }
         },
         {
           "value": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts",
-          "resolved": "__unresolved_10",
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 1349
-            },
-            "end": {
-              "line": 5,
-              "column": 1427
-            }
-          }
-        },
-        {
-          "value": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts",
           "resolved": "__unresolved_11",
           "loc": {
             "start": {
               "line": 5,
-              "column": 1443
+              "column": 1437
             },
             "end": {
               "line": 5,
-              "column": 1521
+              "column": 1515
             }
           }
         },
@@ -1174,11 +1174,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 1537
+              "column": 1531
             },
             "end": {
               "line": 5,
-              "column": 1618
+              "column": 1612
             }
           }
         },
@@ -1188,11 +1188,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 1634
+              "column": 1628
             },
             "end": {
               "line": 5,
-              "column": 1721
+              "column": 1715
             }
           }
         },
@@ -1202,11 +1202,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 1737
+              "column": 1731
             },
             "end": {
               "line": 5,
-              "column": 1816
+              "column": 1810
             }
           }
         },
@@ -1216,11 +1216,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 1832
+              "column": 1826
             },
             "end": {
               "line": 5,
-              "column": 1915
+              "column": 1909
             }
           }
         },
@@ -1230,11 +1230,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 1931
+              "column": 1925
             },
             "end": {
               "line": 5,
-              "column": 2021
+              "column": 2015
             }
           }
         },
@@ -1244,11 +1244,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 2037
+              "column": 2031
             },
             "end": {
               "line": 5,
-              "column": 2118
+              "column": 2112
             }
           }
         },
@@ -1258,11 +1258,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 2134
+              "column": 2128
             },
             "end": {
               "line": 5,
-              "column": 2220
+              "column": 2214
             }
           }
         },
@@ -1272,11 +1272,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 2236
+              "column": 2230
             },
             "end": {
               "line": 5,
-              "column": 2323
+              "column": 2317
             }
           }
         },
@@ -1286,11 +1286,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 2339
+              "column": 2333
             },
             "end": {
               "line": 5,
-              "column": 2415
+              "column": 2409
             }
           }
         },
@@ -1300,11 +1300,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 2431
+              "column": 2425
             },
             "end": {
               "line": 5,
-              "column": 2519
+              "column": 2513
             }
           }
         },
@@ -1314,11 +1314,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 2535
+              "column": 2529
             },
             "end": {
               "line": 5,
-              "column": 2610
+              "column": 2604
             }
           }
         },
@@ -1328,11 +1328,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 2626
+              "column": 2620
             },
             "end": {
               "line": 5,
-              "column": 2713
+              "column": 2707
             }
           }
         },
@@ -1342,11 +1342,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 2729
+              "column": 2723
             },
             "end": {
               "line": 5,
-              "column": 2808
+              "column": 2802
             }
           }
         }
@@ -1405,6 +1405,13 @@
         {
           "resolved": {
             "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Gacha.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts"
           },
           "messages": []
@@ -1427,13 +1434,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts"
           },
           "messages": []
         },
@@ -2094,13 +2094,31 @@
     },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts": {
       "mTimestamp": {
-        "mtime": 1793159169082.1702,
+        "mtime": 1794750920889.4797,
         "uuid": "7954f24b-b1de-478d-be88-724c207f66b7"
       },
       "chunkId": "58880a8083b2f07e7c855faf195f25fd943fc1c0",
       "imports": [
         {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
           "value": "cc"
+        },
+        {
+          "value": "./Gacha",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 36
+            },
+            "end": {
+              "line": 1,
+              "column": 45
+            }
+          }
         }
       ],
       "type": "esm",
@@ -2108,7 +2126,21 @@
         {
           "resolved": {
             "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Gacha.ts"
           },
           "messages": []
         }
@@ -2116,7 +2148,7 @@
     },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts": {
       "mTimestamp": {
-        "mtime": 1793159298875.2249,
+        "mtime": 1794753591703.9612,
         "uuid": "9f327c01-c945-427f-97a6-94ab92496ce9"
       },
       "chunkId": "891993eae04260b53f95443698158d522b88ba86",
@@ -2132,43 +2164,29 @@
           "value": "cc"
         },
         {
-          "value": "./HuaweiLogin",
+          "value": "./Localization",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 1,
-              "column": 40
-            },
-            "end": {
-              "line": 1,
-              "column": 55
-            }
-          }
-        },
-        {
-          "value": "./Localization",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 2,
               "column": 36
             },
             "end": {
-              "line": 2,
+              "line": 1,
               "column": 52
             }
           }
         },
         {
           "value": "./LanguageSwitch",
-          "resolved": "__unresolved_3",
+          "resolved": "__unresolved_2",
           "loc": {
             "start": {
-              "line": 3,
+              "line": 2,
               "column": 31
             },
             "end": {
-              "line": 3,
+              "line": 2,
               "column": 49
             }
           }
@@ -2177,39 +2195,39 @@
           "value": "cc",
           "loc": {
             "start": {
-              "line": 4,
-              "column": 319
+              "line": 3,
+              "column": 336
             },
             "end": {
-              "line": 4,
-              "column": 323
+              "line": 3,
+              "column": 340
             }
           }
         },
         {
           "value": "./GameModel",
-          "resolved": "__unresolved_4",
+          "resolved": "__unresolved_3",
           "loc": {
             "start": {
-              "line": 5,
+              "line": 4,
               "column": 136
             },
             "end": {
-              "line": 5,
+              "line": 4,
               "column": 149
             }
           }
         },
         {
           "value": "./GuliPhysics",
-          "resolved": "__unresolved_5",
+          "resolved": "__unresolved_4",
           "loc": {
             "start": {
-              "line": 6,
+              "line": 5,
               "column": 28
             },
             "end": {
-              "line": 6,
+              "line": 5,
               "column": 43
             }
           }
@@ -2218,110 +2236,124 @@
           "value": "cc/env",
           "loc": {
             "start": {
-              "line": 7,
-              "column": 32
+              "line": 6,
+              "column": 24
             },
             "end": {
-              "line": 7,
-              "column": 40
+              "line": 6,
+              "column": 32
             }
           }
         },
         {
           "value": "./Slingshot",
-          "resolved": "__unresolved_6",
+          "resolved": "__unresolved_5",
           "loc": {
             "start": {
-              "line": 8,
+              "line": 7,
               "column": 42
             },
             "end": {
-              "line": 8,
+              "line": 7,
               "column": 55
             }
           }
         },
         {
           "value": "./AimPrediction",
-          "resolved": "__unresolved_7",
+          "resolved": "__unresolved_6",
           "loc": {
             "start": {
-              "line": 9,
+              "line": 8,
               "column": 27
             },
             "end": {
-              "line": 9,
+              "line": 8,
               "column": 44
             }
           }
         },
         {
           "value": "./MarbleAppearance",
-          "resolved": "__unresolved_8",
+          "resolved": "__unresolved_7",
           "loc": {
             "start": {
-              "line": 10,
+              "line": 9,
               "column": 35
             },
             "end": {
-              "line": 10,
+              "line": 9,
               "column": 55
             }
           }
         },
         {
           "value": "./MarbleRenderer",
-          "resolved": "__unresolved_9",
+          "resolved": "__unresolved_8",
           "loc": {
             "start": {
-              "line": 11,
+              "line": 10,
               "column": 37
             },
             "end": {
-              "line": 11,
+              "line": 10,
               "column": 55
             }
           }
         },
         {
           "value": "./Tutorial",
-          "resolved": "__unresolved_10",
+          "resolved": "__unresolved_9",
           "loc": {
             "start": {
-              "line": 12,
+              "line": 11,
               "column": 25
             },
             "end": {
-              "line": 12,
+              "line": 11,
               "column": 37
             }
           }
         },
         {
           "value": "./TutorialView",
-          "resolved": "__unresolved_11",
+          "resolved": "__unresolved_10",
           "loc": {
             "start": {
-              "line": 13,
+              "line": 12,
               "column": 29
             },
             "end": {
-              "line": 13,
+              "line": 12,
               "column": 45
             }
           }
         },
         {
           "value": "./GameHints",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 37
+            },
+            "end": {
+              "line": 13,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "./Gacha",
           "resolved": "__unresolved_12",
           "loc": {
             "start": {
               "line": 14,
-              "column": 37
+              "column": 91
             },
             "end": {
               "line": 14,
-              "column": 50
+              "column": 100
             }
           }
         },
@@ -2330,11 +2362,11 @@
           "resolved": "__unresolved_13",
           "loc": {
             "start": {
-              "line": 126,
+              "line": 97,
               "column": 45
             },
             "end": {
-              "line": 126,
+              "line": 97,
               "column": 69
             }
           }
@@ -2344,11 +2376,11 @@
           "resolved": "__unresolved_14",
           "loc": {
             "start": {
-              "line": 130,
+              "line": 101,
               "column": 45
             },
             "end": {
-              "line": 130,
+              "line": 101,
               "column": 68
             }
           }
@@ -2358,11 +2390,11 @@
           "resolved": "__unresolved_15",
           "loc": {
             "start": {
-              "line": 185,
+              "line": 158,
               "column": 27
             },
             "end": {
-              "line": 185,
+              "line": 158,
               "column": 54
             }
           }
@@ -2372,11 +2404,11 @@
           "resolved": "__unresolved_16",
           "loc": {
             "start": {
-              "line": 189,
+              "line": 162,
               "column": 27
             },
             "end": {
-              "line": 189,
+              "line": 162,
               "column": 54
             }
           }
@@ -2386,11 +2418,11 @@
           "resolved": "__unresolved_17",
           "loc": {
             "start": {
-              "line": 193,
+              "line": 166,
               "column": 23
             },
             "end": {
-              "line": 193,
+              "line": 166,
               "column": 48
             }
           }
@@ -2400,11 +2432,11 @@
           "resolved": "__unresolved_18",
           "loc": {
             "start": {
-              "line": 196,
+              "line": 169,
               "column": 23
             },
             "end": {
-              "line": 196,
+              "line": 169,
               "column": 47
             }
           }
@@ -2414,11 +2446,11 @@
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
-              "line": 199,
+              "line": 172,
               "column": 23
             },
             "end": {
-              "line": 199,
+              "line": 172,
               "column": 47
             }
           }
@@ -2444,13 +2476,6 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts"
           },
           "messages": []
         },
@@ -2548,6 +2573,13 @@
         {
           "resolved": {
             "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Gacha.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
             "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts"
           },
           "messages": []
@@ -2597,7 +2629,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1794745407064,
+      "mTimestamp": 1794748270240,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",
@@ -2605,7 +2637,7 @@
     },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts": {
       "mTimestamp": {
-        "mtime": 1792732162289.3599,
+        "mtime": 1794751149262.5376,
         "uuid": "315354e2-65ec-4f22-8593-8e9803df24bd"
       },
       "chunkId": "b52d9af49d3f1c3efb6199331218a9ef5cd1858b",
@@ -3610,7 +3642,7 @@
     },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts": {
       "mTimestamp": {
-        "mtime": 1793159169160.4673,
+        "mtime": 1794752276209.2031,
         "uuid": "d230aefd-5785-4f9d-9714-c729c4cb6a4e"
       },
       "chunkId": "224b41cac551edc3f4a2d10740c1f22f2f12adc0",
@@ -3643,6 +3675,39 @@
       ],
       "type": "esm",
       "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Gacha.ts": {
+      "mTimestamp": {
+        "mtime": 1794750497268.5825,
+        "uuid": "4f62f4af-1161-47ca-96c8-69d07907cecb"
+      },
+      "chunkId": "9cca42594fd9695cc1b96e6bc946019c3e793bd5",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
         {
           "resolved": {
             "type": "module",

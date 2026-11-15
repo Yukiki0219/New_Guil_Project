@@ -4,7 +4,9 @@ const assert = require('node:assert/strict');
 const ts = require('../extensions/cocos-creator-mcp-main/node_modules/typescript');
 const source = fs.readFileSync(require('node:path').join(__dirname, '../assets/scripts/GameModel.ts'), 'utf8');
 const out = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2020 } });
-const box = { exports: {}, console }; vm.runInNewContext(out.outputText, box);
+const gacha = { exports: {} };
+vm.runInNewContext(ts.transpileModule(fs.readFileSync(require('node:path').join(__dirname, '../assets/scripts/Gacha.ts'), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS } }).outputText, gacha);
+const box = { exports: {}, console, require: name => name === './Gacha' ? gacha.exports : {} }; vm.runInNewContext(out.outputText, box);
 const { GameModel, LEVELS, RADIUS, award, cleanSave, rollMarbles } = box.exports;
 let tests = 0;
 function test(name, f) { f(); tests++; console.log('PASS ' + name); }
@@ -93,7 +95,7 @@ test('Starting outside or safety removal is not a successful exit', () => {
 });
 test('56 IDs preserve all legacy ownership and exact rarity counts',()=>{
  const save=cleanSave({version:1,stars:[3,2],collection:Array.from({length:50},(_,i)=>i),sound:false});
- assert.equal(save.version,2);assert.equal(save.collection.length,50);assert.equal(save.stars[0],3);assert.equal(save.sound,false);
+ assert.equal(save.version,3);assert.equal(save.collection.length,50);assert.equal(save.stars[0],3);assert.equal(save.starBalance,5);assert.equal(save.sound,false);
  assert.equal(cleanSave({...save,collection:Array.from({length:56},(_,i)=>i)}).collection.length,56);
  const counts={};for(let i=0;i<56;i++){const r=box.exports.rarity(i);counts[r]=(counts[r]||0)+1;assert(box.exports.marbleName(i));}
  assert.deepEqual(counts,{'普通':23,'稀有':16,'超级稀有':8,'珍藏':5,'传奇':4});

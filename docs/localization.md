@@ -22,7 +22,7 @@ Screenshots: `language-menu-zh.png`, `language-menu-en.png`, `language-tutorial-
 
 ## Limits
 
-No Huawei RPK device test or new release build was run. Touch verification used Cocos touch events in the editor preview. Translation tests scan active text; visual inspection covered the screens and sizes above, not every possible device or every saved game state. Original main-menu collection denominator remains unchanged by this localization task.
+No native mobile device test or new release build was run. Touch verification used Cocos touch events in the editor preview. Translation tests scan active text; visual inspection covered the screens and sizes above, not every possible device or every saved game state. Original main-menu collection denominator remains unchanged by this localization task.
 
 New UI copy should receive a dictionary entry or dynamic template in `Localization.ts`. Continue using `setText` for changing main-game labels so live language updates retain their source text.
 

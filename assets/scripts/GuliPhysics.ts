@@ -21,6 +21,7 @@ export type PhysicsConfig = typeof PHYSICS_CONFIG;
  */
 export class GuliPhysics {
     readonly bodies = new Map<Marble, RigidBody2D>();
+    readonly contactPoints: Vec2[] = [];
     readonly config: PhysicsConfig;
     readonly root: Node;
     private system = PhysicsSystem2D.instance;
@@ -75,7 +76,14 @@ export class GuliPhysics {
         const impulse = contact?.getImpulse();
         const normal = impulse ? Math.max(0, ...impulse.normalImpulses) : 0;
         if (normal > 0.00001) this.touched = true;
-        if (normal > 30) this.model.impacts.push(normal);
+        if (normal > 30) {
+            this.model.impacts.push(normal);
+            if (this.contactPoints.length < 6) {
+                const pa = a.node.getComponent(RigidBody2D)!.getWorldCenter(new Vec2());
+                const pb = b.node.getComponent(RigidBody2D)!.getWorldCenter(new Vec2());
+                this.contactPoints.push(new Vec2((pa.x + pb.x) / 2, (pa.y + pb.y) / 2));
+            }
+        }
     }
 
     advance(dt: number): boolean {
@@ -84,6 +92,7 @@ export class GuliPhysics {
         // Long browser stalls slow simulation rather than producing a giant step or premature settle.
         this.accumulator += Math.min(dt, this.config.timestep * this.config.maxSubSteps);
         this.model.impacts.length = 0;
+        this.contactPoints.length = 0;
         let count = 0;
         while (this.accumulator + 1e-10 >= this.config.timestep && count++ < this.config.maxSubSteps && this.model.phase === 'moving') {
             this.accumulator -= this.config.timestep;

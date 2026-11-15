@@ -1,7 +1,7 @@
-System.register(["cc"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _cclegacy, GameModel, _crd, MARBLE_COUNT, RADIUS, SHOOTER_Y, LAUNCH_MIN, LAUNCH_MAX, SETTLE_SPEED, SETTLE_DURATION, LEVELS, colors, patterns, superRareNames, collectibleNames, legendaryNames;
+  var _reporterNs, _cclegacy, REWARDS, rewardById, GameModel, _crd, MARBLE_COUNT, RADIUS, SHOOTER_Y, LAUNCH_MIN, LAUNCH_MAX, SETTLE_SPEED, SETTLE_DURATION, LEVELS, colors, patterns, superRareNames, collectibleNames, legendaryNames;
 
   /** Final ground-plane launch speed (pixels/s), shared by launch and aim prediction. */
   function launchSpeed(power) {
@@ -9,17 +9,37 @@ System.register(["cc"], function (_export, _context) {
   }
 
   function cleanSave(raw) {
-    return {
-      version: 2,
-      stars: LEVELS.map((_, i) => {
-        var _raw$stars;
+    const stars = LEVELS.map((_, i) => {
+      var _raw$stars;
 
-        return Math.max(0, Math.min(3, Math.floor(Number(raw == null || (_raw$stars = raw.stars) == null ? void 0 : _raw$stars[i]) || 0)));
-      }),
+      return Math.max(0, Math.min(3, Math.floor(Number(raw == null || (_raw$stars = raw.stars) == null ? void 0 : _raw$stars[i]) || 0)));
+    });
+    const rewards = Array.from(new Set((Array.isArray(raw == null ? void 0 : raw.rewards) ? raw.rewards : []).filter(id => typeof id === 'string' && (_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
+      error: Error()
+    }), REWARDS) : REWARDS).some(reward => reward.id === id))));
+    const equipped = ['scene', 'marble', 'trail'].reduce((result, kind) => {
+      var _raw$equipped, _ref;
+
+      const id = raw == null || (_raw$equipped = raw.equipped) == null ? void 0 : _raw$equipped[kind];
+      result[kind] = rewards.includes(id) && ((_ref = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
+        error: Error()
+      }), rewardById) : rewardById)(id)) == null ? void 0 : _ref.kind) === kind ? id : null;
+      return result;
+    }, {
+      scene: null,
+      marble: null,
+      trail: null
+    });
+    return {
+      version: 3,
+      stars,
       collection: Array.from(new Set((Array.isArray(raw == null ? void 0 : raw.collection) ? raw.collection : []).filter(n => Number.isInteger(n) && n >= 0 && n < MARBLE_COUNT))),
       sound: (raw == null ? void 0 : raw.sound) !== false,
       tuto: (raw == null ? void 0 : raw.tuto) === true,
-      language: (raw == null ? void 0 : raw.language) === 'en' ? 'en' : 'zh'
+      language: (raw == null ? void 0 : raw.language) === 'en' ? 'en' : 'zh',
+      starBalance: (raw == null ? void 0 : raw.version) === 3 && Number.isFinite(raw == null ? void 0 : raw.starBalance) ? Math.max(0, Math.floor(raw.starBalance)) : (raw == null ? void 0 : raw.version) === 3 ? 0 : stars.reduce((sum, value) => sum + value, 0),
+      rewards,
+      equipped
     };
   }
 
@@ -27,6 +47,7 @@ System.register(["cc"], function (_export, _context) {
     const next = cleanSave(save);
 
     if (game.phase === 'won') {
+      if (save.stars[game.levelIndex] === 0) next.starBalance += game.stars;
       next.stars[game.levelIndex] = Math.max(next.stars[game.levelIndex], game.stars);
       next.collection = Array.from(new Set(next.collection.concat(game.knocked)));
     }
@@ -110,6 +131,14 @@ System.register(["cc"], function (_export, _context) {
     return '普通';
   }
 
+  function _reportPossibleCrUseOfREWARDS(extras) {
+    _reporterNs.report("REWARDS", "./Gacha", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfrewardById(extras) {
+    _reporterNs.report("rewardById", "./Gacha", _context.meta, extras);
+  }
+
   _export({
     launchSpeed: launchSpeed,
     GameModel: void 0,
@@ -121,17 +150,21 @@ System.register(["cc"], function (_export, _context) {
   });
 
   return {
-    setters: [function (_cc) {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
       _cclegacy = _cc.cclegacy;
+    }, function (_unresolved_2) {
+      REWARDS = _unresolved_2.REWARDS;
+      rewardById = _unresolved_2.rewardById;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "7954fJLsd5Hjb6Ickwgf2a3", "GameModel", undefined);
+
       /** Rules only. Position/radius and velocity snapshots use ground-plane pixels and pixels/s.
        * Cocos Box2D owns integration, damping and contact resolution in GuliPhysics. */
-
-
       _export("MARBLE_COUNT", MARBLE_COUNT = 56);
 
       _export("RADIUS", RADIUS = 260);
