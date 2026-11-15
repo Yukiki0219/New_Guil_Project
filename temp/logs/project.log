@@ -1,99 +1,45 @@
-29-10-2026 21:16:22 - error: (node:24456) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+15-11-2026 20:23:22 - error: (node:9660) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
 (Use `CocosCreator --trace-warnings ...` to show where the warning was created)
-29-10-2026 21:16:29 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine
-29-10-2026 21:16:30 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\native
-29-10-2026 21:16:31 - log: Request namespace: device-list
-29-10-2026 21:16:40 - error: The plug-in main process failed to load. Error: Cannot find module 'C:\Users\Lenovo\Documents\Guil_Project\extensions\cocos-creator-mcp-main\dist\main.js'
-Require stack:
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\package\dist\browser\package.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\package\dist\browser\index.js
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\package\index.js
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\startup\protected\browser\index.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\startup\protected\index.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\startup\index.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\init.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\index.js
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\launch\dist\index.js
-- 
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1152:15)
-    at s._resolveFilename (node:electron/js2c/browser_init:2:121381)
-    at Function.Module._resolveFilename (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\index.js:8:24)
-    at Function._resolveFilename (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\cc\preload.ts:109:46)
-    at Module._load (node:internal/modules/cjs/loader:993:27)
-    at Function.c._load (node:electron/js2c/node_init:2:17025)
-    at Function._load (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\cc\preload.ts:127:35)
-    at Module.require (node:internal/modules/cjs/loader:1240:19)
-    at Module.patchedRequire (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\require-in-the-middle\index.js:233:34)
-    at Module.require (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\require-in-the-middle\index.js:181:27)
-29-10-2026 21:18:14 - log: [Scene] meshopt wasm decoder initialized
-29-10-2026 21:18:14 - log: [Scene] [bullet]:bullet wasm lib loaded.
-29-10-2026 21:18:14 - log: [Scene] [box2d]:box2d wasm lib loaded.
-29-10-2026 21:18:14 - log: [Scene] [PHYSICS]: using builtin.
-29-10-2026 21:18:14 - log: [Scene] Cocos Creator v3.8.8
-29-10-2026 21:18:15 - log: [Scene] Using custom pipeline: Builtin
-29-10-2026 21:18:15 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.
-29-10-2026 21:18:15 - warn: [Scene] C:\Users\Lenovo\Documents\Guil_Project\extensions\cocos-creator-mcp-main\dist\scene.js Error: Cannot find module 'C:\Users\Lenovo\Documents\Guil_Project\extensions\cocos-creator-mcp-main\dist\scene'
-Require stack:
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\module\protected\public.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\module\protected\index.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\module\index.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\init.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\index.js
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\preload\main.js
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\preload\web\preload.js
-- electron/js2c/renderer_init
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1152:15)
-    at a._resolveFilename (node:electron/js2c/renderer_init:2:2669)
-    at Function.Module._resolveFilename (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\index.js:8:24)
-    at Function._resolveFilename (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\cc\preload.ts:109:46)
-    at Function.n.resolve (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\require.js:1:2896)
-    at Object.requireFile (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\module\protected\public.ccc:1:455)
-    at attach (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\plugin.ccc:1:2779)
-    at Array.forEach (<anonymous>)
-    at PluginManager.init (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\plugin.ccc:1:1410) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\dist\\module\\protected\\public.ccc',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\dist\\module\\protected\\index.ccc',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\dist\\module\\index.ccc',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\dist\\init.ccc',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\index.js',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\builtin\\scene\\dist\\script\\3d\\preload\\main.js',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\builtin\\scene\\dist\\script\\3d\\preload\\web\\preload.js',
-    'electron/js2c/renderer_init'
-  ]
-}Error: [Scene] C:\Users\Lenovo\Documents\Guil_Project\extensions\cocos-creator-mcp-main\dist\scene.js Error: Cannot find module 'C:\Users\Lenovo\Documents\Guil_Project\extensions\cocos-creator-mcp-main\dist\scene'
-Require stack:
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\module\protected\public.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\module\protected\index.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\module\index.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\init.ccc
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\index.js
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\preload\main.js
-- C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\preload\web\preload.js
-- electron/js2c/renderer_init
-    at Function._resolveFilename (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\cc\preload.ts:109:46)
-    at Function.n.resolve (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\require.js:1:2896)
-    at Object.requireFile (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\creator\dist\module\protected\public.ccc:1:455)
-    at attach (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\plugin.ccc:1:2779)
-    at Array.forEach (<anonymous>)
-    at PluginManager.init (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\plugin.ccc:1:1410) {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: [
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\dist\\module\\protected\\public.ccc',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\dist\\module\\protected\\index.ccc',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\dist\\module\\index.ccc',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\dist\\init.ccc',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\node_modules\\@editor\\creator\\index.js',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\builtin\\scene\\dist\\script\\3d\\preload\\main.js',
-    'C:\\ProgramData\\cocos\\editors\\Creator\\3.8.8\\resources\\app.asar\\builtin\\scene\\dist\\script\\3d\\preload\\web\\preload.js',
-    'electron/js2c/renderer_init'
-  ]
-}
-    at Logger._logHandler (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\startup\log.ccc:1:487)
-    at Logger.record (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:458)
-    at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
-    at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\src\utils-hoist\instrument\console.ts:40:14)
-    at attach (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\plugin.ccc:1:2854)
-    at Array.forEach (<anonymous>)
-    at PluginManager.init (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\builtin\scene\dist\script\3d\manager\plugin.ccc:1:1410)
+15-11-2026 20:23:26 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine
+15-11-2026 20:23:26 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\native
+15-11-2026 20:23:27 - log: Request namespace: device-list
+15-11-2026 20:23:32 - log: [RB] extension loaded v0.1.12 sha256=3d66302ab21f7808de5cd6d5908c063a9d9ca2e38ad335388e5cae82906ce7ff path=C:\Users\Lenovo\.CocosCreator\builtin-extensions\3.8.8\runtime-bridge
+15-11-2026 20:23:33 - log: [cocos-creator-mcp] Extension loaded
+15-11-2026 20:23:33 - log: Cocos MCP Server extension loaded
+15-11-2026 20:23:33 - log: Console capture setup initialized
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for build-worker:ready (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for build-worker:closed (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for scene:ready (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for scene:close (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for scene:light-probe-edit-mode-changed (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for scene:light-probe-bounding-box-edit-mode-changed (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:ready (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:close (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:asset-add (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:asset-change (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:asset-delete (simulated)
+15-11-2026 20:23:33 - log: [ToolManager] Initialized 50 tools from MCP server
+15-11-2026 20:23:33 - log: [MCPServer] Initializing tools...
+15-11-2026 20:23:33 - log: Console capture setup initialized
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for build-worker:ready (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for build-worker:closed (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for scene:ready (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for scene:close (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for scene:light-probe-edit-mode-changed (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for scene:light-probe-bounding-box-edit-mode-changed (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:ready (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:close (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:asset-add (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:asset-change (simulated)
+15-11-2026 20:23:33 - log: [BroadcastTools] Added listener for asset-db:asset-delete (simulated)
+15-11-2026 20:23:33 - log: [MCPServer] Tools initialized successfully
+15-11-2026 20:23:33 - log: [MCPServer] Updating enabled tools: 50 tools
+15-11-2026 20:23:33 - log: [MCPServer] Setup tools: 50 tools available
+15-11-2026 20:23:34 - warn: [RB] Policy refresh retained: request timed out
+15-11-2026 20:23:43 - log: [Scene] meshopt wasm decoder initialized
+15-11-2026 20:23:43 - log: [Scene] [bullet]:bullet wasm lib loaded.
+15-11-2026 20:23:43 - log: [Scene] [box2d]:box2d wasm lib loaded.
+15-11-2026 20:23:43 - log: [Scene] [PHYSICS]: using builtin.
+15-11-2026 20:23:43 - log: [Scene] Cocos Creator v3.8.8
+15-11-2026 20:23:43 - log: [Scene] Using custom pipeline: Builtin
+15-11-2026 20:23:43 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.

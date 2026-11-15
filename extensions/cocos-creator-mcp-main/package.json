@@ -9,7 +9,7 @@
         "watch": "tsc -w",
         "test:compat": "node test/scene-create-compat.cjs && node test/resource-uri-compat.cjs"
     },
-    "description": "MCP Server for Cocos Creator [faa2dee8a8e8]",
+    "description": "MCP Server for Cocos Creator [36e0a3582d7e]",
     "main": "./dist/main.js",
     "dependencies": {
         "vue": "^3.1.4",
