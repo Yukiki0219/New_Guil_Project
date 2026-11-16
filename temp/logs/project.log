@@ -91,3 +91,19 @@
 16-11-2026 20:46:49 - log: [cocos-creator-mcp] ✓ debug_preview (17ms)
 16-11-2026 20:46:54 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":30,"types":["error"]}
 16-11-2026 20:46:54 - log: [cocos-creator-mcp] ✓ read_console (13ms)
+16-11-2026 21:03:40 - log: [cocos-creator-mcp] ▶ project_refresh_assets 
+16-11-2026 21:03:41 - log: [cocos-creator-mcp] ✓ project_refresh_assets (561ms)
+16-11-2026 21:03:44 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":30,"types":["error","warn"]}
+16-11-2026 21:03:44 - log: [cocos-creator-mcp] ✓ read_console (22ms)
+16-11-2026 21:03:55 - log: [cocos-creator-mcp] ▶ debug_preview {"action":"start","waitForReady":false}
+16-11-2026 21:03:55 - log: [cocos-creator-mcp] ✓ debug_preview (13ms)
+16-11-2026 21:03:57 - log: [cocos-creator-mcp] ▶ debug_screenshot {"target":"window"}
+16-11-2026 21:04:00 - log: [cocos-creator-mcp] ✓ debug_screenshot (3030ms)
+16-11-2026 21:05:15 - log: [cocos-creator-mcp] ▶ builder_manage {"action":"run_preview"}
+16-11-2026 21:05:15 - log: [cocos-creator-mcp] ✓ builder_manage (2ms)
+16-11-2026 21:05:52 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":25}
+16-11-2026 21:05:52 - log: [cocos-creator-mcp] ✓ read_console (15ms)
+16-11-2026 21:06:12 - log: [cocos-creator-mcp] ▶ project_refresh_assets 
+16-11-2026 21:06:12 - log: [cocos-creator-mcp] ✓ project_refresh_assets (556ms)
+16-11-2026 21:06:12 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":20,"types":["error"]}
+16-11-2026 21:06:12 - log: [cocos-creator-mcp] ✓ read_console (13ms)

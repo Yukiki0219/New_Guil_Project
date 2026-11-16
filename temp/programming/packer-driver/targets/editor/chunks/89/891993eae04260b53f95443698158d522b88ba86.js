@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3", "__unresolved_4", "cc/env", "__unresolved_5", "__unresolved_6", "__unresolved_7", "__unresolved_8", "__unresolved_9", "__unresolved_10", "__unresolved_11", "__unresolved_12"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, translate, LanguageSwitch, _decorator, Component, Node, UITransform, Graphics, Color, Label, Vec3, input, Input, KeyCode, view, ResolutionPolicy, resources, SpriteFrame, Sprite, Mask, sys, AudioSource, AudioClip, Canvas, Camera, profiler, Prefab, instantiate, Button, BlockInputEvents, UIOpacity, game, Game, GameModel, MARBLE_COUNT, LEVELS, RADIUS, SHOOTER_Y, cleanSave, award, rollMarbles, marbleName, rarity, GuliPhysics, PREVIEW, Slingshot, GROUND_Y_SCALE, predictAim, MARBLE_APPEARANCES, drawMarbleAppearance, Tutorial, TutorialView, GameHints, HINT_TEXT, REWARDS, RARITIES, drawReward, equipReward, rewardById, _dec, _class, _crd, ccclass, CREAM, INK, TEAL, GOLD, PALETTE, GACHA_MARBLE_SOURCES, GuliGame;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, translate, LanguageSwitch, _decorator, Component, Node, UITransform, Graphics, Color, Label, Vec3, input, Input, KeyCode, view, ResolutionPolicy, resources, SpriteFrame, Sprite, Mask, sys, AudioSource, AudioClip, Canvas, Camera, profiler, Prefab, instantiate, Button, BlockInputEvents, UIOpacity, game, Game, GameModel, MARBLE_COUNT, LEVELS, RADIUS, SHOOTER_Y, cleanSave, award, rollMarbles, marbleName, rarity, GuliPhysics, PREVIEW, Slingshot, GROUND_Y_SCALE, predictAim, MARBLE_APPEARANCES, drawMarbleAppearance, Tutorial, TutorialView, GameHints, HINT_TEXT, REWARDS, RARITIES, drawReward, equipReward, rewardById, _dec, _class, _crd, ccclass, CREAM, INK, TEAL, GOLD, RARITY_COLORS, PALETTE, GACHA_MARBLE_SOURCES, GuliGame;
 
   function col(hex, alpha = 255) {
     const c = new Color();
@@ -231,6 +231,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       INK = '#164e54';
       TEAL = '#008e96';
       GOLD = '#e0a13d';
+      RARITY_COLORS = {
+        '普通': '#a7a49a',
+        '稀有': '#4bb8bd',
+        '超级稀有': '#a26bd7',
+        '珍藏': '#d99178',
+        '传奇': '#e5b943'
+      };
       PALETTE = ['#168acb', '#d89516', '#20996b', '#8155bb', '#c44661', '#82becb', '#39b5a3', '#e17d55', '#475bba', '#e7ac30'];
       GACHA_MARBLE_SOURCES = [4, 2, 6, 5, 13, 0, 7, 14, 42, 23, 27, 31, 26, 28, 39, 36, 35, 25, 44, 54];
 
@@ -308,6 +315,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.earnedStars = 0;
           this.lastReward = null;
           this.lastDrawDuplicate = false;
+          this.gachaAnimation = null;
+          this.refundFlight = null;
           this.wardrobeKind = 'marble';
           this.navSwipe = null;
           this.trailMarks = [];
@@ -443,6 +452,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }
 
             prefabs.forEach(p => this.artwork[p.name] = p);
+            if (this.gachaAnimation) return;
             const modal = this.modal;
             this.render();
             if (modal) this.showModal(modal);
@@ -631,6 +641,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           });
         }
 
+        starIcon(parent, x, y, radius) {
+          const n = this.makeNode('GachaStar', parent, x, y, radius * 2, radius * 2);
+          const g = n.addComponent(Graphics);
+          g.fillColor = col('#ffca58');
+          g.strokeColor = col('#fff6d2');
+          g.lineWidth = 2;
+
+          for (let i = 0; i < 10; i++) {
+            const a = Math.PI / 2 + i * Math.PI / 5,
+                  r = i % 2 ? radius * .46 : radius;
+            if (i) g.lineTo(Math.cos(a) * r, Math.sin(a) * r);else g.moveTo(Math.cos(a) * r, Math.sin(a) * r);
+          }
+
+          g.close();
+          g.fill();
+          g.stroke();
+          return n;
+        }
+
         stars(count, x, y, size = 20, parent = this.ui) {
           const g = this.graphic(parent);
 
@@ -695,6 +724,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         render() {
           var _this$tutorialView, _this$hintLayer;
 
+          this.refundFlight = null;
           (_this$tutorialView = this.tutorialView) == null || _this$tutorialView.dispose();
           this.tutorialView = null;
           (_this$hintLayer = this.hintLayer) == null || _this$hintLayer.destroy();
@@ -886,56 +916,58 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.button('去抽奖', 0, -543, 280, 62, () => this.navigate('gacha'), true);
         }
 
-        scenePreview(reward, x, y, owned) {
-          const frame = this.makeNode('ScenePreview-' + reward.id, this.ui, x, y, 76, 76);
+        scenePreview(reward, x, y, owned, parent = this.ui, size = 76) {
+          const k = size / 76;
+          const frame = this.makeNode('ScenePreview-' + reward.id, parent, x, y, size, size);
           frame.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
           const base = this.graphic(frame);
           base.fillColor = col('#aaa9a0');
-          base.rect(-38, -38, 76, 76);
+          base.rect(-size / 2, -size / 2, size, size);
           base.fill();
           base.fillColor = col('#d5d3c9');
-          base.circle(21, 18, 9);
+          base.circle(21 * k, 18 * k, 9 * k);
           base.fill();
           base.fillColor = col('#777c78');
-          base.moveTo(-38, -12);
-          base.lineTo(-11, 14);
-          base.lineTo(13, -14);
-          base.lineTo(38, 10);
-          base.lineTo(38, -38);
-          base.lineTo(-38, -38);
+          base.moveTo(-38 * k, -12 * k);
+          base.lineTo(-11 * k, 14 * k);
+          base.lineTo(13 * k, -14 * k);
+          base.lineTo(38 * k, 10 * k);
+          base.lineTo(38 * k, -38 * k);
+          base.lineTo(-38 * k, -38 * k);
           base.close();
           base.fill();
           if (owned) resources.load(`art/gacha-scenes/${reward.id}/spriteFrame`, SpriteFrame, (err, art) => {
             if (err || !frame.isValid) return;
-            const picture = this.makeNode('SceneArt', frame, 0, 0, 76, 76);
-            const size = art.originalSize;
-            const scale = Math.max(76 / size.width, 76 / size.height);
-            picture.getComponent(UITransform).setContentSize(size.width * scale, size.height * scale);
+            const picture = this.makeNode('SceneArt', frame, 0, 0, size, size);
+            const original = art.originalSize;
+            const artScale = Math.max(size / original.width, size / original.height);
+            picture.getComponent(UITransform).setContentSize(original.width * artScale, original.height * artScale);
             const sprite = picture.addComponent(Sprite);
             sprite.spriteFrame = art;
             sprite.sizeMode = Sprite.SizeMode.CUSTOM;
           });
-          const outline = this.graphic(this.ui);
+          const outline = this.graphic(parent);
           outline.strokeColor = col(owned ? '#b88745' : '#7d7f79');
           outline.lineWidth = 3;
-          outline.roundRect(x - 39, y - 39, 78, 78, 4);
+          outline.roundRect(x - size / 2 - 1, y - size / 2 - 1, size + 2, size + 2, 4 * k);
           outline.stroke();
         }
 
-        trailPreview(reward, x, y, owned) {
-          const frame = this.makeNode('TrailPreview-' + reward.id, this.ui, x, y, 110, 90);
+        trailPreview(reward, x, y, owned, parent = this.ui, scale = 1) {
+          const frame = this.makeNode('TrailPreview-' + reward.id, parent, x, y, 110 * scale, 90 * scale);
           frame.addComponent(Mask).type = Mask.Type.GRAPHICS_RECT;
-          const layer = this.makeNode('TrailPreviewMarks', frame, 0, 0, 110, 90);
-          const ball = this.marble(frame, owned ? 0 : -2, 0, 5, 23);
+          const layer = this.makeNode('TrailPreviewMarks', frame, 0, 0, 110 * scale, 90 * scale);
+          const ball = this.marble(frame, owned ? 0 : -2, 0, 5 * scale, 23 * scale);
           const time = Number(reward.id.slice(1)) * .45;
-          ball.setPosition(Math.sin(time * 2.6) * 25, 5);
+          ball.setPosition(Math.sin(time * 2.6) * 25 * scale, 5 * scale);
           this.trailPreviews.push({
             reward,
             layer,
             ball,
             owned,
             time,
-            stamp: 0
+            stamp: 0,
+            scale
           });
         }
 
@@ -953,6 +985,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         drawGacha() {
+          if (this.gachaAnimation) return;
           const result = (_crd && drawReward === void 0 ? (_reportPossibleCrUseOfdrawReward({
             error: Error()
           }), drawReward) : drawReward)(this.save);
@@ -961,8 +994,123 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.lastReward = result.reward;
           this.lastDrawDuplicate = result.duplicate;
           this.persist();
+          this.startGachaAnimation();
+        }
+
+        startGachaAnimation() {
+          this.cancelInput();
+          this.modal = 'gacha-animation';
+          this.hits = [];
+          this.ui.getComponentsInChildren(Button).forEach(button => button.interactable = false);
+          this.clear(this.overlay);
+          const shade = this.graphic(this.overlay);
+          shade.fillColor = col('#173637', 70);
+          shade.rect(-360, -640, 720, 1280);
+          shade.fill();
+          const halo = this.makeNode('GachaHalo', this.overlay, 0, 60, 260, 260);
+          const ring = halo.addComponent(Graphics);
+          ring.fillColor = col('#ffe7a4', 55);
+          ring.circle(0, 0, 103);
+          ring.fill();
+          ring.strokeColor = col('#ffe7a4');
+          ring.lineWidth = 5;
+          ring.circle(0, 0, 89);
+          ring.stroke();
+          ring.strokeColor = col('#85e7e2');
+          ring.lineWidth = 3;
+          ring.circle(0, 0, 112);
+          ring.stroke();
+          const haloOpacity = halo.addComponent(UIOpacity);
+          haloOpacity.opacity = 0;
+          const flash = this.makeNode('GachaFlash', this.overlay, 0, 60, 260, 260);
+          const burst = flash.addComponent(Graphics);
+          burst.fillColor = col('#fff6da');
+          burst.circle(0, 0, 105);
+          burst.fill();
+          const flashOpacity = flash.addComponent(UIOpacity);
+          flashOpacity.opacity = 0;
+          const stars = [-36, 0, 36].map(x => this.starIcon(this.overlay, x, 365, 16));
+          const sparks = Array.from({
+            length: 12
+          }, () => {
+            const spark = this.starIcon(this.overlay, 0, 60, 7);
+            spark.active = false;
+            return spark;
+          });
+          this.panel(0, -394, 475, 87, this.overlay, '#aaa69c');
+          this.label('抽奖中…', 0, -394, 28, CREAM, this.overlay, 450);
+          this.label('点击跳过', 0, -578, 18, '#fff0c9', this.overlay);
+          const skip = this.makeNode('SkipGachaAnimation', this.overlay);
+          const skipArea = skip.addComponent(Graphics);
+          skipArea.fillColor = col('#ffffff', 1);
+          skipArea.rect(-360, -640, 720, 1280);
+          skipArea.fill();
+          skip.addComponent(Button).node.on(Button.EventType.CLICK, () => this.finishGachaAnimation());
+          this.gachaAnimation = {
+            time: 0,
+            halo,
+            haloOpacity,
+            flash,
+            flashOpacity,
+            stars,
+            sparks
+          };
+        }
+
+        updateGachaAnimation(dt) {
+          const animation = this.gachaAnimation;
+          if (!animation) return;
+          animation.time += Math.min(dt, .05);
+          const time = animation.time;
+          animation.stars.forEach((star, i) => {
+            const t = Math.max(0, Math.min(1, (time - i * .08) / .5));
+            star.active = t < 1;
+            star.setPosition((i - 1) * 36 * (1 - t) + (i - 1) * 22 * Math.sin(Math.PI * t), 365 - 305 * t + 28 * Math.sin(Math.PI * t));
+            star.setScale(1 - t * .5, 1 - t * .5, 1);
+          });
+          const charge = Math.max(0, Math.min(1, (time - .3) / 1.1));
+          animation.haloOpacity.opacity = Math.round(charge * (155 + 45 * Math.sin(time * 19)));
+          animation.halo.setScale(.75 + charge * .5, .75 + charge * .5, 1);
+          const reveal = Math.max(0, Math.min(1, (time - 1.35) / .45));
+          animation.flashOpacity.opacity = Math.round(190 * Math.sin(Math.PI * reveal));
+          animation.flash.setScale(.5 + reveal * 1.8, .5 + reveal * 1.8, 1);
+          animation.sparks.forEach((spark, i) => {
+            spark.active = reveal > 0 && reveal < 1;
+            const angle = i * Math.PI / 6,
+                  radius = 20 + reveal * 150;
+            spark.setPosition(Math.cos(angle) * radius, 60 + Math.sin(angle) * radius);
+            spark.setScale(1 - reveal * .7, 1 - reveal * .7, 1);
+          });
+          if (time >= 1.85) this.finishGachaAnimation();
+        }
+
+        finishGachaAnimation() {
+          if (!this.gachaAnimation) return;
+          this.gachaAnimation = null;
+          this.modal = '';
           this.render();
           this.showModal('gacha-result');
+        }
+
+        updateRefundFlight(dt) {
+          const flight = this.refundFlight;
+          if (!flight) return;
+
+          if (!flight.star.isValid || !flight.balance.isValid) {
+            this.refundFlight = null;
+            return;
+          }
+
+          flight.time += Math.min(dt, .05);
+          const t = Math.min(1, flight.time / .75);
+          flight.star.setPosition(-120 * (1 - t) - 40 * Math.sin(Math.PI * t), -145 + 540 * t);
+          flight.star.setScale(1.15 - .35 * t, 1.15 - .35 * t, 1);
+
+          if (t >= 1) {
+            flight.star.destroy();
+            this.setText(flight.balance, `剩余 ${this.save.starBalance} 星`);
+            this.refundFlight = null;
+          }
         }
 
         rewardMarble(parent, reward, x, y, radius) {
@@ -1409,7 +1557,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.clock += dt;
           this.updateTrail(dt);
-          if (this.screen === 'skins' && this.wardrobeKind === 'trail' && !this.modal) this.updateTrailPreviews(dt);
+          if (this.gachaAnimation) this.updateGachaAnimation(dt);
+          if (this.refundFlight) this.updateRefundFlight(dt);
+          if (this.screen === 'skins' && this.wardrobeKind === 'trail' && !this.modal || this.modal === 'gacha-result') this.updateTrailPreviews(dt);
 
           if (this.tutorial) {
             var _this$tutorialView4;
@@ -1473,14 +1623,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           for (const preview of this.trailPreviews) {
             const previous = preview.ball.position.x;
             preview.time += step;
-            const x = Math.sin(preview.time * 2.6) * 25;
-            preview.ball.setPosition(x, 5);
-            preview.ball.angle -= (x - previous) / 23 * 180 / Math.PI;
+            const x = Math.sin(preview.time * 2.6) * 25 * preview.scale;
+            preview.ball.setPosition(x, 5 * preview.scale);
+            preview.ball.angle -= (x - previous) / (23 * preview.scale) * 180 / Math.PI;
             preview.stamp += step;
             if (preview.stamp < .1 || Math.abs(Math.cos(preview.time * 2.6)) < .2) continue;
             preview.stamp = 0;
             const direction = Math.sign(Math.cos(preview.time * 2.6));
-            this.emitTrailMark(preview.reward, preview.layer, x - direction * 24, 5, direction, 0, .55, !preview.owned);
+            this.emitTrailMark(preview.reward, preview.layer, x - direction * 24 * preview.scale, 5 * preview.scale, direction, 0, .55 * preview.scale, !preview.owned);
           }
         }
 
@@ -1731,6 +1881,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.cancelInput();
           this.modal = kind;
           this.hits = [];
+          this.refundFlight = null;
           this.clear(this.overlay);
           this.ui.getComponentsInChildren(Button).forEach(b => b.interactable = false);
           const shade = this.graphic(this.overlay);
@@ -1739,7 +1890,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           shade.fill();
           shade.node.addComponent(BlockInputEvents);
           const completed = kind === 'result' && ((_this$model2 = this.model) == null ? void 0 : _this$model2.phase) === 'won';
-          this.panel(0, completed ? -40 : 0, 600, completed ? 730 : 650, this.overlay);
+          if (kind !== 'gacha-result') this.panel(0, completed ? -40 : 0, 600, completed ? 730 : 650, this.overlay);
           const m = this.model;
 
           if (kind === 'odds') {
@@ -1757,16 +1908,44 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (kind === 'gacha-result' && this.lastReward) {
             const reward = this.lastReward;
-            this.label(this.lastDrawDuplicate ? '重复奖励 · 返还 1 星' : '获得新奖励！', 0, 235, 35, INK, this.overlay);
-            if (reward.kind === 'marble') this.rewardMarble(this.overlay, reward, 0, 100, 70);else {
-              const g = this.graphic(this.overlay);
-              g.fillColor = col(reward.color);
-              g.circle(0, 100, 62);
-              g.fill();
+            const rarityColor = RARITY_COLORS[reward.rarity] || TEAL;
+            this.panel(0, 505, 440, 78, this.overlay, TEAL);
+            this.label('星星抽奖', 0, 505, 38, CREAM, this.overlay);
+            this.panel(0, 395, 250, 56, this.overlay);
+            this.starIcon(this.overlay, -91, 395, 15);
+            const balance = this.label(`剩余 ${this.save.starBalance - (this.lastDrawDuplicate ? 1 : 0)} 星`, 16, 395, 25, TEAL, this.overlay, 205);
+            this.panel(0, -5, 600, 700, this.overlay);
+            const border = this.graphic(this.overlay);
+            border.strokeColor = col(GOLD);
+            border.lineWidth = 3;
+            border.roundRect(-291, -347, 582, 684, 26);
+            border.stroke();
+            this.starIcon(this.overlay, 0, 295, 16);
+            this.label(this.lastDrawDuplicate ? '重复奖励' : '获得新奖励！', 0, 245, 36, INK, this.overlay);
+            const aura = this.graphic(this.overlay);
+            aura.fillColor = col(rarityColor, 30);
+            aura.circle(0, 95, 105);
+            aura.fill();
+            aura.strokeColor = col(rarityColor);
+            aura.lineWidth = 4;
+            aura.circle(0, 95, 91);
+            aura.stroke();
+            if (reward.kind === 'marble') this.rewardMarble(this.overlay, reward, 0, 95, 68);
+            if (reward.kind === 'scene') this.scenePreview(reward, 0, 95, true, this.overlay, 145);
+            if (reward.kind === 'trail') this.trailPreview(reward, 0, 95, true, this.overlay, 1.7);
+            this.label(reward.name, 0, -35, 30, TEAL, this.overlay, 510);
+            this.label(reward.rarity, 0, -87, 24, rarityColor, this.overlay);
+
+            if (this.lastDrawDuplicate) {
+              this.label('已返还 1 星', 0, -145, 23, '#936b33', this.overlay);
+              this.refundFlight = {
+                time: 0,
+                star: this.starIcon(this.overlay, -120, -145, 16),
+                balance
+              };
             }
-            this.label(`${reward.name} · ${reward.rarity}`, 0, -10, 27, TEAL, this.overlay);
-            this.label(`剩余 ${this.save.starBalance} 星`, 0, -67, 20, '#857155', this.overlay);
-            this.button('立即装备', 0, -155, 300, 65, () => {
+
+            this.button('立即装备', -140, -265, 245, 68, () => {
               this.save = (_crd && equipReward === void 0 ? (_reportPossibleCrUseOfequipReward({
                 error: Error()
               }), equipReward) : equipReward)(this.save, reward.id);
@@ -1774,7 +1953,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               this.wardrobeKind = reward.kind;
               this.navigate('skins');
             }, true, this.overlay);
-            this.button('继续', 0, -247, 300, 65, () => {
+            this.button('继续', 140, -265, 245, 68, () => {
               this.modal = '';
               this.render();
             }, false, this.overlay);
