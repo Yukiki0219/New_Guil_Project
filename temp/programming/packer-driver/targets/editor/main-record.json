@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 1523292.528,
+      "mTimestamp": 3945121.7796,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2092,9 +2092,129 @@
         }
       ]
     },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts": {
+      "mTimestamp": {
+        "mtime": 1793159169063.5793,
+        "uuid": "04305538-f722-431b-8c98-28dd63525edd"
+      },
+      "chunkId": "efeae8b5bb8929cd6cb12a1ec230444c9da2d64c",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "./GameModel",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 57
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Gacha.ts": {
+      "mTimestamp": {
+        "mtime": 1794833062711.8008,
+        "uuid": "4f62f4af-1161-47ca-96c8-69d07907cecb"
+      },
+      "chunkId": "9cca42594fd9695cc1b96e6bc946019c3e793bd5",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts": {
+      "mTimestamp": {
+        "mtime": 1793018056037.6274,
+        "uuid": "83d30718-220b-4205-a893-a02f883916a6"
+      },
+      "chunkId": "b994cf97bc4b6bff9b7cf45a79f7e91a3aaf04c8",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts": {
       "mTimestamp": {
-        "mtime": 1794754081207.9927,
+        "mtime": 1794836518381.4534,
         "uuid": "7954f24b-b1de-478d-be88-724c207f66b7"
       },
       "chunkId": "58880a8083b2f07e7c855faf195f25fd943fc1c0",
@@ -2148,7 +2268,7 @@
     },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts": {
       "mTimestamp": {
-        "mtime": 1794834170986.9766,
+        "mtime": 1794836637994.3184,
         "uuid": "9f327c01-c945-427f-97a6-94ab92496ce9"
       },
       "chunkId": "891993eae04260b53f95443698158d522b88ba86",
@@ -2390,11 +2510,11 @@
           "resolved": "__unresolved_15",
           "loc": {
             "start": {
-              "line": 164,
+              "line": 167,
               "column": 27
             },
             "end": {
-              "line": 164,
+              "line": 167,
               "column": 54
             }
           }
@@ -2404,11 +2524,11 @@
           "resolved": "__unresolved_16",
           "loc": {
             "start": {
-              "line": 168,
+              "line": 171,
               "column": 27
             },
             "end": {
-              "line": 168,
+              "line": 171,
               "column": 54
             }
           }
@@ -2418,11 +2538,11 @@
           "resolved": "__unresolved_17",
           "loc": {
             "start": {
-              "line": 172,
+              "line": 175,
               "column": 23
             },
             "end": {
-              "line": 172,
+              "line": 175,
               "column": 48
             }
           }
@@ -2432,11 +2552,11 @@
           "resolved": "__unresolved_18",
           "loc": {
             "start": {
-              "line": 175,
+              "line": 178,
               "column": 23
             },
             "end": {
-              "line": 175,
+              "line": 178,
               "column": 47
             }
           }
@@ -2446,11 +2566,11 @@
           "resolved": "__unresolved_19",
           "loc": {
             "start": {
-              "line": 178,
+              "line": 181,
               "column": 23
             },
             "end": {
-              "line": 178,
+              "line": 181,
               "column": 47
             }
           }
@@ -2628,13 +2748,6 @@
         }
       ]
     },
-    "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1794832697434,
-      "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
-      "imports": [],
-      "type": "esm",
-      "resolutions": []
-    },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts": {
       "mTimestamp": {
         "mtime": 1794754081207.9927,
@@ -2719,9 +2832,338 @@
         }
       ]
     },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts": {
+      "mTimestamp": {
+        "mtime": 1793018056044.374,
+        "uuid": "e5c8e23a-7cac-4f57-a5b8-fda702852460"
+      },
+      "chunkId": "664fa497237bce8fcfe4e3e9eaa796f0c38c0ec2",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 125
+            },
+            "end": {
+              "line": 1,
+              "column": 129
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts": {
+      "mTimestamp": {
+        "mtime": 1793018056044.374,
+        "uuid": "217ffd53-db30-4e4a-93de-807351f2f8ab"
+      },
+      "chunkId": "a05759eedb7317477ba237a66d3560a0e8d98857",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 78
+            },
+            "end": {
+              "line": 1,
+              "column": 82
+            }
+          }
+        },
+        {
+          "value": "./GameModel",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 47
+            },
+            "end": {
+              "line": 2,
+              "column": 60
+            }
+          }
+        },
+        {
+          "value": "./LanguageSwitch",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 31
+            },
+            "end": {
+              "line": 3,
+              "column": 49
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts": {
+      "mTimestamp": {
+        "mtime": 1794835684592.158,
+        "uuid": "d230aefd-5785-4f9d-9714-c729c4cb6a4e"
+      },
+      "chunkId": "224b41cac551edc3f4a2d10740c1f22f2f12adc0",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts": {
+      "mTimestamp": {
+        "mtime": 1792730516125.3713,
+        "uuid": "082c38db-970a-43bd-b5a6-422fb5e1eab3"
+      },
+      "chunkId": "a4529910ec6dbcf2deec4fc3c5c24c0feccde964",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts": {
+      "mTimestamp": {
+        "mtime": 1792730516127.375,
+        "uuid": "c54e02ab-0a4d-405c-ae72-2ecffd5be82b"
+      },
+      "chunkId": "7386f4ce5fb5aad134a84ae2b4660fed21b7b6d5",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "./GuliPhysics",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 28
+            },
+            "end": {
+              "line": 2,
+              "column": 43
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts": {
+      "mTimestamp": {
+        "mtime": 1792730516127.375,
+        "uuid": "e97056c2-683c-4a47-ad9f-f29ea14b9863"
+      },
+      "chunkId": "ec81fdd6afbc866332b00ba807e2512ac50a3eda",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 106
+            },
+            "end": {
+              "line": 1,
+              "column": 110
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/PhysicsVerification.ts": {
       "mTimestamp": {
-        "mtime": 1792730516129.3777,
+        "mtime": 1794836534221.6658,
         "uuid": "9f8da9f4-d06d-4ef8-ab6f-954ed50d095a"
       },
       "chunkId": "b1ae2cd90ab8e560ca7829bd2f506bad1b758dc3",
@@ -2755,11 +3197,11 @@
           "loc": {
             "start": {
               "line": 5,
-              "column": 50
+              "column": 63
             },
             "end": {
               "line": 5,
-              "column": 63
+              "column": 76
             }
           }
         },
@@ -2774,6 +3216,111 @@
             "end": {
               "line": 6,
               "column": 59
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts": {
+      "mTimestamp": {
+        "mtime": 1792732162289.3599,
+        "uuid": "a31cdcdf-8b02-4e04-8c02-f1f1ddee85f8"
+      },
+      "chunkId": "6974c553c7914b691dc63e9dbd6e5db6ad30c397",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 27
+            },
+            "end": {
+              "line": 2,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "./GameModel",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 34
+            },
+            "end": {
+              "line": 3,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./GuliPhysics",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 28
+            },
+            "end": {
+              "line": 4,
+              "column": 43
             }
           }
         }
@@ -2946,304 +3493,6 @@
           "resolved": {
             "type": "module",
             "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Slingshot.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/AimPrediction.ts": {
-      "mTimestamp": {
-        "mtime": 1793159169063.5793,
-        "uuid": "04305538-f722-431b-8c98-28dd63525edd"
-      },
-      "chunkId": "efeae8b5bb8929cd6cb12a1ec230444c9da2d64c",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "./GameModel",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 57
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearance.ts": {
-      "mTimestamp": {
-        "mtime": 1792730516125.3713,
-        "uuid": "082c38db-970a-43bd-b5a6-422fb5e1eab3"
-      },
-      "chunkId": "a4529910ec6dbcf2deec4fc3c5c24c0feccde964",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleAppearancePreview.ts": {
-      "mTimestamp": {
-        "mtime": 1792730516127.375,
-        "uuid": "c54e02ab-0a4d-405c-ae72-2ecffd5be82b"
-      },
-      "chunkId": "7386f4ce5fb5aad134a84ae2b4660fed21b7b6d5",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "./GuliPhysics",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 28
-            },
-            "end": {
-              "line": 2,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/MarbleRenderer.ts": {
-      "mTimestamp": {
-        "mtime": 1792730516127.375,
-        "uuid": "e97056c2-683c-4a47-ad9f-f29ea14b9863"
-      },
-      "chunkId": "ec81fdd6afbc866332b00ba807e2512ac50a3eda",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 106
-            },
-            "end": {
-              "line": 1,
-              "column": 110
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/RollbackVerification.ts": {
-      "mTimestamp": {
-        "mtime": 1792732162289.3599,
-        "uuid": "a31cdcdf-8b02-4e04-8c02-f1f1ddee85f8"
-      },
-      "chunkId": "6974c553c7914b691dc63e9dbd6e5db6ad30c397",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 27
-            },
-            "end": {
-              "line": 2,
-              "column": 31
-            }
-          }
-        },
-        {
-          "value": "./GameModel",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 34
-            },
-            "end": {
-              "line": 3,
-              "column": 47
-            }
-          }
-        },
-        {
-          "value": "./GuliPhysics",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 4,
-              "column": 28
-            },
-            "end": {
-              "line": 4,
-              "column": 43
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliPhysics.ts"
           },
           "messages": []
         }
@@ -3439,283 +3688,12 @@
         }
       ]
     },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameHints.ts": {
-      "mTimestamp": {
-        "mtime": 1793018056037.6274,
-        "uuid": "83d30718-220b-4205-a893-a02f883916a6"
-      },
-      "chunkId": "b994cf97bc4b6bff9b7cf45a79f7e91a3aaf04c8",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        }
-      ],
+    "cce:/internal/code-quality/cr.mjs": {
+      "mTimestamp": 1794832697434,
+      "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
+      "imports": [],
       "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts": {
-      "mTimestamp": {
-        "mtime": 1793018056044.374,
-        "uuid": "e5c8e23a-7cac-4f57-a5b8-fda702852460"
-      },
-      "chunkId": "664fa497237bce8fcfe4e3e9eaa796f0c38c0ec2",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 125
-            },
-            "end": {
-              "line": 1,
-              "column": 129
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageVerification.ts": {
-      "mTimestamp": {
-        "mtime": 1793018056044.374,
-        "uuid": "217ffd53-db30-4e4a-93de-807351f2f8ab"
-      },
-      "chunkId": "a05759eedb7317477ba237a66d3560a0e8d98857",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 78
-            },
-            "end": {
-              "line": 1,
-              "column": 82
-            }
-          }
-        },
-        {
-          "value": "./GameModel",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
-              "column": 47
-            },
-            "end": {
-              "line": 2,
-              "column": 60
-            }
-          }
-        },
-        {
-          "value": "./LanguageSwitch",
-          "resolved": "__unresolved_2",
-          "loc": {
-            "start": {
-              "line": 3,
-              "column": 31
-            },
-            "end": {
-              "line": 3,
-              "column": 49
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GameModel.ts"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/LanguageSwitch.ts"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts": {
-      "mTimestamp": {
-        "mtime": 1794834183599.2312,
-        "uuid": "d230aefd-5785-4f9d-9714-c729c4cb6a4e"
-      },
-      "chunkId": "224b41cac551edc3f4a2d10740c1f22f2f12adc0",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/HuaweiLogin.ts": {
-      "mTimestamp": {
-        "mtime": 1793159169118.0728,
-        "uuid": "4303d09c-0e85-4d7c-8d10-18b1deaa39d5"
-      },
-      "chunkId": "a8ee4b5c6c28a0fb055b65f2ee9d370d70003649",
-      "imports": [
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Gacha.ts": {
-      "mTimestamp": {
-        "mtime": 1794833062711.8008,
-        "uuid": "4f62f4af-1161-47ca-96c8-69d07907cecb"
-      },
-      "chunkId": "9cca42594fd9695cc1b96e6bc946019c3e793bd5",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
+      "resolutions": []
     }
   }
 }

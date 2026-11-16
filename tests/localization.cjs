@@ -9,4 +9,6 @@ assert.equal(award(save,new GameModel()).language,'en');
 console.log('PASS language defaults, persistence and award preservation');
 for(let id=0;id<56;id++)for(const source of [marbleName(id),rarity(id)]){assert.equal(translate(source,'zh'),source);assert.ok(!/[一-龥]/.test(translate(source,'en')),source);}
 for(const [source,target] of [['开始游戏','Play'],['回到主菜单','Main Menu'],['剩余 0 次','Shots Left: 0'],['第 5 关','Level 5'],['击出 1 颗 · 使用 1 次射击','1 marble out · 1 shot used'],['击出 2 颗 · 使用 3 次射击','2 marbles out · 3 shots used'],['目标 2/4     剩余 3 次','Target 2/4   Shots Left: 3'],['可能抽到重复奖励；重复时返还 1 星','Duplicates refund 1 star.'],['重复奖励 · 返还 1 星','Duplicate Prize · 1 Star Refunded'],['重复奖励','Duplicate Prize'],['已返还 1 星','1 Star Refunded'],['抽奖中…','Drawing…'],['点击跳过','Tap to Skip'],['中文','中文'],['English','English'],['GULI','GULI']])assert.equal(translate(source,'en'),target);
+for(const title of load('GameModel').LEVELS.map(level=>level.title))assert.ok(!/[一-龥]/.test(translate(title,'en')),title);
+assert.equal(translate('新收藏 +1  ·  成绩星星 +2  ·  最佳 3 星','en'),'New +1 · Score stars +2 · Best: 3 stars');
 console.log('PASS 56 marble names, rarity, dynamic counts, plurals and fixed labels');

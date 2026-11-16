@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, REWARDS, rewardById, GameModel, _crd, MARBLE_COUNT, RADIUS, SHOOTER_Y, LAUNCH_MIN, LAUNCH_MAX, SETTLE_SPEED, SETTLE_DURATION, LEVELS, colors, patterns, superRareNames, collectibleNames, legendaryNames;
+  var _reporterNs, _cclegacy, REWARDS, rewardById, GameModel, _crd, MARBLE_COUNT, RADIUS, SHOOTER_Y, LAUNCH_MIN, LAUNCH_MAX, SETTLE_SPEED, SETTLE_DURATION, grid, LEVELS, colors, patterns, superRareNames, collectibleNames, legendaryNames;
 
   function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -11,10 +11,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
   }
 
   function cleanSave(raw) {
+    var oldLevels = [3, 7, 12, 24, 29];
     var stars = LEVELS.map((_, i) => {
       var _raw$stars;
 
-      return Math.max(0, Math.min(3, Math.floor(Number(raw == null || (_raw$stars = raw.stars) == null ? void 0 : _raw$stars[i]) || 0)));
+      var source = (raw == null ? void 0 : raw.version) === 4 ? i : oldLevels.indexOf(i);
+      return Math.max(0, Math.min(3, Math.floor(Number(raw == null || (_raw$stars = raw.stars) == null ? void 0 : _raw$stars[source]) || 0)));
     });
     var rewards = Array.from(new Set((Array.isArray(raw == null ? void 0 : raw.rewards) ? raw.rewards : []).filter(id => typeof id === 'string' && (_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
       error: Error()
@@ -33,13 +35,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       trail: null
     });
     return {
-      version: 3,
+      version: 4,
       stars,
       collection: Array.from(new Set((Array.isArray(raw == null ? void 0 : raw.collection) ? raw.collection : []).filter(n => Number.isInteger(n) && n >= 0 && n < MARBLE_COUNT))),
       sound: (raw == null ? void 0 : raw.sound) !== false,
       tuto: (raw == null ? void 0 : raw.tuto) === true,
       language: (raw == null ? void 0 : raw.language) === 'en' ? 'en' : 'zh',
-      starBalance: (raw == null ? void 0 : raw.version) === 3 && Number.isFinite(raw == null ? void 0 : raw.starBalance) ? Math.max(0, Math.floor(raw.starBalance)) : (raw == null ? void 0 : raw.version) === 3 ? 0 : stars.reduce((sum, value) => sum + value, 0),
+      starBalance: (raw == null ? void 0 : raw.version) >= 3 && Number.isFinite(raw == null ? void 0 : raw.starBalance) ? Math.max(0, Math.floor(raw.starBalance)) : (raw == null ? void 0 : raw.version) >= 3 ? 0 : stars.reduce((sum, value) => sum + value, 0),
       rewards,
       equipped
     };
@@ -49,7 +51,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
     var next = cleanSave(save);
 
     if (game.phase === 'won') {
-      if (save.stars[game.levelIndex] === 0) next.starBalance += game.stars;
+      next.starBalance += Math.max(0, game.stars - next.stars[game.levelIndex]);
       next.stars[game.levelIndex] = Math.max(next.stars[game.levelIndex], game.stars);
       next.collection = Array.from(new Set(next.collection.concat(game.knocked)));
     }
@@ -186,13 +188,68 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
 
       _export("SETTLE_DURATION", SETTLE_DURATION = 0.25);
 
+      grid = function grid() {
+        var positions = [];
+
+        for (var _len = arguments.length, rows = new Array(_len), _key = 0; _key < _len; _key++) {
+          rows[_key] = arguments[_key];
+        }
+
+        rows.forEach((row, y) => {
+          for (var x = 0; x < row.length; x++) if (row[x] === 'o') positions.push([(x - 2) * 85, (2 - y) * 70]);
+        });
+        return positions;
+      };
+
       _export("LEVELS", LEVELS = [{
+        title: '第一撞',
+        target: 2,
+        shots: 4,
+        three: 2,
+        two: 3,
+        positions: [[0, 190], [0, 120]]
+      }, {
+        title: '左右选择',
+        target: 2,
+        shots: 5,
+        three: 2,
+        two: 3,
+        positions: grid('.....', '..o..', '.o.o.', '.....', '.....')
+      }, {
+        title: '轻重之间',
+        target: 2,
+        shots: 5,
+        three: 2,
+        two: 3,
+        positions: grid('.....', '.....', '.o...', '.o.o.', '.....')
+      }, {
         title: '初见弹珠',
         target: 2,
         shots: 5,
         three: 2,
         two: 3,
         positions: [[-105, 90], [105, 90], [-100, -85], [100, -85]]
+      }, {
+        title: '小三角',
+        target: 3,
+        shots: 6,
+        three: 3,
+        two: 4,
+        positions: grid('..o..', '.o.o.', '.....', '.o.o.', '.....')
+      }, {
+        title: '偏心一击',
+        target: 2,
+        shots: 5,
+        three: 2,
+        two: 3,
+        positions: grid('.o...', '..o..', '.....', '...o.', '....o')
+      }, {
+        title: '斜线',
+        target: 3,
+        shots: 6,
+        three: 2,
+        two: 4,
+        positions: grid('....o', '...o.', '..o..', '.o...', 'o....')
       }, {
         title: '寻找角度',
         target: 3,
@@ -201,25 +258,158 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
         two: 4,
         positions: [[-170, 70], [-65, 150], [100, 145], [175, 0], [-110, -100], [65, -90]]
       }, {
-        title: '连锁反应',
+        title: '宽 V',
+        target: 3,
+        shots: 7,
+        three: 2,
+        two: 4,
+        positions: grid('o...o', '.o.o.', '.....', '.o.o.', '.....')
+      }, {
+        title: '双向出口',
         target: 4,
         shots: 7,
         three: 3,
         two: 5,
+        positions: grid('.o.o.', 'o...o', '..o..', 'o...o', '.....')
+      }, {
+        title: '短链',
+        target: 3,
+        shots: 6,
+        three: 3,
+        two: 4,
+        positions: grid('.....', '.ooo.', '.....', 'o.o.o', '.....')
+      }, {
+        title: '交错两列',
+        target: 4,
+        shots: 7,
+        three: 3,
+        two: 5,
+        positions: grid('.o.o.', 'o...o', '..o..', '.o.o.', '.....')
+      }, {
+        title: '连锁反应',
+        target: 4,
+        shots: 8,
+        three: 3,
+        two: 5,
         positions: [[-65, -100], [-60, -40], [-55, 20], [-50, 80], [80, -70], [90, 0], [100, 70], [110, 140]]
+      }, {
+        title: '中心借力',
+        target: 4,
+        shots: 8,
+        three: 4,
+        two: 5,
+        positions: grid('.ooo.', '.o.o.', '..o..', 'o...o', '.....')
+      }, {
+        title: '两团相接',
+        target: 5,
+        shots: 9,
+        three: 3,
+        two: 5,
+        positions: grid('.o..o', 'o.o.o', '..o..', 'o.o.o', '.....')
+      }, {
+        title: '近边练习',
+        target: 3,
+        shots: 6,
+        three: 2,
+        two: 4,
+        positions: grid('o...o', 'o...o', '.....', '.o.o.', '.....')
+      }, {
+        title: '远近混排',
+        target: 4,
+        shots: 8,
+        three: 4,
+        two: 5,
+        positions: grid('.o.o.', '..o..', '.o.o.', 'o...o', '.....')
+      }, {
+        title: '侧边出口',
+        target: 4,
+        shots: 8,
+        three: 4,
+        two: 5,
+        positions: grid('.ooo.', '.o...', '.o.o.', '..o.o', '.....')
+      }, {
+        title: '弧线',
+        target: 5,
+        shots: 9,
+        three: 4,
+        two: 6,
+        positions: grid('.ooo.', 'o...o', '..o..', 'o...o', '.o...')
+      }, {
+        title: '疏密混排',
+        target: 5,
+        shots: 9,
+        three: 5,
+        two: 6,
+        positions: grid('.ooo.', '.o.o.', '..o..', 'o...o', '.o...')
+      }, {
+        title: '三组小球',
+        target: 4,
+        shots: 8,
+        three: 3,
+        two: 5,
+        positions: grid('.o.o.', 'o...o', '..o..', 'o...o', '.o...')
+      }, {
+        title: '双层错位',
+        target: 5,
+        shots: 9,
+        three: 5,
+        two: 6,
+        positions: grid('.o.o.', 'o.o.o', '.o.o.', '.....', 'o...o')
+      }, {
+        title: '两侧接力',
+        target: 5,
+        shots: 9,
+        three: 4,
+        two: 6,
+        positions: grid('.o.o.', 'o.o.o', '..o..', 'o.o.o', '.o...')
+      }, {
+        title: '半环',
+        target: 6,
+        shots: 10,
+        three: 5,
+        two: 7,
+        positions: grid('.ooo.', 'o...o', '.o.o.', 'o...o', '.o...')
       }, {
         title: '恰到好处',
         target: 6,
-        shots: 8,
+        shots: 10,
+        three: 6,
+        two: 7,
+        positions: [[-165, 90], [-110, 130], [-55, 170], [40, 180], [100, 135], [160, 80], [-125, -100], [-65, -65], [65, -65], [125, -100]]
+      }, {
+        title: '分区回顾',
+        target: 5,
+        shots: 9,
         three: 4,
         two: 6,
-        positions: [[-165, 90], [-110, 130], [-55, 170], [40, 180], [100, 135], [160, 80], [-125, -100], [-65, -65], [65, -65], [125, -100]]
+        positions: grid('.o.o.', 'o...o', '..o..', 'o...o', '.o.o.')
+      }, {
+        title: '双弧',
+        target: 6,
+        shots: 10,
+        three: 4,
+        two: 6,
+        positions: grid('.ooo.', 'o...o', '..o..', 'o...o', '.o.o.')
+      }, {
+        title: '错位密阵',
+        target: 7,
+        shots: 10,
+        three: 7,
+        two: 8,
+        positions: grid('.ooo.', 'o.o.o', '.o.o.', 'o...o', '..o..')
+      }, {
+        title: '双出口',
+        target: 7,
+        shots: 11,
+        three: 5,
+        two: 8,
+        positions: grid('.ooo.', 'o.o.o', '.o.o.', 'o.o.o', '.o...')
       }, {
         title: '庭院大师',
         target: 8,
-        shots: 9,
-        three: 5,
-        two: 7,
+        shots: 11,
+        three: 6,
+        two: 8,
         positions: [[-165, 40], [-120, 90], [-75, 140], [-25, 190], [35, 180], [95, 140], [145, 90], [175, 30], [-100, -105], [-45, -80], [45, -80], [100, -105]]
       }]);
 

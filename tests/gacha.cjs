@@ -21,10 +21,24 @@ assert.equal(JSON.stringify(counts), JSON.stringify({ '普通': 14, '稀有': 10
 const legacy = cleanSave({ version: 2, stars: [3, 2], collection: [1, 55] });
 assert.equal(legacy.starBalance, 5);
 assert.equal(cleanSave(legacy).starBalance, 5);
-const first = new GameModel(2); first.phase = 'won'; first.used = 3;
+const first = new GameModel(2); first.phase = 'won'; first.used = 1;
 const credited = award(legacy, first);
 assert.equal(credited.starBalance, 8);
-assert.equal(award(credited, first).starBalance, 8); // Replays and improved scores cannot mint more currency.
+assert.equal(award(credited, first).starBalance, 8);
+const improved = new GameModel(0); improved.phase = 'won'; improved.used = 4;
+const oneStar = award(legacy, improved);
+assert.equal(oneStar.starBalance, 6);
+improved.used = 3;
+const twoStars = award(oneStar, improved);
+assert.equal(twoStars.starBalance, 7);
+improved.used = 2;
+const threeStars = award(twoStars, improved);
+assert.equal(threeStars.starBalance, 8); // Each improvement grants only the missing star.
+assert.equal(award(threeStars, improved).starBalance, 8);
+let full = cleanSave(null);
+for (let i = 0; i < 30; i++) { const m = new GameModel(i); m.phase = 'won'; m.used = m.level.three; full = award(full, m); }
+assert.equal(full.starBalance, 90);
+assert.equal(award(full, improved).starBalance, 90);
 const save = cleanSave({ version: 3, starBalance: 10 });
 const firstDraw = drawReward(save, () => 0);
 assert.equal(firstDraw.reward.id, 'S01');

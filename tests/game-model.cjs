@@ -13,10 +13,13 @@ function test(name, f) { f(); tests++; console.log('PASS ' + name); }
 // Rules-only tests feed completed engine snapshots; actual collision/route tests run in Cocos.
 function settle(m) { for (const b of m.balls) { b.vx = 0; b.vy = 0; } for (let i = 0; i < 32; i++) m.afterPhysics(1 / 120); assert.notEqual(m.phase, 'moving'); }
 test('Every layout starts inside the circle without overlapping discs', () => {
+  assert.equal(LEVELS.length, 30);
+  const counts = [2,3,3,4,5,4,5,6,6,7,6,7,8,8,9,6,7,8,9,9,8,9,10,10,10,9,10,11,12,12];
+  const verifiedShots = [2,2,2,2,3,2,2,3,2,3,3,3,3,4,3,2,4,4,4,5,3,5,4,5,6,4,4,7,5,6]; // Box2D candidate routes, 2026-11-16.
   LEVELS.forEach((l, i) => { const m = new GameModel(i); m.balls.forEach((b, j) => {
     assert(Math.hypot(b.x, b.y) + b.r < RADIUS);
     m.balls.slice(j + 1).forEach(c => assert(Math.hypot(c.x - b.x, c.y - b.y) >= b.r + c.r));
-  }); assert(l.three <= l.two && l.two < l.shots); });
+  }); assert.equal(l.positions.length, counts[i]); assert(l.target <= counts[i]); assert(verifiedShots[i] <= l.three); assert(l.three < l.two && l.two < l.shots); });
 });
 test('Only an entire target outside the circle counts, counted once', () => {
   const m = new GameModel(); m.balls = [{ id: 48, x: RADIUS + 22, y: 0, vx: 0, vy: 0, r: 23, shooter: false, entered: true, gone: false }]; m.phase = 'moving';
@@ -41,13 +44,13 @@ test('Failed round never unlocks its collected items', () => {
   const m = new GameModel(); m.phase = 'lost'; m.knocked = [49]; const s = award(cleanSave(null), m); assert.equal(s.collection.length, 0);
 });
 test('Replaying resets layout and shots, retaining best stars and collection', () => {
-  const m = new GameModel(); m.phase = 'won'; m.used = 2; m.knocked = [48, 49]; let s = award(cleanSave(null), m);
+  const m = new GameModel(); m.phase = 'won'; m.used = 1; m.knocked = [48, 49]; let s = award(cleanSave(null), m);
   m.used = 5; s = award(s, m); assert.equal(s.stars[0], 3); assert.equal(s.collection.length, 2);
-  m.reset(); assert.equal(m.used, 0); assert.equal(m.balls.length, 4); assert.equal(m.knocked.length, 0); assert.equal(s.collection.length, 2);
+  m.reset(); assert.equal(m.used, 0); assert.equal(m.balls.length, 2); assert.equal(m.knocked.length, 0); assert.equal(s.collection.length, 2);
 });
 test('Corrupt or old save values are bounded', () => {
   const s = cleanSave({ stars: [99, -1, 'broken'], collection: [3, 3, -1, 56, '2'], sound: false });
-  assert.equal(s.stars[0], 3); assert.equal(s.stars[1], 0); assert.equal(s.collection.length, 1); assert.equal(s.sound, false);
+  assert.equal(s.stars[3], 3); assert.equal(s.stars[7], 0); assert.equal(s.collection.length, 1); assert.equal(s.sound, false);
 });
 test('Rarity generation produces all three valid ID bands', () => {
   for (const r of [0, .71, .96]) { const ids = rollMarbles(20, () => r); ids.forEach(id => assert(id >= 0 && id < 56)); }
@@ -95,7 +98,11 @@ test('Starting outside or safety removal is not a successful exit', () => {
 });
 test('56 IDs preserve all legacy ownership and exact rarity counts',()=>{
  const save=cleanSave({version:1,stars:[3,2],collection:Array.from({length:50},(_,i)=>i),sound:false});
- assert.equal(save.version,3);assert.equal(save.collection.length,50);assert.equal(save.stars[0],3);assert.equal(save.starBalance,5);assert.equal(save.sound,false);
+ assert.equal(save.version,4);assert.equal(save.collection.length,50);assert.equal(save.stars[3],3);assert.equal(save.stars[7],2);assert.equal(save.stars[0],0);assert.equal(save.starBalance,5);assert.equal(save.sound,false);
+ const old=cleanSave({version:3,stars:[1,2,3,1,2],starBalance:4,rewards:['M01']});
+ assert.deepEqual([3,7,12,24,29].map(i=>old.stars[i]),[1,2,3,1,2]);
+ assert.equal(old.starBalance,4);assert.equal(old.rewards.join(),'M01');
+ assert.equal(cleanSave(old).stars.join(),old.stars.join());
  assert.equal(cleanSave({...save,collection:Array.from({length:56},(_,i)=>i)}).collection.length,56);
  const counts={};for(let i=0;i<56;i++){const r=box.exports.rarity(i);counts[r]=(counts[r]||0)+1;assert(box.exports.marbleName(i));}
  assert.deepEqual(counts,{'普通':23,'稀有':16,'超级稀有':8,'珍藏':5,'传奇':4});

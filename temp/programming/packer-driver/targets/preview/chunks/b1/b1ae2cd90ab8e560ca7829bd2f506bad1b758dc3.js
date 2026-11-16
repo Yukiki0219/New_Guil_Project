@@ -1,7 +1,7 @@
 System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, PHYSICS_2D_PTM_RATIO, PhysicsSystem2D, Vec2, CircleCollider2D, GameModel, LEVELS, RADIUS, GuliPhysics, PHYSICS_CONFIG, _crd;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, PHYSICS_2D_PTM_RATIO, PhysicsSystem2D, Vec2, CircleCollider2D, GameModel, LEVELS, RADIUS, launchSpeed, GuliPhysics, PHYSICS_CONFIG, _crd;
 
   function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -111,6 +111,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         var m = new (_crd && GameModel === void 0 ? (_reportPossibleCrUseOfGameModel({
           error: Error()
         }), GameModel) : GameModel)();
+        m.balls = [];
         m.shoot(0, 0, 0);
         var p = new (_crd && GuliPhysics === void 0 ? (_reportPossibleCrUseOfGuliPhysics({
           error: Error()
@@ -124,8 +125,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
           var b = m.balls[m.balls.length - 1],
               y = b.y;
           p.advance(1 / 120);
-          near(b.y - y, 380 / 120, 0.01, 'position from velocity/time');
-          near(p.bodies.get(b).linearVelocity.y, 380 / 32, 1e-6, 'velocity unit');
+          near(b.y - y, (_crd && launchSpeed === void 0 ? (_reportPossibleCrUseOflaunchSpeed({
+            error: Error()
+          }), launchSpeed) : launchSpeed)(0) / 120, 0.01, 'position from velocity/time');
+          near(p.bodies.get(b).linearVelocity.y, (_crd && launchSpeed === void 0 ? (_reportPossibleCrUseOflaunchSpeed({
+            error: Error()
+          }), launchSpeed) : launchSpeed)(0) / 32, 1e-6, 'velocity unit');
         } finally {
           p.dispose();
         }
@@ -291,7 +296,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
         }), GuliPhysics) : GuliPhysics)(scene, new (_crd && GameModel === void 0 ? (_reportPossibleCrUseOfGameModel({
           error: Error()
         }), GameModel) : GameModel)());
-        check(replay.bodies.size === 4, 'stale bodies after replay');
+        check(replay.bodies.size === (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
+          error: Error()
+        }), LEVELS) : LEVELS)[0].positions.length, 'stale bodies after replay');
         replay.dispose();
       });
       yield test('Overlapping start separates stably; maximum-power shot does not tunnel', () => {
@@ -379,7 +386,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       yield test('Last permitted shot can win; shooter removed only after completed settlement', () => {
         var m = new (_crd && GameModel === void 0 ? (_reportPossibleCrUseOfGameModel({
           error: Error()
-        }), GameModel) : GameModel)();
+        }), GameModel) : GameModel)(3);
         m.used = m.level.shots - 1;
         m.knocked = [31];
         m.balls = [ball(49, 0, 210, 0, 23)];
@@ -474,11 +481,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
             check(travel > previous, 'power lost meaningful travel ordering');
             previous = travel;
             if (count > 1) check(after.peakTarget > 0, 'collision response lost');
-            if (count === 1 && power === 10) check(after.distance < 330 && after.time < 4, 'low power still too long');
+            if (count === 1 && power === 10) check(after.distance < 350 && after.time < 4, 'low power still too long');
           }
         }
       });
-      yield test('All five unchanged levels remain completable with slingshot launch positions', /*#__PURE__*/_asyncToGenerator(function* () {
+      yield test('All 30 levels remain completable with slingshot launch positions', /*#__PURE__*/_asyncToGenerator(function* () {
         for (var i = 0; i < (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
           error: Error()
         }), LEVELS) : LEVELS).length; i++) {
@@ -527,6 +534,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
 
           write("Level " + (i + 1) + ": " + m.used + " shots, " + m.knocked.length + " targets, " + m.stars + " stars; route=" + JSON.stringify(route));
           check(m.phase === 'won', 'level ' + (i + 1) + ' has no tested completion route');
+          check(m.stars === 3, 'level ' + (i + 1) + ' has no tested three-star route');
         }
       }));
       write("DONE: " + passed + " passed, " + failed + " failed.");
@@ -555,6 +563,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
     _reporterNs.report("RADIUS", "./GameModel", _context.meta, extras);
   }
 
+  function _reportPossibleCrUseOflaunchSpeed(extras) {
+    _reporterNs.report("launchSpeed", "./GameModel", _context.meta, extras);
+  }
+
   function _reportPossibleCrUseOfGuliPhysics(extras) {
     _reporterNs.report("GuliPhysics", "./GuliPhysics", _context.meta, extras);
   }
@@ -580,6 +592,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], fu
       GameModel = _unresolved_2.GameModel;
       LEVELS = _unresolved_2.LEVELS;
       RADIUS = _unresolved_2.RADIUS;
+      launchSpeed = _unresolved_2.launchSpeed;
     }, function (_unresolved_3) {
       GuliPhysics = _unresolved_3.GuliPhysics;
       PHYSICS_CONFIG = _unresolved_3.PHYSICS_CONFIG;

@@ -379,11 +379,25 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           profiler.hideStats();
 
           try {
-            const raw = JSON.parse(sys.localStorage.getItem('guli.save.v3') || sys.localStorage.getItem('guli.save.v2') || sys.localStorage.getItem('guli.save.v1') || 'null');
+            let raw = null;
+
+            for (const key of ['guli.save.v4', 'guli.save.v3', 'guli.save.v2', 'guli.save.v1']) {
+              try {
+                const value = sys.localStorage.getItem(key);
+
+                if (value) {
+                  raw = JSON.parse(value);
+                  if (raw) break;
+                }
+              } catch {
+                /* Try an older intact save. */
+              }
+            }
+
             this.save = (_crd && cleanSave === void 0 ? (_reportPossibleCrUseOfcleanSave({
               error: Error()
             }), cleanSave) : cleanSave)(raw);
-            if (raw && raw.version !== 3) this.persist();
+            if (raw && raw.version !== 4) this.persist();
           } catch {
             this.save = (_crd && cleanSave === void 0 ? (_reportPossibleCrUseOfcleanSave({
               error: Error()
@@ -708,10 +722,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.physics = null;
           }
 
+          const levelPage = screen === 'levels' && this.screen === 'game' && this.model ? Math.floor(this.model.levelIndex / 5) : 0;
           this.cancelInput();
           this.screen = screen;
           this.modal = '';
-          this.page = 0;
+          this.page = levelPage;
           this.render();
         }
 
@@ -807,11 +822,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         levels() {
           this.header('庭院挑战', '用更少的射击，留下更好的成绩');
+          const highest = this.save.stars.reduce((last, stars, i) => stars ? i : last, -1);
           (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
             error: Error()
-          }), LEVELS) : LEVELS).forEach((level, i) => {
-            const y = 345 - i * 168,
-                  locked = i > 0 && !this.save.stars[i - 1];
+          }), LEVELS) : LEVELS).slice(this.page * 5, this.page * 5 + 5).forEach((level, row) => {
+            const i = this.page * 5 + row;
+            const y = 345 - row * 168,
+                  locked = i > highest + 1;
             this.panel(0, y, 624, 146);
             this.label('0' + (i + 1), -243, y + 12, 38, locked ? '#afa38a' : TEAL, this.ui, 85);
             this.label(level.title, -35, y + 35, 26, INK, this.ui, 270);
@@ -819,7 +836,20 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.stars(this.save.stars[i], -35, y - 43, 13);
             this.button(locked ? '未解锁' : '挑战', 225, y, 120, 65, () => this.startLevel(i), true, this.ui, locked);
           });
-          this.label('完成前一关即可解锁下一关', 0, -558, 18, '#786549');
+          this.button('上一页', -220, -510, 155, 60, () => {
+            this.page--;
+            this.render();
+          }, false, this.ui, this.page === 0);
+          this.label(`${this.page + 1} / ${Math.ceil((_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
+            error: Error()
+          }), LEVELS) : LEVELS).length / 5)}`, 0, -510, 23);
+          this.button('下一页', 220, -510, 155, 60, () => {
+            this.page++;
+            this.render();
+          }, false, this.ui, this.page >= Math.ceil((_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
+            error: Error()
+          }), LEVELS) : LEVELS).length / 5) - 1);
+          this.label('完成前一关即可解锁下一关', 0, -580, 18, '#786549');
         }
 
         collection() {
@@ -1599,12 +1629,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               if ((m.phase === 'won' || m.phase === 'lost') && !this.resultHandled) {
                 this.resultHandled = true;
                 const previous = this.save.collection.length;
-                const firstClear = m.phase === 'won' && this.save.stars[m.levelIndex] === 0;
+                const gained = Math.max(0, m.stars - this.save.stars[m.levelIndex]);
                 this.save = (_crd && award === void 0 ? (_reportPossibleCrUseOfaward({
                   error: Error()
                 }), award) : award)(this.save, m);
                 this.newItems = this.save.collection.length - previous;
-                this.earnedStars = firstClear ? m.stars : 0;
+                this.earnedStars = gained;
 
                 if (m.phase === 'won') {
                   this.persist();
@@ -1965,8 +1995,12 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.label(won ? '漂亮的一击！' : '次数已用完', 0, 236, 38, INK, this.overlay, 520);
             this.stars(m.stars, 0, 148, 32, this.overlay);
             this.label(`击出 ${m.knocked.length} 颗 · 使用 ${m.used} 次射击`, 0, 62, 24, INK, this.overlay, 530);
-            this.label(won ? `新收藏 +${this.newItems}  ·  首通星星 +${this.earnedStars}  ·  最佳 ${this.save.stars[m.levelIndex]} 星` : '目标尚未完成，本次挑战失败。', 0, 7, 20, '#87704f', this.overlay, 540);
-            this.button(won && m.levelIndex < 4 ? '下一关' : '返回关卡', 0, -87, 440, 75, () => won && m.levelIndex < 4 ? this.startLevel(m.levelIndex + 1) : this.navigate('levels'), true, this.overlay);
+            this.label(won ? `新收藏 +${this.newItems}  ·  成绩星星 +${this.earnedStars}  ·  最佳 ${this.save.stars[m.levelIndex]} 星` : '目标尚未完成，本次挑战失败。', 0, 7, 20, '#87704f', this.overlay, 540);
+            this.button(won && m.levelIndex < (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
+              error: Error()
+            }), LEVELS) : LEVELS).length - 1 ? '下一关' : '返回关卡', 0, -87, 440, 75, () => won && m.levelIndex < (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
+              error: Error()
+            }), LEVELS) : LEVELS).length - 1 ? this.startLevel(m.levelIndex + 1) : this.navigate('levels'), true, this.overlay);
             this.button('再试一次', 0, -181, 440, 70, () => this.startLevel(m.levelIndex, true), false, this.overlay);
             if (won) this.button('回到主菜单', 0, -275, 440, 70, () => this.navigate('home'), false, this.overlay);
             if (!won) this.button('查看教程', 0, -267, 250, 54, () => this.startTutorial(), false, this.overlay);
@@ -1992,7 +2026,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         persist() {
           try {
-            sys.localStorage.setItem('guli.save.v3', JSON.stringify(this.save));
+            sys.localStorage.setItem('guli.save.v4', JSON.stringify(this.save));
             this.storageWarning = false;
           } catch {
             this.storageWarning = true;

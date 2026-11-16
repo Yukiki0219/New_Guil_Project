@@ -2,7 +2,7 @@
  * Open the Guli preview with ?guliPhysicsTest=1. Does not access player saves.
  */
 import { Node, PHYSICS_2D_PTM_RATIO, PhysicsSystem2D, Vec2, CircleCollider2D } from 'cc';
-import { GameModel, Marble, LEVELS, RADIUS } from './GameModel';
+import { GameModel, Marble, LEVELS, RADIUS, launchSpeed } from './GameModel';
 import { GuliPhysics, PHYSICS_CONFIG } from './GuliPhysics';
 
 export async function verifyPhysics(scene: Node) {
@@ -33,13 +33,13 @@ export async function verifyPhysics(scene: Node) {
     write('Cocos 3.8.8 actual Box2D verification');
     write('PTM='+PHYSICS_2D_PTM_RATIO+'; config='+JSON.stringify(PHYSICS_CONFIG));
     await test('Engine unit conversion, collider radius and equal masses',()=>{
-        const m=new GameModel(); m.shoot(0,0,0);
+        const m=new GameModel(); m.balls=[]; m.shoot(0,0,0);
         const p=new GuliPhysics(scene,m,{linearDamping:0});
         try {
             for(const [b,body] of p.bodies) near(body.getMass(),1,1e-5,'mass');
             const b=m.balls[m.balls.length-1], y=b.y;
-            p.advance(1/120); near(b.y-y,380/120,0.01,'position from velocity/time');
-            near(p.bodies.get(b)!.linearVelocity.y,380/32,1e-6,'velocity unit');
+            p.advance(1/120); near(b.y-y,launchSpeed(0)/120,0.01,'position from velocity/time');
+            near(p.bodies.get(b)!.linearVelocity.y,launchSpeed(0)/32,1e-6,'velocity unit');
         } finally { p.dispose(); }
     });
     await test('Restitution 0.25 / 0.3 / 0.45 / 0.6: momentum, energy and one response',()=>{
@@ -112,7 +112,7 @@ export async function verifyPhysics(scene: Node) {
         });
         p.advance(.1);check(m.elapsed>elapsed,'resume failed');p.dispose();
         check(PhysicsSystem2D.instance.autoSimulation===previous,'global configuration not restored');
-        const replay=new GuliPhysics(scene,new GameModel());check(replay.bodies.size===4,'stale bodies after replay');replay.dispose();
+        const replay=new GuliPhysics(scene,new GameModel());check(replay.bodies.size===LEVELS[0].positions.length,'stale bodies after replay');replay.dispose();
     });
     await test('Overlapping start separates stably; maximum-power shot does not tunnel',()=>{
         const m=new GameModel();m.balls=[ball(0,-25,0),ball(1,25,0)];m.phase='moving';
@@ -137,7 +137,7 @@ export async function verifyPhysics(scene: Node) {
         try {p.advance(3);check(m.elapsed<=.101,'stall used wall time for settling');finish(p);check(m.knocked.join()===baseline!.knocked.join(),'stall outcome');}finally {p.dispose();}
     });
     await test('Last permitted shot can win; shooter removed only after completed settlement',()=>{
-        const m=new GameModel();m.used=m.level.shots-1;m.knocked=[31];
+        const m=new GameModel(3);m.used=m.level.shots-1;m.knocked=[31];
         m.balls=[ball(49,0,210,0,23)];m.shoot(0,210,1);
         const p=new GuliPhysics(scene,m);
         try {
@@ -185,11 +185,11 @@ export async function verifyPhysics(scene: Node) {
                 const travel=count===1?after.distance:after.target;
                 check(travel>previous,'power lost meaningful travel ordering');previous=travel;
                 if(count>1) check(after.peakTarget>0,'collision response lost');
-                if(count===1&&power===10) check(after.distance<330&&after.time<4,'low power still too long');
+                if(count===1&&power===10) check(after.distance<350&&after.time<4,'low power still too long');
             }
         }
     });
-    await test('All five unchanged levels remain completable with slingshot launch positions',async()=>{
+    await test('All 30 levels remain completable with slingshot launch positions',async()=>{
         for(let i=0;i<LEVELS.length;i++) {
             let m=new GameModel(i);const route:number[][]=[];
             while(m.phase==='aim') {
@@ -210,6 +210,7 @@ export async function verifyPhysics(scene: Node) {
             }
             write(`Level ${i+1}: ${m.used} shots, ${m.knocked.length} targets, ${m.stars} stars; route=${JSON.stringify(route)}`);
             check(m.phase==='won','level '+(i+1)+' has no tested completion route');
+            check(m.stars===3,'level '+(i+1)+' has no tested three-star route');
         }
     });
     write(`DONE: ${passed} passed, ${failed} failed.`);
