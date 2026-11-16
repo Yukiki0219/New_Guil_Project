@@ -3,27 +3,19 @@ System.register(["__unresolved_0", "cc"], function (_export, _context) {
 
   var _reporterNs, _cclegacy, _crd, make, REWARDS, RARITIES, WEIGHTS, rewardById;
 
-  /** An exhausted rarity redistributes its weight across remaining rarities. */
   function drawReward(save, random = Math.random) {
-    var _weighted$find;
-
     if (save.starBalance < 3) return null;
-    const available = REWARDS.filter(reward => !save.rewards.includes(reward.id));
-    if (!available.length) return null;
-    const weighted = RARITIES.map((rarity, index) => ({
-      rarity,
-      weight: available.some(reward => reward.rarity === rarity) ? WEIGHTS[index] : 0
-    }));
-    const total = weighted.reduce((sum, group) => sum + group.weight, 0);
-    let roll = random() * total;
-    const selected = ((_weighted$find = weighted.find(group => (roll -= group.weight) < 0 && group.weight > 0)) == null ? void 0 : _weighted$find.rarity) || weighted.find(group => group.weight > 0).rarity;
-    const candidates = available.filter(reward => reward.rarity === selected);
+    let roll = random();
+    const selected = RARITIES.find((_, index) => (roll -= WEIGHTS[index]) < 0) || RARITIES[RARITIES.length - 1];
+    const candidates = REWARDS.filter(reward => reward.rarity === selected);
     const reward = candidates[Math.min(candidates.length - 1, Math.floor(random() * candidates.length))];
+    const duplicate = save.rewards.includes(reward.id);
     return {
       reward,
+      duplicate,
       save: { ...save,
-        starBalance: save.starBalance - 3,
-        rewards: [...save.rewards, reward.id]
+        starBalance: save.starBalance - (duplicate ? 2 : 3),
+        rewards: duplicate ? save.rewards : [...save.rewards, reward.id]
       }
     };
   }

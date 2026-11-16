@@ -5,31 +5,23 @@ System.register(["__unresolved_0", "cc"], function (_export, _context) {
 
   function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-  /** An exhausted rarity redistributes its weight across remaining rarities. */
   function drawReward(save, random) {
-    var _weighted$find;
-
     if (random === void 0) {
       random = Math.random;
     }
 
     if (save.starBalance < 3) return null;
-    var available = REWARDS.filter(reward => !save.rewards.includes(reward.id));
-    if (!available.length) return null;
-    var weighted = RARITIES.map((rarity, index) => ({
-      rarity,
-      weight: available.some(reward => reward.rarity === rarity) ? WEIGHTS[index] : 0
-    }));
-    var total = weighted.reduce((sum, group) => sum + group.weight, 0);
-    var roll = random() * total;
-    var selected = ((_weighted$find = weighted.find(group => (roll -= group.weight) < 0 && group.weight > 0)) == null ? void 0 : _weighted$find.rarity) || weighted.find(group => group.weight > 0).rarity;
-    var candidates = available.filter(reward => reward.rarity === selected);
+    var roll = random();
+    var selected = RARITIES.find((_, index) => (roll -= WEIGHTS[index]) < 0) || RARITIES[RARITIES.length - 1];
+    var candidates = REWARDS.filter(reward => reward.rarity === selected);
     var reward = candidates[Math.min(candidates.length - 1, Math.floor(random() * candidates.length))];
+    var duplicate = save.rewards.includes(reward.id);
     return {
       reward,
+      duplicate,
       save: _extends({}, save, {
-        starBalance: save.starBalance - 3,
-        rewards: [...save.rewards, reward.id]
+        starBalance: save.starBalance - (duplicate ? 2 : 3),
+        rewards: duplicate ? save.rewards : [...save.rewards, reward.id]
       })
     };
   }

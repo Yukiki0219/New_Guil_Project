@@ -307,6 +307,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.newItems = 0;
           this.earnedStars = 0;
           this.lastReward = null;
+          this.lastDrawDuplicate = false;
           this.wardrobeKind = 'marble';
           this.navSwipe = null;
           this.trailMarks = [];
@@ -945,9 +946,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.label('○  ●', 274, 425, 20, TEAL, this.ui, 90);
           this.panel(0, 365, 258, 60);
           this.label(`剩余 ${this.save.starBalance} 星`, 0, 365, 27, TEAL, this.ui, 238);
-          this.button('抽一次 3 星', 0, -394, 475, 87, () => this.drawGacha(), true, this.ui, this.save.starBalance < 3 || this.save.rewards.length === (_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
-            error: Error()
-          }), REWARDS) : REWARDS).length);
+          this.button('抽一次 3 星', 0, -394, 475, 87, () => this.drawGacha(), true, this.ui, this.save.starBalance < 3);
           this.button('奖励图鉴', -160, -514, 240, 64, () => this.navigate('skins'));
           this.button('概率', 160, -514, 240, 64, () => this.showModal('odds'));
           if (this.save.starBalance < 3) this.label('星星不足', 0, -580, 18, '#865d3e');
@@ -960,6 +959,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (!result) return;
           this.save = result.save;
           this.lastReward = result.reward;
+          this.lastDrawDuplicate = result.duplicate;
           this.persist();
           this.render();
           this.showModal('gacha-result');
@@ -1747,7 +1747,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             (_crd && RARITIES === void 0 ? (_reportPossibleCrUseOfRARITIES({
               error: Error()
             }), RARITIES) : RARITIES).forEach((rarity, i) => this.label(`${rarity}  ·  ${['50%', '35%', '12.5%', '2%', '0.5%'][i]}`, 0, 135 - i * 65, 24, INK, this.overlay));
-            this.label('每抽一件未拥有奖励；抽空的档位按剩余概率重分配', 0, -238, 18, '#857155', this.overlay, 510);
+            this.label('可能抽到重复奖励；重复时返还 1 星', 0, -238, 18, '#857155', this.overlay, 510);
             this.button('返回', 0, -310, 260, 65, () => {
               this.modal = '';
               this.render();
@@ -1757,7 +1757,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (kind === 'gacha-result' && this.lastReward) {
             const reward = this.lastReward;
-            this.label('获得新奖励！', 0, 235, 35, INK, this.overlay);
+            this.label(this.lastDrawDuplicate ? '重复奖励 · 返还 1 星' : '获得新奖励！', 0, 235, 35, INK, this.overlay);
             if (reward.kind === 'marble') this.rewardMarble(this.overlay, reward, 0, 100, 70);else {
               const g = this.graphic(this.overlay);
               g.fillColor = col(reward.color);

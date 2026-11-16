@@ -26,18 +26,16 @@ export const RARITIES: readonly RewardRarity[] = ['普通','稀有','超级稀�
 const WEIGHTS = [0.5, 0.35, 0.125, 0.02, 0.005];
 export const rewardById = (id: string | null) => REWARDS.find(reward => reward.id === id);
 
-/** An exhausted rarity redistributes its weight across remaining rarities. */
-export function drawReward(save: SaveData, random = Math.random): { save: SaveData; reward: Reward } | null {
+export function drawReward(save: SaveData, random = Math.random): { save: SaveData; reward: Reward; duplicate: boolean } | null {
     if (save.starBalance < 3) return null;
-    const available = REWARDS.filter(reward => !save.rewards.includes(reward.id));
-    if (!available.length) return null;
-    const weighted = RARITIES.map((rarity, index) => ({ rarity, weight: available.some(reward => reward.rarity === rarity) ? WEIGHTS[index] : 0 }));
-    const total = weighted.reduce((sum, group) => sum + group.weight, 0);
-    let roll = random() * total;
-    const selected = weighted.find(group => (roll -= group.weight) < 0 && group.weight > 0)?.rarity || weighted.find(group => group.weight > 0)!.rarity;
-    const candidates = available.filter(reward => reward.rarity === selected);
+    let roll = random();
+    const selected = RARITIES.find((_, index) => (roll -= WEIGHTS[index]) < 0) || RARITIES[RARITIES.length - 1];
+    const candidates = REWARDS.filter(reward => reward.rarity === selected);
     const reward = candidates[Math.min(candidates.length - 1, Math.floor(random() * candidates.length))];
-    return { reward, save: { ...save, starBalance: save.starBalance - 3, rewards: [...save.rewards, reward.id] } };
+    const duplicate = save.rewards.includes(reward.id);
+    return { reward, duplicate, save: { ...save,
+        starBalance: save.starBalance - (duplicate ? 2 : 3),
+        rewards: duplicate ? save.rewards : [...save.rewards, reward.id] } };
 }
 
 export function equipReward(save: SaveData, id: string): SaveData {

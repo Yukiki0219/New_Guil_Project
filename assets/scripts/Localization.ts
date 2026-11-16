@@ -3,8 +3,8 @@ export type Language = 'zh' | 'en';
 const EN: Record<string, string> = {
  '装扮衣橱':'Wardrobe','弹珠':'Marble','场景':'Scene','轨迹':'Trail','当前装备':'Equipped','默认':'Default','未获得':'Not Owned','装备':'Equip','去抽奖':'Go to Draw',
  '星星抽奖':'Star Draw','庭院珍藏':'Courtyard Treasures','弹珠 · 场景 · 轨迹':'Marbles · Scenes · Trails','抽一次 3 星':'Draw Once · 3 Stars','奖励图鉴':'Prize Collection','概率':'Odds',
- '抽奖概率':'Draw Odds','每抽一件未拥有奖励；抽空的档位按剩余概率重分配':'Every draw grants a new prize. Empty rarity tiers are redistributed.',
- '获得新奖励！':'New Prize!','立即装备':'Equip Now','继续':'Continue','星星不足':'Not Enough Stars',
+ '抽奖概率':'Draw Odds','可能抽到重复奖励；重复时返还 1 星':'Duplicates refund 1 star.',
+ '获得新奖励！':'New Prize!','重复奖励 · 返还 1 星':'Duplicate Prize · 1 Star Refunded','立即装备':'Equip Now','继续':'Continue','星星不足':'Not Enough Stars',
  '开始游戏':'Play','关卡选择':'Level Select','庭院挑战':'Level Select','弹珠图鉴':'Collection','收藏图鉴':'Collection','发射球皮肤':'Shooter Skins','新手教学 / Help':'Tutorial','音效：开':'Sound Effects: On','音效：关':'Sound Effects: Off',
  '下一关':'Next Level','再试一次':'Try Again','回到主菜单':'Main Menu','返回主页':'Main Menu','返回关卡':'Level Select','查看提示':'Show Hint','查看教程':'Tutorial','继续游戏':'Resume','返回':'Back','主页':'Main Menu','暂停':'Pause','发射':'Shoot','重玩本关':'Restart Level','力度':'Power',
  '星级与收藏已保存':'Stars and collection saved','一颗弹珠，一整个童年':'A marble. A childhood of memories.','庭 院 弹 珠':'COURTYARD MARBLES','本地单机  /  进度自动保存':'Offline play / Progress saved automatically','存档不可用：本次进度仅保留在当前会话':'Saving unavailable: progress lasts for this session only',
