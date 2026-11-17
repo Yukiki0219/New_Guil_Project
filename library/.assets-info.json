@@ -10,23 +10,23 @@
       "uuid": "4afbca9e-77b1-456c-ad0b-f58f90391f88"
     },
     "scripts": {
-      "time": 1794754081207.9927,
+      "time": 1794837589190.7578,
       "uuid": "c4b5012f-251d-4d42-928f-2f7fe422d683"
     },
     "resources\\art": {
-      "time": 1794754081110.8613,
+      "time": 1794928119853.445,
       "uuid": "d2cc011c-4e0f-4def-bc4b-e09557c4f94e"
     },
     "resources\\audio": {
-      "time": 1793018056032.5012,
+      "time": 1794926452658.3816,
       "uuid": "7f8af59f-9a73-4bb4-b2c9-afc7e323881a"
     },
     "scripts\\GameModel.ts": {
-      "time": 1794754081207.9927,
+      "time": 1794837589188.7573,
       "uuid": "7954f24b-b1de-478d-be88-724c207f66b7"
     },
     "scripts\\GuliGame.ts": {
-      "time": 1794834170986.9766,
+      "time": 1794928961491.3364,
       "uuid": "9f327c01-c945-427f-97a6-94ab92496ce9"
     },
     "resources.meta": {
@@ -98,7 +98,7 @@
       "uuid": "315354e2-65ec-4f22-8593-8e9803df24bd"
     },
     "scripts\\PhysicsVerification.ts": {
-      "time": 1792730516129.3777,
+      "time": 1794837589190.7578,
       "uuid": "9f8da9f4-d06d-4ef8-ab6f-954ed50d095a"
     },
     "resources\\hud.meta": {
@@ -341,7 +341,7 @@
       "uuid": "395bd534-6232-4dcb-8929-b5ad7fc64550"
     },
     "scripts\\TutorialView.ts": {
-      "time": 1793018056050.318,
+      "time": 1794926444429.5938,
       "uuid": "85eaddd5-1d40-4e7e-9572-19d6ba5ad4b2"
     },
     "resources\\audio\\bgm_gameplay.ogg.meta": {
@@ -374,7 +374,7 @@
       "uuid": "217ffd53-db30-4e4a-93de-807351f2f8ab"
     },
     "scripts\\Localization.ts": {
-      "time": 1794834183599.2312,
+      "time": 1794837589189.757,
       "uuid": "d230aefd-5785-4f9d-9714-c729c4cb6a4e"
     },
     "scripts\\LanguageSwitch.ts.meta": {
@@ -404,7 +404,7 @@
       "uuid": "fd8e0d54-555c-4a26-9c18-d10448b122f7"
     },
     "scripts\\Gacha.ts": {
-      "time": 1794833062711.8008,
+      "time": 1794837589187.748,
       "uuid": "4f62f4af-1161-47ca-96c8-69d07907cecb"
     },
     "resources\\art\\gacha-scenes\\S01.png.meta": {
@@ -462,6 +462,104 @@
     "resources\\art\\gacha-T05.png": {
       "time": 1794754081095.1206,
       "uuid": "43cfc734-79be-45fa-9d25-cc7d59356b05"
+    },
+    "resources\\audio\\bgm_menu_new.wav.meta": {
+      "time": 1794887215247.993
+    },
+    "resources\\audio\\bgm_menu_new.wav": {
+      "time": 1794924719054.478,
+      "uuid": "8e6df031-e004-4914-9bb2-38c99c09b2a1"
+    },
+    "resources\\audio\\bgm_draw_new.wav.meta": {
+      "time": 1794887215720.3972
+    },
+    "resources\\audio\\bgm_game_new.wav.meta": {
+      "time": 1794887215489.5366
+    },
+    "resources\\audio\\bgm_game_new.wav": {
+      "time": 1794925706848.2573,
+      "uuid": "75183494-f09c-4528-a7e9-f46706a990bb"
+    },
+    "resources\\audio\\bgm_draw_new.wav": {
+      "time": 1794924719064.452,
+      "uuid": "d836252c-f4c7-47e7-9af3-1a2f9c69a071"
+    },
+    "resources\\audio\\ui_confirm.wav.meta": {
+      "time": 1794926518415.234
+    },
+    "resources\\audio\\ui_draw.wav.meta": {
+      "time": 1794926518417.2344
+    },
+    "resources\\audio\\ui_navigation.wav.meta": {
+      "time": 1794926518410.7197
+    },
+    "resources\\audio\\ui_reward.wav.meta": {
+      "time": 1794926518414.235
+    },
+    "resources\\audio\\ui_selection.wav.meta": {
+      "time": 1794926518409.7217
+    },
+    "resources\\audio\\ui_selection.wav": {
+      "time": 1794926895322.7266,
+      "uuid": "2a88eb34-645c-4598-b772-18f9aecf9161"
+    },
+    "resources\\audio\\ui_navigation.wav": {
+      "time": 1794926658790.2488,
+      "uuid": "d4c65046-ca57-486b-bcb5-0a289b899b0d"
+    },
+    "resources\\audio\\ui_reward.wav": {
+      "time": 1794926346656.5413,
+      "uuid": "0db99926-77dd-4fab-9523-5ed210bbb01e"
+    },
+    "resources\\audio\\ui_confirm.wav": {
+      "time": 1794926895323.9087,
+      "uuid": "1fd6a90e-6b04-4d5d-bb4a-327ea8531260"
+    },
+    "resources\\audio\\ui_draw.wav": {
+      "time": 1794926346653.675,
+      "uuid": "f2f9aa91-0d9e-4359-979e-059a451d48d9"
+    },
+    "resources\\art\\trails.meta": {
+      "time": 1794928119884.028
+    },
+    "resources\\art\\trails\\firefly-trail.png.meta": {
+      "time": 1794928120373.3972
+    },
+    "resources\\art\\trails\\koi-impact.png.meta": {
+      "time": 1794928120358.942
+    },
+    "resources\\art\\trails\\koi-trail.png.meta": {
+      "time": 1794928120361.9502
+    },
+    "resources\\art\\trails\\phoenix-impact.png.meta": {
+      "time": 1794928120357.8433
+    },
+    "resources\\art\\trails\\phoenix-trail.png.meta": {
+      "time": 1794928120376.3953
+    },
+    "resources\\art\\trails": {
+      "time": 1794928119861.9626,
+      "uuid": "34e5e0ef-8e0b-4523-8868-7125bbab72f0"
+    },
+    "resources\\art\\trails\\phoenix-impact.png": {
+      "time": 1794928060257.9175,
+      "uuid": "e45e3e21-f6ba-4048-b615-c710c293b20d"
+    },
+    "resources\\art\\trails\\koi-impact.png": {
+      "time": 1794928096264.4219,
+      "uuid": "b266be9a-3472-45ba-b67b-8907bc6d3e3a"
+    },
+    "resources\\art\\trails\\koi-trail.png": {
+      "time": 1794927969724.854,
+      "uuid": "05e7af41-e618-4019-a9de-24dc5bd3283b"
+    },
+    "resources\\art\\trails\\firefly-trail.png": {
+      "time": 1794927998750.42,
+      "uuid": "79482c02-e82c-470f-bc74-71eb0d0e59a7"
+    },
+    "resources\\art\\trails\\phoenix-trail.png": {
+      "time": 1794927925693.8733,
+      "uuid": "e4280f50-775f-40ff-b05f-6f5e543c6ec1"
     }
   },
   "missing": {}

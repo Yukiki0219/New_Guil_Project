@@ -36,8 +36,11 @@
             "resources\\art\\gacha-page.png",
             "resources\\art\\gacha-T05.png",
             "resources\\art\\marble-motifs.png",
+            "resources\\audio\\bgm_draw_new.wav",
             "resources\\audio\\bgm_gameplay.ogg",
+            "resources\\audio\\bgm_game_new.wav",
             "resources\\audio\\bgm_main_menu.ogg",
+            "resources\\audio\\bgm_menu_new.wav",
             "resources\\audio\\hit.wav",
             "resources\\audio\\shoot.wav",
             "resources\\audio\\win.wav",
@@ -67,7 +70,18 @@
             "resources\\hud\\prefabs\\StarEmpty.prefab",
             "resources\\hud\\prefabs\\StarEmpty2.prefab",
             "resources\\hud\\prefabs\\StarEmpty3.prefab",
-            "resources\\hud\\prefabs\\TargetPlate.prefab"
+            "resources\\hud\\prefabs\\TargetPlate.prefab",
+            "resources\\audio\\ui_confirm.wav",
+            "resources\\audio\\ui_draw.wav",
+            "resources\\audio\\ui_navigation.wav",
+            "resources\\audio\\ui_reward.wav",
+            "resources\\audio\\ui_selection.wav",
+            "resources\\art\\trails",
+            "resources\\art\\trails\\firefly-trail.png",
+            "resources\\art\\trails\\koi-impact.png",
+            "resources\\art\\trails\\koi-trail.png",
+            "resources\\art\\trails\\phoenix-impact.png",
+            "resources\\art\\trails\\phoenix-trail.png"
         ]
     }
 }

@@ -2,6 +2,7 @@ import { Node, UITransform, Graphics, Color, Label, Button } from 'cc';
 
 export interface TutorialArt {
     translate?(text: string): string;
+    playSound?(name: string): void;
     part(name: string, parent: Node, x: number, y: number, w: number, h: number): Node | null;
     marble(parent: Node, id: number, x: number, y: number, r: number): Node;
 }
@@ -40,7 +41,7 @@ export class TutorialView {
     }
     private button(text:string,x:number,action:()=>void) {
         const n=this.box(x,-550,285,76,'#008e96');n.name='Tutorial-'+text;
-        this.text(text,0,0,27,260,n,'#ffffff');n.addComponent(Button);n.on(Button.EventType.CLICK,action);
+        this.text(text,0,0,27,260,n,'#ffffff');n.addComponent(Button);n.on(Button.EventType.CLICK,()=>{this.art.playSound?.(text==='开始挑战 ›'?'ui_confirm':'ui_navigation');action();});
     }
     contains(_x:number,_y:number){return true;}
     show(page:number, level:number, target:number, remaining:number, next:()=>void, previous:()=>void) {

@@ -115,7 +115,12 @@ System.register(["cc"], function (_export, _context) {
           n.name = 'Tutorial-' + text;
           this.text(text, 0, 0, 27, 260, n, '#ffffff');
           n.addComponent(Button);
-          n.on(Button.EventType.CLICK, action);
+          n.on(Button.EventType.CLICK, () => {
+            var _this$art$playSound, _this$art2;
+
+            (_this$art$playSound = (_this$art2 = this.art).playSound) == null || _this$art$playSound.call(_this$art2, text === '开始挑战 ›' ? 'ui_confirm' : 'ui_navigation');
+            action();
+          });
         }
 
         contains(_x, _y) {

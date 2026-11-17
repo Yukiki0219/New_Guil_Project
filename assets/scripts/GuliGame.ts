@@ -86,11 +86,14 @@ export class GuliGame extends Component {
     private navSwipe: { pointer: string; x: number; y: number } | null = null;
     private trailMarks: { node: Node; opacity: UIOpacity; age: number; life: number }[] = [];
     private trailClock = 0;
+    private trailLast: { x: number; y: number } | null = null;
+    private lastLargeCollision = -Infinity;
     private trailPreviews: { reward: Reward; layer: Node; ball: Node; owned: boolean; time: number; stamp: number; scale: number }[] = [];
     private sceneSprite!: Sprite;
     private sceneFallback!: Graphics;
     private sceneArtId = '';
     private flowerTrailFrame: SpriteFrame | null = null;
+    private trailArt: Record<string, SpriteFrame> = {};
     private storageWarning = false;
     private artwork: Record<string, Prefab> = {};
     private aimMarker: Node | null = null;
@@ -124,18 +127,24 @@ export class GuliGame extends Component {
         const musicNode = new Node('BackgroundMusic'); this.node.addChild(musicNode);
         this.music = musicNode.addComponent(AudioSource);
         this.music.loop = true; this.music.volume = 0.22; this.music.playOnAwake = false;
-        for (const name of ['bgm_main_menu', 'bgm_gameplay']) resources.load('audio/' + name, AudioClip, (err, clip) => {
+        for (const name of ['bgm_menu_new', 'bgm_game_new', 'bgm_draw_new']) resources.load('audio/' + name, AudioClip, (err, clip) => {
             if (!this.isValid) return;
             if (err) { console.warn('Background music load failed: ' + name, err); return; }
             this.musicClips[name] = clip; this.syncMusic();
         });
-        for (const name of ['hit', 'shoot', 'win']) resources.load('audio/' + name, AudioClip, (err, clip) => { if (!err) this.clips[name] = clip; });
+        for (const name of ['hit', 'shoot', 'win', 'ui_navigation', 'ui_selection', 'ui_confirm', 'ui_draw', 'ui_reward']) resources.load('audio/' + name, AudioClip, (err, clip) => { if (!err) this.clips[name] = clip; });
         const back = this.makeNode('Courtyard', this.node, 0, 0, 720, 1280);
         this.sceneFallback = back.addComponent(Graphics); this.sceneFallback.fillColor = col('#e8c78f'); this.sceneFallback.rect(-360, -640, 720, 1280); this.sceneFallback.fill();
         this.sceneSprite = this.makeNode('CourtyardArt', back, 0, 0, 720, 1280).addComponent(Sprite);
         this.sceneSprite.sizeMode = Sprite.SizeMode.CUSTOM;
         this.refreshSceneArt();
         resources.load('art/gacha-T05/spriteFrame', SpriteFrame, (err, frame) => { if (!err && this.isValid) this.flowerTrailFrame = frame; });
+        for (const [key, name] of [['T08', 'firefly-trail'], ['T09', 'koi-trail'], ['T10', 'phoenix-trail'],
+            ['T09-impact', 'koi-impact'], ['T10-impact', 'phoenix-impact']]) {
+            resources.load(`art/trails/${name}/spriteFrame`, SpriteFrame, (err, frame) => {
+                if (!err && this.isValid) this.trailArt[key] = frame;
+            });
+        }
         this.board = this.makeNode('Board', this.node);
         this.trailLayer = this.makeNode('Trails', this.node);
         this.ballLayer = this.makeNode('Marbles', this.node);
@@ -250,7 +259,7 @@ export class GuliGame extends Component {
         g.fillColor = col(fill, 248); g.roundRect(x - w / 2, y - h / 2, w, h, 24); g.fill();
         g.strokeColor = col('#ffffff', 185); g.lineWidth = 2; g.roundRect(x - w / 2 + 5, y - h / 2 + 5, w - 10, h - 10, 20); g.stroke(); return g;
     }
-    private button(text: string, x: number, y: number, w: number, h: number, action: () => void, primary = false, parent = this.ui, disabled = false) {
+    private button(text: string, x: number, y: number, w: number, h: number, action: () => void, primary = false, parent = this.ui, disabled = false, sound = 'ui_navigation') {
         const partName = text === '主页' ? 'HomeButton' : text === '暂停' ? 'PauseButton' : text === '发射' ? 'FireButton' : '';
         const size = text === '发射' ? 116 : 84;
         let n = partName ? this.part(partName, parent, x, y, size, size) : null;
@@ -262,7 +271,7 @@ export class GuliGame extends Component {
         const btn = n.getComponent(Button) || n.addComponent(Button);
         btn.interactable = !disabled; btn.transition = Button.Transition.SCALE; btn.zoomScale = 0.94;
         const sp = n.getComponent(Sprite); if (sp) sp.grayscale = disabled;
-        n.on(Button.EventType.CLICK, action);
+        n.on(Button.EventType.CLICK, () => { this.sound(sound); action(); });
         // Native Button owns click dispatch; global input only uses these rectangles to exclude aiming.
         this.hits.push({ x, y, w:partName ? size : w, h:partName ? size : h, action: () => {} });
     }
@@ -311,7 +320,7 @@ export class GuliGame extends Component {
         this.stopInvalidShotHudAnimation();
         this.sling.cancel(); this.shooterPreview = null;
         this.clear(this.ui); this.clear(this.board); this.clear(this.trailLayer); this.clear(this.ballLayer); this.clear(this.overlay);
-        this.trailMarks = []; this.trailClock = 0; this.trailPreviews = []; this.refreshSceneArt();
+        this.trailMarks = []; this.trailClock = 0; this.trailLast = null; this.lastLargeCollision = -Infinity; this.trailPreviews = []; this.refreshSceneArt();
         this.translatedLabels.clear();
         this.hits = []; this.sprites.clear(); this.aimMarker = null; this.shotsHud = null;
         if (this.screen === 'home') this.home();
@@ -340,15 +349,15 @@ export class GuliGame extends Component {
         this.label('庭 院 弹 珠', 0, 558, 22, '#81704f');
         const languageSwitch = this.makeNode('LanguageSwitch', this.ui, 215, 602, 340, 60);
         languageSwitch.setScale(0.65, 0.65, 1);
-        languageSwitch.addComponent(LanguageSwitch).setup(this.save.language, language => this.setLanguage(language));
+        languageSwitch.addComponent(LanguageSwitch).setup(this.save.language, language => { this.sound('ui_selection'); this.setLanguage(language); });
         const g = this.graphic(this.board); g.strokeColor = col(CREAM, 220); g.lineWidth = 4; g.ellipse(0, 102, 253, 145); g.stroke();
         this.marble(this.ballLayer, 0, -111, 100, 51); this.marble(this.ballLayer, 2, 111, 110, 51);
         this.marble(this.ballLayer, 33, 12, 40, 51);
         this.button('›', 298, 0, 70, 78, () => this.navigate('gacha'));
-        this.button('开始游戏', 0, -152, 386, 88, () => this.play(), true);
+        this.button('开始游戏', 0, -152, 386, 88, () => this.play(), true, this.ui, false, 'ui_confirm');
         this.button('收藏图鉴  ' + this.save.collection.length + '/' + MARBLE_COUNT, 0, -258, 386, 76, () => this.navigate('collection'));
         this.button('装扮衣橱', 0, -350, 386, 76, () => this.navigate('skins'));
-        this.button(this.save.sound ? '音效：开' : '音效：关', 0, -535, 280, 54, () => { this.save.sound = !this.save.sound; this.persist(); this.render(); });
+        this.button(this.save.sound ? '音效：开' : '音效：关', 0, -535, 280, 54, () => { this.save.sound = !this.save.sound; this.persist(); this.render(); }, false, this.ui, false, 'ui_selection');
         this.button('新手教学 / Help', 0, -442, 386, 64, () => this.startTutorial());
         this.label(this.storageWarning ? '存档不可用：本次进度仅保留在当前会话' : '本地单机  /  进度自动保存', 0, -585, 15, '#8e7959');
     }
@@ -363,7 +372,7 @@ export class GuliGame extends Component {
             this.label(level.title, -35, y + 35, 26, INK, this.ui, 270);
             this.label(`击出 ${level.target} / ${level.positions.length} 颗 · ${level.shots} 次机会`, -32, y - 4, 18, '#857155', this.ui, 295);
             this.stars(this.save.stars[i], -35, y - 43, 13);
-            this.button(locked ? '未解锁' : '挑战', 225, y, 120, 65, () => this.startLevel(i), true, this.ui, locked);
+            this.button(locked ? '未解锁' : '挑战', 225, y, 120, 65, () => this.startLevel(i), true, this.ui, locked, 'ui_confirm');
         });
         this.button('上一页', -220, -510, 155, 60, () => { this.page--; this.render(); }, false, this.ui, this.page === 0);
         this.label(`${this.page + 1} / ${Math.ceil(LEVELS.length / 5)}`, 0, -510, 23);
@@ -390,7 +399,7 @@ export class GuliGame extends Component {
         this.header('装扮衣橱', `抽奖收藏 ${this.save.rewards.length} / ${REWARDS.length}`);
         const tabs: [RewardKind, string][] = [['marble','弹珠'],['scene','场景'],['trail','轨迹']];
         tabs.forEach(([kind, label], i) => this.button(label, -210 + i * 210, 410, 180, 62,
-            () => { this.wardrobeKind = kind; this.page = 0; this.render(); }, kind === this.wardrobeKind));
+            () => { this.wardrobeKind = kind; this.page = 0; this.render(); }, kind === this.wardrobeKind, this.ui, false, 'ui_selection'));
         const equipped = this.save.equipped[this.wardrobeKind];
         this.panel(0, 300, 312, 58);
         this.label(`当前装备：${rewardById(equipped)?.name || '默认'}`, 0, 300, 23, TEAL, this.ui, 292);
@@ -408,7 +417,7 @@ export class GuliGame extends Component {
             this.label(reward.rarity, x + 53, y - 9, 17, owned ? '#956a44' : '#8b8982', this.ui, 170);
             this.button(equipped === reward.id ? '已装备' : '装备', x + 54, y - 49, 128, 43,
                 () => { this.save = equipReward(this.save, reward.id); this.persist(); this.render(); }, false, this.ui,
-                !owned || equipped === reward.id);
+                !owned || equipped === reward.id, 'ui_selection');
         }
         this.button('上一页', -210, -450, 150, 56, () => { this.page--; this.render(); }, false, this.ui, this.page === 0);
         this.label(`${this.page + 1} / ${Math.ceil(items.length / 6)}`, 0, -450, 21);
@@ -455,7 +464,7 @@ export class GuliGame extends Component {
         this.panel(0, 365, 258, 60);
         this.label(`剩余 ${this.save.starBalance} 星`, 0, 365, 27, TEAL, this.ui, 238);
         this.button('抽一次 3 星', 0, -394, 475, 87, () => this.drawGacha(), true, this.ui,
-            this.save.starBalance < 3);
+            this.save.starBalance < 3, 'ui_draw');
         this.button('奖励图鉴', -160, -514, 240, 64, () => this.navigate('skins'));
         this.button('概率', 160, -514, 240, 64, () => this.showModal('odds'));
         if (this.save.starBalance < 3) this.label('星星不足', 0, -580, 18, '#865d3e');
@@ -524,6 +533,7 @@ export class GuliGame extends Component {
     }
     private finishGachaAnimation() {
         if (!this.gachaAnimation) return;
+        this.sound('ui_reward');
         this.gachaAnimation = null; this.modal = '';
         this.render(); this.showModal('gacha-result');
     }
@@ -583,6 +593,7 @@ export class GuliGame extends Component {
         this.board.active=false;this.ballLayer.active=false;this.ui.active=false;
         if(!this.tutorialView)this.tutorialView=new TutorialView(this.node,{
             part:(...args)=>this.part(...args),marble:(...args)=>this.marble(...args),translate:text=>translate(text,this.save.language),
+            playSound:name=>this.sound(name),
         });
         this.tutorialView.show(this.tutorial.page,this.model.levelIndex,this.model.level.target-this.model.knocked.length,
             this.model.remaining,()=>this.tutorialNext(),()=>{this.tutorial?.previous();this.refreshTutorial();});
@@ -809,60 +820,114 @@ export class GuliGame extends Component {
         if (!reward) return;
         this.trailClock += dt;
         if (this.trailClock < .045) return;
+        const x = shooter.x, y = this.projectY(shooter.y);
+        const spacing = [30, 40, 50, 65, 70][RARITIES.indexOf(reward.rarity)];
+        if (this.trailLast && Math.hypot(x - this.trailLast.x, y - this.trailLast.y) < spacing) return;
         this.trailClock = 0;
-        this.emitTrailMark(reward, this.trailLayer, shooter.x, this.projectY(shooter.y),
+        this.trailLast = { x, y };
+        this.emitTrailMark(reward, this.trailLayer, x, y,
             shooter.vx, shooter.vy * GROUND_Y_SCALE);
     }
     private emitTrailMark(reward: Reward, parent: Node, x: number, y: number,
         vx: number, vy: number, scale = 1, muted = false) {
-        if (this.trailMarks.length >= 28) {
+        if (this.trailMarks.length >= 96) {
             const oldest = this.trailMarks.shift()!; oldest.node.destroy();
         }
-        const n = this.makeNode('Trail-' + reward.id, parent, x, y, 42, 42);
+        const n = this.makeNode('Trail-' + reward.id, parent, x, y, 140, 80);
         n.setScale(scale, scale, 1);
         const index = Number(reward.id.slice(1));
+        const tier = RARITIES.indexOf(reward.rarity);
+        const angle = Math.atan2(vy, vx);
+        n.angle = angle * 180 / Math.PI;
+        const art = !muted && this.trailArt[reward.id];
+        if (art) {
+            const size = index === 10 ? 140 : index === 9 ? 125 : 137;
+            n.angle = 0;
+            const sprite = n.addComponent(Sprite); sprite.sizeMode = Sprite.SizeMode.CUSTOM; sprite.spriteFrame = art;
+            n.getComponent(UITransform)!.setContentSize(size, size * art.originalSize.height / art.originalSize.width);
+            const opacity = n.addComponent(UIOpacity); opacity.opacity = 255;
+            this.trailMarks.push({ node: n, opacity, age: 0, life: [.45, .65, .8, .95, 1.1][tier] });
+            return;
+        }
+        const g = n.addComponent(Graphics);
+        const base = muted ? '#737a78' : reward.color;
+        const highlight = muted ? '#a3aaa6' : reward.accent;
+        const length = Math.min(120, Math.max(26, Math.hypot(vx, vy) * .065));
+        g.strokeColor = col(highlight, muted ? 110 : 235);
+        g.fillColor = col(base, muted ? 110 : 225); g.lineWidth = tier >= 1 ? 3 : 2;
         if (reward.id === 'T05' && this.flowerTrailFrame && !muted) {
-            const angle = Math.atan2(vy, vx);
-            n.setPosition(x - Math.cos(angle) * 32 * scale, y - Math.sin(angle) * 32 * scale);
-            n.angle = angle * 180 / Math.PI;
-            n.getComponent(UITransform)!.setContentSize(100, 36);
-            const sprite = n.addComponent(Sprite); sprite.spriteFrame = this.flowerTrailFrame;
-            sprite.sizeMode = Sprite.SizeMode.CUSTOM;
-        } else {
-            const g = n.addComponent(Graphics);
-            g.strokeColor = col(muted ? '#6e7472' : reward.accent, 220);
-            g.fillColor = col(muted ? '#7c817d' : reward.color, 210); g.lineWidth = 3;
-            if ([3,6].includes(index)) { g.circle(0, 0, 8 + index); g.stroke(); }
-            else if ([2,5,8].includes(index)) {
+            const flower = this.makeNode('Petal', n, -32, 0, 100, 36);
+            const sprite = flower.addComponent(Sprite); sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+            sprite.spriteFrame = this.flowerTrailFrame;
+            flower.getComponent(UITransform)!.setContentSize(100, 36);
+        } else if (!muted) {
+            if (index === 1) {
+                for (let i = 0; i < 10; i++) { const a = Math.PI / 2 + i * Math.PI / 5, r = i % 2 ? 4 : 10; if (i) g.lineTo(Math.cos(a) * r, Math.sin(a) * r); else g.moveTo(Math.cos(a) * r, Math.sin(a) * r); }
+                g.close(); g.stroke();
+            } else if (index === 2) {
+                g.moveTo(-11, -4); g.quadraticCurveTo(1, 14, 13, 5); g.quadraticCurveTo(4, -12, -11, -4); g.fill();
+            } else if (index === 3) {
+                g.moveTo(0, 13); g.bezierCurveTo(15, -4, 10, -12, 0, -12); g.bezierCurveTo(-10, -12, -15, -4, 0, 13); g.fill();
+            } else if (index === 4) {
+                for (const [px, py, r] of [[-9, 3, 3], [2, -5, 4], [10, 5, 2]]) { g.circle(px, py, r); g.fill(); }
+            } else if ([3,6].includes(index)) { g.circle(0, 0, 8 + index); g.stroke(); }
+            else if ([5,8].includes(index)) {
                 for (let i = 0; i < 3; i++) { const a = i * Math.PI * 2 / 3; g.ellipse(Math.cos(a) * 8, Math.sin(a) * 8, 5, 9); g.fill(); }
             } else if (index === 9) {
-                g.moveTo(-18, -9); g.bezierCurveTo(-2, 15, 4, -15, 18, 9); g.stroke();
-                g.moveTo(-18, 9); g.bezierCurveTo(-2, -15, 4, 15, 18, -9); g.stroke();
+                for (const side of [-1, 1]) {
+                    g.moveTo(-length, side * 9); g.bezierCurveTo(-length * .65, side * 27, -length * .3, -side * 19, 0, side * 8); g.stroke();
+                }
             } else if (index === 10) {
-                g.moveTo(-12, -10); g.lineTo(1, 18); g.lineTo(12, -6); g.lineTo(0, 2); g.close(); g.fill();
+                for (let i = 0; i < 3; i++) {
+                    const px = -length * (i + .25) / 3;
+                    g.moveTo(px - 13, 0); g.quadraticCurveTo(px - 2, 24 + i * 5, px + 10, 1);
+                    g.quadraticCurveTo(px - 2, 9, px - 13, 0); g.fill();
+                }
             } else if (index === 7) {
-                for (let i = 0; i < 4; i++) { const a = i * Math.PI / 2; g.moveTo(Math.cos(a) * 8, Math.sin(a) * 8); g.lineTo(Math.cos(a) * 20, Math.sin(a) * 20); g.stroke(); }
+                g.moveTo(-10, -7); g.quadraticCurveTo(-3, 10, 2, 18);
+                g.quadraticCurveTo(6, 5, 11, -7); g.quadraticCurveTo(0, -14, -10, -7); g.fill();
             } else { for (let i = 0; i < 4; i++) { g.circle((i % 2 ? 1 : -1) * (4 + i * 3), (i - 1.5) * 6, 2 + i % 2); g.fill(); } }
         }
-        const opacity = n.addComponent(UIOpacity); opacity.opacity = 210;
-        this.trailMarks.push({ node: n, opacity, age: 0, life: index >= 8 ? .75 : .5 });
+        const opacity = n.addComponent(UIOpacity); opacity.opacity = muted ? 135 : 255;
+        this.trailMarks.push({ node: n, opacity, age: 0, life: muted ? .45 : [.45, .65, .8, .95, 1.1][tier] });
     }
     private updateTrail(dt: number) {
         this.trailMarks = this.trailMarks.filter(mark => {
             mark.age += dt;
             if (mark.age >= mark.life || !mark.node.isValid) { if (mark.node.isValid) mark.node.destroy(); return false; }
-            mark.opacity.opacity = Math.round(210 * (1 - mark.age / mark.life)); return true;
+            mark.opacity.opacity = Math.round(mark.opacity.opacity * (1 - dt / (mark.life - mark.age + dt))); return true;
         });
     }
     private emitCollision(x: number, y: number) {
         const reward = rewardById(this.save.equipped.trail);
         if (!reward) return;
-        if (this.trailMarks.length >= 28) { const oldest = this.trailMarks.shift()!; oldest.node.destroy(); }
+        if (RARITIES.indexOf(reward.rarity) >= 3) {
+            if (this.clock - this.lastLargeCollision < .3) return;
+            this.lastLargeCollision = this.clock;
+        }
+        if (this.trailMarks.length >= 96) { const oldest = this.trailMarks.shift()!; oldest.node.destroy(); }
         const n = this.makeNode('Collision-' + reward.id, this.trailLayer, x, y, 70, 70);
+        const art = this.trailArt[reward.id + '-impact'] || (reward.id === 'T08' && this.trailArt.T08);
+        if (art) {
+            const size = reward.id === 'T10' ? 300 : reward.id === 'T09' ? 240 : 208;
+            const sprite = n.addComponent(Sprite); sprite.sizeMode = Sprite.SizeMode.CUSTOM; sprite.spriteFrame = art;
+            n.getComponent(UITransform)!.setContentSize(size, size * art.originalSize.height / art.originalSize.width);
+            const opacity = n.addComponent(UIOpacity); opacity.opacity = 255;
+            this.trailMarks.push({ node: n, opacity, age: 0, life: reward.id === 'T10' ? 1.1 : .8 });
+            return;
+        }
         const g = n.addComponent(Graphics);
         g.strokeColor = col(reward.accent, 240); g.fillColor = col(reward.color, 210); g.lineWidth = 4;
         const index = Number(reward.id.slice(1));
-        if ([3, 6].includes(index)) {
+        const tier = RARITIES.indexOf(reward.rarity);
+        if (tier >= 2) {
+            g.strokeColor = col(reward.accent, tier >= 4 ? 110 : 65); g.lineWidth = tier >= 4 ? 13 : 8;
+            g.circle(0, 0, tier >= 4 ? 42 : 36); g.stroke();
+            g.strokeColor = col(reward.accent, 240); g.lineWidth = 4;
+        }
+        if (tier === 0) {
+            g.circle(0, 0, 13); g.stroke();
+        } else if ([3, 6].includes(index)) {
             for (const radius of [15, 29]) { g.circle(0, 0, radius); g.stroke(); }
         } else if ([2, 5, 8].includes(index)) {
             for (let i = 0; i < 6; i++) {
@@ -978,7 +1043,7 @@ export class GuliGame extends Component {
             }
             this.button('立即装备', -140, -265, 245, 68, () => {
                 this.save = equipReward(this.save, reward.id); this.persist(); this.wardrobeKind = reward.kind; this.navigate('skins');
-            }, true, this.overlay);
+            }, true, this.overlay, false, 'ui_selection');
             this.button('继续', 140, -265, 245, 68, () => { this.modal = ''; this.render(); }, false, this.overlay);
             return;
         }
@@ -988,21 +1053,21 @@ export class GuliGame extends Component {
             this.stars(m.stars, 0, 148, 32, this.overlay);
             this.label(`击出 ${m.knocked.length} 颗 · 使用 ${m.used} 次射击`, 0, 62, 24, INK, this.overlay, 530);
             this.label(won ? `新收藏 +${this.newItems}  ·  成绩星星 +${this.earnedStars}  ·  最佳 ${this.save.stars[m.levelIndex]} 星` : '目标尚未完成，本次挑战失败。', 0, 7, 20, '#87704f', this.overlay, 540);
-            this.button(won && m.levelIndex < LEVELS.length - 1 ? '下一关' : '返回关卡', 0, -87, 440, 75, () => won && m.levelIndex < LEVELS.length - 1 ? this.startLevel(m.levelIndex + 1) : this.navigate('levels'), true, this.overlay);
-            this.button('再试一次', 0, -181, 440, 70, () => this.startLevel(m.levelIndex, true), false, this.overlay);
+            this.button(won && m.levelIndex < LEVELS.length - 1 ? '下一关' : '返回关卡', 0, -87, 440, 75, () => won && m.levelIndex < LEVELS.length - 1 ? this.startLevel(m.levelIndex + 1) : this.navigate('levels'), true, this.overlay, false, won && m.levelIndex < LEVELS.length - 1 ? 'ui_confirm' : 'ui_navigation');
+            this.button('再试一次', 0, -181, 440, 70, () => this.startLevel(m.levelIndex, true), false, this.overlay, false, 'ui_confirm');
             if(won)this.button('回到主菜单', 0, -275, 440, 70, () => this.navigate('home'), false, this.overlay);
             if(!won)this.button('查看教程',0,-267,250,54,()=>this.startTutorial(),false,this.overlay);
             if(won)this.label(this.storageWarning ? '存档暂不可用，请勿关闭当前会话' : won ? '星级与收藏已保存' : '调整角度，试试一次撞出多颗', 0, -352, 17, '#8b795d', this.overlay, 530);
         } else {
             this.label(kind === 'leave' ? '返回主页？' : '休息一下', 0, 220, 39, INK, this.overlay);
             this.label(kind === 'leave' ? '本局未结算的进度不会保存' : '弹珠已暂停，准备好再继续', 0, 133, 22, '#867053', this.overlay);
-            this.button('继续游戏', 0, 15, 430, 80, () => { this.modal = ''; this.render(); }, true, this.overlay);
+            this.button('继续游戏', 0, 15, 430, 80, () => { this.modal = ''; this.render(); }, true, this.overlay, false, 'ui_confirm');
             this.button('重玩本关', 0, -85, 430, 74, () => {
                 if (this.tutorial) {
                     if (this.tutorial.step === 'PRACTICE' || this.tutorial.step === 'RETRY') { this.tutorial.step = 'PRACTICE'; this.resetTutorialBoard(); }
                     else this.startTutorial();
                 } else this.startLevel(m.levelIndex, true);
-            }, false, this.overlay);
+            }, false, this.overlay, false, 'ui_confirm');
             this.button('返回主页', 0, -184, 430, 74, () => this.navigate('home'), false, this.overlay);
         }
     }
@@ -1012,7 +1077,8 @@ export class GuliGame extends Component {
         const source = this.music;
         if (!source) return;
         if (!this.enabledInHierarchy || !this.musicUnlocked || this.musicHidden || !this.save.sound) { source.pause(); return; }
-        const clip = this.musicClips[this.screen === 'game' ? 'bgm_gameplay' : 'bgm_main_menu'];
+        source.volume = this.screen === 'game' || this.screen === 'gacha' ? 0.22 : 0.5;
+        const clip = this.musicClips[this.screen === 'game' ? 'bgm_game_new' : this.screen === 'gacha' ? 'bgm_draw_new' : 'bgm_menu_new'];
         if (source.clip !== clip) { source.stop(); source.clip = clip || null; }
         if (clip && !source.playing) source.play();
     }

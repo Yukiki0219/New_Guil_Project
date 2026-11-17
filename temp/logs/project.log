@@ -1,49 +1,62 @@
-16-11-2026 20:38:09 - error: (node:18372) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
+17-11-2026 22:17:08 - error: (node:24892) Warning: Setting the NODE_TLS_REJECT_UNAUTHORIZED environment variable to '0' makes TLS connections and HTTPS requests insecure by disabling certificate verification.
 (Use `CocosCreator --trace-warnings ...` to show where the warning was created)
-16-11-2026 20:38:15 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine
-16-11-2026 20:38:17 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\native
-16-11-2026 20:38:17 - log: Request namespace: device-list
-16-11-2026 20:38:40 - log: [RB] extension loaded v0.1.12 sha256=3d66302ab21f7808de5cd6d5908c063a9d9ca2e38ad335388e5cae82906ce7ff path=C:\Users\Lenovo\.CocosCreator\builtin-extensions\3.8.8\runtime-bridge
-16-11-2026 20:38:41 - log: [cocos-creator-mcp] Extension loaded
-16-11-2026 20:38:42 - log: Cocos MCP Server extension loaded
-16-11-2026 20:38:42 - log: Console capture setup initialized
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for build-worker:ready (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for build-worker:closed (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for scene:ready (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for scene:close (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for scene:light-probe-edit-mode-changed (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for scene:light-probe-bounding-box-edit-mode-changed (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:ready (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:close (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:asset-add (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:asset-change (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:asset-delete (simulated)
-16-11-2026 20:38:42 - log: [ToolManager] Initialized 50 tools from MCP server
-16-11-2026 20:38:42 - log: [MCPServer] Initializing tools...
-16-11-2026 20:38:42 - log: Console capture setup initialized
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for build-worker:ready (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for build-worker:closed (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for scene:ready (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for scene:close (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for scene:light-probe-edit-mode-changed (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for scene:light-probe-bounding-box-edit-mode-changed (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:ready (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:close (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:asset-add (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:asset-change (simulated)
-16-11-2026 20:38:42 - log: [BroadcastTools] Added listener for asset-db:asset-delete (simulated)
-16-11-2026 20:38:42 - log: [MCPServer] Tools initialized successfully
-16-11-2026 20:38:42 - log: [MCPServer] Updating enabled tools: 50 tools
-16-11-2026 20:38:42 - log: [MCPServer] Setup tools: 50 tools available
-16-11-2026 20:38:42 - warn: [RB] Policy refresh retained: request timed out
-16-11-2026 20:38:52 - log: [Scene] meshopt wasm decoder initialized
-16-11-2026 20:38:52 - log: [Scene] [box2d]:box2d wasm lib loaded.
-16-11-2026 20:38:52 - log: [Scene] [bullet]:bullet wasm lib loaded.
-16-11-2026 20:38:52 - log: [Scene] [PHYSICS]: using builtin.
-16-11-2026 20:38:52 - log: [Scene] Cocos Creator v3.8.8
-16-11-2026 20:38:53 - log: [Scene] Using custom pipeline: Builtin
-16-11-2026 20:38:53 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.
-16-11-2026 20:38:58 - warn: [Window] [Vue warn]: Failed to resolve component: ui-button 
+17-11-2026 22:17:09 - log: Load engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine
+17-11-2026 22:17:10 - log: Register native engine in C:\ProgramData\cocos\editors\Creator\3.8.8\resources\resources\3d\engine\native
+17-11-2026 22:17:10 - log: Request namespace: device-list
+17-11-2026 22:17:14 - log: [RB] extension loaded v0.1.12 sha256=3d66302ab21f7808de5cd6d5908c063a9d9ca2e38ad335388e5cae82906ce7ff path=C:\Users\Lenovo\.CocosCreator\builtin-extensions\3.8.8\runtime-bridge
+17-11-2026 22:17:16 - log: [cocos-creator-mcp] Extension loaded
+17-11-2026 22:17:16 - log: Cocos MCP Server extension loaded
+17-11-2026 22:17:16 - log: Console capture setup initialized
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for build-worker:ready (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for build-worker:closed (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for scene:ready (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for scene:close (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for scene:light-probe-edit-mode-changed (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for scene:light-probe-bounding-box-edit-mode-changed (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:ready (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:close (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:asset-add (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:asset-change (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:asset-delete (simulated)
+17-11-2026 22:17:16 - log: [ToolManager] Initialized 50 tools from MCP server
+17-11-2026 22:17:16 - log: [MCPServer] Initializing tools...
+17-11-2026 22:17:16 - log: Console capture setup initialized
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for build-worker:ready (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for build-worker:closed (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for scene:ready (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for scene:close (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for scene:light-probe-edit-mode-changed (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for scene:light-probe-bounding-box-edit-mode-changed (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:ready (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:close (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:asset-add (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:asset-change (simulated)
+17-11-2026 22:17:16 - log: [BroadcastTools] Added listener for asset-db:asset-delete (simulated)
+17-11-2026 22:17:16 - log: [MCPServer] Tools initialized successfully
+17-11-2026 22:17:16 - log: [MCPServer] Updating enabled tools: 50 tools
+17-11-2026 22:17:16 - log: [MCPServer] Setup tools: 50 tools available
+17-11-2026 22:17:16 - warn: [RB] Policy refresh retained: request timed out
+17-11-2026 22:17:20 - error: msg not exist!Error: msg not exist!
+    at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\extension\cocos-service\service\pages\index.js:1:21575
+    at new Promise (<anonymous>)
+    at Object.pluginMsg (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\extension\cocos-service\service\pages\index.js:1:21460)
+    at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\panel\lib\element.ccc:1:5083
+    at new Promise (<anonymous>)
+    at EventEmitter.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\panel\lib\element.ccc:1:5044)
+    at EventEmitter.emit (node:events:519:28)
+    at IpcRenderer.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-base-ipc\dist\renderer.ccc:1:3858)
+    at IpcRenderer.emit (node:events:519:28)
+    at Object.onMessage (node:electron/js2c/renderer_init:2:8837)
+17-11-2026 22:17:24 - warn: Request timeout, aborting...
+17-11-2026 22:17:24 - warn: Failed to connect to login server: socket hang up
+17-11-2026 22:17:26 - log: [Scene] [bullet]:bullet wasm lib loaded.
+17-11-2026 22:17:26 - log: [Scene] meshopt wasm decoder initialized
+17-11-2026 22:17:26 - log: [Scene] [box2d]:box2d wasm lib loaded.
+17-11-2026 22:17:26 - log: [Scene] [PHYSICS]: using builtin.
+17-11-2026 22:17:26 - log: [Scene] Cocos Creator v3.8.8
+17-11-2026 22:17:26 - log: [Scene] Using custom pipeline: Builtin
+17-11-2026 22:17:26 - log: [Scene] [PHYSICS2D]: switch from builtin to box2d.
+17-11-2026 22:17:35 - warn: [Window] [Vue warn]: Failed to resolve component: ui-button 
   at <App>Error: [Window] [Vue warn]: Failed to resolve component: ui-button 
     at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\build\cjs\utils-hoist\instrument\console.js:38:14)
@@ -69,8 +82,8 @@
     at loadPanel (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\panel\lib\element.ccc:1:7297)
     at C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@editor\panel\lib\element.ccc:1:4434
     at sentryWrapped (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@sentry\browser\build\npm\cjs\helpers.js:95:17)
-16-11-2026 20:39:00 - log: [cocos-creator-mcp] Server started on http://127.0.0.1:3000/mcp
-16-11-2026 20:39:00 - warn: [Window] [Vue warn]: Failed to resolve component: ui-button 
+17-11-2026 22:17:36 - log: [cocos-creator-mcp] Server started on http://127.0.0.1:3000/mcp
+17-11-2026 22:17:36 - warn: [Window] [Vue warn]: Failed to resolve component: ui-button 
   at <App>Error: [Window] [Vue warn]: Failed to resolve component: ui-button 
     at console.<anonymous> (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@base\electron-logger\lib\renderer.ccc:1:1260)
     at console.warn (C:\ProgramData\cocos\editors\Creator\3.8.8\resources\app.asar\node_modules\@sentry\core\build\cjs\utils-hoist\instrument\console.js:38:14)
@@ -83,27 +96,15 @@
     at reactiveEffect (C:\Users\Lenovo\Documents\Guil_Project\extensions\cocos-creator-mcp-main\node_modules\@vue\reactivity\dist\reactivity.cjs.js:46:24)
     at callWithErrorHandling (C:\Users\Lenovo\Documents\Guil_Project\extensions\cocos-creator-mcp-main\node_modules\@vue\runtime-core\dist\runtime-core.cjs.js:157:36)
     at flushJobs (C:\Users\Lenovo\Documents\Guil_Project\extensions\cocos-creator-mcp-main\node_modules\@vue\runtime-core\dist\runtime-core.cjs.js:383:17)
-16-11-2026 20:45:57 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":30,"types":["error"]}
-16-11-2026 20:45:57 - log: [cocos-creator-mcp] ✓ read_console (19ms)
-16-11-2026 20:45:57 - log: [cocos-creator-mcp] ▶ project_refresh_assets 
-16-11-2026 20:45:57 - log: [cocos-creator-mcp] ✓ project_refresh_assets (569ms)
-16-11-2026 20:46:49 - log: [cocos-creator-mcp] ▶ debug_preview {"action":"start","waitForReady":false}
-16-11-2026 20:46:49 - log: [cocos-creator-mcp] ✓ debug_preview (17ms)
-16-11-2026 20:46:54 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":30,"types":["error"]}
-16-11-2026 20:46:54 - log: [cocos-creator-mcp] ✓ read_console (13ms)
-16-11-2026 21:03:40 - log: [cocos-creator-mcp] ▶ project_refresh_assets 
-16-11-2026 21:03:41 - log: [cocos-creator-mcp] ✓ project_refresh_assets (561ms)
-16-11-2026 21:03:44 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":30,"types":["error","warn"]}
-16-11-2026 21:03:44 - log: [cocos-creator-mcp] ✓ read_console (22ms)
-16-11-2026 21:03:55 - log: [cocos-creator-mcp] ▶ debug_preview {"action":"start","waitForReady":false}
-16-11-2026 21:03:55 - log: [cocos-creator-mcp] ✓ debug_preview (13ms)
-16-11-2026 21:03:57 - log: [cocos-creator-mcp] ▶ debug_screenshot {"target":"window"}
-16-11-2026 21:04:00 - log: [cocos-creator-mcp] ✓ debug_screenshot (3030ms)
-16-11-2026 21:05:15 - log: [cocos-creator-mcp] ▶ builder_manage {"action":"run_preview"}
-16-11-2026 21:05:15 - log: [cocos-creator-mcp] ✓ builder_manage (2ms)
-16-11-2026 21:05:52 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":25}
-16-11-2026 21:05:52 - log: [cocos-creator-mcp] ✓ read_console (15ms)
-16-11-2026 21:06:12 - log: [cocos-creator-mcp] ▶ project_refresh_assets 
-16-11-2026 21:06:12 - log: [cocos-creator-mcp] ✓ project_refresh_assets (556ms)
-16-11-2026 21:06:12 - log: [cocos-creator-mcp] ▶ read_console {"action":"get","count":20,"types":["error"]}
-16-11-2026 21:06:12 - log: [cocos-creator-mcp] ✓ read_console (13ms)
+17-11-2026 22:53:59 - log: [cocos-creator-mcp] ▶ server_status {"action":"get"}
+17-11-2026 22:53:59 - log: [cocos-creator-mcp] ✓ server_status (15ms)
+17-11-2026 22:54:02 - log: [cocos-creator-mcp] ▶ debug_preview {"action":"start","waitForReady":false}
+17-11-2026 22:54:02 - log: [cocos-creator-mcp] ✓ debug_preview (29ms)
+17-11-2026 22:54:10 - log: [cocos-creator-mcp] ▶ debug_game_command {"type":"state","timeout":3000}
+17-11-2026 22:54:13 - log: [cocos-creator-mcp] ✓ debug_game_command (3118ms)
+17-11-2026 22:54:16 - log: [cocos-creator-mcp] ▶ debug_screenshot {"target":"window","savePath":"C:\\Users\\Lenovo\\Documents\\Guil_Project\\output\\trail-preview-editor.png"}
+17-11-2026 22:54:19 - log: [cocos-creator-mcp] ✓ debug_screenshot (3279ms)
+17-11-2026 23:08:39 - log: [cocos-creator-mcp] ▶ project_refresh_assets 
+17-11-2026 23:08:40 - log: [cocos-creator-mcp] ✓ project_refresh_assets (1069ms)
+17-11-2026 23:11:08 - log: [cocos-creator-mcp] ▶ asset_query {"action":"uuid","path":"db://assets/resources/art/trails/phoenix-impact.png"}
+17-11-2026 23:11:08 - log: [cocos-creator-mcp] ✓ asset_query (3ms)

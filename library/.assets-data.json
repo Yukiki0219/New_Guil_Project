@@ -919,5 +919,191 @@
       ]
     },
     "versionCode": 1
+  },
+  "8e6df031-e004-4914-9bb2-38c99c09b2a1": {
+    "url": "db://assets/resources/audio/bgm_menu_new.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d836252c-f4c7-47e7-9af3-1a2f9c69a071": {
+    "url": "db://assets/resources/audio/bgm_draw_new.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "75183494-f09c-4528-a7e9-f46706a990bb": {
+    "url": "db://assets/resources/audio/bgm_game_new.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "1fd6a90e-6b04-4d5d-bb4a-327ea8531260": {
+    "url": "db://assets/resources/audio/ui_confirm.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "f2f9aa91-0d9e-4359-979e-059a451d48d9": {
+    "url": "db://assets/resources/audio/ui_draw.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "d4c65046-ca57-486b-bcb5-0a289b899b0d": {
+    "url": "db://assets/resources/audio/ui_navigation.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "0db99926-77dd-4fab-9523-5ed210bbb01e": {
+    "url": "db://assets/resources/audio/ui_reward.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "2a88eb34-645c-4598-b772-18f9aecf9161": {
+    "url": "db://assets/resources/audio/ui_selection.wav",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "79482c02-e82c-470f-bc74-71eb0d0e59a7": {
+    "url": "db://assets/resources/art/trails/firefly-trail.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "b266be9a-3472-45ba-b67b-8907bc6d3e3a": {
+    "url": "db://assets/resources/art/trails/koi-impact.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "05e7af41-e618-4019-a9de-24dc5bd3283b": {
+    "url": "db://assets/resources/art/trails/koi-trail.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "e45e3e21-f6ba-4048-b615-c710c293b20d": {
+    "url": "db://assets/resources/art/trails/phoenix-impact.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "34e5e0ef-8e0b-4523-8868-7125bbab72f0": {
+    "url": "db://assets/resources/art/trails",
+    "value": {},
+    "versionCode": 1
+  },
+  "e4280f50-775f-40ff-b05f-6f5e543c6ec1": {
+    "url": "db://assets/resources/art/trails/phoenix-trail.png",
+    "value": {
+      "depends": []
+    },
+    "versionCode": 1
+  },
+  "05e7af41-e618-4019-a9de-24dc5bd3283b@6c48a": {
+    "url": "db://assets/resources/art/trails/koi-trail.png@6c48a",
+    "value": {
+      "depends": [
+        "05e7af41-e618-4019-a9de-24dc5bd3283b"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e45e3e21-f6ba-4048-b615-c710c293b20d@6c48a": {
+    "url": "db://assets/resources/art/trails/phoenix-impact.png@6c48a",
+    "value": {
+      "depends": [
+        "e45e3e21-f6ba-4048-b615-c710c293b20d"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b266be9a-3472-45ba-b67b-8907bc6d3e3a@6c48a": {
+    "url": "db://assets/resources/art/trails/koi-impact.png@6c48a",
+    "value": {
+      "depends": [
+        "b266be9a-3472-45ba-b67b-8907bc6d3e3a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "79482c02-e82c-470f-bc74-71eb0d0e59a7@6c48a": {
+    "url": "db://assets/resources/art/trails/firefly-trail.png@6c48a",
+    "value": {
+      "depends": [
+        "79482c02-e82c-470f-bc74-71eb0d0e59a7"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e4280f50-775f-40ff-b05f-6f5e543c6ec1@6c48a": {
+    "url": "db://assets/resources/art/trails/phoenix-trail.png@6c48a",
+    "value": {
+      "depends": [
+        "e4280f50-775f-40ff-b05f-6f5e543c6ec1"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e45e3e21-f6ba-4048-b615-c710c293b20d@f9941": {
+    "url": "db://assets/resources/art/trails/phoenix-impact.png@f9941",
+    "value": {
+      "depends": [
+        "e45e3e21-f6ba-4048-b615-c710c293b20d@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "b266be9a-3472-45ba-b67b-8907bc6d3e3a@f9941": {
+    "url": "db://assets/resources/art/trails/koi-impact.png@f9941",
+    "value": {
+      "depends": [
+        "b266be9a-3472-45ba-b67b-8907bc6d3e3a@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "05e7af41-e618-4019-a9de-24dc5bd3283b@f9941": {
+    "url": "db://assets/resources/art/trails/koi-trail.png@f9941",
+    "value": {
+      "depends": [
+        "05e7af41-e618-4019-a9de-24dc5bd3283b@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "79482c02-e82c-470f-bc74-71eb0d0e59a7@f9941": {
+    "url": "db://assets/resources/art/trails/firefly-trail.png@f9941",
+    "value": {
+      "depends": [
+        "79482c02-e82c-470f-bc74-71eb0d0e59a7@6c48a"
+      ]
+    },
+    "versionCode": 1
+  },
+  "e4280f50-775f-40ff-b05f-6f5e543c6ec1@f9941": {
+    "url": "db://assets/resources/art/trails/phoenix-trail.png@f9941",
+    "value": {
+      "depends": [
+        "e4280f50-775f-40ff-b05f-6f5e543c6ec1@6c48a"
+      ]
+    },
+    "versionCode": 1
   }
 }

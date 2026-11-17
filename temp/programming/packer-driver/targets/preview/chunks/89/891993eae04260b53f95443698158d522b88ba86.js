@@ -327,11 +327,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.navSwipe = null;
           this.trailMarks = [];
           this.trailClock = 0;
+          this.trailLast = null;
+          this.lastLargeCollision = -Infinity;
           this.trailPreviews = [];
           this.sceneSprite = void 0;
           this.sceneFallback = void 0;
           this.sceneArtId = '';
           this.flowerTrailFrame = null;
+          this.trailArt = {};
           this.storageWarning = false;
           this.artwork = {};
           this.aimMarker = null;
@@ -434,7 +437,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             });
           };
 
-          for (var name of ['bgm_main_menu', 'bgm_gameplay']) {
+          for (var name of ['bgm_menu_new', 'bgm_game_new', 'bgm_draw_new']) {
             _loop(name);
           }
 
@@ -444,7 +447,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             });
           };
 
-          for (var _name of ['hit', 'shoot', 'win']) {
+          for (var _name of ['hit', 'shoot', 'win', 'ui_navigation', 'ui_selection', 'ui_confirm', 'ui_draw', 'ui_reward']) {
             _loop2(_name);
           }
 
@@ -459,6 +462,17 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           resources.load('art/gacha-T05/spriteFrame', SpriteFrame, (err, frame) => {
             if (!err && this.isValid) this.flowerTrailFrame = frame;
           });
+
+          var _loop3 = function _loop3(_key) {
+            resources.load("art/trails/" + _name2 + "/spriteFrame", SpriteFrame, (err, frame) => {
+              if (!err && _this.isValid) _this.trailArt[_key] = frame;
+            });
+          };
+
+          for (var [_key, _name2] of [['T08', 'firefly-trail'], ['T09', 'koi-trail'], ['T10', 'phoenix-trail'], ['T09-impact', 'koi-impact'], ['T10-impact', 'phoenix-impact']]) {
+            _loop3(_key);
+          }
+
           this.board = this.makeNode('Board', this.node);
           this.trailLayer = this.makeNode('Trails', this.node);
           this.ballLayer = this.makeNode('Marbles', this.node);
@@ -687,7 +701,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return g;
         }
 
-        button(text, x, y, w, h, action, primary, parent, disabled) {
+        button(text, x, y, w, h, action, primary, parent, disabled, sound) {
           if (primary === void 0) {
             primary = false;
           }
@@ -698,6 +712,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           if (disabled === void 0) {
             disabled = false;
+          }
+
+          if (sound === void 0) {
+            sound = 'ui_navigation';
           }
 
           var partName = text === '主页' ? 'HomeButton' : text === '暂停' ? 'PauseButton' : text === '发射' ? 'FireButton' : '';
@@ -716,7 +734,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           btn.zoomScale = 0.94;
           var sp = n.getComponent(Sprite);
           if (sp) sp.grayscale = disabled;
-          n.on(Button.EventType.CLICK, action); // Native Button owns click dispatch; global input only uses these rectangles to exclude aiming.
+          n.on(Button.EventType.CLICK, () => {
+            this.sound(sound);
+            action();
+          }); // Native Button owns click dispatch; global input only uses these rectangles to exclude aiming.
 
           this.hits.push({
             x,
@@ -836,6 +857,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.clear(this.overlay);
           this.trailMarks = [];
           this.trailClock = 0;
+          this.trailLast = null;
+          this.lastLargeCollision = -Infinity;
           this.trailPreviews = [];
           this.refreshSceneArt();
           this.translatedLabels.clear();
@@ -876,7 +899,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           languageSwitch.setScale(0.65, 0.65, 1);
           languageSwitch.addComponent(_crd && LanguageSwitch === void 0 ? (_reportPossibleCrUseOfLanguageSwitch({
             error: Error()
-          }), LanguageSwitch) : LanguageSwitch).setup(this.save.language, language => this.setLanguage(language));
+          }), LanguageSwitch) : LanguageSwitch).setup(this.save.language, language => {
+            this.sound('ui_selection');
+            this.setLanguage(language);
+          });
           var g = this.graphic(this.board);
           g.strokeColor = col(CREAM, 220);
           g.lineWidth = 4;
@@ -886,7 +912,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.marble(this.ballLayer, 2, 111, 110, 51);
           this.marble(this.ballLayer, 33, 12, 40, 51);
           this.button('›', 298, 0, 70, 78, () => this.navigate('gacha'));
-          this.button('开始游戏', 0, -152, 386, 88, () => this.play(), true);
+          this.button('开始游戏', 0, -152, 386, 88, () => this.play(), true, this.ui, false, 'ui_confirm');
           this.button('收藏图鉴  ' + this.save.collection.length + '/' + (_crd && MARBLE_COUNT === void 0 ? (_reportPossibleCrUseOfMARBLE_COUNT({
             error: Error()
           }), MARBLE_COUNT) : MARBLE_COUNT), 0, -258, 386, 76, () => this.navigate('collection'));
@@ -895,7 +921,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.save.sound = !this.save.sound;
             this.persist();
             this.render();
-          });
+          }, false, this.ui, false, 'ui_selection');
           this.button('新手教学 / Help', 0, -442, 386, 64, () => this.startTutorial());
           this.label(this.storageWarning ? '存档不可用：本次进度仅保留在当前会话' : '本地单机  /  进度自动保存', 0, -585, 15, '#8e7959');
         }
@@ -914,7 +940,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.label(level.title, -35, y + 35, 26, INK, this.ui, 270);
             this.label("\u51FB\u51FA " + level.target + " / " + level.positions.length + " \u9897 \xB7 " + level.shots + " \u6B21\u673A\u4F1A", -32, y - 4, 18, '#857155', this.ui, 295);
             this.stars(this.save.stars[i], -35, y - 43, 13);
-            this.button(locked ? '未解锁' : '挑战', 225, y, 120, 65, () => this.startLevel(i), true, this.ui, locked);
+            this.button(locked ? '未解锁' : '挑战', 225, y, 120, 65, () => this.startLevel(i), true, this.ui, locked, 'ui_confirm');
           });
           this.button('上一页', -220, -510, 155, 60, () => {
             this.page--;
@@ -985,7 +1011,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               this.wardrobeKind = kind;
               this.page = 0;
               this.render();
-            }, kind === this.wardrobeKind);
+            }, kind === this.wardrobeKind, this.ui, false, 'ui_selection');
           });
           var equipped = this.save.equipped[this.wardrobeKind];
           this.panel(0, 300, 312, 58);
@@ -996,7 +1022,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), REWARDS) : REWARDS).filter(reward => reward.kind === this.wardrobeKind);
 
-          var _loop3 = function _loop3() {
+          var _loop4 = function _loop4() {
             var reward = items[_this2.page * 6 + i],
                 x = (i % 2 ? 1 : -1) * 158,
                 y = 175 - Math.floor(i / 2) * 170;
@@ -1021,11 +1047,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               _this2.persist();
 
               _this2.render();
-            }, false, _this2.ui, !owned || equipped === reward.id);
+            }, false, _this2.ui, !owned || equipped === reward.id, 'ui_selection');
           };
 
           for (var i = 0; i < 6 && this.page * 6 + i < items.length; i++) {
-            _loop3();
+            _loop4();
           }
 
           this.button('上一页', -210, -450, 150, 56, () => {
@@ -1118,7 +1144,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.label('○  ●', 274, 425, 20, TEAL, this.ui, 90);
           this.panel(0, 365, 258, 60);
           this.label("\u5269\u4F59 " + this.save.starBalance + " \u661F", 0, 365, 27, TEAL, this.ui, 238);
-          this.button('抽一次 3 星', 0, -394, 475, 87, () => this.drawGacha(), true, this.ui, this.save.starBalance < 3);
+          this.button('抽一次 3 星', 0, -394, 475, 87, () => this.drawGacha(), true, this.ui, this.save.starBalance < 3, 'ui_draw');
           this.button('奖励图鉴', -160, -514, 240, 64, () => this.navigate('skins'));
           this.button('概率', 160, -514, 240, 64, () => this.showModal('odds'));
           if (this.save.starBalance < 3) this.label('星星不足', 0, -580, 18, '#865d3e');
@@ -1226,6 +1252,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         finishGachaAnimation() {
           if (!this.gachaAnimation) return;
+          this.sound('ui_reward');
           this.gachaAnimation = null;
           this.modal = '';
           this.render();
@@ -1369,7 +1396,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             },
             translate: text => (_crd && _translate === void 0 ? (_reportPossibleCrUseOftranslate({
               error: Error()
-            }), _translate) : _translate)(text, this.save.language)
+            }), _translate) : _translate)(text, this.save.language),
+            playSound: name => this.sound(name)
           });
           this.tutorialView.show(this.tutorial.page, this.model.levelIndex, this.model.level.target - this.model.knocked.length, this.model.remaining, () => this.tutorialNext(), () => {
             var _this$tutorial;
@@ -1793,8 +1821,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (!reward) return;
           this.trailClock += dt;
           if (this.trailClock < .045) return;
+          var x = shooter.x,
+              y = this.projectY(shooter.y);
+          var spacing = [30, 40, 50, 65, 70][(_crd && RARITIES === void 0 ? (_reportPossibleCrUseOfRARITIES({
+            error: Error()
+          }), RARITIES) : RARITIES).indexOf(reward.rarity)];
+          if (this.trailLast && Math.hypot(x - this.trailLast.x, y - this.trailLast.y) < spacing) return;
           this.trailClock = 0;
-          this.emitTrailMark(reward, this.trailLayer, shooter.x, this.projectY(shooter.y), shooter.vx, shooter.vy * (_crd && GROUND_Y_SCALE === void 0 ? (_reportPossibleCrUseOfGROUND_Y_SCALE({
+          this.trailLast = {
+            x,
+            y
+          };
+          this.emitTrailMark(reward, this.trailLayer, x, y, shooter.vx, shooter.vy * (_crd && GROUND_Y_SCALE === void 0 ? (_reportPossibleCrUseOfGROUND_Y_SCALE({
             error: Error()
           }), GROUND_Y_SCALE) : GROUND_Y_SCALE));
         }
@@ -1808,75 +1846,128 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             muted = false;
           }
 
-          if (this.trailMarks.length >= 28) {
+          if (this.trailMarks.length >= 96) {
             var oldest = this.trailMarks.shift();
             oldest.node.destroy();
           }
 
-          var n = this.makeNode('Trail-' + reward.id, parent, x, y, 42, 42);
+          var n = this.makeNode('Trail-' + reward.id, parent, x, y, 140, 80);
           n.setScale(scale, scale, 1);
           var index = Number(reward.id.slice(1));
+          var tier = (_crd && RARITIES === void 0 ? (_reportPossibleCrUseOfRARITIES({
+            error: Error()
+          }), RARITIES) : RARITIES).indexOf(reward.rarity);
+          var angle = Math.atan2(vy, vx);
+          n.angle = angle * 180 / Math.PI;
+          var art = !muted && this.trailArt[reward.id];
+
+          if (art) {
+            var size = index === 10 ? 140 : index === 9 ? 125 : 137;
+            n.angle = 0;
+            var sprite = n.addComponent(Sprite);
+            sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+            sprite.spriteFrame = art;
+            n.getComponent(UITransform).setContentSize(size, size * art.originalSize.height / art.originalSize.width);
+
+            var _opacity = n.addComponent(UIOpacity);
+
+            _opacity.opacity = 255;
+            this.trailMarks.push({
+              node: n,
+              opacity: _opacity,
+              age: 0,
+              life: [.45, .65, .8, .95, 1.1][tier]
+            });
+            return;
+          }
+
+          var g = n.addComponent(Graphics);
+          var base = muted ? '#737a78' : reward.color;
+          var highlight = muted ? '#a3aaa6' : reward.accent;
+          var length = Math.min(120, Math.max(26, Math.hypot(vx, vy) * .065));
+          g.strokeColor = col(highlight, muted ? 110 : 235);
+          g.fillColor = col(base, muted ? 110 : 225);
+          g.lineWidth = tier >= 1 ? 3 : 2;
 
           if (reward.id === 'T05' && this.flowerTrailFrame && !muted) {
-            var angle = Math.atan2(vy, vx);
-            n.setPosition(x - Math.cos(angle) * 32 * scale, y - Math.sin(angle) * 32 * scale);
-            n.angle = angle * 180 / Math.PI;
-            n.getComponent(UITransform).setContentSize(100, 36);
-            var sprite = n.addComponent(Sprite);
-            sprite.spriteFrame = this.flowerTrailFrame;
-            sprite.sizeMode = Sprite.SizeMode.CUSTOM;
-          } else {
-            var g = n.addComponent(Graphics);
-            g.strokeColor = col(muted ? '#6e7472' : reward.accent, 220);
-            g.fillColor = col(muted ? '#7c817d' : reward.color, 210);
-            g.lineWidth = 3;
+            var flower = this.makeNode('Petal', n, -32, 0, 100, 36);
 
-            if ([3, 6].includes(index)) {
+            var _sprite = flower.addComponent(Sprite);
+
+            _sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+            _sprite.spriteFrame = this.flowerTrailFrame;
+            flower.getComponent(UITransform).setContentSize(100, 36);
+          } else if (!muted) {
+            if (index === 1) {
+              for (var i = 0; i < 10; i++) {
+                var a = Math.PI / 2 + i * Math.PI / 5,
+                    r = i % 2 ? 4 : 10;
+                if (i) g.lineTo(Math.cos(a) * r, Math.sin(a) * r);else g.moveTo(Math.cos(a) * r, Math.sin(a) * r);
+              }
+
+              g.close();
+              g.stroke();
+            } else if (index === 2) {
+              g.moveTo(-11, -4);
+              g.quadraticCurveTo(1, 14, 13, 5);
+              g.quadraticCurveTo(4, -12, -11, -4);
+              g.fill();
+            } else if (index === 3) {
+              g.moveTo(0, 13);
+              g.bezierCurveTo(15, -4, 10, -12, 0, -12);
+              g.bezierCurveTo(-10, -12, -15, -4, 0, 13);
+              g.fill();
+            } else if (index === 4) {
+              for (var [px, py, _r] of [[-9, 3, 3], [2, -5, 4], [10, 5, 2]]) {
+                g.circle(px, py, _r);
+                g.fill();
+              }
+            } else if ([3, 6].includes(index)) {
               g.circle(0, 0, 8 + index);
               g.stroke();
-            } else if ([2, 5, 8].includes(index)) {
-              for (var i = 0; i < 3; i++) {
-                var a = i * Math.PI * 2 / 3;
-                g.ellipse(Math.cos(a) * 8, Math.sin(a) * 8, 5, 9);
+            } else if ([5, 8].includes(index)) {
+              for (var _i = 0; _i < 3; _i++) {
+                var _a = _i * Math.PI * 2 / 3;
+
+                g.ellipse(Math.cos(_a) * 8, Math.sin(_a) * 8, 5, 9);
                 g.fill();
               }
             } else if (index === 9) {
-              g.moveTo(-18, -9);
-              g.bezierCurveTo(-2, 15, 4, -15, 18, 9);
-              g.stroke();
-              g.moveTo(-18, 9);
-              g.bezierCurveTo(-2, -15, 4, 15, 18, -9);
-              g.stroke();
-            } else if (index === 10) {
-              g.moveTo(-12, -10);
-              g.lineTo(1, 18);
-              g.lineTo(12, -6);
-              g.lineTo(0, 2);
-              g.close();
-              g.fill();
-            } else if (index === 7) {
-              for (var _i = 0; _i < 4; _i++) {
-                var _a = _i * Math.PI / 2;
-
-                g.moveTo(Math.cos(_a) * 8, Math.sin(_a) * 8);
-                g.lineTo(Math.cos(_a) * 20, Math.sin(_a) * 20);
+              for (var side of [-1, 1]) {
+                g.moveTo(-length, side * 9);
+                g.bezierCurveTo(-length * .65, side * 27, -length * .3, -side * 19, 0, side * 8);
                 g.stroke();
               }
+            } else if (index === 10) {
+              for (var _i2 = 0; _i2 < 3; _i2++) {
+                var _px = -length * (_i2 + .25) / 3;
+
+                g.moveTo(_px - 13, 0);
+                g.quadraticCurveTo(_px - 2, 24 + _i2 * 5, _px + 10, 1);
+                g.quadraticCurveTo(_px - 2, 9, _px - 13, 0);
+                g.fill();
+              }
+            } else if (index === 7) {
+              g.moveTo(-10, -7);
+              g.quadraticCurveTo(-3, 10, 2, 18);
+              g.quadraticCurveTo(6, 5, 11, -7);
+              g.quadraticCurveTo(0, -14, -10, -7);
+              g.fill();
             } else {
-              for (var _i2 = 0; _i2 < 4; _i2++) {
-                g.circle((_i2 % 2 ? 1 : -1) * (4 + _i2 * 3), (_i2 - 1.5) * 6, 2 + _i2 % 2);
+              for (var _i3 = 0; _i3 < 4; _i3++) {
+                g.circle((_i3 % 2 ? 1 : -1) * (4 + _i3 * 3), (_i3 - 1.5) * 6, 2 + _i3 % 2);
                 g.fill();
               }
             }
           }
 
           var opacity = n.addComponent(UIOpacity);
-          opacity.opacity = 210;
+          opacity.opacity = muted ? 135 : 255;
           this.trailMarks.push({
             node: n,
             opacity,
             age: 0,
-            life: index >= 8 ? .75 : .5
+            life: muted ? .45 : [.45, .65, .8, .95, 1.1][tier]
           });
         }
 
@@ -1889,7 +1980,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               return false;
             }
 
-            mark.opacity.opacity = Math.round(210 * (1 - mark.age / mark.life));
+            mark.opacity.opacity = Math.round(mark.opacity.opacity * (1 - dt / (mark.life - mark.age + dt)));
             return true;
           });
         }
@@ -1900,19 +1991,62 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }), rewardById) : rewardById)(this.save.equipped.trail);
           if (!reward) return;
 
-          if (this.trailMarks.length >= 28) {
+          if ((_crd && RARITIES === void 0 ? (_reportPossibleCrUseOfRARITIES({
+            error: Error()
+          }), RARITIES) : RARITIES).indexOf(reward.rarity) >= 3) {
+            if (this.clock - this.lastLargeCollision < .3) return;
+            this.lastLargeCollision = this.clock;
+          }
+
+          if (this.trailMarks.length >= 96) {
             var oldest = this.trailMarks.shift();
             oldest.node.destroy();
           }
 
           var n = this.makeNode('Collision-' + reward.id, this.trailLayer, x, y, 70, 70);
+          var art = this.trailArt[reward.id + '-impact'] || reward.id === 'T08' && this.trailArt.T08;
+
+          if (art) {
+            var size = reward.id === 'T10' ? 300 : reward.id === 'T09' ? 240 : 208;
+            var sprite = n.addComponent(Sprite);
+            sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+            sprite.spriteFrame = art;
+            n.getComponent(UITransform).setContentSize(size, size * art.originalSize.height / art.originalSize.width);
+
+            var _opacity2 = n.addComponent(UIOpacity);
+
+            _opacity2.opacity = 255;
+            this.trailMarks.push({
+              node: n,
+              opacity: _opacity2,
+              age: 0,
+              life: reward.id === 'T10' ? 1.1 : .8
+            });
+            return;
+          }
+
           var g = n.addComponent(Graphics);
           g.strokeColor = col(reward.accent, 240);
           g.fillColor = col(reward.color, 210);
           g.lineWidth = 4;
           var index = Number(reward.id.slice(1));
+          var tier = (_crd && RARITIES === void 0 ? (_reportPossibleCrUseOfRARITIES({
+            error: Error()
+          }), RARITIES) : RARITIES).indexOf(reward.rarity);
 
-          if ([3, 6].includes(index)) {
+          if (tier >= 2) {
+            g.strokeColor = col(reward.accent, tier >= 4 ? 110 : 65);
+            g.lineWidth = tier >= 4 ? 13 : 8;
+            g.circle(0, 0, tier >= 4 ? 42 : 36);
+            g.stroke();
+            g.strokeColor = col(reward.accent, 240);
+            g.lineWidth = 4;
+          }
+
+          if (tier === 0) {
+            g.circle(0, 0, 13);
+            g.stroke();
+          } else if ([3, 6].includes(index)) {
             for (var radius of [15, 29]) {
               g.circle(0, 0, radius);
               g.stroke();
@@ -1924,8 +2058,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               g.fill();
             }
           } else if ([7, 10].includes(index)) {
-            for (var _i3 = 0; _i3 < 6; _i3++) {
-              var _a2 = _i3 * Math.PI / 3;
+            for (var _i4 = 0; _i4 < 6; _i4++) {
+              var _a2 = _i4 * Math.PI / 3;
 
               g.moveTo(Math.cos(_a2) * 12, Math.sin(_a2) * 12);
               g.lineTo(Math.cos(_a2 + .22) * 34, Math.sin(_a2 + .22) * 34);
@@ -1934,16 +2068,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               g.fill();
             }
           } else if (index === 9) {
-            for (var _i4 = 0; _i4 < 3; _i4++) {
-              var _a3 = _i4 * Math.PI * 2 / 3;
+            for (var _i5 = 0; _i5 < 3; _i5++) {
+              var _a3 = _i5 * Math.PI * 2 / 3;
 
               g.moveTo(Math.cos(_a3) * 10, Math.sin(_a3) * 10);
               g.bezierCurveTo(Math.cos(_a3 + .6) * 38, Math.sin(_a3 + .6) * 38, Math.cos(_a3 - .6) * 38, Math.sin(_a3 - .6) * 38, Math.cos(_a3) * 26, Math.sin(_a3) * 26);
               g.stroke();
             }
           } else {
-            for (var _i5 = 0; _i5 < 6; _i5++) {
-              var _a4 = _i5 * Math.PI / 3;
+            for (var _i6 = 0; _i6 < 6; _i6++) {
+              var _a4 = _i6 * Math.PI / 3;
 
               g.moveTo(Math.cos(_a4) * 14, Math.sin(_a4) * 14);
               g.lineTo(Math.cos(_a4) * 29, Math.sin(_a4) * 29);
@@ -2116,7 +2250,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               this.persist();
               this.wardrobeKind = reward.kind;
               this.navigate('skins');
-            }, true, this.overlay);
+            }, true, this.overlay, false, 'ui_selection');
             this.button('继续', 140, -265, 245, 68, () => {
               this.modal = '';
               this.render();
@@ -2134,8 +2268,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               error: Error()
             }), LEVELS) : LEVELS).length - 1 ? '下一关' : '返回关卡', 0, -87, 440, 75, () => won && m.levelIndex < (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
               error: Error()
-            }), LEVELS) : LEVELS).length - 1 ? this.startLevel(m.levelIndex + 1) : this.navigate('levels'), true, this.overlay);
-            this.button('再试一次', 0, -181, 440, 70, () => this.startLevel(m.levelIndex, true), false, this.overlay);
+            }), LEVELS) : LEVELS).length - 1 ? this.startLevel(m.levelIndex + 1) : this.navigate('levels'), true, this.overlay, false, won && m.levelIndex < (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
+              error: Error()
+            }), LEVELS) : LEVELS).length - 1 ? 'ui_confirm' : 'ui_navigation');
+            this.button('再试一次', 0, -181, 440, 70, () => this.startLevel(m.levelIndex, true), false, this.overlay, false, 'ui_confirm');
             if (won) this.button('回到主菜单', 0, -275, 440, 70, () => this.navigate('home'), false, this.overlay);
             if (!won) this.button('查看教程', 0, -267, 250, 54, () => this.startTutorial(), false, this.overlay);
             if (won) this.label(this.storageWarning ? '存档暂不可用，请勿关闭当前会话' : won ? '星级与收藏已保存' : '调整角度，试试一次撞出多颗', 0, -352, 17, '#8b795d', this.overlay, 530);
@@ -2145,7 +2281,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.button('继续游戏', 0, 15, 430, 80, () => {
               this.modal = '';
               this.render();
-            }, true, this.overlay);
+            }, true, this.overlay, false, 'ui_confirm');
             this.button('重玩本关', 0, -85, 430, 74, () => {
               if (this.tutorial) {
                 if (this.tutorial.step === 'PRACTICE' || this.tutorial.step === 'RETRY') {
@@ -2153,7 +2289,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   this.resetTutorialBoard();
                 } else this.startTutorial();
               } else this.startLevel(m.levelIndex, true);
-            }, false, this.overlay);
+            }, false, this.overlay, false, 'ui_confirm');
             this.button('返回主页', 0, -184, 430, 74, () => this.navigate('home'), false, this.overlay);
           }
         }
@@ -2180,7 +2316,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             return;
           }
 
-          var clip = this.musicClips[this.screen === 'game' ? 'bgm_gameplay' : 'bgm_main_menu'];
+          source.volume = this.screen === 'game' || this.screen === 'gacha' ? 0.22 : 0.5;
+          var clip = this.musicClips[this.screen === 'game' ? 'bgm_game_new' : this.screen === 'gacha' ? 'bgm_draw_new' : 'bgm_menu_new'];
 
           if (source.clip !== clip) {
             source.stop();
