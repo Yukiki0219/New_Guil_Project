@@ -287,6 +287,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.blurHandler = () => this.cancelInput();
 
           this.modal = '';
+          this.volumeDrag = null;
+          this.volumeSliders = {};
           this.page = 0;
           this.physics = null;
           this.resultHandled = false;
@@ -327,6 +329,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.sceneSprite = void 0;
           this.sceneFallback = void 0;
           this.sceneArtId = '';
+          this.skinTestMode = false;
+          this.testSkinIds = {};
           this.flowerTrailFrame = null;
           this.trailArt = {};
           this.storageWarning = false;
@@ -374,6 +378,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             return;
           }
 
+          this.skinTestMode = PREVIEW && typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('guliSceneTest') === '1';
           view.setDesignResolutionSize(720, 1280, ResolutionPolicy.SHOW_ALL);
           view.resizeWithBrowserSize(true);
           view.on('canvas-resize', this.resizeUI, this);
@@ -555,7 +560,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         refreshSceneArt() {
-          const id = this.screen === 'gacha' ? 'gacha-page' : this.save.equipped.scene || 'default';
+          const id = this.screen === 'gacha' ? 'gacha-page' : this.equippedId('scene') || 'default';
           if (id === this.sceneArtId) return;
           this.sceneArtId = id;
           const path = id === 'default' ? 'art/courtyard/spriteFrame' : id === 'gacha-page' ? 'art/gacha-page/spriteFrame' : `art/gacha-scenes/${id}/spriteFrame`;
@@ -753,6 +758,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           var _this$tutorialView, _this$hintLayer;
 
           this.refundFlight = null;
+          this.volumeSliders = {};
           (_this$tutorialView = this.tutorialView) == null || _this$tutorialView.dispose();
           this.tutorialView = null;
           (_this$hintLayer = this.hintLayer) == null || _this$hintLayer.destroy();
@@ -829,11 +835,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             error: Error()
           }), MARBLE_COUNT) : MARBLE_COUNT), 0, -258, 386, 76, () => this.navigate('collection'));
           this.button('装扮衣橱', 0, -350, 386, 76, () => this.navigate('skins'));
-          this.button(this.save.sound ? '音效：开' : '音效：关', 0, -535, 280, 54, () => {
-            this.save.sound = !this.save.sound;
-            this.persist();
-            this.render();
-          }, false, this.ui, false, 'ui_selection');
+          this.button('声音设置', 0, -535, 280, 54, () => this.showModal('sound-settings'), false, this.ui, false, 'ui_selection');
           this.button('新手教学 / Help', 0, -442, 386, 64, () => this.startTutorial());
           this.label(this.storageWarning ? '存档不可用：本次进度仅保留在当前会话' : '本地单机  /  进度自动保存', 0, -585, 15, '#8e7959');
         }
@@ -912,7 +914,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         skins() {
           var _ref;
 
-          this.header('装扮衣橱', `抽奖收藏 ${this.save.rewards.length} / ${(_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
+          this.header('装扮衣橱', this.skinTestMode ? '皮肤测试 · 不保存' : `抽奖收藏 ${this.save.rewards.length} / ${(_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
             error: Error()
           }), REWARDS) : REWARDS).length}`);
           const tabs = [['marble', '弹珠'], ['scene', '场景'], ['trail', '轨迹']];
@@ -921,9 +923,9 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.page = 0;
             this.render();
           }, kind === this.wardrobeKind, this.ui, false, 'ui_selection'));
-          const equipped = this.save.equipped[this.wardrobeKind];
+          const equipped = this.equippedId(this.wardrobeKind);
           this.panel(0, 300, 312, 58);
-          this.label(`当前装备：${((_ref = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
+          this.label(`${this.skinTestMode ? '当前预览' : '当前装备'}：${((_ref = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
             error: Error()
           }), rewardById) : rewardById)(equipped)) == null ? void 0 : _ref.name) || '默认'}`, 0, 300, 23, TEAL, this.ui, 292);
           const items = (_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
@@ -935,21 +937,24 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
                   x = (i % 2 ? 1 : -1) * 158,
                   y = 175 - Math.floor(i / 2) * 170;
             const owned = this.save.rewards.includes(reward.id);
+            const visible = owned || this.skinTestMode;
             this.panel(x, y, 298, 150);
 
             if (reward.kind === 'marble') {
-              if (owned) this.rewardMarble(this.ui, reward, x - 91, y + 10, 32);else this.marble(this.ui, -2, x - 91, y + 10, 32);
-            } else if (reward.kind === 'scene') this.scenePreview(reward, x - 92, y + 15, owned);else this.trailPreview(reward, x - 92, y + 15, owned);
+              if (visible) this.rewardMarble(this.ui, reward, x - 91, y + 10, 32);else this.marble(this.ui, -2, x - 91, y + 10, 32);
+            } else if (reward.kind === 'scene') this.scenePreview(reward, x - 92, y + 15, visible);else this.trailPreview(reward, x - 92, y + 15, visible);
 
-            this.label(owned ? reward.name : '未获得', x + 53, y + 28, 20, owned ? INK : '#77756f', this.ui, 174);
-            this.label(reward.rarity, x + 53, y - 9, 17, owned ? '#956a44' : '#8b8982', this.ui, 170);
-            this.button(equipped === reward.id ? '已装备' : '装备', x + 54, y - 49, 128, 43, () => {
-              this.save = (_crd && equipReward === void 0 ? (_reportPossibleCrUseOfequipReward({
-                error: Error()
-              }), equipReward) : equipReward)(this.save, reward.id);
-              this.persist();
+            this.label(visible ? reward.name : '未获得', x + 53, y + 28, 20, visible ? INK : '#77756f', this.ui, 174);
+            this.label(reward.rarity, x + 53, y - 9, 17, visible ? '#956a44' : '#8b8982', this.ui, 170);
+            this.button(this.skinTestMode ? equipped === reward.id ? '试用中' : '试用' : equipped === reward.id ? '已装备' : '装备', x + 54, y - 49, 128, 43, () => {
+              if (this.skinTestMode) this.testSkinIds[reward.kind] = reward.id;else {
+                this.save = (_crd && equipReward === void 0 ? (_reportPossibleCrUseOfequipReward({
+                  error: Error()
+                }), equipReward) : equipReward)(this.save, reward.id);
+                this.persist();
+              }
               this.render();
-            }, false, this.ui, !owned || equipped === reward.id, 'ui_selection');
+            }, false, this.ui, !visible || equipped === reward.id, 'ui_selection');
           }
 
           this.button('上一页', -210, -450, 150, 56, () => {
@@ -961,7 +966,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.page++;
             this.render();
           }, false, this.ui, this.page >= Math.ceil(items.length / 6) - 1);
-          this.button('去抽奖', 0, -543, 280, 62, () => this.navigate('gacha'), true);
+          if (this.skinTestMode) this.button('恢复正式皮肤', 0, -543, 280, 62, () => {
+            delete this.testSkinIds[this.wardrobeKind];
+            this.render();
+          }, true, this.ui, !this.testSkinIds[this.wardrobeKind]);else this.button('去抽奖', 0, -543, 280, 62, () => this.navigate('gacha'), true);
+        }
+
+        equippedId(kind) {
+          return this.skinTestMode ? this.testSkinIds[kind] || this.save.equipped[kind] : this.save.equipped[kind];
         }
 
         scenePreview(reward, x, y, owned, parent = this.ui, size = 76) {
@@ -1184,7 +1196,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         shooterMarble(parent, x, y, radius) {
           const reward = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
             error: Error()
-          }), rewardById) : rewardById)(this.save.equipped.marble);
+          }), rewardById) : rewardById)(this.equippedId('marble'));
           return reward ? this.rewardMarble(parent, reward, x, y, radius) : this.marble(parent, 0, x, y, radius);
         }
 
@@ -1385,7 +1397,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.powerG = this.graphic(this.ui);
           this.powerText = this.label('', 220, -524, 22, TEAL, this.ui, 95);
           if (teaching) this.label('拉回起点取消', 200, -566, 16, INK, this.ui, 160);
-          this.label(`三星 ≤ ${m.level.three} 次  ·  两星 ≤ ${m.level.two} 次`, teaching ? -100 : 0, -566, 16, '#8c7657', this.ui, teaching ? 350 : 450);
           if (teaching) this.label('目标整颗离开白圈才算击出', 0, -607, 17, '#7b6445');
           this.refreshHud();
           this.drawAim();
@@ -1687,7 +1698,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         emitTrail(shooter, dt) {
           const reward = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
             error: Error()
-          }), rewardById) : rewardById)(this.save.equipped.trail);
+          }), rewardById) : rewardById)(this.equippedId('trail'));
           if (!reward) return;
           this.trailClock += dt;
           if (this.trailClock < .045) return;
@@ -1844,7 +1855,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         emitCollision(x, y) {
           const reward = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
             error: Error()
-          }), rewardById) : rewardById)(this.save.equipped.trail);
+          }), rewardById) : rewardById)(this.equippedId('trail'));
           if (!reward) return;
 
           if ((_crd && RARITIES === void 0 ? (_reportPossibleCrUseOfRARITIES({
@@ -2032,6 +2043,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.hits = [];
           this.refundFlight = null;
           this.clear(this.overlay);
+          this.volumeSliders = {};
           this.ui.getComponentsInChildren(Button).forEach(b => b.interactable = false);
           const shade = this.graphic(this.overlay);
           shade.fillColor = col('#142f32', 150);
@@ -2040,6 +2052,50 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           shade.node.addComponent(BlockInputEvents);
           const completed = kind === 'result' && ((_this$model2 = this.model) == null ? void 0 : _this$model2.phase) === 'won';
           if (kind !== 'gacha-result') this.panel(0, completed ? -40 : 0, 600, completed ? 730 : 650, this.overlay);
+
+          if (kind === 'sound-settings') {
+            this.label('声音设置', 0, 220, 39, INK, this.overlay);
+            ['music', 'effects'].forEach((volume, i) => {
+              const y = 75 - i * 150;
+              this.panel(0, y, 560, 104, this.overlay);
+              this.label(volume === 'music' ? '背景音乐' : '音效', -195, y, 25, INK, this.overlay, 150);
+              const track = this.graphic(this.overlay);
+              track.fillColor = col('#cbb797');
+              track.roundRect(-95, y - 10, 200, 20, 10);
+              track.fill();
+              const fill = this.graphic(this.overlay);
+              const knob = this.makeNode('VolumeThumb-' + volume, this.overlay, 0, y, 44, 44);
+              const g = knob.addComponent(Graphics);
+              g.fillColor = col(TEAL);
+              g.strokeColor = col('#e0a13d');
+              g.lineWidth = 5;
+              g.circle(0, 0, 19);
+              g.fill();
+              g.stroke();
+              const value = this.label('', 175, y, 24, TEAL, this.overlay, 65);
+              this.volumeSliders[volume] = {
+                fill,
+                knob,
+                value,
+                y
+              };
+              this.paintVolume(volume);
+              const inputArea = this.makeNode('VolumeInput-' + volume, this.overlay, 5, y, 270, 70);
+              inputArea.on(Node.EventType.TOUCH_START, this.touchDown, this);
+              inputArea.on(Node.EventType.TOUCH_MOVE, this.touchMove, this);
+              inputArea.on(Node.EventType.TOUCH_END, this.touchUp, this);
+              inputArea.on(Node.EventType.TOUCH_CANCEL, this.touchCancel, this);
+              inputArea.on(Node.EventType.MOUSE_DOWN, this.mouseDown, this);
+              inputArea.on(Node.EventType.MOUSE_MOVE, this.mouseMove, this);
+              inputArea.on(Node.EventType.MOUSE_UP, this.mouseUp, this);
+            });
+            this.button('完成', 0, -235, 400, 76, () => {
+              this.modal = '';
+              this.render();
+            }, true, this.overlay, false, 'ui_confirm');
+            return;
+          }
+
           const m = this.model;
 
           if (kind === 'odds') {
@@ -2127,22 +2183,81 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             if (!won) this.button('查看教程', 0, -267, 250, 54, () => this.startTutorial(), false, this.overlay);
             if (won) this.label(this.storageWarning ? '存档暂不可用，请勿关闭当前会话' : won ? '星级与收藏已保存' : '调整角度，试试一次撞出多颗', 0, -352, 17, '#8b795d', this.overlay, 530);
           } else {
-            this.label(kind === 'leave' ? '返回主页？' : '休息一下', 0, 220, 39, INK, this.overlay);
-            this.label(kind === 'leave' ? '本局未结算的进度不会保存' : '弹珠已暂停，准备好再继续', 0, 133, 22, '#867053', this.overlay);
-            this.button('继续游戏', 0, 15, 430, 80, () => {
+            this.label('休息一下', 0, 220, 39, INK, this.overlay);
+            this.label('弹珠已暂停，准备好再继续', 0, 133, 22, '#867053', this.overlay);
+
+            if (!this.tutorial) {
+              [['三星', m.level.three], ['两星', m.level.two], ['一星', m.level.shots]].forEach(([tier, limit], i) => {
+                const available = m.phase !== 'lost' && m.used <= limit;
+                const y = 82 - i * 44;
+                this.starIcon(this.overlay, -190, y, 18).addComponent(UIOpacity).opacity = available ? 255 : 70;
+                this.label(`${tier}：${limit} 次内完成目标`, 47, y, 22, available ? INK : '#b7aa95', this.overlay, 410);
+              });
+            }
+
+            const buttonY = this.tutorial ? [15, -85, -184] : [-85, -175, -265];
+            this.button('继续游戏', 0, buttonY[0], 430, 80, () => {
               this.modal = '';
               this.render();
             }, true, this.overlay, false, 'ui_confirm');
-            this.button('重玩本关', 0, -85, 430, 74, () => {
+            this.button('重玩本关', 0, buttonY[1], 430, 74, () => this.showActionConfirmation('restart', () => {
               if (this.tutorial) {
+                this.modal = '';
+                this.clear(this.overlay);
+
                 if (this.tutorial.step === 'PRACTICE' || this.tutorial.step === 'RETRY') {
                   this.tutorial.step = 'PRACTICE';
                   this.resetTutorialBoard();
                 } else this.startTutorial();
               } else this.startLevel(m.levelIndex, true);
-            }, false, this.overlay, false, 'ui_confirm');
-            this.button('返回主页', 0, -184, 430, 74, () => this.navigate('home'), false, this.overlay);
+            }), false, this.overlay, false, 'ui_confirm');
+            this.button('返回主页', 0, buttonY[2], 430, 74, () => this.showActionConfirmation('home', () => this.navigate('home')), false, this.overlay);
           }
+        }
+
+        showActionConfirmation(action, confirm) {
+          this.overlay.getComponentsInChildren(Button).forEach(b => b.interactable = false);
+          const dialog = this.makeNode('ActionConfirmation', this.overlay);
+          const shade = this.graphic(dialog);
+          shade.fillColor = col('#142f32', 160);
+          shade.rect(-360, -640, 720, 1280);
+          shade.fill();
+          shade.node.addComponent(BlockInputEvents);
+          this.panel(0, 0, 550, 310, dialog);
+          const border = this.graphic(dialog);
+          border.strokeColor = col('#df994a');
+          border.lineWidth = 3;
+          border.roundRect(-269, -149, 538, 298, 20);
+          border.stroke();
+          this.label(action === 'home' ? '确定返回主页？' : '确定重玩本关？', 0, 80, 34, INK, dialog, 500);
+          this.label('本局未结算的进度不会保存', 0, 10, 22, '#867053', dialog, 500);
+          this.button('取消', -135, -88, 220, 66, () => this.showModal(this.modal), true, dialog);
+          this.button(action === 'home' ? '确认返回主页' : '确认重玩', 135, -88, 220, 66, confirm, false, dialog, false, 'ui_confirm');
+        }
+
+        paintVolume(kind) {
+          const row = this.volumeSliders[kind];
+          if (!row) return;
+          const volume = kind === 'music' ? this.save.musicVolume : this.save.effectsVolume;
+          row.fill.clear();
+
+          if (volume > 0) {
+            const width = 200 * volume;
+            row.fill.fillColor = col(TEAL);
+            row.fill.roundRect(-95, row.y - 10, width, 20, Math.min(10, width / 2));
+            row.fill.fill();
+          }
+
+          row.knob.setPosition(-95 + 200 * volume, row.y);
+          this.setText(row.value, `${Math.round(volume * 100)}%`);
+        }
+
+        setVolume(kind, x) {
+          const volume = Math.round(Math.max(0, Math.min(1, (x + 95) / 200)) * 100) / 100;
+          if (kind === 'music') this.save.musicVolume = volume;else this.save.effectsVolume = volume;
+          this.save.sound = this.save.musicVolume > 0 || this.save.effectsVolume > 0;
+          this.paintVolume(kind);
+          if (kind === 'music') this.syncMusic();
         }
 
         persist() {
@@ -2155,19 +2270,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         sound(name) {
-          if (this.save.sound && this.clips[name]) this.audio.playOneShot(this.clips[name], name === 'hit' ? 0.22 : 0.36);
+          if (this.save.effectsVolume > 0 && this.clips[name]) this.audio.playOneShot(this.clips[name], (name === 'hit' ? 0.22 : 0.36) * this.save.effectsVolume);
         }
 
         syncMusic() {
           const source = this.music;
           if (!source) return;
 
-          if (!this.enabledInHierarchy || !this.musicUnlocked || this.musicHidden || !this.save.sound) {
+          if (!this.enabledInHierarchy || !this.musicUnlocked || this.musicHidden || this.save.musicVolume <= 0) {
             source.pause();
             return;
           }
 
-          source.volume = this.screen === 'game' || this.screen === 'gacha' ? 0.22 : 0.5;
+          source.volume = (this.screen === 'game' || this.screen === 'gacha' ? 0.22 : 0.5) * this.save.musicVolume;
           const clip = this.musicClips[this.screen === 'game' ? 'bgm_game_new' : this.screen === 'gacha' ? 'bgm_draw_new' : 'bgm_menu_new'];
 
           if (source.clip !== clip) {
@@ -2193,6 +2308,22 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.musicUnlocked = true;
           this.syncMusic();
+
+          if (this.modal === 'sound-settings') {
+            if (!this.volumeDrag && x >= -120 && x <= 130) {
+              const kind = Math.abs(y - 75) <= 52 ? 'music' : Math.abs(y + 75) <= 52 ? 'effects' : null;
+
+              if (kind) {
+                this.volumeDrag = {
+                  pointer,
+                  kind
+                };
+                this.setVolume(kind, x);
+              }
+            }
+
+            return;
+          }
 
           if (this.tutorial) {
             if (!this.tutorialSwipe && y > -490 && y < 280) this.tutorialSwipe = {
@@ -2229,6 +2360,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         move(pointer, x, y) {
+          var _this$volumeDrag;
+
+          if (((_this$volumeDrag = this.volumeDrag) == null ? void 0 : _this$volumeDrag.pointer) === pointer) {
+            this.setVolume(this.volumeDrag.kind, x);
+            return;
+          }
+
           if (this.tutorial) return;
           if (this.sling.move(pointer, x, y)) this.updatePull();
         }
@@ -2246,7 +2384,18 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         up(pointer, x, y) {
-          var _this$navSwipe, _this$model4;
+          var _this$volumeDrag2, _this$navSwipe, _this$model4;
+
+          if (((_this$volumeDrag2 = this.volumeDrag) == null ? void 0 : _this$volumeDrag2.pointer) === pointer) {
+            const kind = this.volumeDrag.kind;
+            this.setVolume(kind, x);
+            this.volumeDrag = null;
+            this.persist();
+            if (kind === 'effects') this.sound('ui_selection');
+            return;
+          }
+
+          if (this.modal === 'sound-settings') return;
 
           if (this.tutorial) {
             const swipe = this.tutorialSwipe;
@@ -2295,6 +2444,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         cancelInput() {
           var _this$model5, _this$shooterPreview2;
 
+          if (this.volumeDrag) {
+            this.volumeDrag = null;
+            this.persist();
+          }
+
           this.tutorialSwipe = null;
           this.navSwipe = null;
           this.sling.cancel();
@@ -2320,9 +2474,15 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         touchCancel(e) {
-          var _this$tutorialSwipe, _this$navSwipe2;
+          var _this$volumeDrag3, _this$tutorialSwipe, _this$navSwipe2;
 
           this.lastTouch = Date.now();
+
+          if (((_this$volumeDrag3 = this.volumeDrag) == null ? void 0 : _this$volumeDrag3.pointer) === 'touch:' + e.getID()) {
+            this.volumeDrag = null;
+            this.persist();
+          }
+
           if (((_this$tutorialSwipe = this.tutorialSwipe) == null ? void 0 : _this$tutorialSwipe.pointer) === 'touch:' + e.getID()) this.tutorialSwipe = null;
           if (((_this$navSwipe2 = this.navSwipe) == null ? void 0 : _this$navSwipe2.pointer) === 'touch:' + e.getID()) this.navSwipe = null;
           if (this.sling.pointer === 'touch:' + e.getID()) this.cancelInput();
@@ -2356,6 +2516,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
           this.musicUnlocked = true;
           this.syncMusic();
+
+          if (e.keyCode === KeyCode.ESCAPE && this.modal === 'sound-settings') {
+            this.cancelInput();
+            this.modal = '';
+            this.render();
+            return;
+          }
+
           if (this.tutorial) return;
 
           if (e.keyCode === KeyCode.ESCAPE && this.sling.pointer !== null) {
@@ -2364,7 +2532,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           if (e.keyCode === KeyCode.ESCAPE && this.screen === 'game' && ((_this$model6 = this.model) == null ? void 0 : _this$model6.phase) !== 'won' && ((_this$model7 = this.model) == null ? void 0 : _this$model7.phase) !== 'lost') {
-            if (this.modal) {
+            if (this.overlay.getChildByName('ActionConfirmation')) this.showModal(this.modal);else if (this.modal) {
               this.modal = '';
               this.render();
             } else this.showModal('pause');

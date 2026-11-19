@@ -38,6 +38,10 @@ System.register(["cc"], function (_export, _context) {
         '未获得': 'Not Owned',
         '装备': 'Equip',
         '去抽奖': 'Go to Draw',
+        '皮肤测试 · 不保存': 'Skin Test · Not Saved',
+        '试用': 'Try',
+        '试用中': 'Trying',
+        '恢复正式皮肤': 'Restore Saved Skin',
         '星星抽奖': 'Star Draw',
         '庭院珍藏': 'Courtyard Treasures',
         '弹珠 · 场景 · 轨迹': 'Marbles · Scenes · Trails',
@@ -64,6 +68,10 @@ System.register(["cc"], function (_export, _context) {
         '新手教学 / Help': 'Tutorial',
         '音效：开': 'Sound Effects: On',
         '音效：关': 'Sound Effects: Off',
+        '声音设置': 'Sound Settings',
+        '背景音乐': 'Music',
+        '音效': 'Sound Effects',
+        '完成': 'Done',
         '下一关': 'Next Level',
         '再试一次': 'Try Again',
         '回到主菜单': 'Main Menu',
@@ -78,6 +86,11 @@ System.register(["cc"], function (_export, _context) {
         '发射': 'Shoot',
         '重玩本关': 'Restart Level',
         '力度': 'Power',
+        '取消': 'Cancel',
+        '确定返回主页？': 'Return to the main menu?',
+        '确定重玩本关？': 'Restart this level?',
+        '确认返回主页': 'Return to Main Menu',
+        '确认重玩': 'Restart Level',
         '星级与收藏已保存': 'Stars and collection saved',
         '一颗弹珠，一整个童年': 'A marble. A childhood of memories.',
         '庭 院 弹 珠': 'COURTYARD MARBLES',
@@ -242,7 +255,7 @@ System.register(["cc"], function (_export, _context) {
 
       plural = (n, word) => n + " " + word + (Number(n) === 1 ? '' : 's');
 
-      templates = [[/^抽奖收藏 (\d+) \/ (\d+)$/, (n, total) => "Draw Collection " + n + "/" + total], [/^当前装备：(.+)$/, name => "Equipped: " + (EN[name] || name)], [/^剩余 (\d+) 星$/, n => n + " stars left"], [/^可用星星 (\d+)$/, n => "Available Stars: " + n], [/^(.+) · (普通|稀有|超级稀有|珍藏|传奇)$/, (name, rarity) => (EN[name] || name) + " \xB7 " + (EN[rarity] || rarity)], [/^(普通|稀有|超级稀有|珍藏|传奇)  ·  (.+)$/, (rarity, odds) => (EN[rarity] || rarity) + " \xB7 " + odds], [/^新收藏 \+(\d+)  ·  成绩星星 \+(\d+)  ·  最佳 (\d+) 星$/, (items, stars, best) => "New +" + items + " \xB7 Score stars +" + stars + " \xB7 Best: " + best + " stars"], [/^第 (\d+) 关$/, n => "Level " + n], [/^目标 (\d+)\/(\d+)(?:\s+剩余 (\d+) 次)?$/, (n, total, shots) => "Target " + n + "/" + total + (shots === undefined ? '' : "   Shots Left: " + shots)], [/^剩余 (\d+) 次(?:机会)?$/, n => "Shots Left: " + n], [/^目标 (\d+) 颗$/, n => "Target: " + n], [/^完成 (\d+) 个目标$/, n => "Knock out " + plural(n, 'target')], [/^收藏图鉴\s+(\d+)\/(\d+)$/, (n, total) => "Collection " + n + "/" + total], [/^已收藏 (\d+) \/ (\d+) · 击出并过关后解锁$/, (n, total) => "Collected " + n + "/" + total + " \xB7 Knock out and win to collect"], [/^击出 (\d+) \/ (\d+) 颗 · (\d+) 次机会$/, (n, total, shots) => "Target " + n + "/" + total + " \xB7 " + plural(shots, 'shot')], [/^三星 ≤ (\d+) 次  ·  两星 ≤ (\d+) 次$/, (a, b) => "3 stars \u2264 " + plural(a, 'shot') + " \xB7 2 stars \u2264 " + plural(b, 'shot')], [/^击出 (\d+) 颗 · 使用 (\d+) 次射击$/, (n, shots) => plural(n, 'marble') + " out \xB7 " + plural(shots, 'shot') + " used"], [/^新收藏 \+(\d+)  ·  最佳 (\d+) 星$/, (n, stars) => "New +" + n + " \xB7 Best: " + plural(stars, 'star')], [/^(#\d+\s+·\s+)(.+)$/, (prefix, r) => prefix + (EN[r] || r)], [/^(.+)  ([123]\/3)$/, (title, page) => (EN[title] || title) + ("  " + page)]];
+      templates = [[/^抽奖收藏 (\d+) \/ (\d+)$/, (n, total) => "Draw Collection " + n + "/" + total], [/^当前装备：(.+)$/, name => "Equipped: " + (EN[name] || name)], [/^当前预览：(.+)$/, name => "Previewing: " + (EN[name] || name)], [/^剩余 (\d+) 星$/, n => n + " stars left"], [/^可用星星 (\d+)$/, n => "Available Stars: " + n], [/^(.+) · (普通|稀有|超级稀有|珍藏|传奇)$/, (name, rarity) => (EN[name] || name) + " \xB7 " + (EN[rarity] || rarity)], [/^(普通|稀有|超级稀有|珍藏|传奇)  ·  (.+)$/, (rarity, odds) => (EN[rarity] || rarity) + " \xB7 " + odds], [/^新收藏 \+(\d+)  ·  成绩星星 \+(\d+)  ·  最佳 (\d+) 星$/, (items, stars, best) => "New +" + items + " \xB7 Score stars +" + stars + " \xB7 Best: " + best + " stars"], [/^第 (\d+) 关$/, n => "Level " + n], [/^目标 (\d+)\/(\d+)(?:\s+剩余 (\d+) 次)?$/, (n, total, shots) => "Target " + n + "/" + total + (shots === undefined ? '' : "   Shots Left: " + shots)], [/^剩余 (\d+) 次(?:机会)?$/, n => "Shots Left: " + n], [/^目标 (\d+) 颗$/, n => "Target: " + n], [/^完成 (\d+) 个目标$/, n => "Knock out " + plural(n, 'target')], [/^收藏图鉴\s+(\d+)\/(\d+)$/, (n, total) => "Collection " + n + "/" + total], [/^已收藏 (\d+) \/ (\d+) · 击出并过关后解锁$/, (n, total) => "Collected " + n + "/" + total + " \xB7 Knock out and win to collect"], [/^击出 (\d+) \/ (\d+) 颗 · (\d+) 次机会$/, (n, total, shots) => "Target " + n + "/" + total + " \xB7 " + plural(shots, 'shot')], [/^三星 ≤ (\d+) 次  ·  两星 ≤ (\d+) 次$/, (a, b) => "3 stars \u2264 " + plural(a, 'shot') + " \xB7 2 stars \u2264 " + plural(b, 'shot')], [/^([一两三])星：(\d+) 次内完成目标$/, (tier, shots) => plural(String('一两三'.indexOf(tier) + 1), 'star') + ": Reach target in " + plural(shots, 'shot')], [/^击出 (\d+) 颗 · 使用 (\d+) 次射击$/, (n, shots) => plural(n, 'marble') + " out \xB7 " + plural(shots, 'shot') + " used"], [/^新收藏 \+(\d+)  ·  最佳 (\d+) 星$/, (n, stars) => "New +" + n + " \xB7 Best: " + plural(stars, 'star')], [/^(#\d+\s+·\s+)(.+)$/, (prefix, r) => prefix + (EN[r] || r)], [/^(.+)  ([123]\/3)$/, (title, page) => (EN[title] || title) + ("  " + page)]];
 
       _cclegacy._RF.pop();
 

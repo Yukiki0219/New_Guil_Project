@@ -10,7 +10,7 @@
       "uuid": "4afbca9e-77b1-456c-ad0b-f58f90391f88"
     },
     "scripts": {
-      "time": 1794837589190.7578,
+      "time": 1794974892470.1216,
       "uuid": "c4b5012f-251d-4d42-928f-2f7fe422d683"
     },
     "resources\\art": {
@@ -22,11 +22,11 @@
       "uuid": "7f8af59f-9a73-4bb4-b2c9-afc7e323881a"
     },
     "scripts\\GameModel.ts": {
-      "time": 1794837589188.7573,
+      "time": 1794979611238.7488,
       "uuid": "7954f24b-b1de-478d-be88-724c207f66b7"
     },
     "scripts\\GuliGame.ts": {
-      "time": 1794928961491.3364,
+      "time": 1795069085352.1885,
       "uuid": "9f327c01-c945-427f-97a6-94ab92496ce9"
     },
     "resources.meta": {
@@ -374,7 +374,7 @@
       "uuid": "217ffd53-db30-4e4a-93de-807351f2f8ab"
     },
     "scripts\\Localization.ts": {
-      "time": 1794837589189.757,
+      "time": 1795069101547.8828,
       "uuid": "d230aefd-5785-4f9d-9714-c729c4cb6a4e"
     },
     "scripts\\LanguageSwitch.ts.meta": {

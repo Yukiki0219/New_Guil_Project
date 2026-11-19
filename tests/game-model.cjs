@@ -51,6 +51,10 @@ test('Replaying resets layout and shots, retaining best stars and collection', (
 test('Corrupt or old save values are bounded', () => {
   const s = cleanSave({ stars: [99, -1, 'broken'], collection: [3, 3, -1, 56, '2'], sound: false });
   assert.equal(s.stars[3], 3); assert.equal(s.stars[7], 0); assert.equal(s.collection.length, 1); assert.equal(s.sound, false);
+  assert.equal(s.musicVolume, 0); assert.equal(s.effectsVolume, 0);
+  const current = cleanSave({version: 4, sound: false, musicVolume: 0.4, effectsVolume: 2});
+  assert.equal(current.musicVolume, 0.4); assert.equal(current.effectsVolume, 1); assert.equal(current.sound, true);
+  assert.equal(cleanSave({...current, musicVolume: NaN}).musicVolume, 1);
 });
 test('Rarity generation produces all three valid ID bands', () => {
   for (const r of [0, .71, .96]) { const ids = rollMarbles(20, () => r); ids.forEach(id => assert(id >= 0 && id < 56)); }

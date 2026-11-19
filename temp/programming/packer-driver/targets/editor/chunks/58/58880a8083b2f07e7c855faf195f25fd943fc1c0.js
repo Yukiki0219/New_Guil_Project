@@ -32,11 +32,19 @@ System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _
       marble: null,
       trail: null
     });
+    const previousVolume = (raw == null ? void 0 : raw.sound) === false ? 0 : 1;
+
+    const volume = value => Number.isFinite(value) ? Math.max(0, Math.min(1, value)) : previousVolume;
+
+    const musicVolume = volume(raw == null ? void 0 : raw.musicVolume),
+          effectsVolume = volume(raw == null ? void 0 : raw.effectsVolume);
     return {
       version: 4,
       stars,
       collection: Array.from(new Set((Array.isArray(raw == null ? void 0 : raw.collection) ? raw.collection : []).filter(n => Number.isInteger(n) && n >= 0 && n < MARBLE_COUNT))),
-      sound: (raw == null ? void 0 : raw.sound) !== false,
+      sound: musicVolume > 0 || effectsVolume > 0,
+      musicVolume,
+      effectsVolume,
       tuto: (raw == null ? void 0 : raw.tuto) === true,
       language: (raw == null ? void 0 : raw.language) === 'en' ? 'en' : 'zh',
       starBalance: (raw == null ? void 0 : raw.version) >= 3 && Number.isFinite(raw == null ? void 0 : raw.starBalance) ? Math.max(0, Math.floor(raw.starBalance)) : (raw == null ? void 0 : raw.version) >= 3 ? 0 : stars.reduce((sum, value) => sum + value, 0),

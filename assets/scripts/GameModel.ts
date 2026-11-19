@@ -137,7 +137,7 @@ export class GameModel {
         this.phase = this.knocked.length >= this.level.target ? 'won' : this.remaining === 0 ? 'lost' : 'aim';
     }
 }
-export interface SaveData { version: number; stars: number[]; collection: number[]; sound: boolean; tuto: boolean; language: 'zh' | 'en'; starBalance: number; rewards: string[]; equipped: { scene: string | null; marble: string | null; trail: string | null } }
+export interface SaveData { version: number; stars: number[]; collection: number[]; sound: boolean; musicVolume: number; effectsVolume: number; tuto: boolean; language: 'zh' | 'en'; starBalance: number; rewards: string[]; equipped: { scene: string | null; marble: string | null; trail: string | null } }
 export function cleanSave(raw: any): SaveData {
     const oldLevels = [3, 7, 12, 24, 29];
     const stars = LEVELS.map((_, i) => {
@@ -148,9 +148,12 @@ export function cleanSave(raw: any): SaveData {
     const equipped = (['scene', 'marble', 'trail'] as const).reduce((result, kind) => {
         const id = raw?.equipped?.[kind]; result[kind] = rewards.includes(id) && rewardById(id)?.kind === kind ? id : null; return result;
     }, { scene: null, marble: null, trail: null } as SaveData['equipped']);
+    const previousVolume = raw?.sound === false ? 0 : 1;
+    const volume = (value: any) => Number.isFinite(value) ? Math.max(0, Math.min(1, value)) : previousVolume;
+    const musicVolume = volume(raw?.musicVolume), effectsVolume = volume(raw?.effectsVolume);
     return { version: 4, stars,
         collection: Array.from(new Set<number>((Array.isArray(raw?.collection) ? raw.collection : []).filter((n: any) => Number.isInteger(n) && n >= 0 && n < MARBLE_COUNT))),
-        sound: raw?.sound !== false, tuto: raw?.tuto === true, language: raw?.language === 'en' ? 'en' : 'zh',
+        sound: musicVolume > 0 || effectsVolume > 0, musicVolume, effectsVolume, tuto: raw?.tuto === true, language: raw?.language === 'en' ? 'en' : 'zh',
         starBalance: raw?.version >= 3 && Number.isFinite(raw?.starBalance) ? Math.max(0, Math.floor(raw.starBalance)) : raw?.version >= 3 ? 0 : stars.reduce((sum, value) => sum + value, 0),
         rewards, equipped };
 }
