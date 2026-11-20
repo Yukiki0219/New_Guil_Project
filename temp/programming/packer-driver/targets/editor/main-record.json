@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 79313.1707,
+      "mTimestamp": 27615.7649,
       "chunkId": "93ba276ea7b26ffcdc433fab14afc1ed6f05647b",
       "imports": [
         {
@@ -997,7 +997,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 885062.5143,
+      "mTimestamp": 2839851.8379,
       "chunkId": "6d8fd2b0177941b032ddc0733af48a561fb60657",
       "imports": [
         {
@@ -2268,7 +2268,7 @@
     },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/GuliGame.ts": {
       "mTimestamp": {
-        "mtime": 1795069085352.1885,
+        "mtime": 1795183463325.428,
         "uuid": "9f327c01-c945-427f-97a6-94ab92496ce9"
       },
       "chunkId": "891993eae04260b53f95443698158d522b88ba86",
@@ -3002,7 +3002,7 @@
     },
     "file:///C:/Users/Lenovo/Documents/Guil_Project/assets/scripts/Localization.ts": {
       "mTimestamp": {
-        "mtime": 1795069101547.8828,
+        "mtime": 1795182720115.4194,
         "uuid": "d230aefd-5785-4f9d-9714-c729c4cb6a4e"
       },
       "chunkId": "224b41cac551edc3f4a2d10740c1f22f2f12adc0",
@@ -3689,7 +3689,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1795068239834,
+      "mTimestamp": 1795180646275,
       "chunkId": "6a5019a719a9014c047e67aa1cf34453ab8392ce",
       "imports": [],
       "type": "esm",

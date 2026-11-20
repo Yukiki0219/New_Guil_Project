@@ -604,8 +604,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           return n;
         }
 
-        label(text, x, y, size = 24, color = INK, parent = this.ui, width = 640) {
-          const n = this.makeNode(text.slice(0, 24), parent, x, y, width, size * 2.4);
+        label(text, x, y, size = 24, color = INK, parent = this.ui, width = 640, height = size * 2.4) {
+          const n = this.makeNode(text.slice(0, 24), parent, x, y, width, height);
           const l = n.addComponent(Label);
           this.setText(l, text);
           l.fontSize = size;
@@ -617,6 +617,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           l.overflow = Label.Overflow.SHRINK;
           l.enableWrapText = true;
           return l;
+        }
+
+        sceneTextColor(y) {
+          const scene = this.equippedId('scene');
+          return scene === 'S05' && y >= 470 || scene === 'S03' && y >= 520 ? CREAM : INK;
         }
 
         panel(x, y, w, h, parent = this.ui, fill = CREAM) {
@@ -749,8 +754,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
         }
 
         header(title, subtitle) {
-          this.label(title, 0, 538, 45);
-          this.label(subtitle, 0, 487, 18, '#726044');
+          this.label(title, 0, 538, 45, this.sceneTextColor(538), this.ui, 470, 64);
+          this.label(subtitle, 0, 487, 18, this.sceneTextColor(487), this.ui, 510, 35);
           this.button('返回', -270, 557, 110, 54, () => this.navigate('home'));
         }
 
@@ -811,8 +816,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
 
         home() {
           if (!this.part('Logo', this.ui, 0, 444, 402, 178)) this.label('GULI GO!', 3, 442, 108, '#00646a');
-          this.label('一颗弹珠，一整个童年', 0, 334, 25, '#735537');
-          this.label('庭 院 弹 珠', 0, 558, 22, '#81704f');
+          this.label('一颗弹珠，一整个童年', 0, 334, 25, INK, this.ui, 470, 46);
+          this.label('庭 院 弹 珠', 0, 558, 22, this.equippedId('scene') === 'S04' ? CREAM : this.sceneTextColor(558), this.ui, 340, 36);
           const languageSwitch = this.makeNode('LanguageSwitch', this.ui, 215, 602, 340, 60);
           languageSwitch.setScale(0.65, 0.65, 1);
           languageSwitch.addComponent(_crd && LanguageSwitch === void 0 ? (_reportPossibleCrUseOfLanguageSwitch({
@@ -837,7 +842,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.button('装扮衣橱', 0, -350, 386, 76, () => this.navigate('skins'));
           this.button('声音设置', 0, -535, 280, 54, () => this.showModal('sound-settings'), false, this.ui, false, 'ui_selection');
           this.button('新手教学 / Help', 0, -442, 386, 64, () => this.startTutorial());
-          this.label(this.storageWarning ? '存档不可用：本次进度仅保留在当前会话' : '本地单机  /  进度自动保存', 0, -585, 15, '#8e7959');
+          this.label(this.storageWarning ? '存档不可用：本次进度仅保留在当前会话' : '本地单机  /  进度自动保存', 0, -585, 15, INK, this.ui, 480, 31);
         }
 
         levels() {
@@ -850,7 +855,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             const y = 345 - row * 168,
                   locked = i > highest + 1;
             this.panel(0, y, 624, 146);
-            this.label('0' + (i + 1), -243, y + 12, 38, locked ? '#afa38a' : TEAL, this.ui, 85);
+            this.label(String(i + 1).padStart(2, '0'), -243, y + 12, 38, locked ? '#afa38a' : TEAL, this.ui, 85);
             this.label(level.title, -35, y + 35, 26, INK, this.ui, 270);
             this.label(`击出 ${level.target} / ${level.positions.length} 颗 · ${level.shots} 次机会`, -32, y - 4, 18, '#857155', this.ui, 295);
             this.stars(this.save.stars[i], -35, y - 43, 13);
@@ -869,14 +874,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }, false, this.ui, this.page >= Math.ceil((_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
             error: Error()
           }), LEVELS) : LEVELS).length / 5) - 1);
-          this.label('完成前一关即可解锁下一关', 0, -580, 18, '#786549');
+          this.label('完成前一关即可解锁下一关', 0, -580, 18, INK, this.ui, 440, 34);
         }
 
         collection() {
           this.header('弹珠图鉴', `已收藏 ${this.save.collection.length} / ${_crd && MARBLE_COUNT === void 0 ? (_reportPossibleCrUseOfMARBLE_COUNT({
             error: Error()
           }), MARBLE_COUNT) : MARBLE_COUNT} · 击出并过关后解锁`);
-          this.label('收藏品不会被消耗，也不能装备为发射球', 0, 439, 17, '#795f42');
+          this.label('收藏品不会被消耗，也不能装备为发射球', 0, 439, 17, INK, this.ui, 590, 32);
 
           for (let i = 0; i < 10 && this.page * 10 + i < (_crd && MARBLE_COUNT === void 0 ? (_reportPossibleCrUseOfMARBLE_COUNT({
             error: Error()
@@ -889,11 +894,11 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.marble(this.ui, owned ? id : -2, x - 91, y + 10, 32);
             this.label(owned ? (_crd && marbleName === void 0 ? (_reportPossibleCrUseOfmarbleName({
               error: Error()
-            }), marbleName) : marbleName)(id) : '未发现', x + 46, y + 29, 22, INK, this.ui, 170);
+            }), marbleName) : marbleName)(id) : '未发现', x + 46, y + 34, 22, INK, this.ui, 170, 62);
             this.label(`#${String(id + 1).padStart(2, '0')}  ·  ${(_crd && rarity === void 0 ? (_reportPossibleCrUseOfrarity({
               error: Error()
-            }), rarity) : rarity)(id)}`, x + 46, y - 11, 17, id >= 30 ? '#93679d' : '#8f7d61', this.ui, 170);
-            this.label(owned ? '已收藏' : '等待在庭院中相遇', x, y - 51, 14, '#968164', this.ui, 270);
+            }), rarity) : rarity)(id)}`, x + 46, y - 15, 17, id >= 30 ? '#755080' : '#715b40', this.ui, 170);
+            this.label(owned ? '已收藏' : '等待在庭院中相遇', x, y - 51, 14, '#68543a', this.ui, 270);
           }
 
           this.button('上一页', -220, -526, 155, 60, () => {
@@ -924,10 +929,10 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.render();
           }, kind === this.wardrobeKind, this.ui, false, 'ui_selection'));
           const equipped = this.equippedId(this.wardrobeKind);
-          this.panel(0, 300, 312, 58);
+          this.panel(0, 300, 520, 58);
           this.label(`${this.skinTestMode ? '当前预览' : '当前装备'}：${((_ref = (_crd && rewardById === void 0 ? (_reportPossibleCrUseOfrewardById({
             error: Error()
-          }), rewardById) : rewardById)(equipped)) == null ? void 0 : _ref.name) || '默认'}`, 0, 300, 23, TEAL, this.ui, 292);
+          }), rewardById) : rewardById)(equipped)) == null ? void 0 : _ref.name) || '默认'}`, 0, 300, 23, TEAL, this.ui, 490, 52);
           const items = (_crd && REWARDS === void 0 ? (_reportPossibleCrUseOfREWARDS({
             error: Error()
           }), REWARDS) : REWARDS).filter(reward => reward.kind === this.wardrobeKind);
@@ -944,8 +949,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
               if (visible) this.rewardMarble(this.ui, reward, x - 91, y + 10, 32);else this.marble(this.ui, -2, x - 91, y + 10, 32);
             } else if (reward.kind === 'scene') this.scenePreview(reward, x - 92, y + 15, visible);else this.trailPreview(reward, x - 92, y + 15, visible);
 
-            this.label(visible ? reward.name : '未获得', x + 53, y + 28, 20, visible ? INK : '#77756f', this.ui, 174);
-            this.label(reward.rarity, x + 53, y - 9, 17, visible ? '#956a44' : '#8b8982', this.ui, 170);
+            this.label(visible ? reward.name : '未获得', x + 53, y + 34, 20, visible ? INK : '#66615a', this.ui, 174, 62);
+            this.label(reward.rarity, x + 53, y - 16, 16, visible ? '#76502f' : '#6b655d', this.ui, 170);
             this.button(this.skinTestMode ? equipped === reward.id ? '试用中' : '试用' : equipped === reward.id ? '已装备' : '装备', x + 54, y - 49, 128, 43, () => {
               if (this.skinTestMode) this.testSkinIds[reward.kind] = reward.id;else {
                 this.save = (_crd && equipReward === void 0 ? (_reportPossibleCrUseOfequipReward({
@@ -1041,7 +1046,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           this.button('抽一次 3 星', 0, -394, 475, 87, () => this.drawGacha(), true, this.ui, this.save.starBalance < 3, 'ui_draw');
           this.button('奖励图鉴', -160, -514, 240, 64, () => this.navigate('skins'));
           this.button('概率', 160, -514, 240, 64, () => this.showModal('odds'));
-          if (this.save.starBalance < 3) this.label('星星不足', 0, -580, 18, '#865d3e');
+          if (this.save.starBalance < 3) this.label('星星不足', 0, -580, 18, INK, this.ui, 250, 34);
         }
 
         drawGacha() {
@@ -1336,7 +1341,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           }
 
           this.stars(this.save.stars[m.levelIndex], 0, 365, 22);
-          this.label(m.level.title, 0, 318, 18, '#82684b');
+          this.label(m.level.title, 0, 318, 18, INK, this.ui, 390, 34);
           const g = this.graphic(this.board);
           g.lineWidth = 4;
           g.strokeColor = col('#fffaf0', 235);
@@ -1389,15 +1394,13 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             }), SHOOTER_Y) : SHOOTER_Y), 32);
           }
 
-          if (m.levelIndex === 0) this.label('按住自己的弹珠后拉', 0, -220, 16, '#7c6448');
           const teaching = m.levelIndex === 0;
           this.panel(0, -525, 664, 150);
-          this.hint = this.label('', 0, -420, 22);
+          this.hint = this.label('', 0, -420, 22, INK, this.ui, 620, 55);
           this.label('力度', -225, -524, 22);
           this.powerG = this.graphic(this.ui);
           this.powerText = this.label('', 220, -524, 22, TEAL, this.ui, 95);
           if (teaching) this.label('拉回起点取消', 200, -566, 16, INK, this.ui, 160);
-          if (teaching) this.label('目标整颗离开白圈才算击出', 0, -607, 17, '#7b6445');
           this.refreshHud();
           this.drawAim();
           this.drawPower();
@@ -1996,7 +1999,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           if (reason === 'targetOnly' && (_m$lastShotReport = m.lastShotReport) != null && _m$lastShotReport.shooter) {
             const previous = m.lastShotReport.shooter;
             this.drawGuideCircle(g, previous.x, this.projectY(previous.y), 38, 38);
-            this.label('上次停留位置', previous.x, this.projectY(previous.y) + 52, 18, INK, this.hintLayer, 180);
+            this.label('上次停留位置', previous.x, this.projectY(previous.y) + 52, 18, INK, this.hintLayer, 210, 34);
           }
 
           if (['targetOnly', 'boundary'].includes(reason)) this.drawGuideCircle(g, 0, 30, (_crd && RADIUS === void 0 ? (_reportPossibleCrUseOfRADIUS({
@@ -2057,8 +2060,8 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.label('声音设置', 0, 220, 39, INK, this.overlay);
             ['music', 'effects'].forEach((volume, i) => {
               const y = 75 - i * 150;
-              this.panel(0, y, 560, 104, this.overlay);
-              this.label(volume === 'music' ? '背景音乐' : '音效', -195, y, 25, INK, this.overlay, 150);
+              this.panel(0, y, 580, 104, this.overlay);
+              this.label(volume === 'music' ? '背景音乐' : '音效', volume === 'music' ? -197 : -190, y, volume === 'music' ? 21 : 20, INK, this.overlay, 145);
               const track = this.graphic(this.overlay);
               track.fillColor = col('#cbb797');
               track.roundRect(-95, y - 10, 200, 20, 10);
@@ -2170,7 +2173,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.label(won ? '漂亮的一击！' : '次数已用完', 0, 236, 38, INK, this.overlay, 520);
             this.stars(m.stars, 0, 148, 32, this.overlay);
             this.label(`击出 ${m.knocked.length} 颗 · 使用 ${m.used} 次射击`, 0, 62, 24, INK, this.overlay, 530);
-            this.label(won ? `新收藏 +${this.newItems}  ·  成绩星星 +${this.earnedStars}  ·  最佳 ${this.save.stars[m.levelIndex]} 星` : '目标尚未完成，本次挑战失败。', 0, 7, 20, '#87704f', this.overlay, 540);
+            this.label(won ? `新收藏 +${this.newItems}  ·  成绩星星 +${this.earnedStars}  ·  最佳 ${this.save.stars[m.levelIndex]} 星` : '目标尚未完成，本次挑战失败。', 0, 0, 20, INK, this.overlay, 540, 58);
             this.button(won && m.levelIndex < (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
               error: Error()
             }), LEVELS) : LEVELS).length - 1 ? '下一关' : '返回关卡', 0, -87, 440, 75, () => won && m.levelIndex < (_crd && LEVELS === void 0 ? (_reportPossibleCrUseOfLEVELS({
@@ -2181,7 +2184,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
             this.button('再试一次', 0, -181, 440, 70, () => this.startLevel(m.levelIndex, true), false, this.overlay, false, 'ui_confirm');
             if (won) this.button('回到主菜单', 0, -275, 440, 70, () => this.navigate('home'), false, this.overlay);
             if (!won) this.button('查看教程', 0, -267, 250, 54, () => this.startTutorial(), false, this.overlay);
-            if (won) this.label(this.storageWarning ? '存档暂不可用，请勿关闭当前会话' : won ? '星级与收藏已保存' : '调整角度，试试一次撞出多颗', 0, -352, 17, '#8b795d', this.overlay, 530);
+            if (won) this.label(this.storageWarning ? '存档暂不可用，请勿关闭当前会话' : won ? '星级与收藏已保存' : '调整角度，试试一次撞出多颗', 0, -352, 18, INK, this.overlay, 530);
           } else {
             this.label('休息一下', 0, 220, 39, INK, this.overlay);
             this.label('弹珠已暂停，准备好再继续', 0, 133, 22, '#867053', this.overlay);
@@ -2223,16 +2226,16 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           shade.rect(-360, -640, 720, 1280);
           shade.fill();
           shade.node.addComponent(BlockInputEvents);
-          this.panel(0, 0, 550, 310, dialog);
+          this.panel(0, 0, 600, 310, dialog);
           const border = this.graphic(dialog);
           border.strokeColor = col('#df994a');
           border.lineWidth = 3;
-          border.roundRect(-269, -149, 538, 298, 20);
+          border.roundRect(-294, -149, 588, 298, 20);
           border.stroke();
           this.label(action === 'home' ? '确定返回主页？' : '确定重玩本关？', 0, 80, 34, INK, dialog, 500);
           this.label('本局未结算的进度不会保存', 0, 10, 22, '#867053', dialog, 500);
-          this.button('取消', -135, -88, 220, 66, () => this.showModal(this.modal), true, dialog);
-          this.button(action === 'home' ? '确认返回主页' : '确认重玩', 135, -88, 220, 66, confirm, false, dialog, false, 'ui_confirm');
+          this.button('取消', -142, -88, 270, 66, () => this.showModal(this.modal), true, dialog);
+          this.button(action === 'home' ? '确认返回主页' : '确认重玩', 142, -88, 270, 66, confirm, false, dialog, false, 'ui_confirm');
         }
 
         paintVolume(kind) {

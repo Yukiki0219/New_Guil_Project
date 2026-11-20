@@ -112,7 +112,7 @@ System.register(["cc"], function (_export, _context) {
         '统一的重量与力度，纯粹的技巧挑战。\n更多皮肤将在后续版本加入。': 'Same weight and power. Pure skill.\nMore skins are coming in future updates.',
         '教程已完成；存档不可用，本次会话有效。': 'Tutorial complete. Saving unavailable; remembered for this session.',
         '按住自己的弹珠后拉': 'Hold your marble and pull back',
-        '拉回起点取消': 'Return to start to cancel',
+        '拉回起点取消': 'Drag back to cancel',
         '目标整颗离开白圈才算击出': 'Targets must fully clear the white circle.',
         '弹珠滚动中…': 'Marbles rolling…',
         '蓄力中': 'Charging',

@@ -12,7 +12,7 @@ const EN: Record<string, string> = {
  '收藏品不会被消耗，也不能装备为发射球':'Collected marbles are kept, but cannot be equipped as shooters.','未发现':'Undiscovered','已收藏':'Collected','等待在庭院中相遇':'Find it in the courtyard','上一页':'Previous','下一页':'Next','专属于你的发射球外观':'Make your shooter your own','原始玻璃弹珠':'Classic Glass Marble','已装备':'Equipped',
  '统一的重量与力度，纯粹的技巧挑战。\n更多皮肤将在后续版本加入。':'Same weight and power. Pure skill.\nMore skins are coming in future updates.',
  '教程已完成；存档不可用，本次会话有效。':'Tutorial complete. Saving unavailable; remembered for this session.',
- '按住自己的弹珠后拉':'Hold your marble and pull back','拉回起点取消':'Return to start to cancel','目标整颗离开白圈才算击出':'Targets must fully clear the white circle.',
+ '按住自己的弹珠后拉':'Hold your marble and pull back','拉回起点取消':'Drag back to cancel','目标整颗离开白圈才算击出':'Targets must fully clear the white circle.',
  '弹珠滚动中…':'Marbles rolling…','蓄力中':'Charging','松手发射 · 拉回起点取消':'Release to shoot · Return to start to cancel','继续后拉蓄力 · 松手取消':'Pull farther to charge · Release to cancel','按住自己的弹珠，向后拖拉':'Hold your marble and pull back',
  '上次停留位置':'Last resting position','漂亮的一击！':'Great shot!','次数已用完':'No shots left','目标尚未完成，本次挑战失败。':'Target not reached. Try again.','存档暂不可用，请勿关闭当前会话':'Saving unavailable. Keep this session open.','调整角度，试试一次撞出多颗':'Adjust your angle to knock out more marbles.',
  '返回主页？':'Return to the main menu?','休息一下':'Paused','本局未结算的进度不会保存':'Unfinished level progress will not be saved.','弹珠已暂停，准备好再继续':'Marbles paused. Resume when ready.',

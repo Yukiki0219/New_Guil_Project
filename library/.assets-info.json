@@ -26,7 +26,7 @@
       "uuid": "7954f24b-b1de-478d-be88-724c207f66b7"
     },
     "scripts\\GuliGame.ts": {
-      "time": 1795069085352.1885,
+      "time": 1795183463325.428,
       "uuid": "9f327c01-c945-427f-97a6-94ab92496ce9"
     },
     "resources.meta": {
@@ -374,7 +374,7 @@
       "uuid": "217ffd53-db30-4e4a-93de-807351f2f8ab"
     },
     "scripts\\Localization.ts": {
-      "time": 1795069101547.8828,
+      "time": 1795182720115.4194,
       "uuid": "d230aefd-5785-4f9d-9714-c729c4cb6a4e"
     },
     "scripts\\LanguageSwitch.ts.meta": {
