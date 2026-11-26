@@ -1,0 +1,14 @@
+flowchart LR
+  Player((Player))
+  subgraph GuliGo["Guli Go! System"]
+    Home([Open home and set language or audio])
+    Levels([Select a level and view first-run guidance])
+    Aim([Aim, release a shot, and view feedback])
+    Round([Pause, restart, exit, or continue after a result])
+    Rewards([Review collection, draw, and equip rewards])
+  end
+  Player --- Home
+  Player --- Levels
+  Player --- Aim
+  Player --- Round
+  Player --- Rewards

@@ -1,0 +1,42 @@
+classDiagram
+  class GuliGame {
+    +screen
+    +render()
+    +readSave()
+    +persist()
+  }
+  class GameModel {
+    +levelIndex
+    +phase
+    +balls
+    +knocked
+    +launch()
+    +afterPhysics()
+  }
+  class GuliPhysics {
+    +bodies
+    +advance()
+    +dispose()
+  }
+  class Slingshot {
+    +begin()
+    +move()
+    +release()
+    +cancel()
+  }
+  class SaveData {
+    +stars
+    +collection
+    +language
+    +volumes
+    +rewards
+  }
+  class Reward
+  class Tutorial
+  GuliGame --> GameModel : coordinates
+  GuliGame --> Slingshot : reads input
+  GuliGame --> SaveData : loads and saves
+  GuliPhysics --> GameModel : advances state
+  GameModel --> SaveData : awards progress
+  GuliGame --> Reward : displays rewards
+  GuliGame --> Tutorial : presents tutorial

@@ -1,0 +1,18 @@
+sequenceDiagram
+  actor Player
+  participant UI as GuliGame
+  participant Sling as Slingshot
+  participant Model as GameModel
+  participant Physics as GuliPhysics / Box2D
+  participant Save as Local storage
+  Player->>UI: Select level
+  UI->>Model: Create level state
+  Player->>UI: Drag and release
+  UI->>Sling: Update pointer and pull vector
+  UI->>Model: launch(direction, power)
+  UI->>Physics: Create bodies
+  loop Until settled
+    Physics->>Model: Advance and report snapshots
+  end
+  Model->>UI: Resolve outcome
+  UI->>Save: Persist if won

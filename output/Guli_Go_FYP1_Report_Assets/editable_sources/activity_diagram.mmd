@@ -1,0 +1,16 @@
+flowchart TD
+  Start([Start]) --> Levels[Open level selector]
+  Levels --> Choose[Choose unlocked level]
+  Choose --> Tutorial[Show first-run guidance when required]
+  Tutorial --> Aim[Aim by dragging shooter]
+  Aim --> Release[Release shot]
+  Release --> Physics[Step Box2D until settled]
+  Physics --> Valid{Shooter fully exited?}
+  Valid -->|No| Rollback[Restore targets; spend shot]
+  Valid -->|Yes| Keep[Retain knock-outs]
+  Rollback --> Won{Target met?}
+  Keep --> Won
+  Won -->|Yes| Save[Award stars and save]
+  Won -->|No| Remaining{Attempts remain?}
+  Remaining -->|Yes| Aim
+  Remaining -->|No| Fail[Show failure]

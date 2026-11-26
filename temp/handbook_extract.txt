@@ -1,0 +1,1366 @@
+--- PAGE 1 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Final Year Project 
+Handbook 
+ 
+ 
+ 
+ 
+ 
+Version 1.0: Oct 2021 
+Version 1.2: May 2022 
+Version 1.3 Oct 2022 
+Version 1.4 May 2024 
+Version 1.5 June 2025 
+ 
+ 
+Department of Computer Science 
+Faculty of Engineering and Information Technology 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 2 ---
+Table of Contents 
+Chapter 1 Introduction to Final Year Project .................................................................................................1 
+1.1 Project 1 Execution Procedure.............................................................................................................1 
+1.2 Introduction to FYP2 ............................................................................................................................5 
+Chapter 2 Project Categories .........................................................................................................................9 
+2.1 Introduction .........................................................................................................................................9 
+2.2 Past Project Titles of 2023-2024 ....................................................................................................... 10 
+Chapter 3 Report Writing and Format ........................................................................................................ 12 
+3.1 Preliminary pages for both FYP1 and FYP2 reports .......................................................................... 12 
+3.2 List structure ..................................................................................................................................... 12 
+3.3 Project Content Structure ................................................................................................................. 12 
+3.4 Reference Format ............................................................................................................................. 13 
+Chapter 4 Chapter Detail ............................................................................................................................ 14 
+4.1 Outline of Chapter 1 ......................................................................................................................... 14 
+4.2 Outline of Chapter 2 ......................................................................................................................... 14 
+4.3 Outline of Chapter 3 ......................................................................................................................... 14 
+4.4 Outline of Chapter 4 ......................................................................................................................... 15 
+4.5 Outline of Chapter 5 ......................................................................................................................... 15 
+4.6 Outline of Chapter 6 ......................................................................................................................... 15 
+4.9 Outline of Presentation ..................................................................................................................... 16 
+Chapter 5 Project Evaluation ...................................................................................................................... 17 
+Chapter 6 Frequent Ask Questions (FAQ) ................................................................................................... 18 
+6.1 Question regarding Supervisor ......................................................................................................... 18 
+1) May I change supervisor during FYP1? ...................................................................................... 18 
+2) May I change supervisor during FYP2? ...................................................................................... 18 
+6.2 Question regarding Turnitin Similarity Report ................................................................................. 19 
+6.3 Questions on Project Topic ............................................................................................................... 19 
+6.4 Questions on AI Tools ....................................................................................................................... 19 
+Chapter 7 Tools or References .................................................................................................................... 20 
+7.1 Github References ............................................................................................................................ 20 
+7.2 Academic Writing .............................................................................................................................. 20 
+7.3 Server ................................................................................................................................................ 22 
+Chapter 8: Work Schedule .......................................................................................................................... 28 
+General Activities for FYP1 ...................................................................................................................... 28 
+General Activities for FYP2 ...................................................................................................................... 28 
+
+--- PAGE 3 ---
+FYP Exhibition / Tech Fest exhibition...................................................................................................... 29 
+ 
+
+--- PAGE 4 ---
+1 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 1 of 24 
+  
+ 
+Chapter 1 Introduction to Final Year Project 
+1.1 Project 1 Execution Procedure 
+Figure 1 FYP1 procedure 
+
+
+--- PAGE 5 ---
+2 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/05/2025 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 27 May 2025 
+Page No Page 2 of 24 
+  
+ 
+1.1.1 Subject enrolment 
+Only final year students can enrol Project 1. 
+ 
+Diploma Subject Code 
+Diploma in Information Technology CSIS3003 
+Diploma in Computer Science - 
+ 
+ 
+Bachelor’s degree Subject Code 
+Bachelor’s in software engineering BTIS3103 
+BTIS3102 
+ 
+1.1.2 Project / Research Category Briefing 
+At the beginning of the semester, Final Year Project coordinator will brief the students on 
+suitable topic areas. The briefing will include lecturers’ areas of interests, which could be 
+very useful for students in the process of selecting the project title ad supervisor. 
+1.1.3 Supervisor appointment 
+Students are responsible to find a supervisor. The appointed supervisor will supervise the 
+student’s project for both Final Year Project 1 and FYP2. Students, in appointing a  
+supervisor, could use the following tips. 
+Have a discussion with a few lecturers before appointing, to identify: 
+i. A supervisor who has sufficient knowledge on the intended project. 
+ii. A supervisor who has the same interest on the intended project. 
+iii. A supervisor has the right to suggest project that contribute to department. 
+iv. Check the list of DCS lecturers and their area of interest at the SUC directory. The 
+link: Southern University College - Lecturer / Staff Directory 
+
+--- PAGE 6 ---
+3 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 3 of 24 
+  
+ 
+ 
+ 
+Figure 2 Lecturers' curriculum vitae (updated 7 June 2024 ) 
+1.1.4 Final Year Project 1 (FYP1) 
+This section outlines the execution procedure of FYP1. It also highlights some of the  
+important deliverables or outputs need to be presented by students to the supervisors as well 
+as the evaluators to get a good grade. 
+1.1.4.1 Project Proposal Submission  
+Project topics can be a product of students’ own ideas or it can be a suggestion from a  
+prospective supervisor. Upon finding a title that suits you, put together a basic information 
+
+
+--- PAGE 7 ---
+4 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 4 of 24 
+  
+ 
+search, discuss with your supervisor and prepare a basic proposal. An online project proposal 
+form will be distributed and completed by students. 
+1.1.4.2 Project Proposal Approval  
+Upon the submission of the project proposal, project proposal will be reviewed to ensure that: 
+i. There is no duplication with previous projects in terms of the objectives and scopes 
+for a particular problem domain. 
+ii. Students are clear on the objectives and scopes of their projects 
+iii. Students meet the minimum requirements in terms of technologies to be applied in 
+their projects. 
+Review sessions are held in the third week of the semester. Students with rejected proposals 
+must submit another proposal within 3 days of receiving the review result. 
+1.1.4.3 Weekly Supervision Meeting And Logbook  
+Regular review from supervisors will ensure that students execute their project according to  
+the faculty’s procedure and standards, as well as the project objectives and aims. Student  
+must arrange a minimum of six (6) formal meetings with their supervisors before 
+receiving permission to submit and present their project. However, students are strongly  
+advised to arrange a weekly meeting with the supervisors to address issues related to project 
+execution. All meetings must be recorded in a logbook and the supervisor’s signature of  
+approval of each meeting is required. The logbook form is available at eLearning portal. 
+Microsoft Teams is the current platform. 
+1.1.4.4 FYP1 Report Submission  
+Towards the end of FYP1 cycle, each student is required to submit their project report for 
+evaluation. Students must get their supervisors’ approval before submitting the report  
+softcopy. A designated submission link will be given by week 11 of semester. 
+1.1.4.5 Presentation Week / Elevator Pitch / Poster Showcase  
+Students are required to present their FYP1 progress and results achieved for evaluation. The 
+presentation session will be evaluated by student’s supervisor and other lecturers on poster  
+showcase day. 
+1.1.4.6 FYP1 Report Correction  
+Students are required to do correction based on the comments given by the supervisors in the 
+coming FYP2. 
+1.1.4.7 FYP1 Evaluation  
+At the end of the semester, each student’s project is evaluated to determine that the objectives  
+and scope are adequate and are aligned with project aim. A passing grade in FYP1 is a  
+requirement for FYP2. Evaluation rubric can be view in 1-Project Rubrics (Phase 1 BoSE and 
+DipIT) (SUC) 
+
+--- PAGE 8 ---
+5 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 5 of 24 
+  
+ 
+1.1.4.8 Project Presentation  
+Twenty (20) minutes is allocated to each student for presentation. 15 minutes for slides  
+presentation and prototype demonstration. 5 minutes for question-and-answer session. The 
+presentation should contain the following items: 
+i. An introduction on presenter, project title and supervisor 
+ii. An overview of the presentation / presentation outline 
+iii. Project background, aim, objectives and scope of the project 
+iv. Summary of literature review 
+v. Summary of research / system development methodology 
+vi. List of software and hardware that are required to develop the project 
+vii. Summary of initial findings during FYP1. 
+viii. Discussion on FYP2 execution plan 
+ix. Conclusion of the presentation 
+Students are advised to follow the subsequent good practices for their project’s presentations: 
+i. Arrive / prepare early for the presentation 
+ii. Limit the use of text in slides 
+iii. No spelling errors 
+iv. Include more figures, pictures, charts, and system screen capture. 
+v. Have eye contact with audience / switch on web camera 
+vi. Dress formally 
+vii. Speak clearly 
+viii. Manage the presentation time within time frame 
+ix. Thank the audience for listening 
+ 
+ 
+1.2 Introduction to FYP2 
+This section outlines the execution procedure of FYP2. It also highlights some of the  
+important deliverables or outputs need to be presented by students to the supervisors as well 
+as the evaluators to get a good grade. 
+1.2.1 Subject Enrolment 
+Only final year students passed FYP1 can enrol FYP2 
+ 
+Diploma Subject Code 
+Diploma in Information Technology CSIS3103 
+Diploma in Computer Science CSIS3044 
+ 
+ 
+Bachelor’s degree Subject Code 
+Bachelor’s in software engineering BTIS3204 
+
+--- PAGE 9 ---
+6 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 6 of 24 
+  
+ 
+1.2.2 FYP2 Procedure 
+ 
+ 
+Figure 3 FYP2 procedure 
+
+
+--- PAGE 10 ---
+7 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 7 of 24 
+  
+ 
+1.2.3 FYP2 Pre-Assessment 
+Students are required to regularly demonstrate their project development updates to their  
+supervisors. These demonstrations act as a benchmark for the supervisor to decide whether 
+the students will proceed with the final presentation. 
+ 
+ 
+1.2.4 Final Report 
+The final report is essential to FYP2. The early chapters, Chapters 1,2 and 3 are like FYP1. It 
+must be reminded that the tenses in Chapter 3 must be changed. In FYP1, Chapter 3 presents  
+the plan, while in FYP2 it presents actions already taken. Consequently, the past tense must  
+be used in FYP2. 
+As part of their progress, students are required to submit drafts of Chapter 4 and 5 to their  
+supervisors for evaluation. Corrections must be done as required. It is hoped that the quality 
+of the student’s project report is improved by having the on-going report assessments. 
+1.2.5 Presentation/ Demo Day 
+Once the final report has been submitted, students need to prepare themselves for the 
+presentation and demo day. 
+ 
+ 
+The presentation for FYP1 is only 20 minutes (15 minutes for slides presentation and 5  
+minutes for the question-and-answer session). The important points must be included in the 
+slide. The presentation should contain the following items: 
+i. An introduction on presenter, project tile and supervisor. 
+ii. Presentation outline 
+iii. Project background, aim, objectives and scopes of the project (Chapter 1) 
+iv. Summary of literature review and research/ system development methodology 
+(Chapter 2 and 3) 
+v. An overview of requirement analysis and design (for system-based projects) / 
+research development and implementation (for research-based projects) 
+vi. Summary of system implementation and testing (for system-based projects) / result 
+and analysis (for research-based projects) 
+vii. Conclusion of the project 
+
+--- PAGE 11 ---
+8 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 8 of 24 
+  
+ 
+1.2.6 Report Submission 
+Students must save thesis report as the required filename and format. 
+ 
+Document File Name format Example File 
+Format 
+Thesis 
+document 
+<subject 
+code>_<academic 
+year>_<studentID> 
+BTIS3204_2021C_B170111B 
+ 
+CSIS3003_2021C_D123456B_D123654A 
+DOCX 
+Thesis 
+document 
+<subject 
+code>_<academic 
+year>_<studentID> 
+BTIS3204_2021C_B170111B 
+ 
+CSIS3003_2021C_D123456B_D123654A 
+PDF 
+Abstract <subject 
+code>_<academic 
+year>_abstract_<stu 
+dentID> 
+BTIS3204_2021C_abstract_B170111B 
+ 
+CSIS3003_2021C_D123456B_abstract_D 
+123654A 
+PDF 
+Source 
+Code 
+GitHub link https://github.com/lerlerchan/testing2.git link 
+Source 
+Code 
+<subject 
+code>_<academic 
+year>_<studentID> 
+BTIS3204_2021C_B170111B 
+ 
+CSIS3003_2021C_D123456B_D123654A 
+ZIP 
+Poster <subject 
+code>_<academic 
+year>_poster_<stude 
+ntID> 
+BTIS3204_2021C_poster_B170111B 
+ 
+CSIS3003_2021C_poster_D123456B_D12 
+3654A 
+PPTX 
+Presentation 
+Slide 
+<subject 
+code>_<academic 
+year>_slide_<studen 
+tID> 
+BTIS3204_2021C_slide_B170111B 
+ 
+CSIS3003_2021C_slide_D123456B_D123 
+654A 
+PPTX 
+Presentation 
+Video 
+<subject 
+code>_<academic 
+year>_presentation_ 
+<studentID> 
+BTIS3204_2021C_presentation_B170111 
+B 
+ 
+CSIS3003_2021C_presentation_D123456 
+B_D123654A 
+MP4 
+ 
+Designated submission link will be given to students on Week 12. Failure to adhere 
+instruction will result in the suspension of students’ results. 
+
+--- PAGE 12 ---
+9 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 9 of 24 
+ 
+Chapter 2 Project Categories 
+2.1 Introduction 
+There are 2 types of projects which are system development and research based. 
+ 
+Categories System development Research-based 
+Description • It is based on developing an 
+application, software, or 
+embedded systems. 
+• The undertaken project must 
+include programming 
+elements with appropriate 
+users’ complexity and meet 
+FYP scope. 
+• It is based on a research 
+application that includes data 
+analysis, comparative studies 
+or enhancement of 
+techniques or algorithms 
+• Programming elements must 
+be included in the research 
+project 
+• It emphasizes on analysis as 
+well as technical writing of 
+the report 
+• Students are expected to read 
+a few technical papers and 
+able to digest with the help 
+from the appointed 
+supervisors. 
+Aim It gives the students an opportunity 
+to conduct exercise as project 
+developer in computer science, 
+information technology and software 
+engineering 
+It aims at guiding the students with 
+research skills in computer 
+networking, computer security, 
+artificial intelligence, and embedded 
+system. 
+Examples • Web based application 
+• RFID-based project 
+• Mobile application 
+• Firmware application 
+• Application of statistical 
+technique in analyzing 
+network data 
+• New technique in 
+cryptography 
+• Image processing 
+• Implementation of soft 
+computing technique in 
+solving security and network 
+problems 
+Future 
+career 
+• Programmer 
+• Software engineer 
+• Researchers 
+• Academic professionals 
+
+--- PAGE 13 ---
+10 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 10 of 24 
+ 
+ 
+Sample • Cryptography teaching tools 
+• Workflow 
+automation tools 
+• Game-based learning tools 
+• Comparative study n IDS 
+performance 
+• Malware detection analysis 
+• EdTech AI analysis 
+ 
+ 
+2.2 Past Project Titles of 2023-2024 
+ 
+ 
+Word Count of Project Titles 
+ 
+ 
+Table 1Type of Project Cluster 
+Program Cluster Theme No of Project Percentage 
+Diploma Event Management Event & Stall Management 
+Systems 
+17.6% 
+Healthcare 
+Management 
+Healthcare & Medical Systems 17.6% 
+Booking system Online Booking & Scheduling 
+Systems 
+35.3% 
+CSR Community & Rescue Systems 11.8% 
+
+
+--- PAGE 14 ---
+11 
+ 
+ 
+Property 
+Management 
+Smart Living & Resident 
+Management 
+17.6% 
+Bachelor Game 
+Development 
+Game Development Projects 8.3% 
+E-Commerce E-Commerce & Logistics Systems 25% 
+Healthcare + AI Healthcare & AI Integration 16.7% 
+Financial  Financial & Productivity Tools 25% 
+CSR Social Impact & Administration 
+Systems 
+25% 
+
+--- PAGE 15 ---
+12 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 12 of 24 
+  
+Chapter 3 Report Writing and Format 
+3.1 Preliminary pages for both FYP1 and FYP2 reports 
+FYP1 FYP2 
+Front Page Format 
+Cover page 
+ 
+Title page 
+Abstract 
+Acknowledgment page 
+Front Page Format 
+Cover page 
+ 
+Title page 
+Abstract 
+Acknowledgment page 
+ 
+3.2 List structure 
+Content page Title and page number must be equivalent to thesis text 
+List of tables page Includes title of all tables and page numbers 
+List of figures page Figures include diagrams, photographs, screen capture, 
+graphs, charts, code snippets and others 
+Include titles of all figures and page numbers 
+List of abbreviations page Lists of abbreviations used within the report 
+Listed in alphabetical order 
+List of terms page Lists of terminologies used within the text 
+Listed in alphabetical order 
+List of appendices page Listed all appendices used within the text. 
+Appendices are given names such as Appendix A: Context 
+diagram 
+Appendix B: Source Code 
+Listed in alphabetical order 
+ 
+3.3 Project Content Structure 
+FYP1 FYP2 
+Chapter 1: Introduction Chapter 1: Introduction 
+Chapter 2: Literature Review Chapter 2: Literature Review 
+Chapter 3: Methodology Chapter 3: Methodology 
+
+--- PAGE 16 ---
+13 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 13 of 24 
+  
+ 
+ Chapter 4: Design 
+ Chapter 5 : Implementation, Testing, 
+Analysis or Evaluation 
+Chapter 6 Conclusion 
+References References 
+Appendixes 
+Source Code / GitHub Link 
+Similarity Report 
+AI Chat / Prompt History 
+Paraphrasing tools 
+AI tools 
+Video presentation 
+ 
+Any of these can be included accordingly: 
+• Organizational Chart 
+• Sample of Interview 
+• Sample of Questionnaire 
+• Functions recording link. 
+ 
+ 
+Every appendix must have a title 
+Appendixes 
+Source Code / GitHub Link 
+Similarity Report 
+AI Chat / Prompt History 
+Paraphrasing tools 
+AI tools 
+Video presentation 
+ 
+ 
+Any of these can be included accordingly: 
+• Organizational Chart 
+• Sample of Interview 
+• Sample of Questionnaire 
+• Functions recording link 
+• User manual 
+ 
+Every appendix must have a title 
+ 
+3.4 Reference Format 
+The project is an essential component of the program. It is important that detection of any 
+form of plagiarism in project work will be taken very seriously. The references can be written 
+by using American Psychological Association, APA referencing style. Student may refer to 
+SUC library for assistance Or 
+https://library.sc.edu.my/files/Quick%20Reference%20Guide_APA_24%20May%202021.pd 
+f 
+
+--- PAGE 17 ---
+14 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 14 of 24 
+  
+Chapter 4 Chapter Detail 
+Students must discuss with supervisors regarding their report writing. Supervisors has the 
+right to add or eliminate some minor topic. 
+4.1 Outline of Chapter 1 
+Applicable to FYP1 and FYP2. 
+ 
+System Development Based Research Based 
+Chapter 1: Introduction 
+1.1 Background Research 
+1.2 Objectives 
+1.3 Scope 
+1.4 Summary 
+Chapter 1: Introduction 
+1.1 Background Research 
+1.2 Objectives 
+1.3 Scope 
+1.4 Research Contribution 
+1.5 Summary 
+ 
+4.2 Outline of Chapter 2 
+Applicable to FYP1 and FYP2. 
+ 
+System Development Based Research Based 
+Chapter 2: Literature Review 
+2.1 Introduction 
+2.2 Inter-organisation case study (if 
+any) 
+2.3 Current system analysis 
+2.4 Compare between 3 existing 
+systems 
+2.5 Literature review on technology 
+used 
+2.6 Summary 
+Chapter 2: Literature Review 
+2.1 Introduction to case study 
+2.2 Problem formulation 
+2.3 Suggestions to solve identified 
+problems 
+2.4 summary 
+ 
+4.3 Outline of Chapter 3 
+Applicable to FYP1 and FYP2 
+ 
+System Development Based Research Based 
+Chapter 3: Methodology 
+3.1 Introduction 
+3.2 Methodology choice and 
+justification 
+3.3 Phases within the chosen 
+methodology / Planning 
+3.4 System requirement analysis: 
+3.4.1 hardware 
+3.4.2 software 
+Chapter 3: Methodology 
+3.1 Introduction 
+3.2 Operational Framework / 
+Research Workflow 
+3.3 Justification 
+3.3.1 Tools 
+3.3.2 Data 
+3.3.3 Techniques 
+3.4 Performance measurement 
+
+--- PAGE 18 ---
+15 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 15 of 24 
+  
+ 
+3.5 Gantt Chart 
+3.6 Financial Justification 
+3.7 Summary 
+3.5 Gantt Chart 
+3.6 Summary 
+ 
+ 
+4.4 Outline of Chapter 4 
+Applicable to FYP1 and FYP2. 
+ 
+System Development Based Research Based 
+Chapter 4: Design 
+4.1 Introduction 
+4.2 Use Case Diagram 
+4.3 Class Diagram / Sequence 
+Diagram (Choose either one) 
+4.4 Entity Relationship Diagram 
+(ERD) 
+4.5 Data Flow Diagram (DFD) 
+4.6 Activity Diagram 
+4.7 Activity Diagram 
+4.8 System Architecture 
+4.9 Summary 
+Chapter 4 Experimental Setup 
+4.1 Introduction 
+4.2 Proposed Solution 
+4.3 Experiment design 
+4.4 Parameter and testing methods 
+4.5 Summary 
+* Discuss with supervisor 
+4.5 Outline of Chapter 5 
+Applicable to FYP2 Only 
+ 
+System Development Based Research Based 
+Chapter 5: Implementation, Testing, 
+Analysis or Evaluation 
+5.1 Introduction 
+5.2 Implementation 
+5.3 Testing 
+5.4 Analysis or Evaluation 
+5.5 Summary 
+Chapter 5: Implementation 
+5.1 Introduction 
+5.2 Experiment implementation 
+5.3 Analysis or Evaluation 
+5.4 Summary 
+ 
+4.6 Outline of Chapter 6 
+Applicable to FYP1 and 2 
+ 
+System Development Based Research Based 
+Chapter 6: Conclusion 
+6.1 Introduction 
+6.2 Achievements 
+6.3 Limitation 
+6.4 Future work / Recommendation 
+Chapter 6: Conclusion 
+6.1 Introduction 
+6.2 Limitation 
+6.3 Future work / recommendation 
+6.4 Summary 
+
+--- PAGE 19 ---
+16 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 16 of 24 
+  
+ 
+6.5 Summary  
+ 
+ 
+4.9 Outline of Presentation 
+FYP1: 15 minutes presentation and 5 minutes question and answer session 
+ 
+System Development Based Research Based 
+• Introduction 
+• Overview of presentation 
+• Project background, objectives, and 
+scopes 
+• Summary of literature review / 
+Methodology 
+• Overview of requirement analysis 
+and design 
+• List of software and hardware 
+• Summary of initial finding during 
+FYP1 (EG: analysis of data collected 
+from survey) 
+• Discussion on FYP2 execution plan 
+• Conclusion 
+ 
+Question and answer session 
+• Introduction 
+• Overview of presentation 
+• Project background, objectives, and 
+scopes 
+• Summary of literature review / 
+methodology 
+• List of software and hardware 
+• Summary of initial finding during 
+FYP1 (EG: analysis of data collected 
+from survey) 
+• Discussion on FYP2 execution plan 
+• Conclusion 
+ 
+Question and answer session 
+ 
+FYP2: 15 minutes presentation and 5 minutes question and answer session 
+ 
+System Development Based Research Based 
+• Introduction 
+• Overview of presentation 
+• Project background, objectives, and 
+scopes 
+• Summary of literature review / 
+Methodology 
+• Overview of requirement analysis 
+and design 
+• Summary of system implementation 
+• Prototype demonstration 
+• Conclusion 
+ 
+Question and answer session 
+• Introduction 
+• Overview of presentation 
+• Project background, objectives, and 
+scopes 
+• Summary of literature review / 
+methodology 
+• Research development and 
+implementation 
+• Result and analysis 
+• Conclusion 
+ 
+Question and answer session 
+
+--- PAGE 20 ---
+17 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 17 of 24 
+  
+ 
+Chapter 5 Project Evaluation 
+Figure 4 Sample of FYP1 rubric 
+ 
+Figure 5 Sample of FYP2 Rubric 
+
+
+--- PAGE 21 ---
+18 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 18 of 24 
+  
+ 
+Chapter 6 Frequent Ask Questions (FAQ) 
+6.1 Question regarding Supervisor 
+1) May I change supervisor during FYP1? 
+Student is not allowed to change supervisor. Thus, it is best to discuss with different 
+lecturers before subject enrolment. 
+ 
+2) May I change supervisor during FYP2? 
+Student is not allowed to change supervisor due to project requirements. Student is 
+allowed to change supervisor IF 
+• Supervisor is not available 
+• Supervisor recommend a change of person in charge for better academic 
+purpose 
+ 
+3) What is the MS Team Code for BoSE? Diploma? 
+BoSE FYP1 / FYP2: 94po3q6 
+DIP Project 1/ Project2 / Project: 2il6ljo 
+ 
+4) Where is the document template? 
+BoSE FYP1 / FYP2 : 
+https://southernuniversitycollege.sharepoint.com/:f:/s/BTIS3204Project2Briefing/Eq4UFGMOKC9
+IuZQ5QwW4sKsBqNI2PFqNn7szXXAZXwX9xg?e=R6IRTa  
+ 
+DIP Project 1/ Project 2/ Project:  
+https://southernuniversitycollege.sharepoint.com/:f:/s/CSIS3103CSIS3044Briefing/Emh8rpj8aqVK
+i58hlLjtH6wBA8vhpWuvV_gnPzqj2k8YPQ?e=VACbh2  
+ 
+5) What is the Turnitin ID and enrolment key? 
+Turnitin ID: 48920141 
+Enrolment Key: 2025b 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- PAGE 22 ---
+19 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 19 of 24 
+ 6.2 Question regarding Turnitin Similarity Report 
+Screen capture your Text-Only Report for Appendix B 
+6.3 Questions on Project Topic 
+1) Can student change project title during FYP2? 
+Student is not allowed to change project title due to time constraint. 
+ 
+ 
+6.4 Questions on AI Tools 
+ 
+1) Can student use AI tools in assistance? 
+Students are permitted to use any open-source AI tools or API keys. However, they must complete the AI 
+Declaration Form. Additionally, students are required to include screenshots of the tools used or the prompt 
+history in the Appendix 
+ 
+ 
+
+
+--- PAGE 23 ---
+20 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 20 of 24 
+  
+Chapter 7 Tools or References 
+7.1 Github References 
+Github: https://github.com/ 
+GitHub desktop: https://desktop.github.com/ 
+ 
+7.2 Academic Writing 
+Phase bank: https://www.ref-n-write.com/academic-phrasebank/ 
+ 
+Summarise an article: https://getdigest.com/en 
+
+
+--- PAGE 24 ---
+21 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 21 of 24 
+ 
+Paraphrasing Tool: Paraphrasing Tool | QuillBot AI 
+
+
+--- PAGE 25 ---
+22 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 22 of 24 
+  
+ 
+7.3 Server 
+ 
+https://vercel.com/ 
+ 
+https://www.netlify.com/ 
+
+
+--- PAGE 26 ---
+23 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 23 of 24 
+  
+ 
+ 
+ 
+https://azure.microsoft.com/en-us/pricing/offers/ms-azr-0170p 
+ 
+ 
+ 
+https://www.000webhost.com/ 
+
+
+--- PAGE 27 ---
+24 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 24 of 24 
+  
+ 
+ 
+ 
+https://www.bitcatcha.com.my/research/free-web-hosting/ 
+ 
+ 
+ 
+ONE minute RM500 cloud credit IA Business Summit 2023 – IP ServerOne Solutions Sdn. Bhd. 
+ 
+
+
+--- PAGE 28 ---
+25 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 25 of 24 
+ 
+ 
+ 
+v0 by Vercel 
+ 
+ 
+ 
+Lovable 
+ 
+ 
+
+
+--- PAGE 29 ---
+26 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 26 of 24 
+ 
+ 
+ 
+Streamlit • A faster way to build and share data apps 
+ 
+ 
+ 
+Sharing Your App 
+ 
+ 
+
+
+--- PAGE 30 ---
+27 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 27 of 24 
+ 
+ 
+ 
+Shiny for R Gallery
+
+
+--- PAGE 31 ---
+28 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 28 of 24 
+  
+ 
+Chapter 8: Work Schedule 
+General Activities for FYP1 
+Week Activity Person(s) Responsible 
+All Project Agent in assistance of final year project / 
+project 
+Student, supervisor, project 
+coordinator 
+1-2 Determination of project title Student & supervisor 
+Research methodology class (optional) Student, 
+Project coordinator 
+3 Submit project title and proposal Student 
+Confirmation of project title Supervisor & Project 
+coordinator 
+4 - 10 Continuous thesis writing 
+Regular discussion with supervisor 
+Student & supervisor 
+10 Submit thesis draft to supervisor Student 
+11 Report correction Student & Supervisor 
+12 Report submission to supervisor 
+Report submission to project coordinator 
+Student, supervisor 
+Project coordinator 
+13 - 14 Presentation with supervisor Student & supervisor 
+14 - 16 Mark submission Supervisor 
+16 Compilation of marks via e-OBE 
+Compilation of ePortfolio 
+Project coordinator 
+ 
+General Activities for FYP2 
+Week Activity Person(s) Responsible 
+All Project Agent in assistance of final year project / 
+project 
+Student, supervisor, project 
+coordinator 
+1 FYP exhibition Proposal Project coordinator 
+6 Supervisors submit 2 projects for competition Supervisor, project 
+coordinator 
+ FYP Coordinator review project progress for 
+competition 
+ 
+1-11 Continuous thesis writing & discussion 
+with supervisor 
+Student & supervisor 
+System development / coding Student 
+10 Submit thesis to supervisor Student & supervisor 
+11 Thesis correction or improvement Student & supervisor 
+12 Submit thesis/ abstract / source code to 
+project coordinator 
+Student 
+Project coordinator 
+12 Arrange presentation session with examiner Project 
+coordinator Panel 
+13 - 
+14 
+Presentation session / FYP exhibition Student, supervisor, 
+project coordinator & 
+panel 
+14 - 
+15 
+Source code submission Student 
+Project coordinator 
+
+--- PAGE 32 ---
+29 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 29 of 24 
+ 14 - 
+16 
+Evaluation by examiner and supervisor supervisor & panel 
+Rubric submission to designated folder Supervisor 
+project coordinator 
+Mark submission to SUC Portal Supervisor 
+16 Compilation of marks via e-OBE Project coordinator 
+Compilation of top-grade thesis Project coordinator 
+ 
+Select Q1 thesis to library Project coordinator 
+ 
+ 
+FYP Exhibition / Tech Fest exhibition 
+ 
+• The Final Year Project (FYP) Exhibition will be held annually during Semester C. 
+• It is proposed that the event be hosted in Room IEB 407, which is equipped with power 
+sockets. 
+• The exhibition is proposed to take place between Weeks 12 and 14 of Semester C. 
+• Project selection for the exhibition will be supported by Microsoft Copilot, utilizing 
+a predetermined exhibition selection rubric. 
+• The duration of the exhibition will be three hours, tentatively scheduled 
+for Wednesdays from 1:00 PM to 4:00 PM. 
+• A total of 12 groups will present, comprising 8 groups from the Bachelor’s 
+program and 4 groups from the Diploma program. 
+• Students are encouraged to use external monitors to enhance the visibility and 
+presentation of their projects during the exhibition. 
+• The predetermined selection rubric for the exhibition includes: 
+• Project Progress – 30% 
+• Presentation Quality – 30% 
+• Technical Functionality – 40% 
+• Supervisors are permitted to nominate supervisees from both Semester B and Semester C 
+for participation in the exhibition. 
+ 
+Week Activity Person(s) Responsible 
+1 FYP exhibition Proposal Project coordinator 
+2 Venue approval 
+Prepare floor plan layout 
+AGO 
+5 Prepare invitation email Project coordinator 
+6  Invitation to internship companies PIC / Board of 
+director/ Top management 
+Project coordinator 
+Head of Department 
+ Supervisors submit 2 projects  Supervisor, project 
+coordinator 
+7 Select suitable project for exhibition Project coordinator 
+8 Compile exhibition guest list 
+Prepare door gift for visitors 
+Project coordinator 
+ Prepare competition itinerary 
+• VP give welcome speech 
+• BoD give speech 
+• Dean give speech 
+• Exhibition 
+• Collect feedback from visitors 
+• Closing speech by HoD 
+• Presentation of cert by HoD to students 
+Project Coordinator 
+ Request HoD to invite top management HoD 
+
+--- PAGE 33 ---
+30 
+ 
+ 
+ FACULTY OF ENGINEERING AND 
+INFORMATION TECHNOLOGY 
+Doc. No. FEIT/DCS/06/2024 
+Rev No. 01.4 
+FINAL YEAR PROJECT 
+HANDBOOK 
+Eff. Date 4 June 2024 
+Page No Page 30 of 24 
+ 9 Submit floor plan layout AGO 
+10  Confirmed project list Project Coordinator 
+11 Prepare exhibition participation Cert SUCCESS, SUCCESS 
+advisor 
+12-14 Exhibition 
+Moderation  
+Supervisor, project 
+coordinator 
+15 Compile visitors’ feedback Project Coordinator 
+ 
+ 
+ 
+ 
+ 
+ 
+  0000   

@@ -1,0 +1,132 @@
+[Normal] Subject Code
+[Normal] Subject Name
+[Normal] Project Title
+[Normal] Student Name (Student Number)
+[Normal] Supervisor: Supervisor Name
+[Normal] Co-Supervisor: Co-Supervisor Name
+[Normal] Submission Date
+[Normal] Department of Computer Science
+[Normal] Faculty of Engineering and Information Technology
+[Normal] Subject Code
+[Normal] Subject Name
+[Normal] Project Title
+[Normal] Final Report
+[Normal] Student Name (Student Number)
+[Normal] Supervisor: Supervisor Name
+[Normal] Co-Supervisor: CoSupervisor Name
+[Normal] Submission Date
+[Normal] Department of Computer Science
+[Normal] Faculty of Engineering and Information Technology
+[Dec notes] Notes: If the FYP/ dissertation / thesis / source code is CONFIDENTIAL or RESTRICTED, please attach with the Non-Disclosure Agreement(NDA) or letter from the organisation / department with period and reasons for confidentiality or restriction as appendices.  
+[Heading 9] DECLARATION OF COPYRIGHT
+[Normal] I hereby declare that this FYP/dissertation/thesis entitled “TITLE TO BE THE SAME AS FRONT COVER, CAPITAL LETTER, BOLD” to be kept by Southern University College subject to the regulations as follows:
+[Normal] 1.	This FYP/dissertation/thesis is a property of Southern University College.
+[Normal] 2.	Southern University College or its library has the right to make and transmit copies (print or electronic) of this FYP/dissertation/thesis for academic purposes.
+[Normal] 3.	Southern University College or its library has the right to store this FYP/dissertation/thesis in a retrieval system and supply copies of this FYP/dissertation/thesis if requested by other universities and research libraries. 
+[Normal] Signature	:	_________________________
+[Normal] Name	:	______________________________
+[Normal] ID No.	:	_________________________
+[Normal] Date 	:	_________________________
+[Heading 9] ECLARATION OF RESPONSIBLE ARTIFICIAL INTELLIGENCE
+[Normal] I, the undersigned hereby declare that this FYP/dissertation/thesis entitled “TITLE TO BE THE SAME AS FRONT COVER, CAPITAL LETTER, BOLD”  involving artificial intelligence (AI). 
+[Normal] By signing this declaration, I am responsible in my use of AI technologies throughout this FYP/ dissertation/ thesis.
+[Normal] Signature	:	_________________________
+[Normal] Name	:	______________________________
+[Normal] ID No.	:	_________________________
+[Normal] Date 	:	_________________________
+[Heading 1] Abstract
+[Normal] The abstract is simply a summary of the report, and it should cover the whole of the report including the setting, methodology (if applicable), main findings, conclusions, and any major recommendations.  Its main purpose is to provide the reader with a quick overview of the contents of the report.  It is usually written last and must not exceed one sheet of paper. The word limit must not exceed 350 words. 
+[Heading 1] Acknowledgements
+[Normal] An Acknowledgments page is included if it is necessary to thank anyone for aiding during the preparation and production of the report.  For example, thanks might be given to external organisations or technical staffs who have provided material and/or support.  In such cases it is essential to indicate the name and title of the person or company.
+[Heading 1] Chapter 1: Introduction
+[Heading 2] 1.1 Background Research
+[Heading 2] 1.2 Problem Statements
+[Heading 2] 1.3 Objectives
+[Heading 2] 1.4 Scope
+[Heading 2] 1.5 Summary 
+[Heading 1] Chapter 2: Literature Review
+[Heading 2] 2.1 Introduction
+[Heading 2] 2.2 Literature Review on Technology
+[Heading 2] 2.3 Compare Between 3 Existing Systems
+[Heading 2] 2.4 Literature Review On Technology Used
+[Heading 2] 2.5 Summary
+[Heading 1] Chapter 3: Methodology
+[Heading 2] 3.1 Introduction
+[Heading 2] 3.2 Methodology Choice And Justification
+[Heading 2] 3.3 Phases Within The Chosen Methodology/ Planning
+[Heading 2] 3.4 System Requirements Analysis: 
+[Heading 3] 3.4.1 Hardware 
+[Heading 3] 3.4.2 Software
+[Heading 2] 3.5 Gantt Chart
+[Heading 2] 3.6 Financial Justification
+[Heading 2] 3.7 Summary
+[Heading 1] Chapter 4: Design 
+[Heading 2] 4.1 Introduction
+[Heading 2] 4.2 Use Case Diagram (Mandatory)
+[Heading 2] 4.3 Sequence Diagram (Optional)
+[Heading 2] 4.4 Class Diagram/Entity Relationship Diagram (ERD) (Mandatory Choose 1, discuss with supervisor)
+[Heading 2] 4.5 Data Flow Diagram (DFD) (optional, discuss with supervisor)
+[Heading 2] 4.6 Activity Diagram (optional, discuss with supervisor)
+[Heading 2] 4.7 System Architecture (optional, discuss with supervisor)
+[Heading 2] 4.8 Summary
+[Heading 1] Chapter 5: Implementation (FYP I)
+[toc 2] 5.1 Introduction
+[toc 2] 5.2 Content Design / Wireframe
+[toc 2] 5.3 Prototype
+[toc 2] 5.4 Summary
+[Heading 1] Chapter 5: Implementation, Testing , Analysis or Evaluation (FYPII)
+[Heading 2] 5.1 Introduction
+[Heading 2] 5.2 Implementation
+[Normal] Coding /feature / snipper code
+[Heading 2] 5.3 Testing
+[List Paragraph] Sample population / selection of participants
+[List Paragraph] Automation testing tools are encouraged to use.
+[List Paragraph] Selenium 
+[List Paragraph] Robot framework
+[List Paragraph] UI Stress test
+[Heading 2] 5.3 Analysis  or Evaluation
+[List Paragraph] Data visualisation: use chart / multiple category / spider chart
+[List Paragraph] User acceptance test
+[Heading 2] 5.4 Summary
+[Heading 1] Chapter 6: Conclusion 
+[Heading 2] 6.1 Introduction
+[Heading 2] 6.2 Achievements
+[Normal] - what have you learn
+[Heading 2] 6.3 Limitation
+[Heading 2] 6.4 Future work / Recommendation 
+[Heading 2] 6.5 Summary
+[Heading 1] References
+[Normal] The references can be written by using APA referencing style.
+[Normal] Student may refer to SUC library for assistance  or https://library.sc.edu.my/files/Quick%20Reference%20Guide_APA_24%20May%202021.pdf
+[Heading 1] Appendix A: Source Code / GitHub Link	
+[Normal] Poptan747/U-Marked (github.com)
+[Heading 1] Appendix B: Similarity Report
+[Heading 1] Appendix C: AI Chat/ Prompt History
+[Normal] Example: Export prompt history from Bing Chat
+[Normal] Example: Export prompt history from Google Gemini
+[Normal] Example: Export prompt history from ChatGPT3.5
+[Heading 1] Appendix D: Paraphrasing Tools
+[Heading 1] Appendix E: AI tools
+[Heading 1] Appendix F: Video Presentation
+[Normal] UMarked Student Attendance Application (youtube.com)
+[Normal] Appendix _: Organisation Chart (if relevant)
+[Normal] Appendix _: Sample of Interview
+[Normal] Appendix _: Sample of Questionnaire
+[Normal] Appendix _: Functions  Recording Links
+[Normal] Appendix _: User Manual
+--- TABLE 1 ---
+Tick if use | Level | Level of AI Use | Description | Disclosure Requirements
+√ | 0 | NO AI Use | This final year project is completed without AI assistance. | 
+√ | 1 | AI-assisted Idea Generation and Structuring | AI is used for brainstorming . | Appendix C: AI Chat / Prompt History
+√ | 2 | AI- Assisted Editing | AI is used to make improvements to the clarity or quality of student created work to improve the final output. /  | Appendix D: Paraphrasing tools
+√ | 3 | AI for Specified Completion | AI is used to complete certain tasks listed in this final year project. /  | Appendix E: AI tools
+ | 4 | Full AI Use with Human Oversight | AI is used as ‘co-pilot’ to enhance human creativity. Student is responsible for providing human oversight and evaluation of all AI generated content. | Appendix E: AI tools
+--- TABLE 2 ---
+Tips: The introduction to the report is the start of the report proper.  Its purpose is to set the scene for the remainder of the report and to provide an overview that gives greater detail than the abstract.  The introduction should include the background to the report and the aims and objectives of the report.  In addition, a summary of the contents of the different sections should be included.  However, if there is no separate methodology chapter, then some indication of any methods used should also be included.  Note that the introduction should be: / consistent with what follows in the body of the report  / consistent with the conclusion / 
+--- TABLE 3 ---
+Tips: A literature review is a text of a scholarly paper, which includes the current knowledge including substantive findings, as well as theoretical and methodological contributions to a particular topic. Literature reviews use secondary sources, and do not report new or original experimental work. (https://en.wikipedia.org/wiki/Literature_review#cite_note-1)
+--- TABLE 4 ---
+Tips: Some reports involve the development or utilisation of standard methods to achieve the objectives.  In such cases a chapter describing these should be included.  This might include details of background literature consulted, why a particular methodology was selected rather than another, who was interviewed, and so on.  Also, in cases where questionnaires are used, the reasoning behind their construction and what they were intended to achieve should be explained here.  However, the actual copies of the questionnaire should be included as an appendix. / 
+--- TABLE 5 ---
+Tips: The conclusions chapter of the report draws on the evidence, argument and facts set out in the introduction and the main body of text and must not introduce any new material.  Each point made in the conclusion should be allocated a separate paragraph, and reference can be made to the main body of the report by using the section numbers.  In simple terms, the conclusion should state some or all the following: / what has been achieved? / what the situation now is/is not? / what might happen? / what could/could not be done? / what constraints have had to be considered? / what courses of action were taken? /  / Whatever is stated, the conclusions made should: / be consistent with the introduction and the body of the report / list the essential points the author wants remembering / leave the reader with the impression you wished to make. / 
+Tips: Not all reports will require a Recommendations chapter but for those that do the following should be kept in mind: /  / all recommendations should be logical consequences of the material set out in the conclusions. / no new issues or arguments should be introduced. / each recommendation should be brief and direct. / each recommendation should be numbered and set out in a separate paragraph. / 

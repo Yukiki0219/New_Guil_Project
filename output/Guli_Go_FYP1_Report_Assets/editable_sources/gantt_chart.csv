@@ -1,0 +1,15 @@
+activity,status,start,end
+Initial repository commit,recorded,2026-11-11,2026-11-11
+Cocos Creator setup,recorded,2026-11-15,2026-11-15
+Reward systems and 30 levels,recorded,2026-11-15,2026-11-16
+Audio integration,recorded,2026-11-17,2026-11-17
+Test entry points,recorded,2026-11-19,2026-11-19
+Overlap fixes,recorded,2026-11-20,2026-11-20
+Supervisor review and scope freeze,proposed,W1,W2
+Design refinement,proposed,W1,W4
+Prototype refinement,proposed,W3,W8
+Input and physics checks,proposed,W5,W8
+Android build and device checks,proposed,W7,W9
+Player evaluation,proposed,W9,W11
+Analysis and revision,proposed,W11,W13
+Final report and presentation,proposed,W13,W14

@@ -1,0 +1,11 @@
+flowchart LR
+  Player[Mouse / touch / keyboard] --> UI[GuliGame: screens, HUD, audio, orchestration]
+  UI --> Model[GameModel: rules, 30 levels, round state, awards]
+  UI --> Input[Slingshot and AimPrediction]
+  Model <--> Physics[GuliPhysics: Cocos Box2D, fixed 1/120 s step]
+  UI <--> Store[Local storage: progress, settings, collection]
+  UI --> Assets[HUD prefabs, artwork, marble renderer, audio]
+  UI --> Support[Tutorial, hints, Chinese / English]
+  Engine[Cocos Creator 3.8.8] --- UI
+  Browser[Browser preview] --- Engine
+  Android[Android target, not built] -. planned .- Engine
